@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Download</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container mt-5 text-center">
+    <h1>Download Files</h1>
+    <form id="downloadForm" class="mt-5">
+      <div class="form-group">
+        <label for="key">Enter Key (4-digit):</label>
+        <input type="number" id="key" name="key" class="form-control" min="1000" max="9999" required>
+        <small id="errorMessage" class="text-danger"></small>
+      </div>
+      <button type="submit" id="downloadBtn" class="btn btn-success">Download</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('downloadForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const key = document.getElementById('key').value;
+
+      if (key.length !== 4) {
+        document.getElementById('errorMessage').textContent = "Please enter a 4-digit key!";
+        return;
+      } else {
+        document.getElementById('errorMessage').textContent = "";
+      }
+
+      // Make an AJAX request to the server to check if the key is valid
+      try {
+        const response = await fetch(`/check?key=${key}`);
+        const data = await response.json();
+
+        if (data.valid) {
+          // Proceed with download
+          window.location.href = '/download';
+        } else {
+          // Display error message
+          document.getElementById('errorMessage').textContent = "Am I joke to you ! Please enter correct key.";
+        }
+      } catch (error) {
+        console.error('Error checking key:', error);
+        document.getElementById('errorMessage').textContent = "An error occurred. Please try again.";
+      }
+    });
+  </script>
+</body>
+</html>
+
