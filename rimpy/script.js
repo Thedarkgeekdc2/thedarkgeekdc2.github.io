@@ -1,3 +1,15 @@
+// When the user clicks the play button
+document.getElementById("playButton").addEventListener("click", function() {
+  // Play the audio
+  var audio = document.getElementById("myAudio");
+  audio.play();
+
+  // After playing the audio, run the rest of the functions
+  startAnimationsAndText();
+  
+  // Hide the play button
+  document.getElementById("playButton").style.display = "none";
+});
 window.onload = function() {
   var audio = document.getElementById("myAudio");
   audio.play();
