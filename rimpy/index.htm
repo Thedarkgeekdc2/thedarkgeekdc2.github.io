@@ -33,6 +33,8 @@
             margin-top: 30px;
             display: inline-block;
             box-shadow: 0 5px 15px rgba(255, 64, 129, 0.5);
+            pointer-events: none; /* Prevent early clicking */
+            opacity: 0.5; /* Make it look disabled */
         }
     </style>
 </head>
@@ -43,16 +45,19 @@
     <a id="hiddenLink" href="https://gifft.me/o/d/evuz4ag3ehqvnrvqeqvfs10x" target="_blank">🎁 Click for a Surprise! 🎁</a>
 
     <script>
-        // Set your love's birthday (YYYY, MM (0-based), DD, HH, MM, SS)
-        const birthday = new Date(2025, 2, 26, 0, 0, 0).getTime(); // April 15, 2025
+        // Set birthday to 26 March 2025 (YYYY, MM (0-based), DD, HH, MM, SS)
+        const birthday = new Date(2025, 2, 26, 0, 0, 0).getTime(); // March is month 2 (0-based index)
 
         function updateCountdown() {
             const now = new Date().getTime();
             const timeLeft = birthday - now;
+            const link = document.getElementById("hiddenLink");
 
             if (timeLeft <= 0) {
                 document.getElementById("countdown").innerText = "🎉 Happy Birthday, My Love! 🎉";
-                document.getElementById("hiddenLink").style.display = "inline-block";
+                link.style.display = "inline-block";
+                link.style.pointerEvents = "auto"; // Enable clicking
+                link.style.opacity = "1"; // Fully visible
             } else {
                 let days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
                 let hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
