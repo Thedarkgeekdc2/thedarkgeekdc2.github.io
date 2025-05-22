@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THEDARKGEEKDC - Interactive Portfolio</title>
+    <style>
+        /* CSS Reset and Basic Styling */
+        :root {
+            --primary-bg: #0a0f18; /* Deep dark blue/black */
+            --secondary-bg: #101727; /* Slightly lighter dark blue */
+            --accent-color: #00ffff; /* Cyan/Electric Blue */
+            --text-color: #e0e0e0; /* Light grey for text */
+            --glow-color: rgba(0, 255, 255, 0.7);
+            --border-color: rgba(0, 255, 255, 0.3);
+            --header-height: 70px; /* Define header height for offsets */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth; /* Smooth scrolling for nav links */
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Animated Background for the "Space" */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(45deg, var(--primary-bg) 0%, #0d121c 25%, #0a0f18 50%, #101727 75%, var(--primary-bg) 100%);
+            background-size: 400% 400%;
+            animation: gradientAnimation 30s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Header Styling */
+        header {
+            background-color: rgba(16, 23, 39, 0.85);
+            backdrop-filter: blur(10px);
+            color: var(--text-color);
+            padding: 0 30px;
+            height: var(--header-height);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: var(--accent-color);
+            text-shadow: 0 0 5px var(--glow-color), 0 0 10px var(--glow-color);
+            letter-spacing: 1px;
+            margin-right: 20px; /* Space between logo and title */
+        }
+
+        .site-title {
+            font-size: 1.6em;
+            font-weight: bold;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 1em;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: color 0.3s ease, background-color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            color: var(--accent-color);
+            background-color: rgba(0, 255, 255, 0.1);
+            text-shadow: 0 0 5px var(--glow-color);
+        }
+
+        /* Main Interactive Space Styling */
+        #interactive-space {
+            flex-grow: 1;
+            padding-top: var(--header-height); /* Adjust for fixed header */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content-section {
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto; /* Increased margin for better separation */
+            padding: 30px; /* Increased padding */
+            background-color: rgba(22, 30, 49, 0.75);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.12);
+            backdrop-filter: blur(5px);
+            min-height: calc(100vh - var(--header-height) - 80px); /* Ensure section can fill viewport height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .content-section:first-child {
+            margin-top: 20px; /* Less top margin for the first section after header */
+        }
+
+
+        .content-section h2 {
+            color: var(--accent-color);
+            margin-bottom: 25px;
+            text-align: center;
+            font-size: 2.2em;
+            text-shadow: 0 0 8px var(--glow-color);
+        }
+        .content-section h3 {
+            color: var(--accent-color);
+            opacity: 0.8;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+        }
+
+        /* Home Section Specifics */
+        #home-section {
+            text-align: center;
+        }
+        #home-section .welcome-message {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+        #home-section .welcome-message .name {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+        #home-section .intro-text {
+            font-size: 1.2em;
+            max-width: 700px;
+            margin: 0 auto 20px auto;
+            line-height: 1.8;
+        }
+        #home-section .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--primary-bg);
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 0 10px var(--glow-color);
+        }
+        #home-section .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px var(--glow-color);
+        }
+
+
+        /* Character Styling */
+        #character-container {
+            position: fixed;
+            top: 40%; /* Adjusted for better visibility on home */
+            left: 5vw; /* Use viewport width for responsiveness */
+            transform: translateY(-50%);
+            z-index: 900;
+            transition: transform 0.1s ease-out;
+        }
+
+        #interactive-character {
+            width: 70px;
+            height: 70px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 0 15px var(--glow-color), 0 0 30px var(--glow-color);
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        #interactive-character:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 25px var(--glow-color), 0 0 50px var(--glow-color);
+        }
+
+        .character-eye {
+            width: 20px;
+            height: 30px;
+            background-color: var(--primary-bg);
+            border-radius: 40% 40% 50% 50% / 60% 60% 40% 40% ;
+            position: relative;
+            overflow: hidden;
+        }
+        .character-pupil {
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: transform 0.1s linear;
+        }
+
+        .character-speech-bubble {
+            position: absolute;
+            bottom: 120%; /* Above the character */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--secondary-bg);
+            color: var(--text-color);
+            padding: 10px 15px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            font-size: 0.9em;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        .character-speech-bubble::after { /* Triangle */
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -8px;
+            border-width: 8px;
+            border-style: solid;
+            border-color: var(--secondary-bg) transparent transparent transparent;
+        }
+        #interactive-character:hover .character-speech-bubble,
+        .character-speech-bubble.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+
+        /* Blog/Work Section (Previously Portfolio Showcase) */
+        #blog-work-section h2 {
+             margin-bottom: 30px;
+        }
+        .portfolio-grid, .blog-grid { /* Renamed for clarity, can use same style */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .interactive-frame, .blog-post-card { /* Unified styling */
+            background-color: rgba(25, 35, 55, 0.6);
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 16 / 10; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .interactive-frame::before, .blog-post-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            border-radius: inherit;
+            box-shadow: inset 0 0 15px rgba(0, 255, 255, 0.3);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .interactive-frame:hover, .blog-post-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+        }
+        .interactive-frame:hover::before, .blog-post-card:hover::before {
+            opacity: 1;
+        }
+
+        .frame-content .project-title-preview, .blog-post-card .post-title-preview {
+            font-size: 1.5em;
+            color: var(--accent-color);
+            font-weight: bold;
+            transition: opacity 0.3s ease;
+        }
+        .interactive-frame:hover .project-title-preview,
+        .blog-post-card:hover .post-title-preview {
+            opacity: 0.8;
+        }
+        .blog-post-card .post-excerpt {
+            font-size: 0.9em;
+            margin-top: 10px;
+            opacity: 0.7;
+        }
+
+
+        /* Modal Styling (Re-used for Portfolio/Blog details) */
+        .project-modal {
+            display: none; 
+            position: fixed;
+            z-index: 1001; 
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.7); 
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background-color: var(--secondary-bg);
+            margin: 10% auto;
+            padding: 30px;
+            border: 1px solid var(--border-color);
+            width: 80%;
+            max-width: 700px;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0, 255, 255, 0.2);
+            position: relative;
+            animation: slideInModal 0.5s ease-out;
+        }
+
+        @keyframes slideInModal {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .close-button {
+            color: var(--text-color);
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            transition: color 0.2s ease;
+        }
+        .close-button:hover,
+        .close-button:focus {
+            color: var(--accent-color);
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .modal-content h3 {
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+        .modal-content img {
+            display: block;
+            max-width: 100%;
+            border-radius: 5px;
+            margin: 15px auto;
+            border: 1px solid var(--border-color);
+        }
+        .modal-content a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        .modal-content a:hover {
+            text-decoration: underline;
+            filter: brightness(1.2);
+        }
+        
+        /* About Section Styling */
+        #about-section .skill-list {
+            list-style: none;
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        #about-section .skill-list li {
+            background-color: rgba(0, 255, 255, 0.1);
+            padding: 8px 15px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            font-size: 0.95em;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+         #about-section .skill-list li:hover {
+            background-color: rgba(0, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Contact Section Styling */
+        #contact-section .social-media-links {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        #contact-section .social-media-links a {
+            margin: 0 15px;
+            font-size: 1.8em; /* For icon fonts or text links */
+            color: var(--accent-color);
+            transition: transform 0.3s, text-shadow 0.3s;
+        }
+        #contact-section .social-media-links a:hover {
+            transform: scale(1.2);
+            text-shadow: 0 0 10px var(--glow-color);
+        }
+        #contact-section .contact-info p {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+
+        /* Footer Styling */
+        footer {
+            background-color: rgba(16, 23, 39, 0.9);
+            color: var(--text-color);
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9em;
+            position: relative;
+            width: 100%;
+        }
+
+        /* Utility Classes */
+        .text-accent {
+            color: var(--accent-color);
+        }
+        .frame-image-placeholder { /* Placeholder for project images */
+            width: 80%;
+            height: 60%;
+            background: linear-gradient(45deg, var(--accent-color), #007bff);
+            opacity: 0.2;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+
+        /* Basic Responsiveness */
+        @media (max-width: 992px) { /* Tablet and smaller */
+            .header-left { flex-direction: column; align-items: flex-start; }
+            .logo { margin-bottom: 5px; font-size: 1.6em;}
+            .site-title { font-size: 1.3em; }
+            nav ul { flex-direction: column; width: 100%; }
+            nav ul li { margin: 5px 0; }
+            nav ul li a { display: block; text-align: center; }
+            header { height: auto; padding: 15px; }
+            #interactive-space { padding-top: 140px; /* Adjust for taller responsive header */ }
+            #character-container { top: 25%; left: 10px; }
+        }
+
+        @media (max-width: 768px) {
+            .content-section { width: 95%; padding: 20px; }
+            .content-section h2 { font-size: 1.8em; }
+             #home-section .welcome-message { font-size: 2em; }
+            #home-section .intro-text { font-size: 1em; }
+            .modal-content { width: 90%; margin: 15% auto; padding: 20px; }
+            .portfolio-grid, .blog-grid { grid-template-columns: 1fr; }
+        }
+         @media (max-width: 480px) {
+            .logo { font-size: 1.4em;}
+            .site-title { font-size: 1.1em; }
+             #interactive-space { padding-top: 120px; }
+         }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="logo">T<span class="text-accent">D</span>G<span class="text-accent">D</span>C</div>
+            <h1 class="site-title">THEDARKGEEKDC</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home-section" class="nav-link">Home</a></li>
+                <li><a href="#about-section" class="nav-link">About</a></li>
+                <li><a href="#blog-work-section" class="nav-link">Blog/Work</a></li>
+                <li><a href="#contact-section" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="interactive-space">
+
+        <div id="character-container">
+            <div id="interactive-character" title="Hey there! I'm your guide.">
+                <div class="character-eye">
+                    <div class="character-pupil"></div>
+                </div>
+                <div class="character-speech-bubble" id="speechBubble">Greetings, explorer!</div>
+            </div>
+        </div>
+
+        <section id="home-section" class="content-section">
+            <h1 class="welcome-message">Welcome to the domain of <span class="name">THEDARKGEEKDC</span></h1>
+            <p class="intro-text">
+                I'm a digital craftsman, weaving code and creativity into immersive online experiences. 
+                This space is a glimpse into my world, my thoughts, and my creations. Navigate through the stars, and let's explore the digital frontier together.
+            </p>
+            <a href="#blog-work-section" class="cta-button">Explore My Work</a>
+            </section>
+
+        <section id="about-section" class="content-section">
+            <h2>About Me: The Story So Far</h2>
+            
+            <h3>Who Am I?</h3>
+            <p>I'm [Your Name/THEDARKGEEKDC], a [Your Profession/Passion - e.g., Full-Stack Developer, Creative Technologist, AI Enthusiast] based in [Your Location, e.g., the digital cosmos]. My journey into the tech world began with [mention a spark or initial interest]. I thrive on solving complex problems and bringing innovative ideas to life through code and design.</p>
+
+            <h3>My Skills</h3>
+            <ul class="skill-list">
+                <li>HTML5 & CSS3</li>
+                <li>JavaScript (ES6+)</li>
+                <li>React / Vue / Angular (mention your forte)</li>
+                <li>Node.js & Express</li>
+                <li>Python / Java / C# (mention backend skills)</li>
+                <li>UI/UX Design Principles</li>
+                <li>Interactive Animations</li>
+                <li>Problem Solving</li>
+                <li>Git & Version Control</li>
+                <li>Agile Methodologies</li>
+                </ul>
+
+            <h3>Current Role / Work</h3>
+            <p>Currently, I am [Your Current Role, e.g., a Senior Developer at TechForward Inc., freelancing on exciting new projects, or a student mastering the digital arts]. My primary focus is on [describe your main responsibilities or projects, e.g., developing cutting-edge web applications, designing intuitive user interfaces, exploring AI integrations].</p>
+
+            <h3>My Journey / Past History</h3>
+            <p>My career path has been a thrilling adventure through various roles and projects. Previously, I worked at [Previous Company/Role 1], where I [key achievement or responsibility]. Before that, I was involved with [Previous Company/Role 2], contributing to [another key achievement]. Each step has equipped me with unique insights and a deeper passion for technology. (Feel free to add specific projects or milestones).</p>
+        </section>
+
+        <section id="blog-work-section" class="content-section">
+            <h2>My Blog & Creative Work</h2>
+            <div class="blog-grid"> <div class="blog-post-card" data-modal-target="modal-project-nova">
+                    <div class="frame-image-placeholder"></div>
+                    <div class="post-title-preview">Project Nova: UI Exploration</div>
+                    <p class="post-excerpt">A conceptual dive into next-gen UIs using advanced CSS & JS...</p>
+                </div>
+                <div id="modal-project-nova" class="project-modal">
+                    <div class="modal-content">
+                        <span class="close-button" data-modal-close="modal-project-nova">&times;</span>
+                        <h3>Project Nova: A UI Exploration</h3>
+                        <img src="https://via.placeholder.com/600x300/00ffff/0a0f18?text=Project+Nova+Detail" alt="Project Nova Screenshot">
+                        <p>Project Nova is a conceptual exploration into next-generation user interfaces. This project leverages advanced CSS techniques and JavaScript to create a dynamic and engaging experience. The focus was on fluidity, responsiveness, and pushing the boundaries of browser capabilities.</p>
+                        <p><strong>Technologies:</strong> HTML5, CSS3 (Flexbox, Grid, Animations), Vanilla JavaScript</p>
+                        <p><a href="#" target="_blank">View Concept (Link)</a> | <a href="#" target="_blank">Read More (Blog Post Link)</a></p>
+                    </div>
+                </div>
+
+                <div class="blog-post-card" data-modal-target="modal-cyber-orb">
+                    <div class="frame-image-placeholder" style="background: linear-gradient(45deg, #ff007f, #7f00ff);"></div>
+                    <div class="post-title-preview">Cyber Orb Interface Musings</div>
+                    <p class="post-excerpt">Thoughts on non-traditional navigation and futuristic aesthetics...</p>
+                </div>
+                 <div id="modal-cyber-orb" class="project-modal">
+                    <div class="modal-content">
+                        <span class="close-button" data-modal-close="modal-cyber-orb">&times;</span>
+                        <h3>Cyber Orb Interface Musings</h3>
+                        <img src="https://via.placeholder.com/600x300/ff007f/0a0f18?text=Cyber+Orb+Detail" alt="Cyber Orb Screenshot">
+                        <p>An interactive UI concept focusing on spherical elements and futuristic aesthetics. This article (or project) delves into the design philosophy and technical challenges of creating dynamic, orb-like components for non-traditional navigation and information display.</p>
+                        <p><strong>Key Ideas:</strong> Dynamic Interactions, Spherical UI, CSS Artistry</p>
+                        <p><a href="#" target="_blank">Explore Interface (Link)</a> | <a href="#" target="_blank">Full Article (Link)</a></p>
+                    </div>
+                </div>
+                
+                <div class="blog-post-card">
+                    <div class="frame-image-placeholder" style="background: linear-gradient(45deg, #f0ad4e, #d9534f);"></div>
+                    <div class="post-title-preview">My Thoughts on AI in Web Dev</div>
+                     <p class="post-excerpt">Exploring the impact and future of AI in modern web development...</p>
+                    </div>
+
+            </div>
+        </section>
+        <section id="contact-section" class="content-section">
+            <h2>Get In Touch / Connect</h2>
+            <p style="text-align:center; margin-bottom: 30px;">
+                Have a project in mind, a question, or just want to connect? I'm always open to interesting conversations and collaborations. 
+                Reach out through one of my social channels or drop me a line.
+            </p>
+            <div class="social-media-links">
+                <a href="#" target="_blank" title="LinkedIn"> LIn </a> <a href="#" target="_blank" title="GitHub"> Git </a>
+                <a href="#" target="_blank" title="Twitter / X"> X </a>
+                <a href="#" target="_blank" title="Instagram"> IG </a>
+            </div>
+            <div class="contact-info">
+                <h3>Direct Contact:</h3>
+                <p>For inquiries or direct messages, you can reach me at:</p>
+                <p><strong>Email:</strong> <a href="mailto:your.email@example.com" class="text-accent">your.email@example.com</a></p>
+                <p>(Or add a simple contact form if you prefer, though that requires more JS/backend for a single file to be fully functional without external services).</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> THEDARKGEEKDC. All rights reserved. Navigating the digital frontier.</p>
+    </footer>
+
+    <script>
+        // --- Dynamic Year in Footer ---
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // --- Active Nav Link highlighting based on scroll ---
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('.content-section');
+        const headerOffset = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) || 70;
+
+
+        function changeNavActiveState() {
+            let currentSectionId = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - headerOffset - 50; // Add a bit more offset
+                if (pageYOffset >= sectionTop) {
+                    currentSectionId = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${currentSectionId}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+        window.addEventListener('scroll', changeNavActiveState);
+        window.addEventListener('load', changeNavActiveState); // Set active on load
+
+
+        // --- Interactive Character Logic ---
+        const character = document.getElementById('interactive-character');
+        const pupil = document.querySelector('.character-pupil');
+        const speechBubble = document.getElementById('speechBubble');
+        const interactiveSpace = document.getElementById('interactive-space');
+
+        let isMouseOverCharacter = false;
+        let speechTimeout;
+
+        const characterMessages = [
+            "Welcome to my digital realm!",
+            "Scroll to explore my story.",
+            "Check out my projects & thoughts!",
+            "This universe is built with code.",
+            "Got questions? Reach out!"
+        ];
+        let currentMessageIndex = 0;
+
+        if (character && pupil && interactiveSpace) {
+            document.body.addEventListener('mousemove', (e) => { // Track on whole body for simplicity
+                const characterRect = character.getBoundingClientRect();
+                const characterCenterX = characterRect.left + characterRect.width / 2;
+                const characterCenterY = characterRect.top + characterRect.height / 2;
+
+                const angle = Math.atan2(e.clientY - characterCenterY, e.clientX - characterCenterX);
+                const pupilMaxOffset = 5;
+                const pupilX = Math.cos(angle) * pupilMaxOffset;
+                const pupilY = Math.sin(angle) * pupilMaxOffset;
+
+                pupil.style.transform = `translate(${pupilX - (pupil.offsetWidth/2)}px, ${pupilY - (pupil.offsetHeight/2)}px)`;
+            });
+
+            character.addEventListener('mouseenter', () => {
+                isMouseOverCharacter = true;
+                clearTimeout(speechTimeout);
+                speechBubble.classList.add('visible');
+                speechBubble.textContent = characterMessages[currentMessageIndex];
+            });
+
+            character.addEventListener('mouseleave', () => {
+                isMouseOverCharacter = false;
+                speechTimeout = setTimeout(() => {
+                     speechBubble.classList.remove('visible');
+                }, 2000);
+            });
+
+            character.addEventListener('click', () => {
+                currentMessageIndex = (currentMessageIndex + 1) % characterMessages.length;
+                speechBubble.textContent = characterMessages[currentMessageIndex];
+                speechBubble.classList.add('visible');
+                clearTimeout(speechTimeout); 
+                 speechTimeout = setTimeout(() => { 
+                    if(!isMouseOverCharacter) speechBubble.classList.remove('visible');
+                }, 3000);
+            });
+        }
+
+
+        // --- Portfolio/Blog Modal Logic ---
+        const itemCards = document.querySelectorAll('.interactive-frame, .blog-post-card'); // Combined selector
+        const closeButtons = document.querySelectorAll('.close-button');
+
+        itemCards.forEach(card => {
+            card.addEventListener('click', (event) => {
+                // Prevent modal from opening if a link inside the card was clicked (e.g. if you add read more links directly on card)
+                if (event.target.tagName === 'A') return;
+
+                const modalId = card.dataset.modalTarget;
+                if (modalId) { // Ensure data-modal-target exists
+                    const modal = document.getElementById(modalId);
+                    if (modal) {
+                        modal.style.display = 'block';
+                    }
+                }
+            });
+        });
+
+        closeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const modalId = button.dataset.modalClose;
+                const modal = document.getElementById(modalId);
+                if (modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+
+        window.addEventListener('click', (event) => {
+            document.querySelectorAll('.project-modal').forEach(modal => {
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+        
+        // --- Initial character speech bubble display ---
+        setTimeout(() => {
+            if (speechBubble && !isMouseOverCharacter) {
+                speechBubble.textContent = "Welcome! Use the nav or scroll.";
+                speechBubble.classList.add('visible');
+                speechTimeout = setTimeout(() => {
+                    speechBubble.classList.remove('visible');
+                }, 4000);
+            }
+        }, 1500);
+
+        console.log("THEDARKGEEKDC's Interactive World V2 Loaded!");
+        console.log("Navigation and new sections added. Customize the content!");
+
+    </script>
+</body>
+</html>
+
+
+            
