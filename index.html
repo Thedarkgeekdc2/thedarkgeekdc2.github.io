@@ -12,19 +12,1036 @@
     <meta property="og:image:height" content="630">
     <title>TheDarkGeekDC</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico" sizes="16x16 32x32">
-    <link rel="stylesheet" href="styles/styles.css">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
+
+.dc-bot-profile-card .card {
+  width: 90%; /* Make it fluid */
+  max-width: 20em; /* Max width (approx original 17em + some flexibility) */
+  min-width: 15em; /* Prevent it from becoming too small */
+  margin-left: auto; /* Center it if it's a block */
+  margin-right: auto;
+  height: auto; 
+  min-height: 22.5em; /* Ensure it has enough height for content */
+  background: #171717;
+  transition: 1s ease-in-out;
+  clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dc-bot-profile-card .img img{
+  width: 100%;
+  object-fit: cover;
+}
+.dc-bot-profile-card .card span {
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  display: block;
+  font-size: 1em;
+}
+
+.dc-bot-profile-card .card .info {
+  font-weight: 400;
+  line-height: 16px;
+  color: white;
+  display: block;
+  text-align: center;
+  font-size: 0.72em;
+  margin: 1em;
+}
+
+.dc-bot-profile-card .card .img {
+  width: 4.8em;
+  height: 4.8em;
+  background: white;
+  border-radius: 150rem;
+  object-fit: cover;
+  overflow: hidden;
+  margin: auto;
+}
+
+.dc-bot-profile-card .card .share {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.dc-bot-profile-card .card a {
+  color: white;
+  transition: .4s ease-in-out;
+}
+
+.dc-bot-profile-card .card a:hover {
+  color: red;
+}
+
+.dc-bot-profile-card .card button {
+  padding: 0.8em 3em;
+  display: block;
+  margin: auto;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  transition: .4s ease-in-out;
+}
+
+.dc-bot-profile-card .card button:hover {
+  background: red;
+  color: white;
+  cursor: pointer;
+}
+
+#dc-bot-name-span {
+    display: inline-block; /* Needed for transform */
+    animation: fadeInSlideUp 1s ease-out 0.5s forwards;
+    opacity: 0; /* Start hidden */
+}
+
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+:root {
+  --color-primary: #191d2b;
+  --color-secondary: #27AE60;
+  --color-white: #FFFFFF;
+  --color-black: #000;
+  --color-grey0: #f8f8f8;
+  --color-grey-1: #dbe1e8;
+  --color-grey-2: #b2becd;
+  --color-grey-3: #6c7983;
+  --color-grey-4: #545e56;
+  --color-grey-5: #2a2e35;
+  --color-grey-6: #12181b;
+  --br-sm-2: 14px;
+  --box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.3);
+}
+
+.light-mode {
+  --color-primary: #FEFBF6;
+  --color-secondary: #A6D1E6;
+  --color-white: #454e56;
+  --color-black: #000;
+  --color-grey0: #f8f8f8;
+  --color-grey-1: #6c7983;
+  --color-grey-2: #6c7983;
+  --color-grey-3: #6c7983;
+  --color-grey-4: #454e56;
+  --color-grey-5: #f8f8f8;
+  --color-grey-6: #12181b;
+}
+
+body {
+  background-color: var(--color-primary);
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  color: var(--color-white);
+  transition: all 0.4s ease-in-out;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+}
+
+header {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  color: var(--color-white);
+  overflow: hidden;
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 3rem 18rem;
+}
+
+.section {
+  transform: translateY(-100%) scale(0);
+  transition: all 0.4s ease-in-out;
+  background-color: var(--color-primary);
+}
+
+.sec1 {
+  display: none;
+  transform: translateY(0) scale(1);
+}
+
+.sec2 {
+  display: none;
+  transform: translateY(0) scale(1);
+}
+
+.sec3 {
+  display: none;
+  transform: translateY(0) scale(1);
+}
+
+.sec4 {
+  display: none;
+  transform: translateY(0) scale(1);
+}
+
+.sec5 {
+  display: none;
+  transform: translateY(0) scale(1);
+}
+
+.active {
+  display: block;
+  -webkit-animation: scaleAnim 1s ease-in-out;
+          animation: scaleAnim 1s ease-in-out;
+}
+@-webkit-keyframes scaleAnim {
+  0% {
+    transform: translateY(-100%) scaleY(0);
+  }
+  100% {
+    transform: translateY(0) scaleY(1);
+  }
+}
+@keyframes scaleAnim {
+  0% {
+    transform: translateY(-100%) scaleY(0);
+  }
+  100% {
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+.controlls {
+  position: fixed;
+  z-index: 10;
+  top: 50%;
+  right: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+}
+.controlls .active-btn {
+  background-color: var(--color-secondary) !important;
+  transition: all 0.4s ease-in-out;
+}
+.controlls .active-btn i {
+  color: var(--color-white) !important;
+}
+.controlls .control {
+  padding: 1rem;
+  cursor: pointer;
+  background-color: var(--color-grey-4);
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.7rem 0;
+  box-shadow: var(--box-shadow-1);
+}
+.controlls .control i {
+  font-size: 1.2rem;
+  color: var(--color-grey-2);
+  pointer-events: none;
+}
+
+.theme-btn {
+  top: 5%;
+  right: 3%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: var(--color-grey-4);
+  cursor: pointer;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.1s ease-in-out;
+}
+.theme-btn:active {
+  transform: translateY(-3px);
+}
+.theme-btn i {
+  font-size: 1.4rem;
+  color: var(--color-grey-2);
+  pointer-events: none;
+}
+
+/*Header-content*/
+.header-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: 100vh;
+}
+.header-content .left-header {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.header-content .left-header .h-shape {
+  transition: all 0.4s ease-in-out;
+  width: 65%;
+  height: 100%;
+  background-color: var(--color-secondary);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  -webkit-clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
+          clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
+}
+/* Removed dead CSS for .header-content .left-header .image and .image img */
+.header-content .right-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 18rem;
+}
+.header-content .right-header .name {
+  font-size: 3rem;
+}
+.header-content .right-header .name span {
+  color: var(--color-secondary);
+}
+.header-content .right-header p {
+  margin: 1.5rem 0;
+  line-height: 2rem;
+}
+
+/*About*/
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 3.5rem;
+  padding-bottom: 5rem;
+}
+.about-container .right-about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+.about-container .right-about .about-item {
+  border: 1px solid var(--color-grey-5);
+  border-radius: 5px;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
+}
+.about-container .right-about .about-item:hover {
+  cursor: default;
+  transform: translateY(-5px);
+  border: 1px solid var(--color-secondary);
+  box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.32);
+}
+.about-container .right-about .about-item .abt-text {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.about-container .right-about .about-item .abt-text .large-text {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+}
+.about-container .right-about .about-item .abt-text .small-text {
+  padding-left: 3rem;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: var(--color-grey-1);
+  letter-spacing: 2px;
+}
+.about-container .right-about .about-item .abt-text .small-text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 2rem;
+  height: 2px;
+  background-color: var(--color-grey-5);
+}
+.about-container .left-about {
+  padding-right: 5rem;
+}
+.about-container .left-about p {
+  line-height: 2rem;
+  padding: 1rem;
+  color: var(--color-grey-1);
+}
+.about-container .left-about h4 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.about-stats {
+  padding-bottom: 4rem;
+}
+.about-stats .progress-bars {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+.about-stats .progress-bars .progress-bar {
+  display: flex;
+  flex-direction: column;
+}
+.about-stats .progress-bars .progress-bar .prog-title {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.about-stats .progress-bars .progress-bar .progress-con {
+  display: flex;
+  align-items: center;
+}
+.about-stats .progress-bars .progress-bar .progress-con .prog-text {
+  color: var(--color-grey-2);
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress {
+  width: 100%;
+  height: 0.45rem;
+  background-color: var(--color-grey-4);
+  margin-left: 1rem;
+  position: relative;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--color-secondary);
+  transition: all 0.4s ease-in-out;
+  width: 60%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .c {
+  width: 60%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .cpp {
+  width: 65%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .java {
+  width: 68%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .oop {
+  width: 75%;
+}
+
+.stat-title {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 3.5rem 0;
+  position: relative;
+}
+.stat-title::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 40%;
+  height: 1px;
+  background-color: var(--color-grey-5);
+  transform: translateX(-50%);
+}
+
+/*timeline*/
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  padding-bottom: 3rem;
+}
+.timeline .timeline-item {
+  position: relative;
+  padding-left: 3rem;
+  border-left: 1px solid var(--color-grey-5);
+}
+.timeline .timeline-item .tl-icon {
+  position: absolute;
+  left: -27px;
+  top: 0;
+  background-color: var(--color-secondary);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.timeline .timeline-item .tl-icon i {
+  font-size: 1.3rem;
+}
+.timeline .timeline-item .tl-duration {
+  padding: 0.2rem 0.6rem;
+  background-color: var(--color-grey-5);
+  border-radius: 15px;
+  display: inline-block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.timeline .timeline-item h5 {
+  padding: 1rem 0;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.timeline .timeline-item h5 span {
+  color: var(--color-grey-2);
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.timeline .timeline-item h5 p {
+  color: var(--color-grey-2);
+}
+
+.port-text {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.portfolios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin-top: 3rem;
+}
+.portfolios .portfolio-item {
+  position: relative;
+  border-radius: 15px;
+}
+.portfolios .portfolio-item img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+}
+.portfolios .portfolio-item .hover-items {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-secondary);
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.4s ease-in-out;
+}
+.portfolios .portfolio-item .hover-items h3 {
+  font-size: 1.8rem; /* Make title larger */
+  color: var(--color-white);
+  margin-bottom: 1rem;
+  transform: translateY(-20px); /* Initial position for animation */
+  opacity: 0;
+  transition: all 0.3s ease-in-out 0.2s; /* Delay title animation */
+}
+.portfolios .portfolio-item .hover-items .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(20px); /* Initial position for animation */
+  opacity: 0;
+  transition: all 0.3s ease-in-out 0.3s; /* Delay icon animation */
+}
+.portfolio-item:hover .hover-items h3,
+.portfolio-item:hover .hover-items .icons {
+  transform: translateY(0);
+  opacity: 1;
+}
+.portfolio-item .image img {
+  transition: transform 0.3s ease-in-out;
+}
+.portfolio-item:hover .image img {
+  transform: scale(1.1); /* Zoom image on hover */
+}
+.portfolios .portfolio-item .hover-items .icons .icon {
+  background-color: var(--color-black);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1rem;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.portfolios .portfolio-item .hover-items .icons .icon i {
+  font-size: 1.5rem;
+  color: var(--color-white);
+  margin: 0 1rem;
+}
+.portfolios .portfolio-item .hover-items .icons .icon:hover {
+  background-color: var(--color-white);
+}
+.portfolios .portfolio-item .hover-items .icons .icon:hover i {
+  color: var(--color-primary);
+}
+
+.portfolio-item:hover .hover-items {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.contact-content-con {
+  display: flex;
+  padding-top: 3.5rem;
+}
+.contact-content-con .left-contact {
+  flex: 2;
+}
+.contact-content-con .left-contact h4 {
+  margin-top: 1rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.contact-content-con .left-contact p {
+  margin: 1rem 0;
+  line-height: 2rem;
+}
+.contact-content-con .left-contact .contact-info .contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contact-content-con .left-contact .contact-info .contact-item p {
+  margin: 0.3rem 0 !important;
+  padding: 0 !important;
+}
+.contact-content-con .left-contact .contact-info .contact-item .icon {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+}
+.contact-content-con .left-contact .contact-info .contact-item .icon i {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+}
+.contact-content-con .left-contact .contact-icon {
+  display: flex;
+  margin-top: 2rem;
+}
+.contact-content-con .left-contact .contact-icon a {
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
+  background-color: var(--color-grey-5);
+  cursor: pointer;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 0.4rem;
+  transition: all 0.4s ease-in-out;
+}
+.contact-content-con .left-contact .contact-icon a:hover {
+  background-color: var(--color-secondary);
+}
+.contact-content-con .left-contact .contact-icon a:hover i {
+  color: var(--color-primary);
+}
+.contact-content-con .left-contact .contact-icon a i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+.contact-content-con .right-contact {
+  flex: 3;
+  margin-left: 3rem;
+}
+.contact-content-con .right-contact .input-control {
+  margin: 1.5rem;
+}
+.contact-content-con .right-contact .input-control input, .contact-content-con .right-contact .input-control textarea {
+  border-radius: 30px;
+  font-weight: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  padding: 0.8rem 1.1rem;
+  outline: none;
+  border: none;
+  background-color: var(--color-grey-5);
+  width: 100%;
+  color: var(--color-white);
+  resize: none;
+}
+.contact-content-con .right-contact .i-c-2 {
+  display: flex;
+}
+.contact-content-con .right-contact .i-c-2 :last-child {
+  margin-left: 1.5rem;
+}
+.contact-content-con .right-contact .submit-btn {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/*Independent Component*/
+.btn-con {
+  display: flex;
+  align-self: flex-start;
+}
+
+.main-btn {
+  border-radius: 30px;
+  color: inherit;
+  font-weight: 600;
+  position: relative;
+  border: 1px solid var(--color-secondary);
+  display: flex;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.main-btn .btn-text {
+  padding: 0 2rem;
+}
+.main-btn .btn-icon {
+  background-color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 1rem;
+}
+.main-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  transition: all 0.4s ease-out;
+  z-index: -1;
+}
+.main-btn:hover {
+  transition: all 0.4s ease-out;
+}
+.main-btn:hover::before {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-secondary);
+  transform: translateX(0);
+  transition: all 0.4s ease-out;
+}
+
+.main-title {
+  text-align: center;
+}
+.main-title h2 {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 700;
+}
+.main-title h2 span {
+  color: var(--color-secondary);
+}
+.main-title h2 .bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: var(--color-grey-5);
+  transition: all 0.4s ease-in-out;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  font-weight: 800;
+  font-size: 6.3rem;
+}
+
+@media screen and (max-width: 600px) {
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+  .about-container .right-about {
+    grid-template-columns: 1fr;
+    padding-top: 2.5rem;
+  }
+  .about-container .left-about {
+    padding-right: 0;
+  }
+  .about-container .left-about p {
+    padding-left: 0;
+  }
+  .timeline {
+    grid-template-columns: 1fr;
+    padding-bottom: 6rem;
+  }
+  .portfolios {
+    grid-template-columns: 1fr;
+    padding-bottom: 6rem;
+  }
+  .section {
+    padding: 2rem 2.5rem;
+  }
+  .main-title h2 {
+    font-size: 2rem;
+  }
+  .main-title h2 span {
+    font-size: 2.5rem;
+  }
+  .main-title h2 .bg-text {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (max-width: 1432px) {
+  header {
+    padding: 0 !important;
+  }
+  .section {
+    padding: 7rem 11rem;
+  }
+  .contact-content-con {
+    flex-direction: column;
+  }
+  .contact-content-con .right-contact {
+    margin-left: 0;
+    margin-top: 2.5rem;
+  }
+  .contact-content-con .right-contact .i-c-2 {
+    flex-direction: column;
+  }
+  .contact-content-con .right-contact .i-c-2 :last-child {
+    margin-left: 0;
+    margin-top: 1.5rem;
+  }
+}
+@media screen and (max-width: 1070px) {
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+  .about-container .right-about {
+    padding-top: 2.5rem;
+  }
+  .portfolios {
+    grid-template-columns: 1fr 1fr;
+  }
+  .main-title h2 {
+    font-size: 4rem;
+  }
+  .main-title h2 span {
+    font-size: 4rem;
+  }
+  .main-title h2 .bg-text {
+    font-size: 4.5rem;
+  }
+}
+@media screen and (max-width: 970px) {
+  .section {
+    padding: 7rem 6rem;
+  }
+  header {
+    padding: 0;
+  }
+  header .right-header {
+    padding: 0 !important;
+  }
+  .theme-btn {
+    width: 50px;
+    height: 50px;
+  }
+  .header-content {
+    grid-template-columns: 1fr;
+    padding: 6rem;
+  }
+  .left-header .h-shape {
+    display: none;
+  }
+  .right-header {
+    grid-row: 1;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .right-header .name {
+    font-size: 2.5rem !important;
+  }
+  .header-content .left-header .image {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .controlls {
+    top: auto;
+    bottom: 0;
+    flex-direction: row;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: var(--color-grey-5);
+  }
+  .controlls .control {
+    margin: 0.3rem 1rem;
+  }
+}
+@media screen and (max-width: 710px) {
+  .section {
+    padding: 7rem 3rem;
+  }
+  .about-stats .progress-bars {
+    grid-template-columns: 1fr;
+  }
+  .main-title h2 {
+    font-size: 3rem;
+  }
+  .main-title h2 span {
+    font-size: 3rem;
+  }
+  .main-title h2 .bg-text {
+    font-size: 4rem;
+  }
+}/*# sourceMappingURL=styles.css.map */
+
+.terabox-player {
+    /* Styles for the section if needed, beyond the default .section styles */
+    text-align: center; /* Center content */
+}
+.terabox-container {
+    background-color: var(--color-grey-5); /* A slightly different background */
+    padding: 2rem;
+    border-radius: var(--br-sm-2);
+    box-shadow: var(--box-shadow-1);
+    max-width: 800px; /* Limit width */
+    margin: 0 auto; /* Center container */
+}
+.terabox-container p {
+    margin-bottom: 1rem;
+}
+/* Ensure video player is responsive */
+.video-js {
+    width: 100% !important; /* Important to override inline width */
+    height: auto !important; /* Important to override inline height */
+    max-width: 640px; /* Max width from original */
+}
+#videoThumbnail {
+    max-width: 100%; /* Ensure thumbnail is responsive */
+    height: auto;
+}
+
+.snakes-ladders-game {
+    text-align: center;
+}
+.game-container-snakes-ladders {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--color-grey-5);
+    /* padding: 1rem; // Padding moved to ensure it doesn't affect scroll width calc */
+    border-radius: var(--br-sm-2);
+    box-shadow: var(--box-shadow-1);
+    max-width: 520px; /* Max width of game plus some padding */
+    overflow-x: auto; /* Allow horizontal scrolling if content overflows */
+    padding: 1rem; /* Ensure padding doesn't add to fixed width issues */
+    margin: 0 auto;
+}
+.wrapper { /* Matches script.js selector */
+    width: 500px; /* Keep the game's fixed logical size */
+    height: 500px;
+    border: 2px solid var(--color-secondary);
+    margin: 0 auto; /* Center the fixed-size game within the scrollable container */
+}
+#snakesLaddersCanvas {
+    width: 100%;
+    height: 100%;
+    background-color: #fff; /* Default canvas background */
+}
+.game-controls-snakes-ladders {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.dice { /* For #diceThrow */
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-white);
+    border: 2px solid var(--color-secondary);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    color: var(--color-secondary);
+}
+/* Basic styling for dice spots - script.js adds classes s1-s6 */
+.dice.s1::before { content: '\2680'; } /* Die face 1 */
+.dice.s2::before { content: '\2681'; } /* Die face 2 */
+.dice.s3::before { content: '\2682'; } /* Die face 3 */
+.dice.s4::before { content: '\2683'; } /* Die face 4 */
+.dice.s5::before { content: '\2684'; } /* Die face 5 */
+.dice.s6::before { content: '\2685'; } /* Die face 6 */
+
+.player-info {
+    font-size: 1.2em;
+}
+    </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/video.js@7/dist/video-js.min.css" rel="stylesheet" />
+<link href="https://unpkg.com/@videojs/themes@1/dist/forest/index.css" rel="stylesheet" />
+<script src="https://vjs.zencdn.net/8.16.1/video.min.js" defer></script>
 </head>
 <body class="main-content">
     <header class="section sec1 header active" id="home">
         <div class="header-content">
-            <div class="left-header">
-                <div class="h-shape"></div>
-                <div class="image">
-                    <img src="img/hero1.png" alt="">
+            <div class="left-header"> <!-- This div will now wrap the card -->
+                <div class="dc-bot-profile-card"> <!-- Added wrapper for namespacing -->
+                    <div class="card">
+                        <div class="img"><img src="Terabox/user.png" alt=""></div>
+                        <span id="dc-bot-name-span">THEDARKGEEKDC</span>
+                        <p class="info">I'm Dinesh Chaudhary, a lifelong learner and passionate teacher. For me, coding is not just a profession—it's a true passion that fuels my creativity and curiosity every day. I believe in the power of constant growth, both as a coder and a mentor, and I’m always eager to share my knowledge with others.</p>
+                        <div class="share">
+                            <a href="https://github.com/Thedarkgeekdc2" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                                </svg></a>
+                            <a href="https://x.com/TheDarkGeekDC" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path>
+                                </svg></a>
+                            <a href="https://instagram.com/thedarkgeekdc" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path>
+                                </svg></a>
+                            <a href="https://wa.me/918126956997" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                    <path d="M13.601 2.5A7.488 7.488 0 0 0 8.004.5C3.858.5.5 3.858.5 8.004c0 1.326.347 2.631 1.004 3.773L.5 15.5l3.786-1.004A7.478 7.478 0 0 0 8.004 15.5c4.146 0 7.504-3.358 7.504-7.504a7.49 7.49 0 0 0-1.907-5.496zM8.004 14a5.979 5.979 0 0 1-3.2-.93l-.229-.137-2.537.674.678-2.51-.149-.237A6.01 6.01 0 1 1 14.004 8c0 3.314-2.686 6-6 6zm3.226-4.598c-.182-.09-1.078-.533-1.245-.595-.168-.06-.291-.09-.414.09-.122.182-.477.595-.585.717-.107.122-.215.137-.397.045-.182-.09-.771-.284-1.469-.903-.543-.484-.907-1.084-1.015-1.266-.107-.182-.012-.28.08-.372.082-.082.182-.213.273-.32.09-.107.12-.183.183-.304.061-.122.03-.227-.015-.319-.045-.09-.414-.997-.568-1.37-.15-.36-.303-.312-.414-.32h-.353c-.107 0-.274.045-.417.213-.137.168-.547.533-.547 1.299s.56 1.506.637 1.61c.076.106 1.105 1.687 2.68 2.367.374.161.666.257.893.343.376.12.72.103.992.062.303-.045.932-.38 1.063-.746.13-.367.13-.682.09-.746-.045-.06-.167-.09-.35-.182z"></path>
+                                </svg></a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="right-header">
@@ -311,6 +1328,56 @@
             </div>
         </section>
 
+        <section class="section sec6 terabox-player" id="terabox">
+            <div class="main-title">
+                <h2>Terabox<span> Player</span><span class="bg-text">Video Player</span></h2>
+            </div>
+            <div class="terabox-container">
+                <p>Enter a Terabox URL to fetch and play the video.</p>
+                <input type="text" id="urlInput" placeholder="Enter Terabox URL" style="width: 80%; padding: 10px; margin: 10px 0; font-size: 1em; border: 1px solid #ccc; border-radius: 4px;">
+                <button onclick="fetchVideoData()" style="padding: 10px 20px; font-size: 1em; cursor: pointer; background-color: var(--color-secondary); color: var(--color-white); border: none; border-radius: 4px; margin-top: 10px;">Fetch Video</button>
+                <div id="videoDetails" style="display: none; margin-top: 20px;">
+                    <h2 id="videoTitle" style="font-size: 1.5em; margin-bottom: 10px;"></h2>
+                    <div class="video">
+                        <video id="my-video" class="video-js vjs-theme-forest" controls preload="auto" width="640" height="264" data-setup="{}">
+                            <source src="" type="video/mp4" />
+                            <p class="vjs-no-js">
+                                To view this video please enable JavaScript, and consider upgrading to a
+                                web browser that
+                                <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                            </p>
+                        </video>
+                    </div>
+                    <div class="details" style="margin-top: 20px;">
+                        <a rel="noreferrer noopener" id="fastDownload" href="#" target="_blank" style="display: block; margin-top: 10px; color: var(--color-secondary); text-decoration: none;">Fast Download</a>
+                        <a rel="noreferrer noopener" id="hdDownload" href="#" target="_blank" style="display: block; margin-top: 10px; color: var(--color-secondary); text-decoration: none;">HD Video</a>
+                        <img id="videoThumbnail" src="" alt="Thumbnail" style="margin-top: 10px; max-width: 100%; border-radius: 8px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section sec7 snakes-ladders-game" id="snakes-ladders">
+            <div class="main-title">
+                <h2>Snakes &<span> Ladders</span><span class="bg-text">Retro Game</span></h2>
+            </div>
+            <div class="game-container-snakes-ladders">
+                <div class="wrapper"> <!-- script.js uses document.querySelector('.wrapper') -->
+                    <canvas id="snakesLaddersCanvas"></canvas> <!-- script.js uses document.querySelector('canvas') -->
+                </div>
+                <div class="game-controls-snakes-ladders">
+                    <div id="diceThrow" class="dice"></div> <!-- script.js uses document.querySelector('#diceThrow') -->
+                    <div class="player-info">
+                        <span class="playerName">Player 1</span>: <span class="message">Click dice to play</span>
+                        <!-- script.js uses document.querySelector('.playerName') and '.message' -->
+                    </div>
+                    <button id="reset" class="main-btn" style="margin-top: 1rem;"> <!-- script.js uses document.querySelector('#reset') -->
+                        <span class="btn-text">Reset Game</span>
+                        <span class="btn-icon"><i class="fas fa-redo"></i></span>
+                    </button>
+                </div>
+            </div>
+        </section>
 
     </main>
 
@@ -324,17 +1391,324 @@
         <div class="control control-3 " data-id="portfolio">
             <i class="fas fa-briefcase"></i>
         </div>
-        <div class="control control-4 " data-id="game">
-            <a href="Terabox/index.html"><i class="fas fa-share"></i></a>
+        <div class="control control-4" data-id="terabox">
+            <i class="fas fa-play-circle"></i>
         </div>
-        <div class="control control-5 " data-id="contact">
+        <div class="control control-5" data-id="snakes-ladders"> <!-- Renumbered -->
+            <i class="fas fa-dice-d6"></i>
+        </div>
+        <div class="control control-6 " data-id="contact"> <!-- Renumbered -->
             <i class="fas fa-envelope-open"></i>
         </div>
     </div>
     <div class="theme-btn">
         <i class="fas fa-adjust"></i>
     </div>
-    <script src="app.js"></script>
+    <script>
+const sections = document.querySelectorAll('.section');
+const sectBtns = document.querySelectorAll('.controlls');
+const sectBtn = document.querySelectorAll('.control');
+const allSections = document.querySelector('.main-content');
+
+
+function PageTransition(){
+    //Button click active class
+    for(let i=0; i < sectBtn.length; i++){
+        sectBtn[i].addEventListener('click', function() {
+            let currentBtn = document.querySelectorAll('.active-btn');
+            currentBtn[0].className = currentBtn[0].className.replace('active-btn', '');
+            this.className += ' active-btn';
+        })
+    }
+    
+    //sections active class
+    allSections.addEventListener('click', (e) =>{
+        const id = e.target.dataset.id;
+        if(id){
+            //remove selected from the other btns
+            sectBtns.forEach((btn) =>{
+                btn.classList.remove('active')
+            })
+            e.target.classList.add('active')
+
+            //hide other section
+            sections.forEach((section)=>{
+                section.classList.remove('active')
+            })
+
+            const element = document.getElementById(id);
+            element.classList.add('active');
+        }
+    })
+
+    //Toogle theme
+
+    const themeBtn = document.querySelector('.theme-btn');
+    themeBtn.addEventListener('click', () => {
+        let element = document.body;
+        element.classList.toggle('light-mode');
+    })
+
+}
+
+PageTransition();
+
+async function fetchVideoData() {
+    const urlInput = document.getElementById('urlInput').value;
+    const videoDetails = document.getElementById('videoDetails');
+    const videoTitle = document.getElementById('videoTitle');
+    const videoThumbnail = document.getElementById('videoThumbnail');
+    const videoPlayer = videojs('my-video');
+    const fastDownload = document.getElementById('fastDownload');
+    const hdDownload = document.getElementById('hdDownload');
+
+    const id = urlInput.split("/").pop();
+
+    let response = await fetch(`https://wholly-api.skinnyrunner.com/get/website-data.php?get_html=https://www.terabox.tech/api/yttera?id=${id}`);
+    response = await response.text();
+    const data = JSON.parse(response);
+
+    const videoData = data.response[0];
+
+    videoTitle.innerText = videoData.title;
+    videoThumbnail.src = videoData.thumbnail;
+    fastDownload.href = videoData.resolutions["Fast Download"];
+    hdDownload.href = videoData.resolutions["HD Video"];
+
+    videoPlayer.src({ type: 'video/mp4', src: "https://apis.forn.fun/tera/data.php?id=" + id });
+    
+    videoPlayer.poster(videoData.thumbnail);
+
+    videoDetails.style.display = "block";
+}
+
+// Snakes and Ladders Game Logic (from script.js)
+// Ensure canvas and other elements are selected after they are in the DOM
+// It's good practice to wrap this in a DOMContentLoaded listener or ensure script runs after HTML
+document.addEventListener('DOMContentLoaded', () => {
+    let canvas = document.querySelector('#snakesLaddersCanvas'); 
+    // Check if canvas exists before proceeding
+    if (canvas) {
+        let wrapper = document.querySelector('.wrapper');
+        let resetGameBtn = document.querySelector('#reset');
+        let diceDisplay = document.querySelector('#diceThrow');
+        let playerDisplay = document.querySelector('.playerName');
+        let message = document.querySelector('.message');
+        let ctx = canvas.getContext('2d');
+        let height = 500;
+        let width = 500;
+        let gridSize = 50;
+        let gridMid = 25;
+        let walking, walkSpeed = 450;
+        let locked = false;
+        let slideSpeed = .5;
+        let rolled = '', rolling, rollCount, rollMax, rollSpeed=85;
+
+        let player1 = {current:0, target:0, x:0, y:0, colour:'#f36d', id:'You'};
+        let player2 = {current:0, target:0, x:0, y:0, colour:'#8a2d', id:'AutoBot'};
+        let activePlayer = player1;
+
+        const obstacles = [
+            {type:'snake', start:97, end:78},
+            {type:'snake', start:95, end:56},
+            {type:'snake', start:88, end:24}, 
+            {type:'snake', start:62, end:18},
+            {type:'snake', start:48, end:26},
+            {type:'snake', start:36, end:6}, 
+            {type:'snake', start:32, end:10},
+            {type:'ladder', start:1, end:38},
+            {type:'ladder', start:4, end:14},
+            {type:'ladder', start:8, end:30},
+            {type:'ladder', start:21, end:42},
+            {type:'ladder', start:28, end:76},
+            {type:'ladder', start:50, end:67},
+            {type:'ladder', start:71, end:92},
+            {type:'ladder', start:80, end:99}
+        ];
+
+        canvas.width = width;
+        canvas.height = height;
+        // Ensure wrapper exists before setting its style
+        if (wrapper) {
+            wrapper.style.width = `${width}px`;
+        }
+        ctx.strokeStyle = '#555';
+        ctx.lineWidth = 2;
+
+        const setLocked = (tf) => {
+            locked = tf;
+        }
+
+        const boustrophedonWalk = (cols, rows) => {
+            let temp = [];
+            for(let row=0; row<rows; row++){
+                let t = Array.apply(null, Array(cols)).map((x, col) => {
+                    return {id:col+row*cols, y:height - gridSize - row*gridSize, x:col*gridSize};
+                });
+                t = row % 2 ? t.reverse() : t;
+                temp = [...temp, ...t];
+            }
+            return temp;
+        }
+
+        const drawPlayers = () => {
+            ctx.clearRect(0, 0, width, height);
+            if(player1.current > 0) {
+                ctx.fillStyle = player1.colour;
+                ctx.beginPath();
+                ctx.arc(player1.x+gridMid, player1.y+gridMid, 16, 0, 2 * Math.PI);
+                ctx.fill();
+                ctx.stroke();
+            }
+            if(player2.current > 0) {
+                ctx.fillStyle = player2.colour;
+                ctx.beginPath();
+                if(player2.current === player1.current){
+                    ctx.arc(player2.x+gridMid, player2.y+gridMid, 16, 45, Math.PI + 45);
+                } 
+                else {
+                    ctx.arc(player2.x+gridMid, player2.y+gridMid, 16, 0, 2 * Math.PI);
+                }
+                ctx.fill();
+                ctx.stroke();
+            }
+        }
+
+        const walk = () => {
+            if(!walkSequence[activePlayer.current]) { // Guard against undefined walkSequence index
+                 clearInterval(walking);
+                 resetTurn();
+                 togglePlayer();
+                 return;
+            }
+            activePlayer.x = walkSequence[activePlayer.current].x;
+            activePlayer.y = walkSequence[activePlayer.current].y;
+            activePlayer.current++; // Increment after accessing current position
+            drawPlayers();
+            
+            if(activePlayer.current > 99){ // current is now 1-based for display, target is 1-based
+                clearInterval(walking);
+                showWinner();
+                return;
+            }
+            
+            if(activePlayer.current >= activePlayer.target){
+                clearInterval(walking);
+                let sliding = false;
+                for(let i=0; i < obstacles.length; i++){
+                    if(obstacles[i].start === activePlayer.current){ // current is the square number
+                        activePlayer.target = obstacles[i].end;
+                        sliding = true;
+                        // Slide logic assumes target is the destination square number
+                        slide(activePlayer, walkSequence[activePlayer.target-1].x, walkSequence[activePlayer.target-1].y, slideSpeed);
+                        break;
+                    }
+                }
+                if(!sliding){
+                    resetTurn();
+                    togglePlayer();
+                }
+            }
+        }
+
+        const showWinner = () => {
+            setPlayerID('is the winner!');
+            if(resetGameBtn) resetGameBtn.classList.remove('hidden');
+        }
+
+        const setPlayerID = (msg='') => {
+            if(playerDisplay) playerDisplay.innerHTML = `${activePlayer.id} ${msg}`;
+            if(message) message.innerHTML = "Click dice to play";
+        }
+
+        const resetTurn = () => {
+            setLocked(false);
+        }
+
+        const slide = (element, dX, dY, dur=1) => {
+            // Simplified slide: direct move then update, as gsap is not included
+            element.x = dX;
+            element.y = dY;
+            // Update current position after slide
+            element.current = element.target; // Target is the destination square number
+            drawPlayers(); 
+            setTimeout(() => { // Delay to simulate slide and then toggle player
+                 resetTurn();
+                 togglePlayer();
+            }, dur * 500); // Adjusted delay
+        }
+        // const doOnUpdate = () => { // Not used without gsap
+        // 	drawPlayers();
+        // }
+        // const doOnComplete = () => { // Not used without gsap
+        // 	activePlayer.current = activePlayer.target;
+        // 	drawPlayers();
+        // 	resetTurn();
+        // 	togglePlayer();
+        // }
+
+        const togglePlayer = () => {
+            activePlayer = activePlayer.id === player1.id ? player2 : player1;
+            setPlayerID();
+            
+            if(activePlayer === player2){
+                rollDice();
+            }
+        }
+
+        const rollDice = (evt) => {
+            if(evt) evt.preventDefault();
+            if (locked) return;
+            setLocked(true);
+            
+            if(message) message.innerHTML = activePlayer === player1 ? "Rolling..." : 'Auto rolling...';
+            
+            rollCount = 0;
+            rollMax = Math.random()*10 + 15; // Number of visual rolls
+            rolling = setInterval(doRoll, rollSpeed);
+        }
+
+        const doRoll = () => {
+            rolled = Math.floor(Math.random() * 6 + 1);
+            diceRollDisplay(rolled);
+            if(rollCount++ >= rollMax){
+                clearInterval(rolling);
+                if(message) message.innerHTML = "Moving...";
+                activePlayer.target = activePlayer.current + rolled; // Target is the destination square number
+                if (activePlayer.target > 100) activePlayer.target = 100; 
+                
+                // Ensure current is not advanced here, walk() handles advancement
+                walking = setInterval(walk, walkSpeed);
+            }
+        }
+
+        const diceRollDisplay = (spots) => {
+            if(diceDisplay) diceDisplay.className = `dice s${spots}`; // Ensure class 'dice' is always present
+        }
+
+        const resetGame = () => {
+            player1.current = 0; player1.target = 0; player1.x = 0; player1.y = 0;
+            player2.current = 0; player2.target = 0; player2.x = 0; player2.y = 0;
+            activePlayer = player1;
+            locked = false;
+            diceRollDisplay('');
+            setPlayerID();
+            drawPlayers();
+            if(resetGameBtn) resetGameBtn.classList.add('hidden');
+            if (walking) clearInterval(walking);
+            if (rolling) clearInterval(rolling);
+        }
+
+        if(diceDisplay) diceDisplay.addEventListener('click', rollDice);
+        if(resetGameBtn) resetGameBtn.addEventListener('click', resetGame);
+
+        var walkSequence = boustrophedonWalk(10, 10);
+        setPlayerID(); // Initialize player display
+        drawPlayers(); // Draw initial state of players (none on board)
+        if(resetGameBtn) resetGameBtn.classList.add('hidden'); // Hide reset button initially
+    }
+});
+    </script>
     
 </body>
 </html>
