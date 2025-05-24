@@ -951,64 +951,6 @@ section {
     max-width: 100%; /* Ensure thumbnail is responsive */
     height: auto;
 }
-
-.snakes-ladders-game {
-    text-align: center;
-}
-.game-container-snakes-ladders {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    background-color: var(--color-grey-5);
-    /* padding: 1rem; // Padding moved to ensure it doesn't affect scroll width calc */
-    border-radius: var(--br-sm-2);
-    box-shadow: var(--box-shadow-1);
-    max-width: 520px; /* Max width of game plus some padding */
-    overflow-x: auto; /* Allow horizontal scrolling if content overflows */
-    padding: 1rem; /* Ensure padding doesn't add to fixed width issues */
-    margin: 0 auto;
-}
-.wrapper { /* Matches script.js selector */
-    width: 500px; /* Keep the game's fixed logical size */
-    height: 500px;
-    border: 2px solid var(--color-secondary);
-    margin: 0 auto; /* Center the fixed-size game within the scrollable container */
-}
-#snakesLaddersCanvas {
-    width: 100%;
-    height: 100%;
-    background-color: #fff; /* Default canvas background */
-}
-.game-controls-snakes-ladders {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
-.dice { /* For #diceThrow */
-    width: 50px;
-    height: 50px;
-    background-color: var(--color-white);
-    border: 2px solid var(--color-secondary);
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2em;
-    color: var(--color-secondary);
-}
-/* Basic styling for dice spots - script.js adds classes s1-s6 */
-.dice.s1::before { content: '\2680'; } /* Die face 1 */
-.dice.s2::before { content: '\2681'; } /* Die face 2 */
-.dice.s3::before { content: '\2682'; } /* Die face 3 */
-.dice.s4::before { content: '\2683'; } /* Die face 4 */
-.dice.s5::before { content: '\2684'; } /* Die face 5 */
-.dice.s6::before { content: '\2685'; } /* Die face 6 */
-
-.player-info {
-    font-size: 1.2em;
-}
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1356,28 +1298,6 @@ section {
                 </div>
             </div>
         </section>
-        
-        <section class="section sec7 snakes-ladders-game" id="snakes-ladders">
-            <div class="main-title">
-                <h2>Snakes &<span> Ladders</span><span class="bg-text">Retro Game</span></h2>
-            </div>
-            <div class="game-container-snakes-ladders">
-                <div class="wrapper"> <!-- script.js uses document.querySelector('.wrapper') -->
-                    <canvas id="snakesLaddersCanvas"></canvas> <!-- script.js uses document.querySelector('canvas') -->
-                </div>
-                <div class="game-controls-snakes-ladders">
-                    <div id="diceThrow" class="dice"></div> <!-- script.js uses document.querySelector('#diceThrow') -->
-                    <div class="player-info">
-                        <span class="playerName">Player 1</span>: <span class="message">Click dice to play</span>
-                        <!-- script.js uses document.querySelector('.playerName') and '.message' -->
-                    </div>
-                    <button id="reset" class="main-btn" style="margin-top: 1rem;"> <!-- script.js uses document.querySelector('#reset') -->
-                        <span class="btn-text">Reset Game</span>
-                        <span class="btn-icon"><i class="fas fa-redo"></i></span>
-                    </button>
-                </div>
-            </div>
-        </section>
 
     </main>
 
@@ -1394,10 +1314,7 @@ section {
         <div class="control control-4" data-id="terabox">
             <i class="fas fa-play-circle"></i>
         </div>
-        <div class="control control-5" data-id="snakes-ladders"> <!-- Renumbered -->
-            <i class="fas fa-dice-d6"></i>
-        </div>
-        <div class="control control-6 " data-id="contact"> <!-- Renumbered -->
+        <div class="control control-5 " data-id="contact"> <!-- Adjusted control-5 to be contact -->
             <i class="fas fa-envelope-open"></i>
         </div>
     </div>
@@ -1406,52 +1323,60 @@ section {
     </div>
     <script>
 const sections = document.querySelectorAll('.section');
-const sectBtns = document.querySelectorAll('.controlls');
-const sectBtn = document.querySelectorAll('.control');
-const allSections = document.querySelector('.main-content');
+const sections = document.querySelectorAll('.section'); // Keep this for PageTransition
+// const sectBtns = document.querySelectorAll('.controlls'); // Not needed globally with new PageTransition
+// const sectBtn = document.querySelectorAll('.control'); // Not needed globally with new PageTransition
+// const allSections = document.querySelector('.main-content'); // Not needed globally with new PageTransition
 
 
-function PageTransition(){
-    //Button click active class
-    for(let i=0; i < sectBtn.length; i++){
-        sectBtn[i].addEventListener('click', function() {
-            let currentBtn = document.querySelectorAll('.active-btn');
-            currentBtn[0].className = currentBtn[0].className.replace('active-btn', '');
-            this.className += ' active-btn';
-        })
+function PageTransition() {
+    const controlsContainer = document.querySelector('.controlls');
+    const sections = document.querySelectorAll('.section'); // Already declared globally, but good to have local reference if preferred
+    const sectBtns = document.querySelectorAll('.control'); 
+
+    if (controlsContainer) { 
+        controlsContainer.addEventListener('click', function(e) {
+            const clickedControl = e.target.closest('.control'); 
+            if (!clickedControl) return; 
+
+            const id = clickedControl.dataset.id;
+            if (id) {
+                // Update button states
+                sectBtns.forEach((btn) => {
+                    btn.classList.remove('active-btn');
+                });
+                clickedControl.classList.add('active-btn');
+
+                // Update section states
+                sections.forEach((section) => {
+                    section.classList.remove('active');
+                });
+
+                const element = document.getElementById(id);
+                if (element) {
+                    element.classList.add('active');
+                } else {
+                    // console.error("Target section with ID '" + id + "' not found."); 
+                }
+            }
+        });
+    } else {
+        // console.error("Controls container '.controlls' not found."); 
     }
-    
-    //sections active class
-    allSections.addEventListener('click', (e) =>{
-        const id = e.target.dataset.id;
-        if(id){
-            //remove selected from the other btns
-            sectBtns.forEach((btn) =>{
-                btn.classList.remove('active')
-            })
-            e.target.classList.add('active')
 
-            //hide other section
-            sections.forEach((section)=>{
-                section.classList.remove('active')
-            })
-
-            const element = document.getElementById(id);
-            element.classList.add('active');
-        }
-    })
-
-    //Toogle theme
-
+    // Theme toggle part
     const themeBtn = document.querySelector('.theme-btn');
-    themeBtn.addEventListener('click', () => {
-        let element = document.body;
-        element.classList.toggle('light-mode');
-    })
-
+    if (themeBtn) { 
+        themeBtn.addEventListener('click', () => {
+            let element = document.body;
+            element.classList.toggle('light-mode');
+        });
+    } else {
+        // console.error("Theme button '.theme-btn' not found."); 
+    }
 }
 
-PageTransition();
+PageTransition(); // Call the function to attach listeners
 
 async function fetchVideoData() {
     const urlInput = document.getElementById('urlInput').value;
@@ -1481,233 +1406,6 @@ async function fetchVideoData() {
 
     videoDetails.style.display = "block";
 }
-
-// Snakes and Ladders Game Logic (from script.js)
-// Ensure canvas and other elements are selected after they are in the DOM
-// It's good practice to wrap this in a DOMContentLoaded listener or ensure script runs after HTML
-document.addEventListener('DOMContentLoaded', () => {
-    let canvas = document.querySelector('#snakesLaddersCanvas'); 
-    // Check if canvas exists before proceeding
-    if (canvas) {
-        let wrapper = document.querySelector('.wrapper');
-        let resetGameBtn = document.querySelector('#reset');
-        let diceDisplay = document.querySelector('#diceThrow');
-        let playerDisplay = document.querySelector('.playerName');
-        let message = document.querySelector('.message');
-        let ctx = canvas.getContext('2d');
-        let height = 500;
-        let width = 500;
-        let gridSize = 50;
-        let gridMid = 25;
-        let walking, walkSpeed = 450;
-        let locked = false;
-        let slideSpeed = .5;
-        let rolled = '', rolling, rollCount, rollMax, rollSpeed=85;
-
-        let player1 = {current:0, target:0, x:0, y:0, colour:'#f36d', id:'You'};
-        let player2 = {current:0, target:0, x:0, y:0, colour:'#8a2d', id:'AutoBot'};
-        let activePlayer = player1;
-
-        const obstacles = [
-            {type:'snake', start:97, end:78},
-            {type:'snake', start:95, end:56},
-            {type:'snake', start:88, end:24}, 
-            {type:'snake', start:62, end:18},
-            {type:'snake', start:48, end:26},
-            {type:'snake', start:36, end:6}, 
-            {type:'snake', start:32, end:10},
-            {type:'ladder', start:1, end:38},
-            {type:'ladder', start:4, end:14},
-            {type:'ladder', start:8, end:30},
-            {type:'ladder', start:21, end:42},
-            {type:'ladder', start:28, end:76},
-            {type:'ladder', start:50, end:67},
-            {type:'ladder', start:71, end:92},
-            {type:'ladder', start:80, end:99}
-        ];
-
-        canvas.width = width;
-        canvas.height = height;
-        // Ensure wrapper exists before setting its style
-        if (wrapper) {
-            wrapper.style.width = `${width}px`;
-        }
-        ctx.strokeStyle = '#555';
-        ctx.lineWidth = 2;
-
-        const setLocked = (tf) => {
-            locked = tf;
-        }
-
-        const boustrophedonWalk = (cols, rows) => {
-            let temp = [];
-            for(let row=0; row<rows; row++){
-                let t = Array.apply(null, Array(cols)).map((x, col) => {
-                    return {id:col+row*cols, y:height - gridSize - row*gridSize, x:col*gridSize};
-                });
-                t = row % 2 ? t.reverse() : t;
-                temp = [...temp, ...t];
-            }
-            return temp;
-        }
-
-        const drawPlayers = () => {
-            ctx.clearRect(0, 0, width, height);
-            if(player1.current > 0) {
-                ctx.fillStyle = player1.colour;
-                ctx.beginPath();
-                ctx.arc(player1.x+gridMid, player1.y+gridMid, 16, 0, 2 * Math.PI);
-                ctx.fill();
-                ctx.stroke();
-            }
-            if(player2.current > 0) {
-                ctx.fillStyle = player2.colour;
-                ctx.beginPath();
-                if(player2.current === player1.current){
-                    ctx.arc(player2.x+gridMid, player2.y+gridMid, 16, 45, Math.PI + 45);
-                } 
-                else {
-                    ctx.arc(player2.x+gridMid, player2.y+gridMid, 16, 0, 2 * Math.PI);
-                }
-                ctx.fill();
-                ctx.stroke();
-            }
-        }
-
-        const walk = () => {
-            if(!walkSequence[activePlayer.current]) { // Guard against undefined walkSequence index
-                 clearInterval(walking);
-                 resetTurn();
-                 togglePlayer();
-                 return;
-            }
-            activePlayer.x = walkSequence[activePlayer.current].x;
-            activePlayer.y = walkSequence[activePlayer.current].y;
-            activePlayer.current++; // Increment after accessing current position
-            drawPlayers();
-            
-            if(activePlayer.current > 99){ // current is now 1-based for display, target is 1-based
-                clearInterval(walking);
-                showWinner();
-                return;
-            }
-            
-            if(activePlayer.current >= activePlayer.target){
-                clearInterval(walking);
-                let sliding = false;
-                for(let i=0; i < obstacles.length; i++){
-                    if(obstacles[i].start === activePlayer.current){ // current is the square number
-                        activePlayer.target = obstacles[i].end;
-                        sliding = true;
-                        // Slide logic assumes target is the destination square number
-                        slide(activePlayer, walkSequence[activePlayer.target-1].x, walkSequence[activePlayer.target-1].y, slideSpeed);
-                        break;
-                    }
-                }
-                if(!sliding){
-                    resetTurn();
-                    togglePlayer();
-                }
-            }
-        }
-
-        const showWinner = () => {
-            setPlayerID('is the winner!');
-            if(resetGameBtn) resetGameBtn.classList.remove('hidden');
-        }
-
-        const setPlayerID = (msg='') => {
-            if(playerDisplay) playerDisplay.innerHTML = `${activePlayer.id} ${msg}`;
-            if(message) message.innerHTML = "Click dice to play";
-        }
-
-        const resetTurn = () => {
-            setLocked(false);
-        }
-
-        const slide = (element, dX, dY, dur=1) => {
-            // Simplified slide: direct move then update, as gsap is not included
-            element.x = dX;
-            element.y = dY;
-            // Update current position after slide
-            element.current = element.target; // Target is the destination square number
-            drawPlayers(); 
-            setTimeout(() => { // Delay to simulate slide and then toggle player
-                 resetTurn();
-                 togglePlayer();
-            }, dur * 500); // Adjusted delay
-        }
-        // const doOnUpdate = () => { // Not used without gsap
-        // 	drawPlayers();
-        // }
-        // const doOnComplete = () => { // Not used without gsap
-        // 	activePlayer.current = activePlayer.target;
-        // 	drawPlayers();
-        // 	resetTurn();
-        // 	togglePlayer();
-        // }
-
-        const togglePlayer = () => {
-            activePlayer = activePlayer.id === player1.id ? player2 : player1;
-            setPlayerID();
-            
-            if(activePlayer === player2){
-                rollDice();
-            }
-        }
-
-        const rollDice = (evt) => {
-            if(evt) evt.preventDefault();
-            if (locked) return;
-            setLocked(true);
-            
-            if(message) message.innerHTML = activePlayer === player1 ? "Rolling..." : 'Auto rolling...';
-            
-            rollCount = 0;
-            rollMax = Math.random()*10 + 15; // Number of visual rolls
-            rolling = setInterval(doRoll, rollSpeed);
-        }
-
-        const doRoll = () => {
-            rolled = Math.floor(Math.random() * 6 + 1);
-            diceRollDisplay(rolled);
-            if(rollCount++ >= rollMax){
-                clearInterval(rolling);
-                if(message) message.innerHTML = "Moving...";
-                activePlayer.target = activePlayer.current + rolled; // Target is the destination square number
-                if (activePlayer.target > 100) activePlayer.target = 100; 
-                
-                // Ensure current is not advanced here, walk() handles advancement
-                walking = setInterval(walk, walkSpeed);
-            }
-        }
-
-        const diceRollDisplay = (spots) => {
-            if(diceDisplay) diceDisplay.className = `dice s${spots}`; // Ensure class 'dice' is always present
-        }
-
-        const resetGame = () => {
-            player1.current = 0; player1.target = 0; player1.x = 0; player1.y = 0;
-            player2.current = 0; player2.target = 0; player2.x = 0; player2.y = 0;
-            activePlayer = player1;
-            locked = false;
-            diceRollDisplay('');
-            setPlayerID();
-            drawPlayers();
-            if(resetGameBtn) resetGameBtn.classList.add('hidden');
-            if (walking) clearInterval(walking);
-            if (rolling) clearInterval(rolling);
-        }
-
-        if(diceDisplay) diceDisplay.addEventListener('click', rollDice);
-        if(resetGameBtn) resetGameBtn.addEventListener('click', resetGame);
-
-        var walkSequence = boustrophedonWalk(10, 10);
-        setPlayerID(); // Initialize player display
-        drawPlayers(); // Draw initial state of players (none on board)
-        if(resetGameBtn) resetGameBtn.classList.add('hidden'); // Hide reset button initially
-    }
-});
     </script>
     
 </body>
