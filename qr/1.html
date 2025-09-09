@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Surprise - Your Panda 🐼</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Dancing Script', cursive;
+      background: linear-gradient(to bottom right, #0f0c29, #302b63, #24243e); /* Night sky gradient */
+      color: #ffffff;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Starry background */
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="10" cy="10" r="1" fill="white"/><circle cx="30" cy="50" r="1" fill="white"/><circle cx="70" cy="20" r="1" fill="white"/><circle cx="90" cy="80" r="1" fill="white"/><circle cx="50" cy="90" r="1" fill="white"/></svg>') repeat;
+      opacity: 0.3;
+      animation: twinkle 5s infinite alternate;
+    }
+
+    @keyframes twinkle {
+      0% { opacity: 0.3; }
+      100% { opacity: 0.6; }
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+      max-width: 600px;
+      animation: fadeIn 2s ease-in-out, pulse 2s infinite alternate;
+      z-index: 2;
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      color: #ff69b4;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 10px rgba(255, 105, 180, 0.8);
+    }
+
+    p {
+      font-size: 1.5rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      color: #ffd1dc;
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+
+    .signature {
+      margin-top: 1.5rem;
+      font-style: italic;
+      font-weight: bold;
+      color: #ff69b4;
+      font-size: 1.8rem;
+    }
+
+    img.placeholder {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 15px;
+      margin: 1rem 0;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.05); }
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* Animated Comet */
+    .comet {
+      position: absolute;
+      top: -50px;
+      right: -100px;
+      width: 100px;
+      height: 5px;
+      background: linear-gradient(to right, transparent, #ffffff, #ff69b4);
+      border-radius: 50%;
+      box-shadow: 0 0 20px #ffffff;
+      animation: comet 5s linear infinite;
+      z-index: 1;
+    }
+
+    @keyframes comet {
+      0% { transform: translate(0, 0) rotate(-45deg); opacity: 0; }
+      10% { opacity: 1; }
+      100% { transform: translate(-200vw, 200vh) rotate(-45deg); opacity: 0; }
+    }
+
+    /* Heart Bubbles */
+    .heart-bubble {
+      position: absolute;
+      bottom: -50px;
+      width: 30px;
+      height: 30px;
+      background: transparent;
+      animation: bubble 10s linear infinite;
+      z-index: 1;
+      opacity: 0.7;
+    }
+
+    .heart-bubble::before,
+    .heart-bubble::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 15px;
+      height: 25px;
+      background: #ff69b4;
+      border-radius: 50px 50px 0 0;
+      transform: rotate(-45deg);
+    }
+
+    .heart-bubble::after {
+      left: 15px;
+      transform: rotate(45deg);
+    }
+
+    @keyframes bubble {
+      0% { transform: translateY(0) scale(0.5); opacity: 0.5; left: calc(50% + (var(--rand-x) * 1vw)); }
+      50% { opacity: 1; }
+      100% { transform: translateY(-120vh) scale(1.5); opacity: 0; }
+    }
+
+    /* Multiple hearts with delays and positions */
+    .heart-bubble:nth-child(1) { animation-delay: 0s; --rand-x: -40; }
+    .heart-bubble:nth-child(2) { animation-delay: 2s; --rand-x: 20; }
+    .heart-bubble:nth-child(3) { animation-delay: 4s; --rand-x: -10; }
+    .heart-bubble:nth-child(4) { animation-delay: 6s; --rand-x: 30; }
+    .heart-bubble:nth-child(5) { animation-delay: 8s; --rand-x: -20; }
+  </style>
+</head>
+<body>
+  <!-- Comet -->
+  <div class="comet"></div>
+
+  <!-- Heart Bubbles -->
+  <div class="heart-bubble"></div>
+  <div class="heart-bubble"></div>
+  <div class="heart-bubble"></div>
+  <div class="heart-bubble"></div>
+  <div class="heart-bubble"></div>
+
+  <div class="container">
+    <h1>💖 Surprise #1 💖</h1>
+    <p>
+      Jab se aap meri zindagi me aaye ho,<br>
+      har khushi ne mera ghar bana liya hai.<br>
+      Yeh chhota sa teddy sirf ek nishaani hai,<br>
+      warna meri rooh to pehle hi aapke paas rehne lagi hai.<br>
+      Safar ki shuruaat aaj se hai,<br>
+      aur main chahta hoon ki yeh hamesha aapke saath hi chale.
+    </p>
+    <!--img src="../images/placeholder1.jpg" alt="Surprise Image" class="placeholder" / -->
+    <!-- Song embed placeholder -->
+    <!-- Example: <iframe src="SONG_LINK_HERE" ...></iframe> -->
+    <div class="signature">— Your Panda 🐼</div>
+  </div>
+</body>
+</html>

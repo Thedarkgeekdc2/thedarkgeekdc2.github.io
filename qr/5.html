@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Surprise - Your Panda 🐼</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Dancing Script', cursive;
+      background: radial-gradient(circle at center, #330000, #000000);
+      color: #fff;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Moving smoke background */
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 200%; height: 200%;
+      background: url('https://i.ibb.co/b2mT9vr/smoke.png') repeat;
+      background-size: cover;
+      animation: smokeMove 40s linear infinite;
+      opacity: 0.15;
+      z-index: 0;
+    }
+    @keyframes smokeMove {
+      from { transform: translate(0,0); }
+      to { transform: translate(-200px,-200px); }
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      border-radius: 20px;
+      border: 2px solid rgba(255, 0, 80, 0.6);
+      box-shadow: 0 0 25px rgba(255, 0, 80, 0.8);
+      max-width: 650px;
+      animation: fadeIn 2s ease-in-out;
+      backdrop-filter: blur(12px);
+      z-index: 2;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      color: #ff3366;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 15px rgba(255, 0, 80, 0.9);
+    }
+
+    p {
+      font-size: 1.6rem;
+      line-height: 1.9;
+      margin-bottom: 1rem;
+      color: #ffb3c6;
+      text-shadow: 0 0 8px rgba(255, 100, 150, 0.7);
+    }
+
+    .signature {
+      margin-top: 1.5rem;
+      font-style: italic;
+      font-weight: bold;
+      color: #ff3366;
+      font-size: 1.8rem;
+    }
+
+    img.placeholder {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 15px;
+      margin: 1rem 0;
+      box-shadow: 0 6px 20px rgba(255,0,80,0.6);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* Floating emojis */
+    .emoji {
+      position: absolute;
+      bottom: -60px;
+      font-size: 2.2rem;
+      animation: rise 10s linear infinite;
+      opacity: 0.8;
+      z-index: 1;
+    }
+    @keyframes rise {
+      0% { transform: translateY(0) scale(0.6); opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-120vh) scale(1.2); opacity: 0; }
+    }
+    .emoji:nth-child(1) { left: 20%; animation-delay: 0s; }
+    .emoji:nth-child(2) { left: 40%; animation-delay: 3s; }
+    .emoji:nth-child(3) { left: 60%; animation-delay: 6s; }
+    .emoji:nth-child(4) { left: 80%; animation-delay: 9s; }
+  </style>
+</head>
+<body>
+  <!-- Floating emojis -->
+  <div class="emoji">🔥</div>
+  <div class="emoji">💋</div>
+  <div class="emoji">❤️</div>
+  <div class="emoji">🔥</div>
+
+  <div class="container">
+    <h1>🔥 Surprise #5 💋</h1>
+    <p>
+      Aaj raat kuch khaas hone wala hai,<br>
+      massage oil ke har touch me sirf jazbaat hone wale hain.<br>
+      Har pal me ek nayi mehek hogi,<br>
+      aur har game ke rule me sirf pyaar ki gehraayi hogi.<br>
+      Aapke saath ye safar aur bhi haseen hai,<br>
+      jahan sirf rooh ka ehsaas aur dil ka junoon hoga. ❤️
+    </p>
+    <!-- img src="../images/placeholder5.jpg" alt="Surprise Image" class="placeholder" / -->
+    <!-- Song embed placeholder -->
+    <div class="signature">— Your Panda 🐼</div>
+  </div>
+</body>
+</html>

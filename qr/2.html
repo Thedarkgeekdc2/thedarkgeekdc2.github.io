@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Surprise - Your Panda 🐼</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Dancing Script', cursive;
+    background: radial-gradient(#ffccd5, #ffe6f0, #fff0f5);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  /* Floating particles / notes */
+  .particle {
+    position: absolute;
+    width: 12px; height: 12px;
+    background: rgba(255, 102, 204, 0.7);
+    border-radius: 50%;
+    animation: floatParticle linear infinite;
+  }
+
+  @keyframes floatParticle {
+    0% { transform: translateY(100vh) translateX(0) rotate(0deg); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-20vh) translateX(50vw) rotate(360deg); opacity: 0; }
+  }
+
+  .container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2rem 2.5rem;
+    border-radius: 25px;
+    backdrop-filter: blur(15px);
+    text-align: center;
+    max-width: 700px;
+    box-shadow: 0 8px 40px rgba(255,182,193,0.4);
+    position: relative;
+    z-index: 2;
+    animation: containerFade 1.5s ease-in-out forwards;
+  }
+
+  @keyframes containerFade {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+
+  h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    color: #ff3366;
+    margin-bottom: 1rem;
+    animation: glowText 3s ease-in-out infinite alternate;
+    text-shadow: 0 0 10px #ff99cc, 0 0 20px #ff6699;
+  }
+
+  @keyframes glowText {
+    0% { text-shadow: 0 0 10px #ff99cc, 0 0 20px #ff6699; }
+    100% { text-shadow: 0 0 25px #ff99cc, 0 0 35px #ff3366; }
+  }
+
+  p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: #ff1a75; /* Strong pink for visibility */
+    margin-bottom: 1rem;
+    animation: fadeText 2s ease-in-out forwards;
+    opacity: 1; /* Start visible */
+  }
+
+  @keyframes fadeText {
+    0% { opacity: 0; transform: translateY(10px);}
+    100% { opacity: 1; transform: translateY(0);}
+  }
+
+  .signature {
+    font-style: italic;
+    font-weight: bold;
+    color: #ff3366;
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+    animation: floatSignature 4s ease-in-out infinite;
+  }
+
+  @keyframes floatSignature {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+</style>
+</head>
+<body>
+
+<!-- Floating Particles -->
+<div class="particle" style="left:10%; animation-duration:12s;"></div>
+<div class="particle" style="left:25%; animation-duration:10s;"></div>
+<div class="particle" style="left:40%; animation-duration:14s;"></div>
+<div class="particle" style="left:55%; animation-duration:11s;"></div>
+<div class="particle" style="left:70%; animation-duration:13s;"></div>
+<div class="particle" style="left:85%; animation-duration:15s;"></div>
+
+<div class="container">
+  <h1>💖 Surprise #2 💖</h1>
+  <p>
+    Aaj ka suraj naye rang lekar utra hai,<br>
+    par meri subah tabhi hoti hai jab main aapko dekhta hoon.<br>
+    Yeh khushbu sirf ek zariya hai,<br>
+    warna meri rooh ki asli mehek to aapke saath hi jud jaati hai.<br>
+    Chaand, sitare aur roshni sab fanaa hai,<br>
+    bas aap meri zindagi ka wo noor ho jo kabhi kam nahi hota.
+  </p>
+  <div class="signature">— Your Panda 🐼</div>
+</div>
+
+</body>
+</html>

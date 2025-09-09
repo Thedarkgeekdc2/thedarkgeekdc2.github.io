@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Surprise - Your Panda 🐼</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Dancing Script', cursive;
+      background: radial-gradient(circle at top, #000010, #0a0a2a, #000000);
+      color: #fff;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Twinkling stars */
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: white;
+      border-radius: 50%;
+      animation: twinkle 3s infinite alternate;
+    }
+    @keyframes twinkle {
+      from { opacity: 0.2; }
+      to { opacity: 1; }
+    }
+    .star:nth-child(1) { top: 20%; left: 25%; animation-delay: 0s; }
+    .star:nth-child(2) { top: 40%; left: 70%; animation-delay: 1s; }
+    .star:nth-child(3) { top: 60%; left: 50%; animation-delay: 2s; }
+    .star:nth-child(4) { top: 80%; left: 30%; animation-delay: 3s; }
+    .star:nth-child(5) { top: 15%; left: 80%; animation-delay: 4s; }
+
+    /* Shooting star */
+    .shooting-star {
+      position: absolute;
+      top: -50px;
+      left: 100%;
+      width: 100px;
+      height: 3px;
+      background: linear-gradient(to left, white, transparent);
+      border-radius: 50%;
+      animation: shoot 8s linear infinite;
+    }
+    @keyframes shoot {
+      0% { transform: translate(0,0); opacity: 0; }
+      10% { opacity: 1; }
+      100% { transform: translate(-120vw,120vh); opacity: 0; }
+    }
+
+    /* Floating memories emojis */
+    .memory {
+      position: absolute;
+      bottom: -50px;
+      font-size: 2rem;
+      animation: rise 12s linear infinite;
+      opacity: 0.8;
+    }
+    @keyframes rise {
+      0% { transform: translateY(0) scale(0.6); opacity: 0.5; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-120vh) scale(1.2); opacity: 0; }
+    }
+    .memory:nth-child(1) { left: 20%; animation-delay: 0s; }
+    .memory:nth-child(2) { left: 40%; animation-delay: 4s; }
+    .memory:nth-child(3) { left: 60%; animation-delay: 8s; }
+    .memory:nth-child(4) { left: 80%; animation-delay: 2s; }
+
+    .container {
+      background: rgba(255,255,255,0.1);
+      padding: 2rem;
+      border-radius: 20px;
+      border: 2px solid rgba(200,200,255,0.6);
+      box-shadow: 0 0 25px rgba(150,150,255,0.9);
+      max-width: 700px;
+      animation: fadeIn 2s ease-in-out;
+      z-index: 2;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      color: #87cefa;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 15px rgba(135,206,250,0.9);
+    }
+
+    p {
+      font-size: 1.6rem;
+      line-height: 1.9;
+      margin-bottom: 1rem;
+      color: #e0f7ff;
+      text-shadow: 0 0 6px rgba(200,200,255,0.7);
+    }
+
+    .signature {
+      margin-top: 1.5rem;
+      font-style: italic;
+      font-weight: bold;
+      color: #87cefa;
+      font-size: 1.8rem;
+    }
+
+    img.placeholder {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 15px;
+      margin: 1rem 0;
+      box-shadow: 0 6px 20px rgba(135,206,250,0.6);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Stars -->
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+
+  <!-- Shooting star -->
+  <div class="shooting-star"></div>
+
+  <!-- Floating memories emojis -->
+  <div class="memory">🖼️</div>
+  <div class="memory">📸</div>
+  <div class="memory">🖼️</div>
+  <div class="memory">📸</div>
+
+  <div class="container">
+    <h1>🌌 Surprise #6 🖼️</h1>
+    <p>
+      Aap meri kahani ka wo hissa ho,<br>
+      jahan har safha roshni se bhar jaata hai.<br>
+      Yeh portrait ek nishaani hai,<br>
+      ki chahe dooriyaan ho jaayein, yaadein kabhi kam nahi hoti.<br>
+      Zindagi ke is goodbye me bhi,<br>
+      sirf ek nayi shuruaat छुपी hai — aapke saath. 💖
+    </p>
+    <!-- img src="../images/placeholder6.jpg" alt="Surprise Image" class="placeholder" / -->
+    <!-- Song embed placeholder -->
+    <div class="signature">— Your Panda 🐼</div>
+  </div>
+</body>
+</html>

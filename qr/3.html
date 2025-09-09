@@ -1,0 +1,156 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Surprise - Your Panda 🐼</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Dancing Script', cursive;
+      background: linear-gradient(to bottom right, #1a2a6c, #b21f1f, #fdbb2d);
+      color: #ffffff;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255,0,150,0.4) 0%, transparent 70%),
+              radial-gradient(circle, rgba(255,140,0,0.4) 0%, transparent 80%);
+  animation: glow 6s infinite alternate;
+  z-index: 0;
+}
+
+@keyframes glow {
+  0% { opacity: 0.3; }
+  100% { opacity: 0.7; }
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  max-width: 650px;
+  animation: fadeIn 2s ease-in-out;
+  z-index: 2;
+  backdrop-filter: blur(12px);
+}
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: #ff3366;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 15px rgba(255, 51, 102, 0.8);
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  color: #ffe6f0;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+}
+
+.signature {
+  margin-top: 1.5rem;
+  font-style: italic;
+  font-weight: bold;
+  color: #ff3366;
+  font-size: 1.8rem;
+}
+
+img.placeholder {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 15px;
+  margin: 1rem 0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+/* Extra Sparkling Hearts */
+.spark-heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #ff3366;
+  transform: rotate(45deg);
+  animation: sparkle 6s infinite ease-in-out;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.spark-heart::before,
+.spark-heart::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #ff3366;
+  border-radius: 50%;
+}
+
+.spark-heart::before { top: -10px; left: 0; }
+.spark-heart::after { left: -10px; top: 0; }
+
+@keyframes sparkle {
+  0% { transform: scale(0.5) rotate(45deg); opacity: 0.3; top: 90%; left: 50%; }
+  50% { opacity: 1; }
+  100% { transform: scale(1.2) rotate(45deg); opacity: 0; top: -20%; left: calc(20% + (var(--rand-x) * 1vw)); }
+}
+
+.spark-heart:nth-child(1) { animation-delay: 0s; --rand-x: 10; }
+.spark-heart:nth-child(2) { animation-delay: 2s; --rand-x: -20; }
+.spark-heart:nth-child(3) { animation-delay: 4s; --rand-x: 25; }
+.spark-heart:nth-child(4) { animation-delay: 6s; --rand-x: -15; }
+.spark-heart:nth-child(5) { animation-delay: 8s; --rand-x: 5; }
+
+  </style>
+</head>
+<body>
+  <!-- Sparkling Hearts -->
+  <div class="spark-heart"></div>
+  <div class="spark-heart"></div>
+  <div class="spark-heart"></div>
+  <div class="spark-heart"></div>
+  <div class="spark-heart"></div>  <div class="container">
+    <h1>🔥 Surprise #3 🔥</h1>
+    <p>
+      Raat ke andheron me bhi ek roshni hai,<br>
+      jo sirf aapki adaon se chamakti hai.<br>
+      Aaj ki raat sirf hansi, sharaarat aur deewangi ki hogi,<br>
+      jahan har pal sirf aap meri khwahish ban jaayengi.<br>
+      Chand bhi sharma jaayega, sitare bhi muskaan denge,<br>
+      jab aap meri baahon ka taaj banengi.
+    </p>
+    <!--img src="../images/placeholder3.jpg" alt="Surprise Image" class="placeholder" /-->
+    <!-- Song embed placeholder -->
+    <!-- Example: <iframe src="SONG_LINK_HERE" ...></iframe> -->
+    <div class="signature">— Your Panda 🐼</div>
+  </div>
+</body>
+</html>
