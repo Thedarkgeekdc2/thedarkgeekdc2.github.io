@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>For My Queen — Mr. DK</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#05011a;
+    --card-bg: rgba(255,255,255,0.03);
+    --accent: #ff6b81;
+    --glass: rgba(255,255,255,0.06);
+  }
+  html,body{height:100%; margin:0; font-family: 'Montserrat', sans-serif; background:var(--bg); overflow:hidden; color:#fff;}
+  /* full canvas for stars */
+  #starfield{position:fixed; inset:0; z-index:0; display:block;}
+
+  /* floating hearts container */
+  #hearts{position:fixed; inset:0; pointer-events:none; z-index:1;}
+
+  /* main content card */
+  .container{
+    position:relative;
+    z-index:2;
+    width:92%;
+    max-width:760px;
+    margin:40px auto;
+    background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border-radius:16px;
+    padding:20px;
+    box-shadow: 0 6px 30px rgba(0,0,0,0.6);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255,255,255,0.04);
+  }
+
+  .photo-wrap{
+    display:flex;
+    justify-content:center;
+    margin-top:6px;
+  }
+  img.profile{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:18px;
+    border:6px solid rgba(255,255,255,0.08);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  }
+
+  .title{
+    text-align:center;
+    font-family:'Playfair Display', serif;
+    font-size:20px;
+    margin-top:12px;
+    color:#ffdfe6;
+    letter-spacing:0.4px;
+  }
+
+  .shayari{
+    margin-top:18px;
+    font-size:18px;
+    line-height:1.6;
+    color:#f7ecff;
+    padding:18px;
+    border-radius:10px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border:1px solid rgba(255,255,255,0.03);
+    text-align:center;
+  }
+
+  .meta{
+    margin-top:12px;
+    text-align:center;
+    color:#d0c7ff;
+    font-size:14px;
+  }
+
+  /* play control */
+  .play-btn{
+    display:inline-block;
+    margin-top:14px;
+    background:linear-gradient(90deg,#ff6b81,#ff9aa2);
+    color:white;
+    padding:10px 18px;
+    border-radius:30px;
+    cursor:pointer;
+    border:none;
+    font-weight:600;
+    box-shadow:0 6px 18px rgba(255,107,129,0.18);
+  }
+
+  /* hearts CSS (for pure CSS hearts fallback) */
+  .heart {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    transform: rotate(-45deg);
+    opacity: 0.9;
+    pointer-events:none;
+  }
+  .heart:before,
+  .heart:after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: linear-gradient(180deg,#ff9aa2,#ff6b81);
+    border-radius: 50%;
+    left: 0;
+    top: -9px;
+  }
+  .heart:after{
+    left: 9px;
+    top: 0;
+  }
+
+  /* small responsive tweaks */
+  @media (max-width:420px){
+    img.profile{width:160px;height:160px;}
+    .shayari{font-size:16px;}
+  }
+</style>
+</head>
+<body>
+
+<canvas id="starfield"></canvas>
+<div id="hearts"></div>
+
+<div class="container" role="main" aria-labelledby="pageTitle">
+  <h1 id="pageTitle" class="title">Ek Khubsurat Yaad — Sirf Aapke Liye</h1>
+
+  <div class="photo-wrap">
+    <!-- Save your uploaded image as "wife.jpg" in same folder, or change src accordingly -->
+    <img src="wife.jpg" alt="Aapki tasveer" class="profile" id="profileImage">
+  </div>
+
+  <div class="shayari" id="shayariBlock">
+    <!-- Shayari text (you can edit) -->
+    <p style="margin:0;">
+      Ek saal pehle ka wo pal yaad aata hai, <br>
+      Aaj bhi aapki muskaan ka wahi jadoo chadha hai…<br><br>
+
+      Aaj bhi wahi roshni aankhon me basi hai, <br>
+      Jaise waqt ruk gaya ho, aur khoobsurti wahi rasi hai…<br><br>
+
+      Har din guzarta hai, par jazbaat nahi badle, <br>
+      Aap ke liye dil ke ehsaas kabhi kam nahi padle…<br><br>
+
+      Dooriyan sirf zameen ki, par pyaar me koi faasla nahi, <br>
+      Ek saal pehle bhi aap meri dua thi… <strong>aaj bhi aap hi dua hain wahi.
+      ~YOUR PANDA</strong> 🌸
+    </p>
+  </div>
+
+  <div class="meta">
+    <button class="play-btn" id="playBtn">Play Music / AirPlay</button>
+  </div>
+</div>
+
+<!-- audio: replace src with "romantic.mp3" local file or an online mp3 link -->
+<audio id="bgAudio" x-webkit-airplay="allow" controls crossorigin="anonymous" style="display:none;">
+  <source src="romantic.mp3" type="audio/mpeg">
+  <!-- If you want to use an online mp3, replace the src above with the URL. -->
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+/* -------- STARFIELD (canvas) -------- */
+const canvas = document.getElementById('starfield');
+const ctx = canvas.getContext('2d');
+let w = canvas.width = window.innerWidth;
+let h = canvas.height = window.innerHeight;
+const stars = [];
+const STAR_COUNT = Math.round((w*h)/6000);
+
+function rand(min,max){ return Math.random()*(max-min)+min; }
+
+function createStars(){
+  stars.length = 0;
+  for(let i=0;i<STAR_COUNT;i++){
+    stars.push({
+      x: rand(0,w),
+      y: rand(0,h),
+      r: rand(0.3,1.8),
+      vx: rand(-0.05,0.05),
+      vy: rand(-0.02,0.02),
+      alpha: rand(0.2,1),
+      twinkle: Math.random()*0.02
+    });
+  }
+}
+function resize(){
+  w = canvas.width = window.innerWidth;
+  h = canvas.height = window.innerHeight;
+  createStars();
+}
+window.addEventListener('resize', resize);
+createStars();
+
+function drawStars(){
+  ctx.clearRect(0,0,w,h);
+  // faint purple-blue radial for galaxy feel
+  const g = ctx.createLinearGradient(0,0,w,h);
+  g.addColorStop(0,'rgba(12,9,40,0.5)');
+  g.addColorStop(1,'rgba(5,1,26,0.85)');
+  ctx.fillStyle = g;
+  ctx.fillRect(0,0,w,h);
+
+  for(let s of stars){
+    s.x += s.vx;
+    s.y += s.vy;
+    s.alpha += (Math.random()-0.5)*s.twinkle;
+    if(s.alpha < 0.15) s.alpha = 0.15;
+    if(s.alpha > 1) s.alpha = 1;
+    if(s.x < 0) s.x = w;
+    if(s.x > w) s.x = 0;
+    if(s.y < 0) s.y = h;
+    if(s.y > h) s.y = 0;
+
+    ctx.beginPath();
+    ctx.fillStyle = 'rgba(255,255,255,'+ (s.alpha*0.9) +')';
+    ctx.arc(s.x, s.y, s.r, 0, Math.PI*2);
+    ctx.fill();
+  }
+  requestAnimationFrame(drawStars);
+}
+drawStars();
+
+/* -------- HEARTS: spawn floating hearts periodically -------- */
+const heartsContainer = document.getElementById('hearts');
+function spawnHeart(){
+  const heart = document.createElement('div');
+  heart.classList.add('heart');
+  const size = Math.random()*22 + 12;
+  heart.style.width = size + 'px';
+  heart.style.height = size + 'px';
+  heart.style.left = (Math.random()*100) + '%';
+  heart.style.top = (70 + Math.random()*30) + '%';
+  heart.style.opacity = Math.random()*0.9 + 0.2;
+  heart.style.transform = 'rotate(-45deg) scale(0.6)';
+  heartsContainer.appendChild(heart);
+
+  // animation using JS
+  const endY = (Math.random()*35) + 3; // top percent
+  const duration = Math.random()*7000 + 7000;
+  heart.animate([
+    { transform: 'translateY(0) rotate(-45deg) scale(0.6)', opacity: heart.style.opacity },
+    { transform: `translateY(-${endY}vh) rotate(-45deg) scale(1)`, opacity: 0.05 }
+  ], { duration: duration, easing:'ease-out' });
+
+  setTimeout(()=> heart.remove(), duration+50);
+}
+setInterval(spawnHeart, 900); // spawn every ~0.9s
+// spawn a few initially
+for(let i=0;i<6;i++){ setTimeout(spawnHeart, i*300); }
+
+/* -------- music / play button handling -------- */
+const audio = document.getElementById('bgAudio');
+const playBtn = document.getElementById('playBtn');
+
+playBtn.addEventListener('click', async () => {
+  try {
+    if(audio.paused){
+      await audio.play();
+      playBtn.textContent = 'Pause Music';
+    } else {
+      audio.pause();
+      playBtn.textContent = 'Play Music / AirPlay';
+    }
+  } catch(e){
+    // autoplay blocked; show simple message
+    alert('Browser ne autoplay block kiya. Play button dubara dhyan se dabaiye ya audio file confirm kijiye.');
+  }
+});
+
+/* optional: clicking on profile image triggers a gentle glow */
+const img = document.getElementById('profileImage');
+img.addEventListener('mouseenter', ()=> img.style.boxShadow = '0 18px 40px rgba(255,107,129,0.18)');
+img.addEventListener('mouseleave', ()=> img.style.boxShadow = '0 10px 30px rgba(0,0,0,0.6)');
+
+</script>
+</body>
+</html>
