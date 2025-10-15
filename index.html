@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="𝗗𝗶𝗻𝗲𝘀𝗵 𝗖𝗵𝗮𝘂𝗱𝗵𝗮𝗿𝘆">
-    <meta property="og:description" content="𝗧𝐫𝐚𝐢𝐧𝐞𝐞 | 𝗔𝐩𝐤 &amp; 𝗪𝐞𝐛 𝗗𝐞𝐯 | 𝗘𝐭𝐡𝐢𝐜𝐚𝐥 𝗛𝐚𝐜𝐤𝐞𝐫">
+    <meta property="og:description" content="𝗧𝐫𝐚𝐢𝐧𝐞𝐞 | 𝗔𝐩𝐤 &amp; 𝗪𝐞𝐛 𝗗𝗲𝐯 | 𝗘𝐭𝐡𝐢𝐜𝐚𝐥 𝗛𝐚𝐜𝗸𝐞𝐫">
     <meta property="og:url" content="https://linktr.ee/thedarkgeekdc">
     <meta property="og:image" content="https://raw.githubusercontent.com/Thedarkgeekdc2/thedarkgeekdc2.github.io/main/img/view.jpg">
     <meta property="og:image:width" content="1200">
@@ -158,6 +158,19 @@ body {
   font-size: 1.1rem;
   color: var(--color-white);
   transition: all 0.4s ease-in-out;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Universe Galaxy Background with Moving Stars */
+#stars-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
 }
 
 a {
@@ -186,7 +199,7 @@ section {
 .section {
   transform: translateY(-100%) scale(0);
   transition: all 0.4s ease-in-out;
-  background-color: var(--color-primary);
+  background-color: transparent; /* Make sections transparent to show background */
 }
 
 .sec1 {
@@ -287,6 +300,7 @@ section {
   align-items: center;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
   transition: all 0.1s ease-in-out;
+  z-index: 10;
 }
 .theme-btn:active {
   transform: translateY(-3px);
@@ -961,6 +975,7 @@ section {
 <script src="https://vjs.zencdn.net/8.16.1/video.min.js" defer></script>
 </head>
 <body class="main-content">
+    <canvas id="stars-canvas"></canvas>
     <header class="section sec1 header active" id="home">
         <div class="header-content">
             <div class="left-header"> <!-- This div will now wrap the card -->
@@ -1106,7 +1121,7 @@ section {
                 </div>
                 <p class="tl-duration">2022 - 2023</p>
                 <h5>Aspirants of- <span>OneDay Exams</span></h5>
-                <p>Main Focused on KVS,RO/ARO <br> <p>and free lancer educator.</p></p>
+                <p>Main Focused on KVS,RO/ARO <br> and free lancer educator.</p>
             </div>
             <div class="timeline-item">
                 <div class="tl-icon">
@@ -1136,7 +1151,7 @@ section {
             <div class="portfolios">
                 <div class="portfolio-item">
                     <div class="image">
-                        <img src="img/port1.png" alt="termux-login">
+                        <img src="img/port1.png" alt="termux-login" loading="lazy">
                     </div>
                     <div class="hover-items">
                       <h3>Project source</h3>
@@ -1149,7 +1164,7 @@ section {
                 </div>
                 <div class="portfolio-item">
                     <div class="image">
-                        <img src="img/port2.jpg" alt="FUNTOOL">
+                        <img src="img/port2.jpg" alt="FUNTOOL" loading="lazy">
                     </div>
                     <div class="hover-items">
                       <h3>Project source</h3>
@@ -1162,7 +1177,7 @@ section {
                 </div>
                 <div class="portfolio-item">
                     <div class="image">
-                        <img src="img/port3.jpg" alt="P2P VC">
+                        <img src="img/port3.jpg" alt="P2P VC" loading="lazy">
                     </div>
                     <div class="hover-items">
                       <h3>Project source</h3>
@@ -1175,7 +1190,7 @@ section {
                 </div>
                 <div class="portfolio-item">
                     <div class="image">
-                        <img src="img/port4.jpg" alt="tui Interface">
+                        <img src="img/port4.jpg" alt="tui Interface" loading="lazy">
                     </div>
                     <div class="hover-items">
                       <h3>Project source</h3>
@@ -1209,7 +1224,7 @@ section {
  </div>
                             <div class="contact-item">
                                 <div class="icon">
-                                    <i class="fas fa-envelope"></i><p> thedarkgeekdc.protanmail.com</p>
+                                    <i class="fas fa-envelope"></i><p> thedarkgeekdc@protonmail.com</p>
 </div>
 </div>
                             <div class="contact-item">
@@ -1323,15 +1338,10 @@ section {
     </div>
     <script>
 const sections = document.querySelectorAll('.section');
-const sections = document.querySelectorAll('.section'); // Keep this for PageTransition
-// const sectBtns = document.querySelectorAll('.controlls'); // Not needed globally with new PageTransition
-// const sectBtn = document.querySelectorAll('.control'); // Not needed globally with new PageTransition
-// const allSections = document.querySelector('.main-content'); // Not needed globally with new PageTransition
 
-
+// Page Transition Function
 function PageTransition() {
     const controlsContainer = document.querySelector('.controlls');
-    const sections = document.querySelectorAll('.section'); // Already declared globally, but good to have local reference if preferred
     const sectBtns = document.querySelectorAll('.control'); 
 
     if (controlsContainer) { 
@@ -1355,13 +1365,9 @@ function PageTransition() {
                 const element = document.getElementById(id);
                 if (element) {
                     element.classList.add('active');
-                } else {
-                    // console.error("Target section with ID '" + id + "' not found."); 
                 }
             }
         });
-    } else {
-        // console.error("Controls container '.controlls' not found."); 
     }
 
     // Theme toggle part
@@ -1371,12 +1377,69 @@ function PageTransition() {
             let element = document.body;
             element.classList.toggle('light-mode');
         });
-    } else {
-        // console.error("Theme button '.theme-btn' not found."); 
     }
 }
 
 PageTransition(); // Call the function to attach listeners
+
+// Moving Stars Animation
+function initStars() {
+    const canvas = document.getElementById('stars-canvas');
+    const ctx = canvas.getContext('2d');
+    
+    // Set canvas size
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    // Star properties
+    const stars = [];
+    const numStars = 200;
+
+    class Star {
+        constructor() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.size = Math.random() * 2 + 1;
+            this.speed = Math.random() * 0.5 + 0.1;
+            this.opacity = Math.random();
+        }
+        update() {
+            this.y += this.speed;
+            if (this.y > canvas.height) {
+                this.y = 0;
+                this.x = Math.random() * canvas.width;
+            }
+        }
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+            ctx.fill();
+        }
+    }
+
+    // Initialize stars
+    for (let i = 0; i < numStars; i++) {
+        stars.push(new Star());
+    }
+
+    // Animation loop
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        stars.forEach(star => {
+            star.update();
+            star.draw();
+        });
+        requestAnimationFrame(animate);
+    }
+    animate();
+}
+
+initStars(); // Initialize stars on load
 
 async function fetchVideoData() {
     const urlInput = document.getElementById('urlInput').value;
