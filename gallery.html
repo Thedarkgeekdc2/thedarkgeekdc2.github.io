@@ -1,1 +1,29 @@
-<!-- Updated IMG_DIR from '~' to 'img/me/' -->\n<!-- Replaced line 656 -->\n    const IMG_DIR = 'img/me/';\n
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Gallery</h1>
+    <div id="gallery"></div>
+    <script>
+        const IMG_DIR = 'img/me/';
+        const images = [
+            // Add the path to your images here
+            'image1.jpg',
+            'image2.jpg',
+            'image3.jpg'
+        ];
+
+        const galleryDiv = document.getElementById('gallery');
+        images.forEach(image => {
+            const imgElement = document.createElement('img');
+            imgElement.src = `${IMG_DIR}${image}`;
+            galleryDiv.appendChild(imgElement);
+        });
+    </script>
+</body>
+</html>
