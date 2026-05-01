@@ -379,6 +379,34 @@
         linear-gradient(to top, var(--green) 2px, transparent 2px) 100% 100% / 16px 16px no-repeat;
     }
 
+    /* Gallery link on photo */
+    .hero-photo-link { display: block; }
+    .hero-photo-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      border-radius: 10px;
+      background: rgba(0,255,136,0.15);
+      backdrop-filter: blur(2px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+      opacity: 0;
+      transition: opacity .35s ease;
+      color: var(--green);
+      font-family: var(--ff-brand);
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-shadow: 0 0 12px rgba(0,255,136,.6);
+    }
+    .hero-photo-overlay i { font-size: 1.8rem; }
+    .hero-photo-link:hover .hero-photo-overlay { opacity: 1; }
+    .hero-photo-link:hover .hero-photo-wrap::before { animation-duration: 1s; }
+
     .hero-text .eyebrow {
       font-family: var(--ff-mono);
       font-size: .82rem;
@@ -1046,10 +1074,16 @@
 <section id="home" class="section" aria-label="Introduction">
   <div class="hero-inner">
     <div class="hero-photo fade-up">
-      <div class="hero-photo-wrap">
-        <img src="user.png" alt="Dinesh Chaudhary — THEDARKGEEKDC profile photo" loading="eager">
-        <div class="hero-photo-corner" aria-hidden="true"></div>
-      </div>
+      <a href="gallery.html" class="hero-photo-link" aria-label="View My Gallery" title="My Gallery">
+        <div class="hero-photo-wrap">
+          <img src="user.png" alt="Dinesh Chaudhary — THEDARKGEEKDC profile photo" loading="eager">
+          <div class="hero-photo-corner" aria-hidden="true"></div>
+          <div class="hero-photo-overlay" aria-hidden="true">
+            <i class="fas fa-images"></i>
+            <span>My Gallery</span>
+          </div>
+        </div>
+      </a>
     </div>
     <div class="hero-text fade-up">
       <p class="eyebrow">Dinesh Chaudhary</p>
