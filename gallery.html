@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — THEDARKGEEKDC</title>
+
+  <!-- No index for search engines — private page -->
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    /* ── Variables (same as index) ─────────────────────────── */
+    :root {
+      --bg:        #050810;
+      --bg2:       #0a0f1e;
+      --card:      rgba(10, 18, 36, 0.7);
+      --green:     #00ff88;
+      --cyan:      #00cfff;
+      --dim:       rgba(0,255,136,0.12);
+      --border:    rgba(0,255,136,0.2);
+      --glow:      0 0 18px rgba(0,255,136,0.35);
+      --glow-sm:   0 0 8px rgba(0,255,136,0.25);
+      --text:      #c8d6e5;
+      --muted:     #6b7a8d;
+      --white:     #eaf4ff;
+      --ff-brand:  'Orbitron', monospace;
+      --ff-mono:   'Share Tech Mono', monospace;
+      --ff-body:   'Rajdhani', sans-serif;
+      --nav-h:     64px;
+      --radius:    10px;
+    }
+
+    /* ── Reset ─────────────────────────────────────────────── */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--ff-body);
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    img { display: block; max-width: 100%; }
+
+    /* ── Starfield ─────────────────────────────────────────── */
+    #stars {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* ── Scrollbar ─────────────────────────────────────────── */
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--green); border-radius: 3px; }
+
+    /* ── Navbar ────────────────────────────────────────────── */
+    #navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 999;
+      height: var(--nav-h);
+      background: rgba(5,8,16,0.88);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 clamp(1rem, 4vw, 3rem);
+      transition: box-shadow .3s;
+    }
+    #navbar.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,.5); }
+
+    .nav-brand {
+      font-family: var(--ff-brand);
+      font-size: clamp(.85rem, 2vw, 1.1rem);
+      font-weight: 900;
+      color: var(--green);
+      letter-spacing: 2px;
+      text-shadow: var(--glow-sm);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+    }
+
+    .nav-label {
+      font-family: var(--ff-mono);
+      font-size: .75rem;
+      color: var(--muted);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+    .nav-label i { color: var(--green); font-size: .85rem; }
+
+    .nav-back {
+      font-family: var(--ff-brand);
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: .45rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      transition: all .2s;
+    }
+    .nav-back:hover {
+      color: var(--green);
+      border-color: var(--green);
+      background: rgba(0,255,136,.06);
+      box-shadow: var(--glow-sm);
+    }
+
+    /* ── Main content ──────────────────────────────────────── */
+    main {
+      flex: 1;
+      position: relative;
+      z-index: 1;
+      padding: calc(var(--nav-h) + 3rem) clamp(1rem, 6vw, 8rem) 4rem;
+    }
+
+    /* ── Page header ───────────────────────────────────────── */
+    .page-header {
+      text-align: center;
+      margin-bottom: clamp(2.5rem, 5vw, 4rem);
+    }
+    .page-header .eyebrow {
+      font-family: var(--ff-mono);
+      font-size: .78rem;
+      color: var(--green);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: .75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+    }
+    .page-header .eyebrow::before,
+    .page-header .eyebrow::after {
+      content: '';
+      display: inline-block;
+      width: 32px;
+      height: 1px;
+      background: var(--green);
+    }
+    .page-header h1 {
+      font-family: var(--ff-brand);
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      font-weight: 900;
+      color: var(--white);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      line-height: 1.1;
+    }
+    .page-header h1 span {
+      background: linear-gradient(90deg, var(--green), var(--cyan));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .divider {
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--green), var(--cyan));
+      margin: 1rem auto 0;
+      border-radius: 2px;
+    }
+    .page-header p {
+      margin-top: .75rem;
+      color: var(--muted);
+      font-family: var(--ff-mono);
+      font-size: .82rem;
+      letter-spacing: 1px;
+    }
+
+    /* ── Gallery Grid ──────────────────────────────────────── */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.4rem;
+    }
+
+    /* ── Gallery Card ──────────────────────────────────────── */
+    .gallery-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      backdrop-filter: blur(8px);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+      position: relative;
+    }
+    .gallery-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--glow);
+      border-color: rgba(0,255,136,.55);
+    }
+
+    .gallery-card-thumb {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      background: linear-gradient(135deg, #0a1428, #0d1f3a);
+    }
+    .gallery-card-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .5s ease, filter .5s ease;
+      filter: brightness(.92) contrast(1.05);
+    }
+    .gallery-card:hover .gallery-card-thumb img {
+      transform: scale(1.08);
+      filter: brightness(1) contrast(1.08);
+    }
+
+    /* Hover overlay */
+    .gallery-card-thumb-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,255,136,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity .35s ease;
+    }
+    .gallery-card-thumb-overlay i {
+      font-size: 2rem;
+      color: var(--green);
+      text-shadow: var(--glow);
+      background: rgba(5,8,16,0.65);
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--green);
+    }
+    .gallery-card:hover .gallery-card-thumb-overlay { opacity: 1; }
+
+    /* Scan-line effect on hover */
+    .gallery-card-thumb::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 3px,
+        rgba(0,255,136,0.018) 3px,
+        rgba(0,255,136,0.018) 4px
+      );
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity .3s;
+    }
+    .gallery-card:hover .gallery-card-thumb::after { opacity: 1; }
+
+    /* Card body */
+    .gallery-card-body {
+      padding: 1rem 1.2rem 1.1rem;
+      border-top: 1px solid var(--border);
+    }
+    .gallery-card-body h3 {
+      font-family: var(--ff-brand);
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 1px;
+      margin-bottom: .25rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .gallery-card-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .gallery-card-meta span {
+      font-family: var(--ff-mono);
+      font-size: .68rem;
+      color: var(--muted);
+      letter-spacing: 1px;
+    }
+    .gallery-card-meta .tag-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 6px rgba(0,255,136,.5);
+      flex-shrink: 0;
+    }
+
+    /* ── Empty state ───────────────────────────────────────── */
+    .gallery-empty {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 5rem 2rem;
+      color: var(--muted);
+    }
+    .gallery-empty i {
+      font-size: 3rem;
+      color: var(--border);
+      margin-bottom: 1.2rem;
+      display: block;
+    }
+    .gallery-empty h3 {
+      font-family: var(--ff-brand);
+      font-size: 1rem;
+      color: var(--white);
+      margin-bottom: .5rem;
+      letter-spacing: 2px;
+    }
+    .gallery-empty p {
+      font-family: var(--ff-mono);
+      font-size: .78rem;
+      line-height: 1.8;
+    }
+    .gallery-empty code {
+      color: var(--green);
+      background: var(--dim);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: .1rem .4rem;
+      font-size: .8rem;
+    }
+
+    /* ── Lightbox ──────────────────────────────────────────── */
+    #lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(5,8,16,0.95);
+      backdrop-filter: blur(12px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s ease;
+    }
+    #lightbox.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .lightbox-inner {
+      position: relative;
+      max-width: min(90vw, 900px);
+      max-height: 88vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #lightbox-img {
+      max-width: 100%;
+      max-height: 76vh;
+      object-fit: contain;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: var(--glow);
+      display: block;
+    }
+
+    .lightbox-caption {
+      margin-top: .85rem;
+      font-family: var(--ff-mono);
+      font-size: .78rem;
+      color: var(--muted);
+      letter-spacing: 1px;
+      text-align: center;
+    }
+    .lightbox-caption strong { color: var(--green); }
+
+    .lightbox-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 46px;
+      height: 46px;
+      background: rgba(10,18,36,0.85);
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--green);
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all .2s;
+      z-index: 2;
+    }
+    .lightbox-btn:hover {
+      background: rgba(0,255,136,.1);
+      border-color: var(--green);
+      box-shadow: var(--glow-sm);
+    }
+    .lightbox-prev { left: -64px; }
+    .lightbox-next { right: -64px; }
+
+    .lightbox-close {
+      position: absolute;
+      top: -48px;
+      right: 0;
+      background: rgba(10,18,36,0.85);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-size: .85rem;
+      cursor: pointer;
+      transition: all .2s;
+    }
+    .lightbox-close:hover {
+      color: var(--green);
+      border-color: var(--green);
+      background: rgba(0,255,136,.08);
+    }
+
+    /* Counter */
+    .lightbox-counter {
+      font-family: var(--ff-mono);
+      font-size: .7rem;
+      color: var(--muted);
+      position: absolute;
+      top: -48px;
+      left: 0;
+      letter-spacing: 2px;
+    }
+    .lightbox-counter span { color: var(--green); }
+
+    /* ── Fade-up animation ─────────────────────────────────── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    .stagger > * {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .55s ease, transform .55s ease;
+    }
+    .stagger.visible > *:nth-child(1)  { opacity:1; transform:none; transition-delay:.05s; }
+    .stagger.visible > *:nth-child(2)  { opacity:1; transform:none; transition-delay:.10s; }
+    .stagger.visible > *:nth-child(3)  { opacity:1; transform:none; transition-delay:.15s; }
+    .stagger.visible > *:nth-child(4)  { opacity:1; transform:none; transition-delay:.20s; }
+    .stagger.visible > *:nth-child(5)  { opacity:1; transform:none; transition-delay:.25s; }
+    .stagger.visible > *:nth-child(6)  { opacity:1; transform:none; transition-delay:.30s; }
+    .stagger.visible > *:nth-child(7)  { opacity:1; transform:none; transition-delay:.35s; }
+    .stagger.visible > *:nth-child(8)  { opacity:1; transform:none; transition-delay:.40s; }
+    .stagger.visible > *:nth-child(9)  { opacity:1; transform:none; transition-delay:.45s; }
+    .stagger.visible > *:nth-child(n+10){ opacity:1; transform:none; transition-delay:.50s; }
+
+    /* ── Scroll-to-top ─────────────────────────────────────── */
+    #scroll-top {
+      position: fixed;
+      bottom: 2rem; right: 2rem;
+      width: 42px; height: 42px;
+      background: linear-gradient(135deg, var(--green), var(--cyan));
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      color: #050810;
+      font-size: .9rem;
+      cursor: pointer;
+      z-index: 900;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s, transform .3s;
+      box-shadow: var(--glow-sm);
+      border: none;
+    }
+    #scroll-top.show { opacity: 1; pointer-events: auto; }
+    #scroll-top:hover { transform: translateY(-3px); }
+
+    /* ── Footer ────────────────────────────────────────────── */
+    footer {
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid var(--border);
+      padding: 2.5rem clamp(1rem, 6vw, 8rem);
+      background: var(--bg2);
+    }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: .5rem;
+    }
+    .footer-bottom p {
+      font-family: var(--ff-mono);
+      font-size: .74rem;
+      color: var(--muted);
+    }
+    .footer-bottom span { color: var(--green); }
+    .footer-nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .footer-nav a {
+      font-family: var(--ff-mono);
+      font-size: .72rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: color .2s;
+    }
+    .footer-nav a:hover { color: var(--green); }
+
+    /* ── Responsive ────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
+      .lightbox-prev { left: -44px; }
+      .lightbox-next { right: -44px; }
+      .nav-label { display: none; }
+    }
+    @media (max-width: 520px) {
+      .gallery-grid { grid-template-columns: 1fr 1fr; gap: .75rem; }
+      .lightbox-prev, .lightbox-next { display: none; }
+      .lightbox-inner { max-width: 95vw; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .footer-nav { justify-content: center; }
+    }
+    @media (max-width: 360px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Starfield -->
+<canvas id="stars"></canvas>
+
+<!-- ── Navbar ──────────────────────────────────────────────── -->
+<nav id="navbar" role="navigation" aria-label="Gallery navigation">
+  <a href="index.html" class="nav-brand" aria-label="THEDARKGEEKDC Home">THEDARKGEEKDC</a>
+  <div class="nav-right">
+    <span class="nav-label"><i class="fas fa-images"></i> My Gallery</span>
+    <a href="index.html" class="nav-back" aria-label="Back to portfolio">
+      <i class="fas fa-arrow-left"></i> Back
+    </a>
+  </div>
+</nav>
+
+<!-- ── Main ──────────────────────────────────────────────────── -->
+<main>
+  <!-- Page header -->
+  <div class="page-header fade-up">
+    <p class="eyebrow">Private</p>
+    <h1>My <span>Gallery</span></h1>
+    <div class="divider"></div>
+    <p>//Every picture holds a story worth remembering.</p>
+  </div>
+
+  <!-- Gallery grid -->
+  <div class="gallery-grid stagger" id="gallery-grid" role="list" aria-label="Photo gallery">
+    <!-- Cards injected by JS -->
+  </div>
+</main>
+
+<!-- ── Footer ──────────────────────────────────────────────── -->
+<footer role="contentinfo">
+  <div class="footer-bottom">
+    <p>© 2024 <span>THEDARKGEEKDC</span> — Dinesh Chaudhary. Private Gallery.</p>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<!-- Scroll to top -->
+<button id="scroll-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+<!-- ── Lightbox ─────────────────────────────────────────────── -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" id="lb-close" aria-label="Close"><i class="fas fa-times"></i></button>
+    <span class="lightbox-counter"><span id="lb-current">1</span> / <span id="lb-total">1</span></span>
+    <img id="lightbox-img" src="" alt="Gallery photo" loading="lazy">
+    <p class="lightbox-caption" id="lb-caption"></p>
+    <button class="lightbox-btn lightbox-prev" id="lb-prev" aria-label="Previous photo"><i class="fas fa-chevron-left"></i></button>
+    <button class="lightbox-btn lightbox-next" id="lb-next" aria-label="Next photo"><i class="fas fa-chevron-right"></i></button>
+  </div>
+</div>
+
+<!-- ── Scripts ─────────────────────────────────────────────── -->
+<script>
+  /* ── CONFIG: Add your photo filenames here ──────────────────
+     Place photos in the img/me/ folder and list them below.
+     Format: { file: 'filename.jpg', label: 'Caption' }
+  ──────────────────────────────────────────────────────────── */
+  const GALLERY_PHOTOS = [
+    // Example entries — replace with your actual photo filenames:
+     { file: 'view.jpg',  label: 'Happiness'  },
+  { file: 'pic1.jpg',  label: 'Darjiling' },  
+  { file: 'pic2.jpg',  label: 'Silent Moments' },
+  { file: 'pic3.jpg',  label: 'Captured Carefully' },
+  { file: 'pic4.jpg',  label: 'Big Memories' },
+  { file: 'pic5.jpg',  label: 'Happy Frames' },
+  { file: 'pic6.jpg',  label: 'Calm Reflection' },
+  { file: 'pic7.jpg',  label: 'Funny but awesome' },
+  { file: 'pic8.jpg',  label: 'Worth Keeping' },
+  { file: 'pic9.jpg',  label: 'Quiet Journey to NEPAL' },
+  { file: 'pic10.jpg', label: 'Pure Moments' },
+  { file: 'pic11.jpg', label: 'Smiling Frames' },
+  { file: 'pic12.jpg', label: 'Life Snapshots' },
+  { file: 'pic13.jpg', label: 'Small Memory' },
+  { file: 'pic14.jpg', label: 'Heart Captured' },
+  { file: 'pic15.jpg', label: 'Simple Timeless' },
+  { file: 'pic16.jpg', label: 'Life Frame' }, // fixed
+  { file: 'pic17.jpg', label: 'Memories Fade' },
+  { file: 'pic18.jpg', label: 'My World' },
+  { file: 'pic19.jpg', label: 'Beautiful Moment' }
+    // { file: 'photo2.jpg',  label: 'Photo 2'  },
+    // { file: 'photo3.jpg',  label: 'Photo 3'  },
+    // { file: 'me_2024.jpg', label: 'Year 2024' },
+  ];
+
+  const IMG_DIR = '~';
+
+  /* ── Starfield ─────────────────────────────────────────── */
+  (function () {
+    const canvas = document.getElementById('stars');
+    const ctx = canvas.getContext('2d');
+    let W, H, stars = [];
+    function resize() {
+      W = canvas.width  = window.innerWidth;
+      H = canvas.height = window.innerHeight;
+    }
+    resize();
+    window.addEventListener('resize', resize);
+    for (let i = 0; i < 180; i++) {
+      stars.push({
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        r: Math.random() * 1.2 + 0.2,
+        speed: Math.random() * 0.3 + 0.1,
+        op: Math.random() * 0.6 + 0.2
+      });
+    }
+    function draw() {
+      ctx.clearRect(0, 0, W, H);
+      stars.forEach(s => {
+        s.y += s.speed;
+        if (s.y > H) { s.y = 0; s.x = Math.random() * W; }
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(0,255,136,${s.op})`;
+        ctx.fill();
+      });
+      requestAnimationFrame(draw);
+    }
+    draw();
+  })();
+
+  /* ── Navbar scroll ────────────────────────────────────── */
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
+    document.getElementById('scroll-top').classList.toggle('show', window.scrollY > 300);
+  });
+  document.getElementById('scroll-top').addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  /* ── Build gallery cards ──────────────────────────────── */
+  const grid = document.getElementById('gallery-grid');
+
+  function buildGallery(photos) {
+    grid.innerHTML = '';
+
+    if (!photos || photos.length === 0) {
+      grid.innerHTML = `
+        <div class="gallery-empty">
+          <i class="fas fa-images"></i>
+          <h3>Gallery Coming Soon</h3>
+          <p>
+            Add your photos to the <code>img/me/</code> folder,<br>
+            then list the filenames in the <code>GALLERY_PHOTOS</code> array<br>
+            at the top of this page's script section.
+          </p>
+        </div>`;
+      return;
+    }
+
+    photos.forEach((photo, idx) => {
+      const card = document.createElement('div');
+      card.className = 'gallery-card';
+      card.setAttribute('role', 'listitem');
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('aria-label', photo.label || `Photo ${idx + 1}`);
+
+      const num = String(idx + 1).padStart(2, '0');
+      card.innerHTML = `
+        <div class="gallery-card-thumb">
+          <img src="${IMG_DIR}${photo.file}"
+               alt="${photo.label || 'Gallery photo ' + (idx + 1)}"
+               loading="lazy"
+               onerror="this.closest('.gallery-card-thumb').style.background='linear-gradient(135deg,#0a1428,#0d1f3a)'; this.style.display='none';">
+          <div class="gallery-card-thumb-overlay">
+            <i class="fas fa-expand"></i>
+          </div>
+        </div>
+        <div class="gallery-card-body">
+          <h3>${photo.label || 'Photo ' + (idx + 1)}</h3>
+          <div class="gallery-card-meta">
+            <span>IMG_${num}</span>
+            <span class="tag-dot"></span>
+          </div>
+        </div>`;
+
+      card.addEventListener('click',  () => openLightbox(idx));
+      card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(idx); } });
+      grid.appendChild(card);
+    });
+  }
+
+  buildGallery(GALLERY_PHOTOS);
+
+  /* ── Lightbox ─────────────────────────────────────────── */
+  const lightbox  = document.getElementById('lightbox');
+  const lbImg     = document.getElementById('lightbox-img');
+  const lbCaption = document.getElementById('lb-caption');
+  const lbCurrent = document.getElementById('lb-current');
+  const lbTotal   = document.getElementById('lb-total');
+  let currentIdx  = 0;
+
+  function openLightbox(idx) {
+    if (!GALLERY_PHOTOS.length) return;
+    currentIdx = idx;
+    updateLightbox();
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    document.getElementById('lb-close').focus();
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+    lbImg.src = '';
+  }
+
+  function updateLightbox() {
+    const photo = GALLERY_PHOTOS[currentIdx];
+    lbImg.src = IMG_DIR + photo.file;
+    lbImg.alt = photo.label || `Photo ${currentIdx + 1}`;
+    lbCaption.innerHTML = `<strong>${photo.label || 'Photo ' + (currentIdx + 1)}</strong>`;
+    lbCurrent.textContent = currentIdx + 1;
+    lbTotal.textContent   = GALLERY_PHOTOS.length;
+  }
+
+  function prevPhoto() {
+    currentIdx = (currentIdx - 1 + GALLERY_PHOTOS.length) % GALLERY_PHOTOS.length;
+    updateLightbox();
+  }
+  function nextPhoto() {
+    currentIdx = (currentIdx + 1) % GALLERY_PHOTOS.length;
+    updateLightbox();
+  }
+
+  document.getElementById('lb-close').addEventListener('click', closeLightbox);
+  document.getElementById('lb-prev').addEventListener('click', prevPhoto);
+  document.getElementById('lb-next').addEventListener('click', nextPhoto);
+
+  // Click backdrop to close
+  lightbox.addEventListener('click', e => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  // Keyboard navigation
+  document.addEventListener('keydown', e => {
+    if (!lightbox.classList.contains('active')) return;
+    if (e.key === 'Escape')      closeLightbox();
+    if (e.key === 'ArrowLeft')   prevPhoto();
+    if (e.key === 'ArrowRight')  nextPhoto();
+  });
+
+  // Touch swipe support
+  let touchStartX = 0;
+  lightbox.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  lightbox.addEventListener('touchend',   e => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) diff > 0 ? nextPhoto() : prevPhoto();
+  });
+
+  /* ── Scroll animations ────────────────────────────────── */
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-up, .stagger').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
