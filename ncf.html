@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+<title>NCF 2023 — Curriculum Deck</title>
+<meta name="theme-color" content="#05070a" />
+
+<!-- ============================================================
+  DEPLOY NOTES
+  1. Put your PDF file in this same folder and set PDF_URL below
+     (default expects a file named "ncf.pdf").
+  2. Push this folder to a GitHub repo, enable Pages (Settings →
+     Pages → Deploy from branch), and it's live.
+  3. Works fully offline-capable once cached — no build step needed.
+============================================================= -->
+
+<style>
+  :root{
+    --bg:#05070a;
+    --panel:#0d1218;
+    --panel-line:#1c2730;
+    --accent:#29f1c3;
+    --accent-dim:#1aae93;
+    --text:#e7f6f2;
+    --muted:#5b7267;
+    --danger:#ff6b6b;
+    --ui-face:'Space Grotesk', system-ui, sans-serif;
+    --mono-face:'JetBrains Mono', ui-monospace, monospace;
+  }
+
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body {
+    margin:0; padding:0; width:100%; height:100%;
+    background:var(--bg); color:var(--text);
+    font-family:var(--ui-face);
+    overflow:hidden;
+    overscroll-behavior:none;
+  }
+
+  #app{ position:fixed; inset:0; }
+
+  /* ---------- Boot / start overlay ---------- */
+  #boot{
+    position:fixed; inset:0; z-index:50;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    background:
+      radial-gradient(circle at 50% 30%, rgba(41,241,195,0.07), transparent 60%),
+      var(--bg);
+    gap:28px; padding:24px; text-align:center;
+  }
+  #boot .term{
+    font-family:var(--mono-face); font-size:13px; color:var(--accent-dim);
+    letter-spacing:0.5px; line-height:1.9; min-height:96px;
+    white-space:pre-wrap;
+  }
+  #boot .term .cursor{
+    display:inline-block; width:8px; height:14px; background:var(--accent);
+    margin-left:2px; vertical-align:-2px;
+    animation:blink 1s steps(1) infinite;
+  }
+  @keyframes blink{ 50%{ opacity:0; } }
+
+  #boot h1{
+    font-size:20px; margin:0; font-weight:600; letter-spacing:0.3px;
+    color:var(--text); opacity:0; animation:fadeUp .6s ease forwards; animation-delay:.1s;
+  }
+  #boot p.sub{
+    margin:0; color:var(--muted); font-size:13px; font-family:var(--mono-face);
+    opacity:0; animation:fadeUp .6s ease forwards; animation-delay:.2s;
+  }
+  @keyframes fadeUp{ from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:translateY(0);} }
+
+  #startBtn{
+    opacity:0; animation:fadeUp .6s ease forwards; animation-delay:.35s;
+    pointer-events:none;
+  }
+  #startBtn.ready{ pointer-events:auto; }
+  #startBtn button{
+    font-family:var(--mono-face); font-size:14px; letter-spacing:1px;
+    background:transparent; color:var(--accent);
+    border:1px solid var(--accent-dim); border-radius:2px;
+    padding:14px 30px; cursor:pointer;
+    transition:background .15s ease, color .15s ease, box-shadow .15s ease;
+  }
+  #startBtn button:active{ background:var(--accent); color:#04120e; box-shadow:0 0 24px rgba(41,241,195,0.4); }
+
+  #boot .rotate-hint{
+    display:flex; align-items:center; gap:10px; color:var(--muted);
+    font-family:var(--mono-face); font-size:11px; letter-spacing:0.5px;
+    opacity:0; animation:fadeUp .6s ease forwards; animation-delay:.45s;
+  }
+  #boot .rotate-hint svg{ width:20px; height:20px; animation:tilt 2.2s ease-in-out infinite; }
+  @keyframes tilt{ 0%,100%{ transform:rotate(0deg);} 50%{ transform:rotate(-90deg);} }
+
+  /* ---------- Viewer ---------- */
+  #viewer{ position:fixed; inset:0; display:none; background:#000; }
+  #viewer.active{ display:block; }
+
+  #pageWrap{
+    position:absolute; inset:0;
+    display:flex; align-items:center; justify-content:center;
+    touch-action:pan-y;
+  }
+  #pageWrap canvas{
+    max-width:100%; max-height:100%;
+    box-shadow:0 0 60px rgba(0,0,0,0.6);
+    background:#fff;
+  }
+  #pageWrap.turning canvas{ animation:pageFade .18s ease; }
+  @keyframes pageFade{ from{ opacity:.35; } to{ opacity:1; } }
+
+  #spinner{
+    position:absolute; inset:0; display:none; align-items:center; justify-content:center;
+    background:rgba(5,7,10,0.55); z-index:5;
+  }
+  #spinner.show{ display:flex; }
+  #spinner .dot{
+    width:6px; height:6px; border-radius:50%; background:var(--accent);
+    margin:0 4px; animation:pulse 1s ease-in-out infinite;
+  }
+  #spinner .dot:nth-child(2){ animation-delay:.15s; }
+  #spinner .dot:nth-child(3){ animation-delay:.3s; }
+  @keyframes pulse{ 0%,80%,100%{ opacity:.25; transform:scale(.8);} 40%{ opacity:1; transform:scale(1.15);} }
+
+  /* progress hairline */
+  #progress{
+    position:absolute; left:0; bottom:0; height:2px; background:var(--accent);
+    width:0%; z-index:8; transition:width .25s ease;
+    box-shadow:0 0 8px rgba(41,241,195,0.7);
+  }
+
+  /* top-left minimal control */
+  #topBar{
+    position:absolute; top:0; left:0; right:0; z-index:10;
+    display:flex; justify-content:space-between; align-items:center;
+    padding:10px 14px; pointer-events:none;
+    background:linear-gradient(to bottom, rgba(0,0,0,0.5), transparent);
+    opacity:0; transition:opacity .3s ease;
+  }
+  #topBar.show{ opacity:1; }
+  #topBar button{ pointer-events:auto; }
+
+  .iconBtn{
+    width:36px; height:36px; border-radius:50%;
+    border:1px solid var(--panel-line); background:rgba(13,18,24,0.7);
+    color:var(--accent); display:flex; align-items:center; justify-content:center;
+    cursor:pointer; backdrop-filter:blur(6px);
+  }
+  .iconBtn svg{ width:16px; height:16px; }
+  .iconBtn:active{ background:var(--accent); color:#04120e; }
+
+  #counter{
+    font-family:var(--mono-face); font-size:11px; color:var(--muted);
+    background:rgba(13,18,24,0.7); border:1px solid var(--panel-line);
+    padding:6px 10px; border-radius:20px; letter-spacing:0.5px;
+    pointer-events:auto; backdrop-filter:blur(6px);
+  }
+  #counter b{ color:var(--accent); font-weight:600; }
+
+  /* bottom-right nav cluster */
+  #navCluster{
+    position:absolute; right:14px; bottom:16px; z-index:10;
+    display:flex; gap:10px; align-items:center;
+  }
+  #navCluster .navBtn{
+    width:52px; height:52px; border-radius:50%;
+    border:1px solid var(--panel-line); background:rgba(13,18,24,0.75);
+    color:var(--accent); display:flex; align-items:center; justify-content:center;
+    cursor:pointer; backdrop-filter:blur(8px);
+    transition:transform .12s ease, background .12s ease;
+  }
+  #navCluster .navBtn svg{ width:22px; height:22px; }
+  #navCluster .navBtn:active{ transform:scale(0.9); background:var(--accent); color:#04120e; }
+  #navCluster .navBtn[disabled]{ opacity:.25; pointer-events:none; }
+
+  /* swipe hint (first time only) */
+  #swipeHint{
+    position:absolute; inset:0; z-index:9; display:flex; align-items:center; justify-content:center;
+    pointer-events:none; opacity:0;
+  }
+  #swipeHint.show{ animation:hintShow 1.8s ease forwards; }
+  @keyframes hintShow{
+    0%{ opacity:0; } 15%{ opacity:1; } 75%{ opacity:1; } 100%{ opacity:0; }
+  }
+  #swipeHint span{
+    font-family:var(--mono-face); font-size:12px; color:var(--muted);
+    background:rgba(13,18,24,0.75); border:1px solid var(--panel-line);
+    padding:8px 16px; border-radius:20px; letter-spacing:0.5px;
+  }
+
+  /* rotate overlay (portrait fallback, shown if lock unsupported/denied) */
+  #rotateOverlay{
+    position:fixed; inset:0; z-index:60; background:var(--bg);
+    display:none; align-items:center; justify-content:center; flex-direction:column; gap:16px;
+  }
+  #rotateOverlay.show{ display:flex; }
+  #rotateOverlay svg{ width:52px; height:52px; color:var(--accent); animation:tilt 2.2s ease-in-out infinite; }
+  #rotateOverlay p{ font-family:var(--mono-face); font-size:13px; color:var(--muted); letter-spacing:0.5px; }
+
+  #err{
+    position:fixed; inset:0; z-index:70; display:none; align-items:center; justify-content:center;
+    background:var(--bg); color:var(--danger); font-family:var(--mono-face); font-size:13px;
+    text-align:center; padding:24px;
+  }
+  #err.show{ display:flex; }
+</style>
+</head>
+<body>
+
+<div id="app">
+
+  <!-- BOOT SCREEN -->
+  <div id="boot">
+    <div class="term" id="bootTerm"></div>
+    <h1>NCF 2023 — Foundational vs Preparatory</h1>
+    <p class="sub">Curricular Goals &amp; Competencies · Full Reference</p>
+    <div id="startBtn"><button id="startBtnEl">▶ START READING</button></div>
+    <div class="rotate-hint">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg>
+      best viewed landscape, fullscreen
+    </div>
+  </div>
+
+  <!-- VIEWER -->
+  <div id="viewer">
+    <div id="pageWrap">
+      <canvas id="pdfCanvas"></canvas>
+    </div>
+    <div id="spinner"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+    <div id="progress"></div>
+
+    <div id="topBar">
+      <button class="iconBtn" id="exitBtn" title="Exit">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <div id="counter"><b id="curPage">1</b> / <span id="totalPages">—</span></div>
+    </div>
+
+    <div id="swipeHint"><span>‹ swipe to turn page ›</span></div>
+
+    <div id="navCluster">
+      <div class="navBtn" id="prevBtn" title="Previous">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+      </div>
+      <div class="navBtn" id="nextBtn" title="Next">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROTATE FALLBACK -->
+  <div id="rotateOverlay">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg>
+    <p>rotate your device to landscape</p>
+  </div>
+
+  <div id="err"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+(function(){
+  "use strict";
+
+  // ======= CONFIG =======
+  const PDF_URL = "ncf.pdf"; // <-- put your PDF next to this file with this name, or change this path
+
+  pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+
+  // ======= BOOT TERMINAL SEQUENCE =======
+  const bootLines = [
+    "> initializing viewer_",
+    "> loading NCF_2023.pdf ...",
+    "> ready."
+  ];
+  const termEl = document.getElementById("bootTerm");
+  const startWrap = document.getElementById("startBtn");
+  let li = 0;
+  function typeLine(){
+    if(li >= bootLines.length){
+      startWrap.classList.add("ready");
+      return;
+    }
+    const line = bootLines[li];
+    let ci = 0;
+    const rowEl = document.createElement("div");
+    termEl.appendChild(rowEl);
+    const cursor = document.createElement("span");
+    cursor.className = "cursor";
+    const iv = setInterval(function(){
+      rowEl.textContent = line.slice(0, ci+1);
+      rowEl.appendChild(cursor);
+      ci++;
+      if(ci >= line.length){
+        clearInterval(iv);
+        li++;
+        setTimeout(typeLine, 220);
+      }
+    }, 18);
+  }
+  typeLine();
+
+  // ======= STATE =======
+  let pdfDoc = null, curPage = 1, totalPages = 0, rendering = false, pendingPage = null;
+  const canvas = document.getElementById("pdfCanvas");
+  const ctx = canvas.getContext("2d");
+  const pageWrap = document.getElementById("pageWrap");
+  const spinner = document.getElementById("spinner");
+  const progress = document.getElementById("progress");
+  const curPageEl = document.getElementById("curPage");
+  const totalPagesEl = document.getElementById("totalPages");
+  const topBar = document.getElementById("topBar");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+  const rotateOverlay = document.getElementById("rotateOverlay");
+  const errEl = document.getElementById("err");
+
+  function showError(msg){
+    errEl.textContent = msg;
+    errEl.classList.add("show");
+  }
+
+  // ======= LOAD PDF =======
+  function loadPdf(){
+    pdfjsLib.getDocument(PDF_URL).promise.then(function(doc){
+      pdfDoc = doc;
+      totalPages = doc.numPages;
+      totalPagesEl.textContent = totalPages;
+      renderPage(1);
+    }).catch(function(e){
+      showError("Could not load PDF.\n\nMake sure \"" + PDF_URL + "\" is in the same folder as this page.\n\n(" + e.message + ")");
+    });
+  }
+  loadPdf();
+
+  // ======= RENDER =======
+  function renderPage(num){
+    if(!pdfDoc) return;
+    if(num < 1 || num > totalPages) return;
+    if(rendering){ pendingPage = num; return; }
+    rendering = true;
+    spinner.classList.add("show");
+
+    pdfDoc.getPage(num).then(function(page){
+      const dpr = window.devicePixelRatio || 1;
+      const availW = pageWrap.clientWidth;
+      const availH = pageWrap.clientHeight;
+      const baseVp = page.getViewport({ scale: 1 });
+      const scale = Math.min(availW / baseVp.width, availH / baseVp.height) * dpr;
+      const viewport = page.getViewport({ scale: scale });
+
+      canvas.width = viewport.width;
+      canvas.height = viewport.height;
+      canvas.style.width = (viewport.width / dpr) + "px";
+      canvas.style.height = (viewport.height / dpr) + "px";
+
+      const renderTask = page.render({ canvasContext: ctx, viewport: viewport });
+      renderTask.promise.then(function(){
+        rendering = false;
+        spinner.classList.remove("show");
+        curPage = num;
+        curPageEl.textContent = curPage;
+        progress.style.width = (curPage / totalPages * 100) + "%";
+        prevBtn.toggleAttribute("disabled", curPage <= 1);
+        nextBtn.toggleAttribute("disabled", curPage >= totalPages);
+        pageWrap.classList.remove("turning"); void pageWrap.offsetWidth; pageWrap.classList.add("turning");
+        if(pendingPage !== null){
+          const p = pendingPage; pendingPage = null; renderPage(p);
+        }
+      }).catch(function(e){
+        rendering = false;
+        spinner.classList.remove("show");
+        showError("Render error: " + e.message);
+      });
+    });
+  }
+
+  function goTo(num){ renderPage(num); }
+  function next(){ if(curPage < totalPages) goTo(curPage + 1); }
+  function prev(){ if(curPage > 1) goTo(curPage - 1); }
+
+  window.addEventListener("resize", function(){ if(pdfDoc) renderPage(curPage); });
+
+  // ======= NAV BUTTONS / KEYS =======
+  nextBtn.addEventListener("click", next);
+  prevBtn.addEventListener("click", prev);
+  document.addEventListener("keydown", function(e){
+    if(e.key === "ArrowRight" || e.key === " ") next();
+    if(e.key === "ArrowLeft") prev();
+    if(e.key === "Escape") exitViewer();
+  });
+
+  // ======= SWIPE =======
+  let touchStartX = 0, touchStartY = 0, touchActive = false;
+  pageWrap.addEventListener("touchstart", function(e){
+    if(e.touches.length !== 1) return;
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+    touchActive = true;
+  }, { passive:true });
+  pageWrap.addEventListener("touchend", function(e){
+    if(!touchActive) return;
+    touchActive = false;
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    const dy = e.changedTouches[0].clientY - touchStartY;
+    if(Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy) * 1.4){
+      if(dx < 0) next(); else prev();
+    }
+  }, { passive:true });
+
+  // tap center toggles topbar
+  pageWrap.addEventListener("click", function(){
+    topBar.classList.toggle("show");
+  });
+
+  // ======= FULLSCREEN + LANDSCAPE LOCK (must originate from user gesture) =======
+  async function enterImmersiveMode(){
+    const el = document.documentElement;
+    try{
+      if(el.requestFullscreen) await el.requestFullscreen();
+      else if(el.webkitRequestFullscreen) await el.webkitRequestFullscreen();
+    }catch(e){ /* fullscreen denied or unsupported — continue anyway */ }
+
+    try{
+      if(screen.orientation && screen.orientation.lock){
+        await screen.orientation.lock("landscape");
+      }
+    }catch(e){ /* lock unsupported (common on iOS) — fall back to rotate hint */ }
+
+    checkOrientation();
+  }
+
+  function checkOrientation(){
+    const isPortrait = window.innerHeight > window.innerWidth;
+    const lockSupported = !!(screen.orientation && screen.orientation.lock);
+    if(isPortrait && !lockSupported){
+      rotateOverlay.classList.add("show");
+    } else {
+      rotateOverlay.classList.remove("show");
+    }
+  }
+  window.addEventListener("resize", checkOrientation);
+  if(screen.orientation){
+    screen.orientation.addEventListener("change", checkOrientation);
+  }
+
+  function exitViewer(){
+    if(document.fullscreenElement) document.exitFullscreen().catch(function(){});
+    document.getElementById("boot").style.display = "flex";
+    document.getElementById("viewer").classList.remove("active");
+  }
+  document.getElementById("exitBtn").addEventListener("click", exitViewer);
+
+  // ======= START BUTTON =======
+  document.getElementById("startBtnEl").addEventListener("click", async function(){
+    if(!startWrap.classList.contains("ready")) return;
+    await enterImmersiveMode();
+    document.getElementById("boot").style.display = "none";
+    const viewer = document.getElementById("viewer");
+    viewer.classList.add("active");
+    setTimeout(function(){
+      renderPage(curPage);
+      const hint = document.getElementById("swipeHint");
+      hint.classList.add("show");
+      setTimeout(function(){ hint.classList.remove("show"); }, 2000);
+    }, 50);
+  });
+
+})();
+</script>
+</body>
+</html>
