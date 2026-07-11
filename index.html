@@ -137,7 +137,7 @@
       transition: box-shadow .3s;
     }
     #navbar.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,.5); }
-
+    
     .nav-brand {
       font-family: var(--ff-brand);
       font-size: clamp(.85rem, 2vw, 1.1rem);
@@ -146,7 +146,14 @@
       letter-spacing: 2px;
       text-shadow: var(--glow-sm);
     }
-
+    .nav-tagline {
+  font-size: 0.45em;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: var(--green);
+  opacity: .75;
+  text-transform: uppercase;
+    }
     .nav-links {
       display: flex;
       gap: clamp(.6rem, 2vw, 1.6rem);
@@ -1044,7 +1051,7 @@
 
 <!-- ── Navbar ──────────────────────────────────────────────── -->
 <nav id="navbar" role="navigation" aria-label="Main navigation">
-  <a href="#home" class="nav-brand" aria-label="THEDARKGEEKDC Home">THEDARKGEEKDC</a>
+  <a href="#home" class="nav-brand" aria-label="THEDARKGEEKDC Home">THEDARKGEEKDC   <span class="nav-tagline">Everything is connected</span></a>
   <ul class="nav-links" role="list">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
