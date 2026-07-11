@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>DAS — Help & Documentation</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=IBM+Plex+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --bg: #07090f;
+  --surface: #0e1320;
+  --card: #111827;
+  --border: #1f2d45;
+  --accent: #3b82f6;
+  --accent2: #06b6d4;
+  --gold: #f59e0b;
+  --green: #10b981;
+  --red: #ef4444;
+  --purple: #8b5cf6;
+  --text: #e2e8f0;
+  --muted: #64748b;
+  --dim: #1e293b;
+  --sidebar-w: 260px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 300;
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ── SIDEBAR ── */
+.sidebar {
+  width: var(--sidebar-w);
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  overflow-y: auto;
+  padding: 0 0 40px;
+  z-index: 100;
+}
+.sidebar-logo { padding: 24px 20px 20px; border-bottom: 1px solid var(--border); margin-bottom: 12px; }
+.sidebar-logo-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 20px; font-weight: 800;
+  background: linear-gradient(90deg, #3b82f6, #06b6d4);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.sidebar-logo-sub { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--muted); letter-spacing: 2px; margin-top: 4px; }
+.nav-group { padding: 8px 12px 4px; }
+.nav-group-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); padding: 6px 8px 4px; }
+.nav-link { display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px; color: #94a3b8; text-decoration: none; font-size: 13px; font-weight: 400; transition: all 0.2s; margin-bottom: 2px; }
+.nav-link:hover, .nav-link.active { background: var(--dim); color: var(--text); }
+.nav-link.active { color: var(--accent2); }
+.nav-icon { font-size: 14px; width: 18px; text-align: center; }
+
+/* ── MAIN ── */
+.main { margin-left: var(--sidebar-w); flex: 1; padding: 48px 56px 100px; max-width: calc(100vw - var(--sidebar-w)); }
+
+/* ── SECTION ── */
+.doc-section { margin-bottom: 72px; scroll-margin-top: 32px; }
+.section-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: var(--accent2); margin-bottom: 12px; display: flex; align-items: center; gap: 12px; }
+.section-eyebrow::after { content: ''; flex: 1; height: 1px; background: linear-gradient(to right, var(--border), transparent); }
+.section-title { font-family: 'Syne', sans-serif; font-size: 32px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+.section-lead { font-size: 15px; color: #94a3b8; line-height: 1.8; margin-bottom: 32px; max-width: 680px; }
+
+/* ── CARD ── */
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px 28px; margin-bottom: 16px; position: relative; overflow: hidden; transition: border-color 0.3s, transform 0.3s; }
+.card:hover { border-color: #2d4a70; transform: translateY(-1px); }
+.card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--accent), var(--accent2)); opacity: 0; transition: opacity 0.3s; }
+.card:hover::before { opacity: 1; }
+.card-title { font-family: 'Syne', sans-serif; font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+.card-body { font-size: 13.5px; color: #94a3b8; line-height: 1.9; }
+
+/* ── TABLE ── */
+.doc-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 13px; }
+.doc-table th { background: var(--dim); color: var(--accent2); font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); }
+.doc-table td { padding: 10px 14px; border-bottom: 1px solid #0f1929; color: #94a3b8; vertical-align: top; }
+.doc-table tr:last-child td { border-bottom: none; }
+.doc-table tr:hover td { background: #0a1220; }
+.doc-table td:first-child { color: var(--text); font-weight: 500; }
+
+/* ── BADGE ── */
+.badge { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 10px; padding: 3px 10px; border-radius: 20px; letter-spacing: 1px; font-weight: 600; }
+.badge-green  { background: #052e16; color: #4ade80; border: 1px solid #166534; }
+.badge-blue   { background: #0c1e3d; color: #60a5fa; border: 1px solid #1d4ed8; }
+.badge-gold   { background: #2d1f00; color: #fbbf24; border: 1px solid #92400e; }
+.badge-red    { background: #2d0a0a; color: #f87171; border: 1px solid #991b1b; }
+.badge-purple { background: #1e1035; color: #c084fc; border: 1px solid #6d28d9; }
+.badge-cyan   { background: #042029; color: #67e8f9; border: 1px solid #0e7490; }
+
+/* ── STEP LIST ── */
+.step-list { counter-reset: steps; list-style: none; }
+.step-list li { counter-increment: steps; padding: 14px 16px 14px 52px; position: relative; border-left: 2px solid var(--border); margin-left: 20px; margin-bottom: 6px; font-size: 13.5px; color: #94a3b8; line-height: 1.7; }
+.step-list li::before { content: counter(steps); position: absolute; left: -14px; top: 12px; width: 26px; height: 26px; background: var(--accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; }
+
+/* ── ALERT ── */
+.alert { border-radius: 8px; padding: 14px 18px; margin: 16px 0; font-size: 13px; line-height: 1.7; display: flex; gap: 12px; align-items: flex-start; }
+.alert-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+.alert-info  { background: #0c1e3d; border: 1px solid #1d4ed8; color: #93c5fd; }
+.alert-warn  { background: #2d1f00; border: 1px solid #92400e; color: #fde68a; }
+.alert-tip   { background: #052e16; border: 1px solid #166534; color: #86efac; }
+
+/* ── ROLE GRID ── */
+.role-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 20px; }
+.role-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 20px; }
+.role-card-icon { font-size: 28px; margin-bottom: 10px; }
+.role-card-name { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+.role-card-list { list-style: none; font-size: 12px; color: #94a3b8; line-height: 2.1; }
+.role-card-list li::before { content: '→ '; color: var(--accent2); }
+.role-card-list li.no::before { content: '✕ '; color: var(--red); }
+
+/* ── STATUS ROW ── */
+.status-row { display: flex; align-items: center; gap: 16px; padding: 12px 16px; border-radius: 8px; margin-bottom: 8px; font-size: 13px; }
+.status-time { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text); min-width: 140px; }
+.status-desc { flex: 1; color: #94a3b8; }
+
+/* ── HR ── */
+hr { border: none; height: 1px; background: linear-gradient(90deg, transparent, var(--border), transparent); margin: 56px 0; }
+
+/* ── HERO ── */
+.doc-hero { margin-bottom: 56px; padding-bottom: 40px; border-bottom: 1px solid var(--border); }
+.doc-hero-badge { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 3px; color: var(--accent2); border: 1px solid var(--accent2); display: inline-block; padding: 4px 14px; border-radius: 2px; margin-bottom: 20px; }
+.doc-hero-title { font-family: 'Syne', sans-serif; font-size: clamp(36px, 5vw, 56px); font-weight: 800; line-height: 1.05; background: linear-gradient(135deg, #e2e8f0, #06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 16px; }
+.doc-hero-desc { font-size: 15px; color: #94a3b8; max-width: 580px; line-height: 1.8; }
+
+/* ── SCREEN MOCKUP ── */
+.screen { background: #050a12; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin: 16px 0; }
+.screen-bar { background: var(--dim); padding: 9px 16px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid var(--border); }
+.screen-dots { display: flex; gap: 5px; }
+.screen-dots span { width: 9px; height: 9px; border-radius: 50%; }
+.screen-dots span:nth-child(1) { background: #ef4444; }
+.screen-dots span:nth-child(2) { background: #f59e0b; }
+.screen-dots span:nth-child(3) { background: #22c55e; }
+.screen-url { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); background: #07090f; border: 1px solid var(--border); border-radius: 4px; padding: 3px 14px; flex: 1; text-align: center; }
+.screen-body { padding: 20px 24px; font-size: 13px; color: #94a3b8; line-height: 1.9; }
+.screen-body strong { color: var(--text); font-weight: 500; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--surface); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+@media (max-width: 768px) {
+  .sidebar { transform: translateX(-100%); }
+  .main { margin-left: 0; padding: 32px 20px 80px; max-width: 100vw; }
+}
+</style>
+</head>
+<body>
+
+<aside class="sidebar">
+  <div class="sidebar-logo">
+    <div class="sidebar-logo-title">DAS Docs</div>
+    <div class="sidebar-logo-sub">// v1.0 · User Guide</div>
+  </div>
+  <div class="nav-group">
+    <div class="nav-group-label">Getting Started</div>
+    <a href="#overview"  class="nav-link"><span class="nav-icon">📖</span> Overview</a>
+    <a href="#login"     class="nav-link"><span class="nav-icon">🔐</span> Login</a>
+    <a href="#roles"     class="nav-link"><span class="nav-icon">👥</span> Roles & Access</a>
+    <a href="#dashboard" class="nav-link"><span class="nav-icon">🏠</span> Dashboard</a>
+  </div>
+  <div class="nav-group">
+    <div class="nav-group-label">Admin Guide</div>
+    <a href="#students"  class="nav-link"><span class="nav-icon">🎓</span> Students</a>
+    <a href="#excel"     class="nav-link"><span class="nav-icon">📊</span> Excel Import</a>
+    <a href="#teachers"  class="nav-link"><span class="nav-icon">👩‍🏫</span> Teachers</a>
+    <a href="#qr"        class="nav-link"><span class="nav-icon">🪪</span> QR Cards</a>
+  </div>
+  <div class="nav-group">
+    <div class="nav-group-label">Attendance</div>
+    <a href="#scanning"  class="nav-link"><span class="nav-icon">🚪</span> How Scanning Works</a>
+    <a href="#statuses"  class="nav-link"><span class="nav-icon">📌</span> Status Codes</a>
+    <a href="#override"  class="nav-link"><span class="nav-icon">✏️</span> Manual Override</a>
+    <a href="#offline"   class="nav-link"><span class="nav-icon">📡</span> Offline Mode</a>
+  </div>
+  <div class="nav-group">
+    <div class="nav-group-label">Reports & Logs</div>
+    <a href="#reports"   class="nav-link"><span class="nav-icon">📄</span> Reports</a>
+    <a href="#noclass"   class="nav-link"><span class="nav-icon">❓</span> No-Class UIDs</a>
+    <a href="#audit"     class="nav-link"><span class="nav-icon">🔍</span> Audit Trail</a>
+    <a href="#logs"      class="nav-link"><span class="nav-icon">📋</span> System Logs</a>
+  </div>
+  <div class="nav-group">
+    <div class="nav-group-label">Account</div>
+    <a href="#password"  class="nav-link"><span class="nav-icon">🔑</span> Change Password</a>
+    <a href="#faq"       class="nav-link"><span class="nav-icon">💡</span> FAQ</a>
+  </div>
+</aside>
+
+<main class="main">
+
+  <div class="doc-hero">
+    <div class="doc-hero-badge">Help & Documentation</div>
+    <div class="doc-hero-title">DAS User Guide</div>
+    <p class="doc-hero-desc">Complete user guide for the Digital Attendance System — from first login to downloading reports. Use the sidebar to jump to any topic.</p>
+  </div>
+
+  <!-- OVERVIEW -->
+  <div class="doc-section" id="overview">
+    <div class="section-eyebrow">Getting Started</div>
+    <div class="section-title">System Overview</div>
+    <p class="section-lead">DAS is a QR-based smart attendance platform. Students carry signed QR cards that are scanned at school gates — attendance is recorded automatically, in real time.</p>
+    <div class="card">
+      <div class="card-title">🔄 How It Works — End to End</div>
+      <div class="card-body">
+        <ol class="step-list">
+          <li>Admin imports the student list. Each student is assigned a unique ID.</li>
+          <li>A signed QR card is generated and printed for each student.</li>
+          <li>Students scan their QR card at the gate when arriving or leaving.</li>
+          <li>The system reads the time and automatically marks Present, Late, or Half-Day.</li>
+          <li>Teachers and the Principal view live attendance on their dashboards.</li>
+          <li>Reports can be downloaded as Excel files at any time.</li>
+        </ol>
+      </div>
+    </div>
+    <div class="screen">
+      <div class="screen-bar">
+        <div class="screen-dots"><span></span><span></span><span></span></div>
+        <div class="screen-url">das.local:5000</div>
+      </div>
+      <div class="screen-body">
+        DAS is accessible from any browser on the school network:<br/><br/>
+        <strong>🏠 das.local:5000</strong> &nbsp;—&nbsp; Main dashboard (login required)<br/>
+        <strong>📖 das.local:5000/help</strong> &nbsp;—&nbsp; This help page<br/>
+        <strong>ℹ️ das.local:5000/about</strong> &nbsp;—&nbsp; Project credits &amp; contact
+      </div>
+    </div>
+  </div>
+
+  <!-- LOGIN -->
+  <div class="doc-section" id="login">
+    <div class="section-eyebrow">Getting Started</div>
+    <div class="section-title">Login</div>
+    <p class="section-lead">Open <strong>das.local:5000</strong> in any browser on the school network. Enter your username and password to access your dashboard.</p>
+    <div class="card">
+      <div class="card-title">🔐 How to Log In</div>
+      <div class="card-body">
+        <ol class="step-list">
+          <li>Open a browser and go to <strong>das.local:5000</strong>.</li>
+          <li>Enter your username and password.</li>
+          <li>Click <strong>Login</strong>.</li>
+          <li>Your role-specific dashboard opens immediately.</li>
+        </ol>
+      </div>
+    </div>
+    <div class="alert alert-warn">
+      <span class="alert-icon">⚠️</span>
+      <div>Change your default password immediately after first login — go to <strong>Change Password</strong> from the top menu.</div>
+    </div>
+    <div class="alert alert-info">
+      <span class="alert-icon">ℹ️</span>
+      <div>Forgot your password? Contact the Admin — they can reset it for you.</div>
+    </div>
+  </div>
+
+  <!-- ROLES -->
+  <div class="doc-section" id="roles">
+    <div class="section-eyebrow">Getting Started</div>
+    <div class="section-title">Roles & Access</div>
+    <p class="section-lead">DAS has three roles. Each role only sees pages and features relevant to their work — nothing more.</p>
+    <div class="role-grid">
+      <div class="role-card">
+        <div class="role-card-icon">⚙️</div>
+        <div class="role-card-name" style="color:var(--accent2)">Admin</div>
+        <ul class="role-card-list">
+          <li>Add &amp; delete students</li>
+          <li>Bulk import via Excel</li>
+          <li>Add &amp; delete teachers</li>
+          <li>View No-Class UIDs</li>
+          <li>View system logs</li>
+          <li>Data cleanup</li>
+        </ul>
+      </div>
+      <div class="role-card">
+        <div class="role-card-icon">👑</div>
+        <div class="role-card-name" style="color:var(--gold)">Principal</div>
+        <ul class="role-card-list">
+          <li>School-wide attendance view</li>
+          <li>Filter by class &amp; section</li>
+          <li>Daily / Weekly / Monthly reports</li>
+          <li>Add single student</li>
+          <li>View No-Class UIDs</li>
+          <li class="no">Cannot import Excel</li>
+          <li class="no">Cannot manage teachers</li>
+        </ul>
+      </div>
+      <div class="role-card">
+        <div class="role-card-icon">👩‍🏫</div>
+        <div class="role-card-name" style="color:var(--green)">Teacher</div>
+        <ul class="role-card-list">
+          <li>Own class attendance only</li>
+          <li>Download own class report</li>
+          <li class="no">Cannot view other classes</li>
+          <li class="no">Cannot manage students</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div class="doc-section" id="dashboard">
+    <div class="section-eyebrow">Getting Started</div>
+    <div class="section-title">Dashboard</div>
+    <p class="section-lead">The first page after login. It shows today's attendance summary at a glance, with role-specific sections for each user type.</p>
+    <div class="card">
+      <div class="card-title">🏠 What's on the Dashboard</div>
+      <div class="card-body">
+        <table class="doc-table">
+          <tr><th>Section</th><th>Shows</th><th>Visible to</th></tr>
+          <tr><td>Today's Summary</td><td>Total Present / Late / Absent counts</td><td>All roles</td></tr>
+          <tr><td>Class-wise Cards</td><td>Attendance % per class today</td><td>Admin, Principal</td></tr>
+          <tr><td>My Class</td><td>Assigned class data for today</td><td>Teacher</td></tr>
+          <tr><td>No-Class UIDs</td><td>Count of unregistered scans today</td><td>Admin, Principal</td></tr>
+          <tr><td>Quick Links</td><td>Shortcuts to Students, Reports, Override</td><td>Role-based</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="alert alert-tip">
+      <span class="alert-icon">✅</span>
+      <div>Dashboard is real-time — refresh the page to see the latest attendance data.</div>
+    </div>
+  </div>
+
+  <hr/>
+
+  <!-- STUDENTS -->
+  <div class="doc-section" id="students">
+    <div class="section-eyebrow">Admin Guide</div>
+    <div class="section-title">Students</div>
+    <p class="section-lead">The Students page lists every registered student. You can search, filter, add, and delete records from here.</p>
+    <div class="card">
+      <div class="card-title">🔍 Searching & Filtering</div>
+      <div class="card-body">Use the <strong>Search bar</strong> at the top to find students by name, UID, or class. The Class and Section dropdowns let you narrow the list further.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">➕ Adding a Student</div>
+      <div class="card-body">
+        <ol class="step-list">
+          <li>Click the <strong>Add Student</strong> button at the top of the page.</li>
+          <li>Fill in the student's details in the form.</li>
+          <li>Click <strong>Save</strong> — the student appears in the list immediately.</li>
+        </ol>
+        <br/>
+        <table class="doc-table">
+          <tr><th>Field</th><th>Example</th><th>Required?</th></tr>
+          <tr><td>UID / Card ID</td><td>22697641900</td><td><span class="badge badge-red">Yes</span></td></tr>
+          <tr><td>Student Name</td><td>RAHUL SHARMA</td><td><span class="badge badge-red">Yes</span></td></tr>
+          <tr><td>Class</td><td>5</td><td><span class="badge badge-red">Yes</span></td></tr>
+          <tr><td>Section</td><td>A</td><td><span class="badge badge-gold">Optional</span></td></tr>
+          <tr><td>Roll No</td><td>12</td><td><span class="badge badge-gold">Optional</span></td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">🗑️ Deleting a Student</div>
+      <div class="card-body">
+        Click <strong>Delete</strong> next to the student's row, then confirm the prompt.
+        <div class="alert alert-warn" style="margin-top:12px">
+          <span class="alert-icon">⚠️</span>
+          <div>Deleting a student permanently removes their attendance history. Download their report before deleting.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXCEL IMPORT -->
+  <div class="doc-section" id="excel">
+    <div class="section-eyebrow">Admin Guide</div>
+    <div class="section-title">Excel Import</div>
+    <p class="section-lead">Import the entire school's student list at once using an Excel file. Multiple files and multiple sheets are supported in a single upload.</p>
+    <div class="card">
+      <div class="card-title">📋 How to Prepare the Excel File</div>
+      <div class="card-body">
+        Your <strong>.xlsx</strong> file needs these columns (names are case-insensitive):
+        <br/><br/>
+        <table class="doc-table">
+          <tr><th>Purpose</th><th>Accepted Column Names</th><th>Required?</th></tr>
+          <tr><td>Student ID</td><td>uid · id · rfid · card_id</td><td><span class="badge badge-red">Yes</span></td></tr>
+          <tr><td>Student Name</td><td>name · student name · full name</td><td><span class="badge badge-red">Yes</span></td></tr>
+          <tr><td>Class</td><td>class · grade · std · standard</td><td><span class="badge badge-red">Yes</span></td></tr>
+          <tr><td>Section</td><td>section · sec · div</td><td><span class="badge badge-gold">Optional</span></td></tr>
+          <tr><td>Roll Number</td><td>roll · roll_no · rollno</td><td><span class="badge badge-gold">Optional</span></td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">📤 How to Import</div>
+      <div class="card-body">
+        <ol class="step-list">
+          <li>Go to the <strong>Students</strong> page.</li>
+          <li>Click the <strong>Import Excel</strong> button.</li>
+          <li>Select one or more <strong>.xlsx</strong> files.</li>
+          <li>Click Upload — all sheets are processed automatically.</li>
+          <li>A result summary shows records imported, updated, and skipped.</li>
+        </ol>
+        <div class="alert alert-info" style="margin-top:14px">
+          <span class="alert-icon">ℹ️</span>
+          <div>
+            <strong>Same UID again</strong> → record is updated, no duplicate is created.<br/>
+            <strong>No Class column</strong> → system tries to detect it from the sheet name.<br/>
+            <strong>Row missing UID or Name</strong> → that row is skipped automatically.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TEACHERS -->
+  <div class="doc-section" id="teachers">
+    <div class="section-eyebrow">Admin Guide</div>
+    <div class="section-title">Teachers</div>
+    <p class="section-lead">Only Admin can access this page. Teacher login accounts are created and managed here.</p>
+    <div class="card">
+      <div class="card-title">➕ Adding a Teacher</div>
+      <div class="card-body">
+        <ol class="step-list">
+          <li>Go to the <strong>Teachers</strong> page from the menu.</li>
+          <li>Click <strong>Add Teacher</strong>.</li>
+          <li>Fill in the form and click <strong>Save</strong>.</li>
+        </ol>
+        <br/>
+        <table class="doc-table">
+          <tr><th>Field</th><th>Example</th><th>Note</th></tr>
+          <tr><td>Full Name</td><td>Priya Sharma</td><td>Display name</td></tr>
+          <tr><td>Username</td><td>priya_5a</td><td>Used to log in — must be unique</td></tr>
+          <tr><td>Password</td><td>any strong password</td><td>Teacher can change it later</td></tr>
+          <tr><td>Class</td><td>5</td><td>Teacher will only see this class</td></tr>
+          <tr><td>Section</td><td>A</td><td>Optional</td></tr>
+        </table>
+        <div class="alert alert-tip" style="margin-top:12px">
+          <span class="alert-icon">✅</span>
+          <div>Share the username and temporary password with the teacher and ask them to change it on first login.</div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">🗑️ Deleting a Teacher</div>
+      <div class="card-body">Click <strong>Delete</strong> next to the teacher's name and confirm. Their login is removed; student attendance records remain safe.</div>
+    </div>
+  </div>
+
+  <!-- QR CARDS -->
+  <div class="doc-section" id="qr">
+    <div class="section-eyebrow">Admin Guide</div>
+    <div class="section-title">QR Cards</div>
+    <p class="section-lead">Every student needs a printed QR card to scan at the gate. Cards are generated by the Admin and printed once per student.</p>
+    <div class="card">
+      <div class="card-title">🪪 What's on a QR Card</div>
+      <div class="card-body">
+        <table class="doc-table">
+          <tr><th>Element</th><th>Example</th></tr>
+          <tr><td>Student Name</td><td>RAHUL SHARMA</td></tr>
+          <tr><td>Class &amp; Section</td><td>Class 5 — Section A</td></tr>
+          <tr><td>Roll Number</td><td>12</td></tr>
+          <tr><td>UID</td><td>22697641900</td></tr>
+          <tr><td>QR Code</td><td>Scannable, digitally signed</td></tr>
+        </table>
+        <div class="alert alert-info" style="margin-top:12px">
+          <span class="alert-icon">ℹ️</span>
+          <div>Each QR code is <strong>digitally signed</strong>. Tampered or photocopied cards are rejected at the gate and the speaker announces <em>"Invalid ID."</em></div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">🖨️ Lost or Damaged Card</div>
+      <div class="card-body">Ask the Admin to reprint the card for the same student. Their entire attendance history is preserved — only the physical card is replaced.</div>
+    </div>
+  </div>
+
+  <hr/>
+
+  <!-- SCANNING -->
+  <div class="doc-section" id="scanning">
+    <div class="section-eyebrow">Attendance</div>
+    <div class="section-title">How Gate Scanning Works</div>
+    <p class="section-lead">Students hold their QR card in front of the scanner at the gate. The system reads the time and automatically decides the attendance status — no manual input needed.</p>
+    <div class="card">
+      <div class="card-title">1️⃣ First Scan — Entry</div>
+      <div class="card-body">
+        <div class="status-row" style="background:#052e16; border:1px solid #166534">
+          <span class="status-time">06:50 – 07:30</span>
+          <span class="badge badge-green">✅ Present</span>
+          <span class="status-desc">On-time entry — speaker says <em>"Hello [Name]"</em></span>
+        </div>
+        <div class="status-row" style="background:#2d1f00; border:1px solid #92400e">
+          <span class="status-time">07:30 – 08:00</span>
+          <span class="badge badge-gold">⚠️ Late</span>
+          <span class="status-desc">Late entry — speaker says <em>"Late [Name]"</em></span>
+        </div>
+        <div class="status-row" style="background:#1e1035; border:1px solid #6d28d9">
+          <span class="status-time">Any other time</span>
+          <span class="badge badge-purple">🔧 Special Work</span>
+          <span class="status-desc">Visiting for school duty — <em>"For Special Work [Name]"</em></span>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">2️⃣ Second Scan — Exit</div>
+      <div class="card-body">
+        <div class="status-row" style="background:#0c1e3d; border:1px solid #1d4ed8">
+          <span class="status-time">10:20 – 12:20</span>
+          <span class="badge badge-blue">🌓 Half-Day Exit</span>
+          <span class="status-desc">Early departure — <em>"Half day [Name]"</em></span>
+        </div>
+        <div class="status-row" style="background:#052e16; border:1px solid #166534">
+          <span class="status-time">12:20 – 17:00</span>
+          <span class="badge badge-green">🚪 Normal Exit</span>
+          <span class="status-desc">Full-day exit — <em>"Bye [Name]"</em></span>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">⛔ Rejected Scans</div>
+      <div class="card-body">
+        <table class="doc-table">
+          <tr><th>Situation</th><th>Voice</th><th>Result</th></tr>
+          <tr><td>Tampered or invalid card</td><td>"Invalid ID"</td><td>No record created</td></tr>
+          <tr><td>Unreadable QR format</td><td>"Invalid QR"</td><td>No record created</td></tr>
+          <tr><td>Student already marked</td><td>"Already marked [Name]"</td><td>Duplicate blocked</td></tr>
+          <tr><td>Exit outside allowed window</td><td>"Exit not allowed now"</td><td>Exit blocked</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATUS CODES -->
+  <div class="doc-section" id="statuses">
+    <div class="section-eyebrow">Attendance</div>
+    <div class="section-title">Attendance Status Codes</div>
+    <p class="section-lead">These codes appear on the dashboard and in downloaded Excel reports. Here is what each one means.</p>
+    <table class="doc-table">
+      <tr><th>Status</th><th>Code</th><th>Meaning</th><th>Colour in Excel</th></tr>
+      <tr><td><span class="badge badge-green">Present</span></td><td>P</td><td>Arrived on time</td><td style="color:#4ade80">Green</td></tr>
+      <tr><td><span class="badge badge-gold">Late</span></td><td>L</td><td>Arrived after the on-time window</td><td style="color:#fde68a">Yellow</td></tr>
+      <tr><td><span class="badge badge-red">Absent</span></td><td>A</td><td>No scan recorded for the day</td><td style="color:#f87171">Red</td></tr>
+      <tr><td><span class="badge badge-cyan">Half-Day</span></td><td>H</td><td>Exited early (10:20 – 12:20)</td><td style="color:#67e8f9">Light Blue</td></tr>
+      <tr><td><span class="badge badge-purple">For Special Work</span></td><td>SW</td><td>Arrived outside normal entry window</td><td style="color:#c084fc">Purple</td></tr>
+      <tr><td><span class="badge badge-purple">Special Work Done Exit</span></td><td>SX</td><td>Completed special duty, left campus</td><td style="color:#a5b4fc">Indigo</td></tr>
+    </table>
+    <div class="alert alert-tip">
+      <span class="alert-icon">✅</span>
+      <div>Students who did not scan at all are automatically marked <strong>Absent</strong> overnight — no manual action required.</div>
+    </div>
+  </div>
+
+  <!-- OVERRIDE -->
+  <div class="doc-section" id="override">
+    <div class="section-eyebrow">Attendance</div>
+    <div class="section-title">Manual Attendance Override</div>
+    <p class="section-lead">If a student's attendance was marked incorrectly or a scan was missed, Admin or Principal can correct it manually.</p>
+    <div class="card">
+      <div class="card-title">✏️ How to Override Attendance</div>
+      <div class="card-body">
+        <ol class="step-list">
+          <li>Go to <strong>Attendance Override</strong> from the dashboard menu.</li>
+          <li>Select the <strong>date</strong> you want to correct (defaults to today).</li>
+          <li>Filter by <strong>Class</strong> and <strong>Section</strong>.</li>
+          <li>Find the student — their current status is shown alongside.</li>
+          <li>Select the corrected status from the dropdown.</li>
+          <li>Optionally add a reason or remark.</li>
+          <li>Click <strong>Save</strong> — the change takes effect immediately.</li>
+        </ol>
+        <div class="alert alert-warn" style="margin-top:14px">
+          <span class="alert-icon">⚠️</span>
+          <div>Every override is permanently recorded in the <strong>Audit Trail</strong> — who changed it, when, and why.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OFFLINE MODE -->
+  <div class="doc-section" id="offline">
+    <div class="section-eyebrow">Attendance</div>
+    <div class="section-title">Offline Mode</div>
+    <p class="section-lead">If the server is temporarily unreachable, the gate continues scanning and saves records locally. Nothing is ever lost.</p>
+    <div class="card">
+      <div class="card-title">📡 What Happens During a Network Outage</div>
+      <div class="card-body">
+        <ol class="step-list">
+          <li>Gate detects the server is unreachable.</li>
+          <li>All scans are saved locally on the gate device.</li>
+          <li>Voice feedback and status logic continue working normally.</li>
+          <li>The gate checks for the server in the background every 60 seconds.</li>
+          <li>Once the server is back online, all queued records sync automatically.</li>
+        </ol>
+        <div class="alert alert-tip" style="margin-top:12px">
+          <span class="alert-icon">✅</span>
+          <div>Even if power cuts out or the network goes down — no attendance data is ever lost. The gate handles everything silently.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr/>
+
+  <!-- REPORTS -->
+  <div class="doc-section" id="reports">
+    <div class="section-eyebrow">Reports & Logs</div>
+    <div class="section-title">Reports</div>
+    <p class="section-lead">Download colour-coded attendance reports as Excel files — daily, weekly, or monthly. Teachers can only download their assigned class.</p>
+    <div class="card">
+      <div class="card-title">📄 Downloading a Report</div>
+      <div class="card-body">
+        <ol class="step-list">
+          <li>Click <strong>Reports</strong> in the navigation menu.</li>
+          <li>Choose the report type — <strong>Daily</strong>, <strong>Weekly</strong>, or <strong>Monthly</strong>.</li>
+          <li>Select the date or month.</li>
+          <li>Filter by Class and Section if needed.</li>
+          <li>Click <strong>Download Excel</strong> — the file downloads automatically.</li>
+        </ol>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">📊 What the Excel Report Contains</div>
+      <div class="card-body">
+        <table class="doc-table">
+          <tr><th>Column</th><th>Contents</th></tr>
+          <tr><td>Roll No</td><td>Student roll number</td></tr>
+          <tr><td>Name</td><td>Student full name</td></tr>
+          <tr><td>Class / Section</td><td>Class and section</td></tr>
+          <tr><td>Date Columns</td><td>P / L / A / H per day — colour coded</td></tr>
+          <tr><td>Summary</td><td>Total Present, Late, and Absent count per student</td></tr>
+        </table>
+        <div class="alert alert-info" style="margin-top:12px">
+          <span class="alert-icon">ℹ️</span>
+          <div>Each status cell is colour-highlighted — green for Present, red for Absent, yellow for Late, and so on.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NO-CLASS UIDs -->
+  <div class="doc-section" id="noclass">
+    <div class="section-eyebrow">Reports & Logs</div>
+    <div class="section-title">No-Class UIDs</div>
+    <p class="section-lead">When a card is scanned at the gate but its UID is not in the database, it is saved here for Admin review rather than being lost.</p>
+    <div class="card">
+      <div class="card-title">❓ What Are No-Class UIDs</div>
+      <div class="card-body">
+        A No-Class entry is created when an unknown card is scanned — the UID, date, and time are saved.
+        <br/><br/>
+        <strong>Common reasons:</strong><br/>
+        — A new student joined but hasn't been added to the system yet<br/>
+        — An old or unregistered card was accidentally scanned<br/>
+        — A test scan was performed during setup
+        <div class="alert alert-tip" style="margin-top:12px">
+          <span class="alert-icon">✅</span>
+          <div>Check this page regularly. If you recognise a UID, add the student via the Students page right away.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AUDIT TRAIL -->
+  <div class="doc-section" id="audit">
+    <div class="section-eyebrow">Reports & Logs</div>
+    <div class="section-title">Audit Trail</div>
+    <p class="section-lead">Every manual change made in the system is permanently recorded — who made it, when, and what was changed.</p>
+    <div class="card">
+      <div class="card-title">🔍 Reading the Audit Trail</div>
+      <div class="card-body">
+        Go to <strong>Audit Trail</strong> from the dashboard menu. Each entry shows:
+        <br/><br/>
+        <table class="doc-table">
+          <tr><th>Field</th><th>Meaning</th></tr>
+          <tr><td>Date &amp; Time</td><td>Exactly when the change was made</td></tr>
+          <tr><td>Changed By</td><td>Which user made the change</td></tr>
+          <tr><td>Action</td><td>What was done (e.g. Override, Student Add)</td></tr>
+          <tr><td>Details</td><td>Full detail — old value → new value, reason given</td></tr>
+        </table>
+        <div class="alert alert-info" style="margin-top:12px">
+          <span class="alert-icon">ℹ️</span>
+          <div>Visible to Admin and Principal only. The audit trail cannot be deleted.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SYSTEM LOGS -->
+  <div class="doc-section" id="logs">
+    <div class="section-eyebrow">Reports & Logs</div>
+    <div class="section-title">System Logs</div>
+    <p class="section-lead">System Logs record important events — logins, additions, imports. Visible to Admin only.</p>
+    <div class="card">
+      <div class="card-title">📋 Events Recorded in Logs</div>
+      <div class="card-body">
+        <table class="doc-table">
+          <tr><th>Event</th><th>When It's Logged</th></tr>
+          <tr><td>LOGIN / LOGOUT</td><td>Every time any user signs in or out</td></tr>
+          <tr><td>Student Add / Delete</td><td>When a student record is created or removed</td></tr>
+          <tr><td>Teacher Add / Delete</td><td>When a teacher account is created or removed</td></tr>
+          <tr><td>Excel Import</td><td>Every bulk import, with record count</td></tr>
+          <tr><td>Password Change</td><td>When any user updates their password</td></tr>
+        </table>
+        <div class="alert alert-tip" style="margin-top:12px">
+          <span class="alert-icon">✅</span>
+          <div>Admin can clean up old logs to free space — go to the Settings section on the dashboard.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr/>
+
+  <!-- CHANGE PASSWORD -->
+  <div class="doc-section" id="password">
+    <div class="section-eyebrow">Account</div>
+    <div class="section-title">Change Password</div>
+    <p class="section-lead">Any user — Admin, Principal, or Teacher — can update their own password at any time from the dashboard.</p>
+    <div class="card">
+      <div class="card-title">🔑 How to Change Your Password</div>
+      <div class="card-body">
+        <ol class="step-list">
+          <li>Click your name in the top-right corner of the dashboard.</li>
+          <li>Select <strong>Change Password</strong> from the dropdown.</li>
+          <li>Enter your <strong>current password</strong>.</li>
+          <li>Enter and confirm your <strong>new password</strong>.</li>
+          <li>Click <strong>Update Password</strong> — takes effect immediately.</li>
+        </ol>
+        <div class="alert alert-warn" style="margin-top:14px">
+          <span class="alert-icon">⚠️</span>
+          <div>Choose a strong password. Avoid using your name or date of birth. You may be asked to log in again after the change.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="doc-section" id="faq">
+    <div class="section-eyebrow">Account</div>
+    <div class="section-title">Frequently Asked Questions</div>
+
+    <div class="card">
+      <div class="card-title">❓ A student scanned but it doesn't show on the dashboard</div>
+      <div class="card-body">Refresh the page (F5). The dashboard is real-time but does not update automatically — a manual refresh is needed.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">❓ A student's attendance status is wrong</div>
+      <div class="card-body">Use <strong>Attendance Override</strong> to correct it. Select the date, find the student, pick the correct status, add a reason, and save.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">❓ Some students are missing from the report</div>
+      <div class="card-body">Check whether those students exist on the <strong>Students</strong> page. If not, add them manually or via Excel import, then run the report again.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">❓ A teacher is seeing the wrong class</div>
+      <div class="card-body">Admin should go to the <strong>Teachers</strong> page → Edit the teacher's account → correct the Class and Section → Save.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">❓ Gate is scanning but attendance isn't appearing</div>
+      <div class="card-body">The gate is likely offline and storing records locally. Once the network is restored, all queued records sync automatically. If the issue persists, contact the Admin.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">❓ I forgot my password</div>
+      <div class="card-body">
+        Contact the Admin — they can reset your password and provide a temporary one.
+        <br/><br/>
+        Admin contact: <a href="https://wa.me/918126956997" style="color:var(--accent2)">WhatsApp +91 81269 56997</a> &nbsp;·&nbsp; <a href="mailto:dcg136143@gmail.com" style="color:var(--accent2)">dcg136143@gmail.com</a>
+      </div>
+    </div>
+
+    <div class="alert alert-tip">
+      <span class="alert-icon">💡</span>
+      <div>
+        Need further help? Reach the developer directly — <strong>WhatsApp / Phone:</strong> +91 81269 56997 &nbsp;·&nbsp;
+        <strong>Email:</strong> dcg136143@gmail.com &nbsp;·&nbsp;
+        <a href="https://THEDARKGEEKDC2.github.io" style="color:var(--accent2)">THEDARKGEEKDC2.github.io</a>
+        &nbsp;·&nbsp; <a href="/about" style="color:var(--accent2)">About &amp; Credits →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="border-top:1px solid var(--border); padding-top:28px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-top:40px;">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--muted)">DAS v1.0 · 2026 · MIT License</div>
+    <div style="font-size:12px; color:var(--muted); text-align:right">
+      Built by <span style="color:var(--accent2)">THEDARKGEEKDC</span> · PM SHRI KV No.2 Kharagpur<br/>
+      <a href="/about" style="color:var(--muted); text-decoration:none">Credits &amp; Contact →</a>
+    </div>
+  </div>
+
+</main>
+
+<script>
+const sections = document.querySelectorAll('.doc-section');
+const navLinks  = document.querySelectorAll('.nav-link');
+const observer  = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      navLinks.forEach(l => l.classList.remove('active'));
+      const a = document.querySelector(`.nav-link[href="#${e.target.id}"]`);
+      if (a) a.classList.add('active');
+    }
+  });
+}, { rootMargin: '-25% 0px -65% 0px' });
+sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>
