@@ -108,7 +108,15 @@ document.getElementById('downloadSample').onclick=()=>{
     ]
   };
   exportJson(sample,'flashcard-champ-sample-import.json');
-  say('✅ Sample file downloaded — edit it and import it back in.');
+  // Second sample file
+const a = document.createElement('a');
+a.href = 'https://raw.githubusercontent.com/Thedarkgeekdc2/thedarkgeekdc2.github.io/main/FCGAMES/sample-all-question-types.json';
+a.download = 'sample-all-question-types.json';
+a.target = '_blank';
+document.body.appendChild(a);
+a.click();
+a.remove();
+  say('✅ Sample files downloaded — edit it and import it back in.');
 };
 
 document.getElementById('importBtn').onclick=async()=>{
