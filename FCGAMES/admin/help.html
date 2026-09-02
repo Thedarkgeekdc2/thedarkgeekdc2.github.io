@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Help &amp; Guide · Flashcard Champ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700&display=swap">
+<style>
+  :root{
+    --paper:#fff8ec;
+    --paper-tint:#fef1da;
+    --surface:#ffffff;
+    --ink:#241c15;
+    --ink-soft:#786a5a;
+    --line:#241c15;
+    --grape:#6c4df0;   --grape-dark:#5638d1;
+    --sky:#2fa8e0;     --sky-dark:#1a86ba;
+    --grass:#1fb579;   --grass-dark:#0f9662;
+    --marigold:#ffb238; --marigold-dark:#e0921a;
+    --coral:#ff5a5f;   --coral-dark:#e13f45;
+    --font-display:'Baloo 2',system-ui,sans-serif;
+    --font-body:'Nunito',system-ui,sans-serif;
+    --bw:3px;
+    --shadow:5px 5px 0 var(--ink);
+    --shadow-sm:3px 3px 0 var(--ink);
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:var(--font-body);font-size:17px;line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{font-family:var(--font-display);margin:0;line-height:1.15;color:var(--ink);}
+  p{margin:0 0 .7em;max-width:62ch;}
+  a{color:var(--grape-dark);}
+  img,svg{max-width:100%;}
+
+  /* ---------- sticky top bar ---------- */
+  .topbar{
+    position:sticky;top:0;z-index:50;
+    background:var(--paper);border-bottom:var(--bw) solid var(--line);
+    display:flex;align-items:center;justify-content:space-between;gap:14px;
+    padding:12px 20px;flex-wrap:wrap;
+  }
+  .topbar .brand{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:700;font-size:19px;}
+  .topbar .brand .dot{width:12px;height:12px;border-radius:50%;background:var(--grape);border:2px solid var(--line);}
+  .nav-pills{display:flex;gap:8px;flex-wrap:wrap;}
+  .nav-pill{
+    font-family:var(--font-display);font-weight:600;font-size:14.5px;
+    padding:9px 16px;border-radius:999px;border:var(--bw) solid var(--line);
+    background:var(--surface);color:var(--ink);text-decoration:none;
+    box-shadow:var(--shadow-sm);cursor:pointer;transition:transform .15s ease;
+  }
+  .nav-pill:hover{transform:translate(-1px,-1px);}
+  .nav-pill.active{background:var(--grape);color:#fff;}
+
+  main{max-width:980px;margin:0 auto;padding:0 20px 80px;}
+
+  /* ---------- hero ---------- */
+  .hero{
+    text-align:center;padding:64px 16px 46px;
+  }
+  .hero .kicker{
+    display:inline-block;font-family:var(--font-display);font-weight:600;font-size:15px;
+    color:var(--grape-dark);background:var(--surface);border:var(--bw) solid var(--line);
+    border-radius:999px;padding:6px 16px;box-shadow:var(--shadow-sm);margin-bottom:18px;
+    animation:pop .5s cubic-bezier(.2,.8,.3,1.4) both;
+  }
+  .hero h1{
+    font-size:clamp(34px,6vw,58px);font-weight:800;letter-spacing:-.01em;
+    background:linear-gradient(100deg,var(--grape) 0%,var(--sky) 50%,var(--grass) 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    animation:pop .6s .05s cubic-bezier(.2,.8,.3,1.4) both;
+  }
+  .hero .sub{
+    max-width:56ch;margin:16px auto 0;color:var(--ink-soft);font-size:18.5px;
+  }
+  @keyframes pop{from{opacity:0;transform:translateY(10px) scale(.97);}to{opacity:1;transform:none;}}
+
+  .audience-picks{
+    display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:760px;margin:38px auto 0;
+  }
+  .pick-card{
+    display:block;text-decoration:none;color:var(--ink);
+    background:var(--surface);border:var(--bw) solid var(--line);border-radius:22px;
+    padding:26px 22px;box-shadow:var(--shadow);text-align:left;
+    transition:transform .15s ease,box-shadow .15s ease;
+  }
+  .pick-card:hover{transform:translate(-3px,-3px);box-shadow:8px 8px 0 var(--ink);}
+  .pick-card .emoji{font-size:34px;display:block;margin-bottom:10px;}
+  .pick-card h3{font-size:21px;margin-bottom:4px;}
+  .pick-card p{margin:0;color:var(--ink-soft);font-size:15px;}
+  .pick-card.sky{border-color:var(--sky-dark);}
+  .pick-card.sky .emoji + h3{color:var(--sky-dark);}
+  .pick-card.grass{border-color:var(--grass-dark);}
+  .pick-card.grass .emoji + h3{color:var(--grass-dark);}
+
+  /* ---------- section shell ---------- */
+  .section{padding:70px 0 20px;scroll-margin-top:84px;}
+  .section-head{margin-bottom:34px;}
+  .section-head .tag{
+    display:inline-flex;align-items:center;gap:8px;font-family:var(--font-display);
+    font-weight:700;font-size:14px;padding:6px 14px;border-radius:999px;color:#fff;margin-bottom:14px;
+  }
+  .tag.sky{background:var(--sky);}
+  .tag.grass{background:var(--grass);}
+  .tag.marigold{background:var(--marigold-dark);}
+  .section-head h2{font-size:clamp(26px,4vw,36px);}
+  .section-head p{color:var(--ink-soft);font-size:17px;margin-top:8px;}
+
+  /* ---------- step list (game section) ---------- */
+  .steps{display:flex;flex-direction:column;gap:16px;}
+  .step{
+    display:grid;grid-template-columns:52px 1fr;gap:16px;align-items:start;
+    background:var(--surface);border:var(--bw) solid var(--line);border-radius:18px;
+    padding:18px 20px;box-shadow:var(--shadow-sm);
+  }
+  .step .num{
+    width:52px;height:52px;border-radius:14px;display:grid;place-items:center;
+    font-family:var(--font-display);font-weight:800;font-size:20px;color:#fff;
+    border:var(--bw) solid var(--line);
+  }
+  .step h4{font-size:18px;margin-bottom:4px;}
+  .step p{margin:0;color:var(--ink-soft);font-size:15.5px;}
+  .step .badge{
+    display:inline-block;margin-top:8px;font-size:12.5px;font-weight:700;
+    background:var(--paper-tint);border:2px solid var(--line);border-radius:999px;
+    padding:3px 10px;color:var(--ink);
+  }
+
+  /* ---------- accordion (admin section) ---------- */
+  .accordion{display:flex;flex-direction:column;gap:14px;}
+  .acc-item{
+    background:var(--surface);border:var(--bw) solid var(--line);border-radius:18px;
+    box-shadow:var(--shadow-sm);overflow:hidden;
+  }
+  .acc-item summary{
+    list-style:none;cursor:pointer;padding:18px 20px;display:flex;align-items:center;gap:14px;
+    font-family:var(--font-display);font-weight:700;font-size:17.5px;
+  }
+  .acc-item summary::-webkit-details-marker{display:none;}
+  .acc-item summary .ic{
+    width:40px;height:40px;flex-shrink:0;border-radius:12px;display:grid;place-items:center;
+    font-size:19px;background:var(--paper-tint);border:2px solid var(--line);
+  }
+  .acc-item summary .chev{margin-left:auto;font-size:18px;transition:transform .2s ease;color:var(--ink-soft);}
+  .acc-item[open] summary .chev{transform:rotate(180deg);}
+  .acc-body{padding:0 20px 22px 74px;color:var(--ink-soft);font-size:15.5px;}
+  .acc-body p{margin:0 0 .6em;}
+  .acc-body ul,.acc-body ol{margin:.4em 0 .8em;padding-left:20px;}
+  .acc-body li{margin-bottom:6px;}
+  .acc-body strong{color:var(--ink);}
+  .callout{
+    margin-top:10px;padding:12px 14px;border-radius:12px;border:2px dashed var(--line);
+    background:var(--paper-tint);font-size:14.5px;color:var(--ink);
+  }
+  .callout.warn{border-color:var(--coral-dark);background:#fff0ee;}
+  .callout b{color:var(--coral-dark);}
+
+  /* ---------- good to know cards ---------- */
+  .tips-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;}
+  .tip{
+    background:var(--surface);border:var(--bw) solid var(--line);border-radius:18px;
+    padding:18px 18px 20px;box-shadow:var(--shadow-sm);
+  }
+  .tip .emoji{font-size:26px;display:block;margin-bottom:8px;}
+  .tip h4{font-size:16.5px;margin-bottom:6px;}
+  .tip p{font-size:14.5px;color:var(--ink-soft);margin:0;}
+
+  /* ---------- faq ---------- */
+  .faq{display:flex;flex-direction:column;gap:10px;}
+  .faq-item{background:var(--surface);border:var(--bw) solid var(--line);border-radius:14px;padding:4px 18px;box-shadow:var(--shadow-sm);}
+  .faq-item summary{cursor:pointer;list-style:none;padding:14px 0;font-family:var(--font-display);font-weight:600;font-size:16px;display:flex;gap:10px;align-items:center;}
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::before{content:"Q";flex-shrink:0;width:26px;height:26px;border-radius:50%;background:var(--marigold);border:2px solid var(--line);display:grid;place-items:center;font-size:13px;}
+  .faq-item .a{padding:0 0 16px 36px;color:var(--ink-soft);font-size:15px;}
+
+  footer{
+    text-align:center;padding:46px 20px 60px;color:var(--ink-soft);font-size:14px;
+    border-top:var(--bw) solid var(--line);margin-top:40px;
+  }
+  footer .credit{font-family:var(--font-display);font-weight:700;color:var(--ink);font-size:15.5px;margin-bottom:4px;}
+
+  #topBtn{
+    position:fixed;right:20px;bottom:20px;width:50px;height:50px;border-radius:50%;
+    background:var(--grape);color:#fff;border:var(--bw) solid var(--line);box-shadow:var(--shadow-sm);
+    font-size:20px;cursor:pointer;display:none;place-items:center;z-index:40;
+  }
+  #topBtn.show{display:grid;}
+
+  @media(max-width:640px){
+    .audience-picks{grid-template-columns:1fr;}
+    .acc-body{padding-left:20px;}
+    .step{grid-template-columns:44px 1fr;}
+    .step .num{width:44px;height:44px;font-size:17px;border-radius:12px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand"><span class="dot"></span> Flashcard Champ — Help</div>
+  <nav class="nav-pills">
+    <a class="nav-pill" data-target="#playing" href="#playing">🎮 Playing the Game</a>
+    <a class="nav-pill" data-target="#admin" href="#admin">🛠️ Admin Panel</a>
+    <a class="nav-pill" data-target="#tips" href="#tips">💡 Good to Know</a>
+    <a class="nav-pill" data-target="#faq" href="#faq">❓ FAQ</a>
+  </nav>
+</div>
+
+<main>
+
+  <section class="hero">
+    <span class="kicker">📚 Your Complete Guide</span>
+    <h1>Learn Flashcard Champ<br>in a Few Minutes</h1>
+    <p class="sub">Everything you need to know to play the game and run the Admin Panel — explained simply, no computer skills needed.</p>
+
+    <div class="audience-picks">
+      <a class="pick-card sky" href="#playing">
+        <span class="emoji">🎮</span>
+        <h3>I'm here to Play</h3>
+        <p>Learn how a student picks a topic and answers flashcards.</p>
+      </a>
+      <a class="pick-card grass" href="#admin">
+        <span class="emoji">🛠️</span>
+        <h3>I'm here to Manage</h3>
+        <p>Learn how a teacher logs in and runs the Admin Panel.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ PLAYING THE GAME ============ -->
+  <section class="section" id="playing">
+    <div class="section-head">
+      <span class="tag sky">🎮 For Players</span>
+      <h2>Playing the Game</h2>
+      <p>Nine simple steps — from opening the app to seeing your score.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <div class="num" style="background:var(--sky)">1</div>
+        <div><h4>Open the app</h4><p>Go to the website. You'll land straight on the home screen — no sign-up, no password needed to play.</p></div>
+      </div>
+      <div class="step">
+        <div class="num" style="background:var(--sky)">2</div>
+        <div><h4>Choose your Class</h4><p>Tap the card for your class (grade). You'll only see the classes that have been set up.</p></div>
+      </div>
+      <div class="step">
+        <div class="num" style="background:var(--grape)">3</div>
+        <div><h4>Choose a Subject</h4><p>Pick from the subjects shown for your class, like Maths or Hindi.</p></div>
+      </div>
+      <div class="step">
+        <div class="num" style="background:var(--grape)">4</div>
+        <div><h4>Pick a Topic</h4><p>Each subject has several topics — like Addition, Shapes, or Time. Tap the one you want to practise.</p></div>
+      </div>
+      <div class="step">
+        <div class="num" style="background:var(--marigold-dark)">5</div>
+        <div><h4>Choose a Difficulty</h4><p>Pick Easy, Medium, or Challenge depending on how confident you feel.</p></div>
+      </div>
+      <div class="step">
+        <div class="num" style="background:var(--marigold-dark)">6</div>
+        <div><h4>Answer by tapping</h4><p>Every question is answered with a single tap — a picture, a word, or dragging a tile into place. You never need to type anything.</p><span class="badge">👆 Tap only — no typing, ever</span></div>
+      </div>
+      <div class="step">
+        <div class="num" style="background:var(--grass)">7</div>
+        <div><h4>Watch your progress</h4><p>While you play, you'll see your score, how many lives you have left, your streak of correct answers, and a timer — depending on what your teacher has turned on.</p></div>
+      </div>
+      <div class="step">
+        <div class="num" style="background:var(--grass)">8</div>
+        <div><h4>See your result</h4><p>At the end of the topic, a results screen shows how many you got right and how well you did.</p></div>
+      </div>
+      <div class="step">
+        <div class="num" style="background:var(--coral)">9</div>
+        <div><h4>Play again</h4><p>Try the same topic again to beat your score, or go back and pick a new one. There's no limit — practise as much as you like!</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ADMIN PANEL ============ -->
+  <section class="section" id="admin">
+    <div class="section-head">
+      <span class="tag grass">🛠️ For Teachers</span>
+      <h2>The Admin Panel</h2>
+      <p>Tap any card below to open it up. This is where you add questions, manage topics, and change how the app looks.</p>
+    </div>
+
+    <div class="accordion">
+
+      <details class="acc-item" open>
+        <summary><span class="ic">🔑</span> Logging In <span class="chev">▾</span></summary>
+        <div class="acc-body">
+          <p>Open the Admin Login page (there's a link at the bottom of the game screen). Enter the username and password given to you by whoever set up your app.</p>
+          <p>You'll stay logged in for a while automatically. If you leave the page idle for too long, it'll ask you to log in again — that's normal and keeps things safe.</p>
+          <div class="callout warn"><b>Please note:</b> if you're still using the starting password, ask whoever manages your website to change it to something private.</div>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary><span class="ic">🏠</span> The Dashboard <span class="chev">▾</span></summary>
+        <div class="acc-body">
+          <p>Once logged in, the Dashboard is your home base. It shows a card for every tool — tap any card to open that tool. Here's what each one does:</p>
+          <ul>
+            <li><strong>Question Builder</strong> — create a brand-new question</li>
+            <li><strong>Question Library</strong> — see, search, edit, or remove existing questions</li>
+            <li><strong>Classes &amp; Subjects</strong> — add a new grade or subject</li>
+            <li><strong>Topics</strong> — add or remove topics inside a subject</li>
+            <li><strong>Images</strong> — check and reuse the pictures used in questions</li>
+            <li><strong>Settings</strong> — change your school's name, colours, and game rules</li>
+            <li><strong>Data Tools</strong> — bring in ready-made question files, or save a copy of your own work</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary><span class="ic">➕</span> Adding a Question <span class="chev">▾</span></summary>
+        <div class="acc-body">
+          <p>Open <strong>Question Builder</strong> from the Dashboard.</p>
+          <ol>
+            <li>Choose the Class, Subject, and Topic this question belongs to.</li>
+            <li>Choose a question type — for example, a simple multiple-choice question, a True/False statement, matching pairs, dragging items into place, or a picture-based question.</li>
+            <li>Type your question, then fill in the answer choices (or pairs, or items, depending on the type you picked).</li>
+            <li>Mark which answer is correct.</li>
+            <li>Watch the box on the side — it shows exactly how the question will look to a student, updated as you type.</li>
+            <li>Tap <strong>Save</strong>. That's it — the question is ready to be played.</li>
+          </ol>
+          <div class="callout">💡 Not sure which type to pick? Start with the simple multiple-choice type — it works for almost anything.</div>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary><span class="ic">📚</span> Managing Questions <span class="chev">▾</span></summary>
+        <div class="acc-body">
+          <p>Open <strong>Question Library</strong> to see every question you've added. You can:</p>
+          <ul>
+            <li>Search by typing a word from the question</li>
+            <li>Filter by Class, Subject, or question type</li>
+            <li>Tap <strong>Edit</strong> to change a question, or <strong>Delete</strong> to remove it</li>
+          </ul>
+          <p>A small picture icon next to a question means it has an image attached to it.</p>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary><span class="ic">🏷️</span> Classes, Subjects &amp; Topics <span class="chev">▾</span></summary>
+        <div class="acc-body">
+          <p>Open <strong>Classes &amp; Subjects</strong> to add a brand-new grade or subject — just type its name and tap Add. It will immediately show up as an option everywhere in the app.</p>
+          <p>Open <strong>Topics</strong> to add or remove a topic inside a class and subject — for example, adding "Fractions" under Class 3 → Maths.</p>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary><span class="ic">🖼️</span> Images <span class="chev">▾</span></summary>
+        <div class="acc-body">
+          <p>Open <strong>Images</strong> to see every picture currently used in your questions, with a quick check showing whether each one loads properly or is broken.</p>
+          <p>There's also a small tool to preview a picture from your own device and get a suggested name for it — handy when you're about to ask your website manager to add a new picture for you to use in a question.</p>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary><span class="ic">🎨</span> Settings <span class="chev">▾</span></summary>
+        <div class="acc-body">
+          <p>Open <strong>Settings</strong> to change:</p>
+          <ul>
+            <li>Your school's name and footer message</li>
+            <li>The app's colour theme</li>
+            <li>Game rules — how many questions per round, how many lives, whether there's a timer, and points/streak settings</li>
+          </ul>
+          <div class="callout warn"><b>Good to know:</b> changes you make here are saved on the device and browser you're using right now. Someone opening the app on a different phone or computer won't see your change until your website manager makes it permanent for everyone.</div>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary><span class="ic">🔄</span> Data Tools <span class="chev">▾</span></summary>
+        <div class="acc-body">
+          <p>Open <strong>Data Tools</strong> for three things:</p>
+          <ul>
+            <li><strong>Import</strong> — bring in a ready-made question file (someone may have prepared one for you)</li>
+            <li><strong>Export</strong> — save a copy of the questions you've built, as a file you can keep</li>
+            <li><strong>Backup / Restore</strong> — save everything at once, or bring it all back if something goes wrong</li>
+          </ul>
+          <div class="callout">💡 There's a separate step-by-step guide for creating a whole set of questions automatically from a book chapter, using AI. Ask for it if you'd like a copy.</div>
+        </div>
+      </details>
+
+    </div>
+  </section>
+
+  <!-- ============ GOOD TO KNOW ============ -->
+  <section class="section" id="tips">
+    <div class="section-head">
+      <span class="tag marigold">💡 Quick Tips</span>
+      <h2>Good to Know</h2>
+    </div>
+    <div class="tips-grid">
+      <div class="tip"><span class="emoji">👆</span><h4>Nothing to type, ever</h4><p>Every question in the game is answered by tapping — never by typing an answer.</p></div>
+      <div class="tip"><span class="emoji">💾</span><h4>Save copies often</h4><p>Use Export or Backup in Data Tools regularly, so your work is never lost.</p></div>
+      <div class="tip"><span class="emoji">📱</span><h4>Works on any device</h4><p>Phone, tablet, or computer — the app adjusts itself to fit the screen.</p></div>
+      <div class="tip"><span class="emoji">🔒</span><h4>Change the default password</h4><p>If you're still using the starting admin password, ask to have it changed.</p></div>
+      <div class="tip"><span class="emoji">🌐</span><h4>Some changes are per-device</h4><p>Settings and questions you add stay on your device until made permanent by your website manager.</p></div>
+      <div class="tip"><span class="emoji">🔁</span><h4>Practice has no limit</h4><p>Students can replay any topic as many times as they like.</p></div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section" id="faq">
+    <div class="section-head">
+      <span class="tag grass">❓ Quick Answers</span>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq">
+      <details class="faq-item"><summary>Do students need to install anything?</summary><div class="a">No. It opens straight in a web browser, on any phone, tablet, or computer.</div></details>
+      <details class="faq-item"><summary>Do I need the internet to play?</summary><div class="a">Yes, the app loads over the internet each time you open it.</div></details>
+      <details class="faq-item"><summary>I added a question but a student can't see it. Why?</summary><div class="a">Questions you add are saved on your own device first. Ask your website manager to make them permanent so every student can see them.</div></details>
+      <details class="faq-item"><summary>Can I undo a mistake in the Admin Panel?</summary><div class="a">Yes — if you took a Backup beforehand, use Restore in Data Tools to bring everything back to that point.</div></details>
+      <details class="faq-item"><summary>I forgot the admin password. What now?</summary><div class="a">Ask whoever manages your website to look it up or reset it for you.</div></details>
+      <details class="faq-item"><summary>Can more than one teacher use the Admin Panel?</summary><div class="a">Yes, anyone with the password can log in from their own device.</div></details>
+    </div>
+  </section>
+
+</main>
+
+<button id="topBtn" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<footer>
+  <div class="credit">Flashcard Champ — Help &amp; Guide</div>
+  Contact / Credit: <strong>DK CHAUDHARY</strong>
+</footer>
+
+<script>
+  var pills = document.querySelectorAll('.nav-pill');
+  var sections = ['playing','admin','tips','faq'].map(function(id){ return document.getElementById(id); });
+
+  function setActive(id){
+    pills.forEach(function(p){ p.classList.toggle('active', p.dataset.target === '#' + id); });
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting) setActive(e.target.id); });
+  }, {rootMargin:'-40% 0px -55% 0px'});
+  sections.forEach(function(s){ if(s) io.observe(s); });
+
+  var topBtn = document.getElementById('topBtn');
+  window.addEventListener('scroll', function(){
+    topBtn.classList.toggle('show', window.scrollY > 500);
+  });
+</script>
+</body>
+</html>
