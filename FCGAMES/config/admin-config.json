@@ -6,6 +6,6 @@
   "allowJsonImport": true,
   "allowJsonExport": true,
   "allowImageUpload": true,
-  "adminPassword": "KV2KGP 1",
+  "adminPassword": "KV2KGP",
   "note": "Basic classroom-level protection; admin URLs require an active local session."
 }
