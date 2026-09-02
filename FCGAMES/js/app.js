@@ -127,14 +127,27 @@ async function startGame(diff){
   renderGame(s);
 }
 function renderGame(s){
-  const q=s.questions[s.index];let locked=false,time=s.settings.game.questionTimeSeconds;
-  app.innerHTML=`<section class="game"><div class="game-top"><span class="progress-chip">Q ${s.index+1}/${s.questions.length}</span><span class="progress-chip">⭐ <b id="score">${s.score}</b></span>${s.settings.game.enableStreak?`<span class="progress-chip">🔥 <b id="streak">${s.streak}</b></span>`:''}${s.settings.game.enableLives?`<span class="progress-chip">❤️ <b id="lives">${s.lives}</b></span>`:''}</div><div class="progress-track"><div class="progress-fill" style="width:${Math.round((s.index)/s.questions.length*100)}%"></div></div>${s.settings.game.enableTimer?`<div class="timer">⏱️ <b id="time">${s.settings.game.questionTimeSeconds}</b>s</div>`:''}<div id="question-card"></div></section>`;
+  const q=s.questions[s.index];let locked=false,paused=false,time=s.settings.game.questionTimeSeconds;
+  app.innerHTML=`<section class="game"><div class="game-top"><span class="progress-chip">Q ${s.index+1}/${s.questions.length}</span><span class="progress-chip">⭐ <b id="score">${s.score}</b></span>${s.settings.game.enableStreak?`<span class="progress-chip">🔥 <b id="streak">${s.streak}</b></span>`:''}${s.settings.game.enableLives?`<span class="progress-chip">❤️ <b id="lives">${s.lives}</b></span>`:''}<button type="button" id="pauseBtn" class="pause-btn" aria-label="Pause game">⏸️</button></div><div class="progress-track"><div class="progress-fill" style="width:${Math.round((s.index)/s.questions.length*100)}%"></div></div>${s.settings.game.enableTimer?`<div class="timer">⏱️ <b id="time">${s.settings.game.questionTimeSeconds}</b>s</div>`:''}<div id="question-card"></div><div class="pause-overlay" id="pauseOverlay" hidden><div class="pause-card"><h2>⏸️ Paused</h2><p>Take your time — nothing is running while you're away.</p><div class="pause-actions"><button type="button" id="resumeBtn" class="primary">▶️ Resume</button><button type="button" id="quitBtn" class="quit-btn">🏠 Quit to Home</button></div></div></div></section>`;
   const root=document.getElementById('question-card');
   renderQuestion(root,q,finish);
+  const pauseBtn=document.getElementById('pauseBtn');
+  const overlay=document.getElementById('pauseOverlay');
+  function setPaused(p){
+    if(locked)return;
+    paused=p;
+    overlay.hidden=!p;
+    pauseBtn.textContent=p?'▶️':'⏸️';
+    pauseBtn.setAttribute('aria-label',p?'Resume game':'Pause game');
+  }
+  pauseBtn.onclick=()=>setPaused(!paused);
+  document.getElementById('resumeBtn').onclick=()=>setPaused(false);
+  document.getElementById('quitBtn').onclick=()=>{if(tick)clearInterval(tick);home();};
   let tick=null;
   if(s.settings.game.enableTimer){
     tick=setInterval(()=>{
       if(locked){clearInterval(tick);return;}
+      if(paused)return;
       time--;
       const timeEl=document.getElementById('time');
       if(timeEl)timeEl.textContent=time;
@@ -144,6 +157,7 @@ function renderGame(s){
   }
   function finish(ok){
     if(locked)return;locked=true;if(tick)clearInterval(tick);s.answers++;
+    pauseBtn.disabled=true;
     if(s.settings.game.enableSounds)playSound(ok);
     if(ok){
       s.correct++;
@@ -310,4 +324,3 @@ function showError(e){console.error(e);app.innerHTML=`<section class="panel"><h2
 window.FlashcardApp={chooseClass,home};
 home().catch(showError);
 })();
-
