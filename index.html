@@ -675,15 +675,21 @@
       flex-direction: column;
     }
     .proj-thumb {
-      height: 160px;
-      overflow: hidden;
-    }
-    .proj-thumb img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform .5s;
-    }
+  height: 340px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(5,8,16,.35);
+}
+
+.proj-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transition: transform .5s;
+}
     .proj-card:hover .proj-thumb img { transform: scale(1.07); }
     .proj-thumb-placeholder {
       width: 100%; height: 100%;
@@ -1057,6 +1063,9 @@
       .hero-text h1    { font-size: 1.7rem; }
       .projects-grid   { grid-template-columns: 1fr; }
       .services-grid   { grid-template-columns: 1fr; }
+      .proj-thumb {
+  height: 300px;
+      }
     }
   </style>
 </head>
