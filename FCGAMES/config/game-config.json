@@ -1,7 +1,7 @@
 {
-  "questionsPerGame": 10,
-  "startingLives": 3,
-  "questionTimeSeconds": 20,
+  "questionsPerGame": 24,
+  "startingLives": 6,
+  "questionTimeSeconds": 60,
   "pointsPerCorrectAnswer": 10,
   "enableTimer": true,
   "enableLives": true,
