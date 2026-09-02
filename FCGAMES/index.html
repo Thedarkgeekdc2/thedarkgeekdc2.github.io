@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta
+  name="viewport"
+  content="width=device-width,initial-scale=1,viewport-fit=cover"
+>
+
+<meta name="theme-color" content="#6c4df0">
+
+<meta
+  name="description"
+  content="Flashcard Champ — interactive school flashcard game"
+>
+
+<title>Flashcard Champ</title>
+
+<link rel="manifest" href="manifest.json">
+
+<link
+  rel="icon"
+  href="assets/icons/kvs-logo.png"
+  type="image/png"
+>
+
+<!-- Bubbly, modern display font for the student app — "Baloo 2" natively
+     covers both Latin (English UI/maths) and Devanagari (Hindi) glyphs, so
+     English and Hindi headings share one consistent, colorful, kid-friendly
+     look. Body/answer text still uses the plain readable --font stack for
+     legibility; see styles/main.css for where --font-display is applied. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&display=swap"
+>
+
+<script src="js/env-check.js"></script>
+
+<link rel="stylesheet" href="styles/main.css">
+<link rel="stylesheet" href="styles/game.css">
+
+
+<style>
+
+/* =========================================================
+   FLASHCARD CHAMP — PERMANENT APP SHELL
+   (navbar + student branding + footer, everything outside
+   #app; app.js owns #app and never touches this file)
+
+   Colors below intentionally reuse the SAME CSS variables as
+   styles/main.css (--grape, --sky, --grass, --marigold,
+   --coral, --line, --shadow-*, --border-w, --accent, --ink,
+   --surface, --r-btn/--r-tile/--r-chip) so this shell reacts
+   to the Admin > Settings > Theme (Colorful/Simple) and
+   Corner-radius controls exactly like the rest of the app,
+   instead of being stuck on a fixed set of colors.
+   ========================================================= */
+
+:root{
+  --nav-height:68px;
+  --text:var(--ink,#172033);
+  --muted:var(--ink-soft,#667085);
+}
+
+/* ---------- base ---------- */
+
+html,body{margin:0;min-height:100%;}
+html{scroll-behavior:smooth;}
+
+body{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;              /* enables a true sticky footer below */
+  padding-top:var(--nav-height);      /* clearance for the fixed navbar */
+  color:var(--text);
+  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  /* No background declared here on purpose: styles/main.css already paints
+     the theme-aware paper background (colorful tint / flat simple). */
+}
+
+*{box-sizing:border-box;}
+
+button,a,input,select,textarea{-webkit-tap-highlight-color:transparent;}
+
+/* :focus-visible intentionally left to styles/main.css, which already
+   ties the outline color to var(--sky) so it follows the theme too. */
+
+/* ---------- fixed navbar ---------- */
+
+.topbar{
+  position:fixed;
+  top:0;left:0;right:0;
+  z-index:1000;
+  height:var(--nav-height);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  padding:0 max(14px,env(safe-area-inset-right)) 0 max(14px,env(safe-area-inset-left));
+  background:color-mix(in srgb, var(--surface,#fff) 94%, transparent);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  border-bottom:var(--border-w,3px) solid var(--line,#241c15);
+  box-shadow:0 6px 24px color-mix(in srgb, var(--shadow-col,#241c15) 16%, transparent);
+}
+
+/* Slim rainbow accent under the navbar — a small colorful touch that
+   automatically hides itself in the calmer Simple theme. */
+.topbar::after{
+  content:"";
+  position:absolute;
+  left:0;right:0;bottom:-3px;
+  height:3px;
+  background:linear-gradient(90deg,
+    var(--grape,#6c4df0),var(--sky,#2fa8e0),var(--grass,#1fb579),
+    var(--marigold,#ffb238),var(--coral,#ff5a5f));
+}
+[data-theme="simple"] .topbar::after{display:none;}
+
+/* ---------- navbar brand ---------- */
+
+.brand-link{
+  min-width:0;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:var(--text);
+  text-decoration:none;
+}
+
+.kvs-logo-slot{
+  width:46px;height:46px;flex:0 0 46px;
+  display:grid;place-items:center;
+  position:relative;overflow:hidden;
+  border-radius:var(--r-tile,14px);
+  background:linear-gradient(135deg,
+    var(--grape,#6c4df0) 0%,var(--sky,#2fa8e0) 48%,var(--grass,#1fb579) 100%);
+  box-shadow:0 7px 19px color-mix(in srgb, var(--grape,#6c4df0) 35%, transparent);
+}
+.kvs-logo-slot::before{
+  content:"";
+  position:absolute;inset:2px;
+  border-radius:calc(var(--r-tile,14px) - 2px);
+  background:linear-gradient(145deg,#ffffff,#f3f9f4);
+}
+.kvs-logo-slot img{
+  position:relative;z-index:2;
+  width:36px;height:36px;
+  object-fit:contain;
+}
+.kvs-logo-fallback{
+  position:relative;z-index:2;
+  display:none;place-items:center;
+  width:100%;height:100%;
+  font-size:22px;
+}
+
+.navbar-school-name{
+  min-width:0;
+  max-width:min(62vw,620px);
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  font-family:var(--font-display,inherit);
+  font-size:18px;
+  font-weight:950;
+  letter-spacing:-.025em;
+  background:linear-gradient(90deg,
+    var(--grape,#6c4df0) 0%,var(--sky,#2fa8e0) 45%,var(--grass,#1fb579) 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+[data-theme="simple"] .navbar-school-name{
+  background:none;
+  -webkit-text-fill-color:currentColor;
+  color:var(--ink);
+}
+
+/* ---------- admin button ---------- */
+
+.admin-link{
+  min-height:44px;
+  padding:0 15px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border:var(--border-w,3px) solid var(--line,#241c15);
+  border-radius:var(--r-btn,14px);
+  color:#fff;
+  background:linear-gradient(135deg,var(--grape,#6c4df0),var(--grape-dark,#5638d1));
+  text-decoration:none;
+  font-size:14px;
+  font-weight:850;
+  box-shadow:var(--shadow-x,5px) var(--shadow-y,5px) 0 var(--shadow-col,#241c15);
+  transition:transform .18s ease,box-shadow .18s ease;
+}
+.admin-link:hover{
+  transform:translate(-2px,-2px);
+  box-shadow:calc(var(--shadow-x,5px) + 2px) calc(var(--shadow-y,5px) + 2px) 0 var(--shadow-col,#241c15);
+}
+.admin-link:active{transform:translate(1px,1px);}
+
+/* ---------- permanent body branding (outside #app) ---------- */
+
+#studentBranding{
+  width:100%;
+  text-align:center;
+  padding:24px max(16px,env(safe-area-inset-right)) 8px max(16px,env(safe-area-inset-left));
+}
+
+.student-branding{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:15px;
+  max-width:900px;
+  margin:0 auto;
+}
+
+.student-logo{
+  width:72px;height:72px;flex:0 0 72px;
+  display:grid;place-items:center;
+  overflow:hidden;
+  border-radius:22px;
+  background:linear-gradient(145deg,#ffffff,#f1f4ff);
+  border:1px solid var(--line,#dfe6ee);
+  box-shadow:0 13px 29px rgba(27,42,80,.11);
+  transform:rotate(-2deg);
+}
+.student-logo img{width:54px;height:54px;object-fit:contain;}
+.student-logo-fallback{
+  display:none;place-items:center;
+  width:100%;height:100%;
+  font-size:42px;font-weight:1000;color:#fff;
+  background:linear-gradient(135deg,
+    var(--grape,#6c4df0),var(--sky,#2fa8e0),var(--coral,#ff5a5f),var(--marigold,#ffb238));
+}
+
+.student-brand-title{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  justify-content:center;
+  line-height:.82;
+  text-align:right;
+  font-family:var(--font-display);
+  font-weight:1000;
+  text-transform:uppercase;
+  letter-spacing:-.065em;
+  filter:drop-shadow(0 7px 13px rgba(44,58,90,.08));
+}
+
+.student-title-main{
+  font-size:clamp(38px,7vw,64px);
+  background:linear-gradient(180deg,var(--ink,#172b43) 0%,var(--ink-soft,#31566f) 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.student-title-accent{
+  margin-top:5px;
+  padding-right:1px;
+  font-size:clamp(29px,5.4vw,50px);
+  background:linear-gradient(90deg,
+    var(--grape,#6c4df0) 0%,var(--sky,#2fa8e0) 27%,var(--grass,#1fb579) 50%,
+    var(--coral,#ff5a5f) 73%,var(--marigold,#ffb238) 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+[data-theme="simple"] .student-title-accent{
+  background:none;
+  -webkit-text-fill-color:currentColor;
+  color:var(--accent);
+}
+
+/* ---------- learn / play / win ---------- */
+
+.student-tagline{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  margin-top:17px;
+  font-family:var(--font-display);
+  font-size:clamp(19px,3vw,28px);
+  font-weight:950;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+.tag-word.learn{color:var(--sky,#1d5b89);}
+.tag-word.play{color:var(--grape,#6d55dd);}
+.tag-word.win{color:var(--grass,#65b32e);}
+.tag-dot{color:#a4adb7;}
+
+.student-subtitle{
+  margin:9px auto 0;
+  color:var(--muted);
+  font-family:"Trebuchet MS","Segoe UI",sans-serif;
+  font-size:15px;
+  font-weight:650;
+  letter-spacing:.01em;
+}
+
+/* ---------- game area ---------- */
+
+main#app{
+  width:100%;
+  flex:1 0 auto;   /* grows to fill the viewport so the footer below sticks
+                       to the bottom on tall screens, without ever needing
+                       to float on top of content the way a fixed footer did */
+  padding:8px max(16px,env(safe-area-inset-right)) 32px max(16px,env(safe-area-inset-left));
+}
+
+/* ---------- footer ----------
+   Flows naturally after the page content instead of floating fixed on top
+   of it. A fixed footer used to cover the last row of topic/class cards and
+   drag-and-drop tiles on shorter viewports (~720px tall, very common on
+   laptops), making them unclickable — flex:0 0 auto plus the body's flex
+   column keeps this pinned to the bottom of the screen on tall pages, and
+   simply below the content on short ones, with no overlap possible. */
+
+#footer{
+  flex:0 0 auto;
+  align-self:center;
+  width:auto;
+  max-width:calc(100% - 24px);
+  margin:28px auto max(14px,env(safe-area-inset-bottom));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:7px;
+  padding:10px 18px;
+  background:var(--surface,#fff);
+  border:var(--border-w,1px) solid var(--line,#dce5df);
+  border-radius:var(--r-chip,999px);
+  box-shadow:var(--shadow-x,0) var(--shadow-y,2px) 0 var(--shadow-col,rgba(27,40,55,.12));
+  color:var(--muted);
+  text-align:center;
+  font-size:12px;
+  line-height:1.35;
+}
+
+.footer-message{display:none;}
+
+.footer-author{
+  color:var(--grape-dark,#1d5b89);
+  font-weight:950;
+  text-decoration:none;
+  letter-spacing:.01em;
+}
+.footer-author:hover{text-decoration:underline;}
+
+.footer-separator{color:#aab3bd;font-weight:900;}
+
+.footer-copy{
+  font-size:12px;
+  font-weight:900;
+  background:linear-gradient(90deg,var(--grape,#1d5b89),var(--grass,#65b32e));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+[data-theme="simple"] .footer-copy{
+  background:none;
+  -webkit-text-fill-color:currentColor;
+  color:var(--muted);
+}
+
+/* ---------- mobile ---------- */
+
+@media(max-width:650px){
+  :root{--nav-height:62px;}
+
+  .topbar{
+    padding-left:max(10px,env(safe-area-inset-left));
+    padding-right:max(10px,env(safe-area-inset-right));
+  }
+
+  .kvs-logo-slot{width:40px;height:40px;flex-basis:40px;border-radius:12px;}
+  .kvs-logo-slot::before{border-radius:10px;}
+  .kvs-logo-slot img{width:31px;height:31px;}
+
+  .navbar-school-name{max-width:52vw;font-size:14px;}
+
+  .admin-link{min-height:42px;padding:0 11px;border-radius:12px;font-size:13px;}
+
+  #studentBranding{padding-top:17px;}
+  .student-branding{gap:10px;}
+
+  .student-logo{width:54px;height:54px;flex-basis:54px;border-radius:17px;}
+  .student-logo img{width:40px;height:40px;}
+
+  .student-brand-title{line-height:.84;letter-spacing:-.06em;}
+  .student-title-main{font-size:clamp(29px,9.5vw,43px);}
+  .student-title-accent{margin-top:4px;font-size:clamp(23px,7.2vw,35px);}
+
+  .student-tagline{margin-top:13px;gap:6px;font-size:16px;}
+  .student-subtitle{font-size:12px;}
+
+  main#app{padding-top:8px;}
+
+  #footer{
+    margin:20px auto max(10px,env(safe-area-inset-bottom));
+    max-width:calc(100% - 16px);
+    padding:8px 12px;
+    border-radius:22px;
+    font-size:10.5px;
+  }
+  .footer-copy,.footer-author{font-size:10.5px;}
+}
+
+/* ---------- reduced motion ---------- */
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:.01ms!important;
+  }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ======================================================
+     PERMANENT NAVBAR — KVS LOGO + SCHOOL NAME
+     ====================================================== -->
+
+<header class="topbar" role="banner">
+
+  <a class="brand-link" href="./" aria-label="Flashcard Champ home">
+
+    <!-- KVS LOGO -->
+    <span class="kvs-logo-slot" aria-hidden="true">
+      <img
+        src="assets/icons/kvs-logo.png"
+        alt=""
+        onerror="this.style.display='none';this.nextElementSibling.style.display='grid';"
+      >
+      <span class="kvs-logo-fallback">🏫</span>
+    </span>
+
+    <!-- SCHOOL NAME -->
+    <span id="schoolName" class="navbar-school-name">PM SHRI KV 2 KGP</span>
+
+  </a>
+
+  <a class="admin-link" href="admin/login.html">🔐 Admin</a>
+
+</header>
+
+
+<!-- ======================================================
+     PERMANENT BODY BRANDING — OUTSIDE #app
+     ====================================================== -->
+
+<section id="studentBranding" aria-label="Flashcard Champ">
+
+  <div class="student-branding">
+
+    <!-- FLASHCARD LOGO -->
+    <div class="student-logo">
+      <img
+        src="assets/icons/logo.svg"
+        alt="Flashcard Champ logo"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='grid';"
+      >
+      <span class="student-logo-fallback">F</span>
+    </div>
+
+    <!-- TITLE -->
+    <div class="student-brand-title">
+      <span class="student-title-main">FLASHCARD</span>
+      <span class="student-title-accent">CHAMP</span>
+    </div>
+
+  </div>
+
+  <!-- LEARN / PLAY / WIN -->
+  <div class="student-tagline">
+    <span class="tag-word learn">LEARN.</span>
+    <span class="tag-dot">•</span>
+    <span class="tag-word play">PLAY.</span>
+    <span class="tag-dot">•</span>
+    <span class="tag-word win">WIN.</span>
+  </div>
+
+  <!-- TAGLINE -->
+  <p class="student-subtitle">Your practice. Your progress. Your win. 🌟</p>
+
+</section>
+
+
+<!-- ======================================================
+     EXISTING GAME AREA — app.js CONTINUES TO CONTROL THIS
+     AREA ONLY
+     ====================================================== -->
+
+<main id="app" role="main">
+
+  <section class="hero" id="fallback-home">
+    <div class="class-grid">
+      <button class="class-card" type="button">
+        <span class="card-emoji">🏫</span>
+        <strong>Loading…</strong>
+        <span>Please wait</span>
+      </button>
+    </div>
+  </section>
+
+</main>
+
+
+<!-- ======================================================
+     PERMANENT FOOTER
+     ====================================================== -->
+
+<footer id="footer" role="contentinfo">
+
+  <a
+    class="footer-author"
+    href="https://thedarkgeekdc2.github.io/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="THE DARK GEEK DC website"
+  >THEDARKGEEKDC</a>
+
+  <span class="footer-separator" aria-hidden="true">•</span>
+
+  <span id="footerCopyright" class="footer-copy">© 2026 PM SHRI KENDRIYA VIDYALAYA No. 2 KHARAGPUR</span>
+
+</footer>
+
+
+<!-- ======================================================
+     SETTINGS
+     ====================================================== -->
+
+<script type="module">
+
+import { getSettings } from './js/storage/settings-store.js';
+
+function applySettings(){
+
+  const s = getSettings();
+
+  // App title
+  document.title = s.app?.appName || 'Flashcard Champ';
+
+  // Navbar school name
+  const school = document.getElementById('schoolName');
+  if(school){
+    school.textContent = s.school?.schoolName || 'PM SHRI KV 2 KGP';
+    school.style.display = s.school?.showSchoolNameInNavbar === false ? 'none' : '';
+  }
+
+  // Footer visibility
+  const footer = document.getElementById('footer');
+  if(footer){
+    footer.style.display = s.school?.showFooter === false ? 'none' : 'flex';
+  }
+
+  // Footer copyright — uses school short name
+  const copyright = document.getElementById('footerCopyright');
+  if(copyright){
+    const shortName = s.school?.schoolShortName || s.school?.schoolName || 'PM SHRI KENDRIYA VIDYALAYA NO 2 KHARAGPUR';
+    const year = s.app?.releaseYear || new Date().getFullYear();
+    copyright.textContent = `© ${year} ${shortName}`;
+  }
+
+  // Theme
+  document.documentElement.dataset.theme = s.theme?.theme || 'colorful';
+  document.documentElement.dataset.radius = s.theme?.borderRadius || 'large';
+  document.documentElement.dataset.animations = s.theme?.animations === false ? 'off' : 'on';
+}
+
+applySettings();
+
+window.addEventListener('flashcard:settings-changed', applySettings);
+
+</script>
+
+
+<!-- ======================================================
+     EXISTING GAME JS
+     ====================================================== -->
+
+<script src="js/app.js" defer></script>
+
+
+</body>
+</html>

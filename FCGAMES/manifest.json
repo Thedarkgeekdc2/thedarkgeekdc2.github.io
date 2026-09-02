@@ -1,0 +1,17 @@
+{
+  "name": "Flashcard Champ",
+  "short_name": "Flashcard Champ",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#fff8ec",
+  "theme_color": "#6c4df0",
+  "description": "Interactive flashcard game for school practice.",
+  "icons": [
+    {
+      "src": "assets/icons/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

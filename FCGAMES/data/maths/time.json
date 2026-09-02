@@ -1,0 +1,35 @@
+{
+  "class": 3,
+  "subject": "maths",
+  "topic": "Time",
+  "questions": [
+    {
+      "id": "time001",
+      "type": "image_based",
+      "question": "What time is shown?",
+      "image": "assets/images/maths/clocks/clock-0430.svg",
+      "options": [
+        "3:00",
+        "4:30",
+        "5:00",
+        "4:00"
+      ],
+      "answer": "4:30",
+      "difficulty": "easy"
+    },
+    {
+      "id": "time002",
+      "type": "image_based",
+      "question": "What time is shown?",
+      "image": "assets/images/maths/clocks/clock-0200.svg",
+      "options": [
+        "1:00",
+        "2:00",
+        "2:30",
+        "3:00"
+      ],
+      "answer": "2:00",
+      "difficulty": "easy"
+    }
+  ]
+}

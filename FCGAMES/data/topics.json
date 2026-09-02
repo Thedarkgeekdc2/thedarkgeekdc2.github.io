@@ -1,0 +1,139 @@
+{
+  "topics": [
+    {
+      "class": 3,
+      "subject": "maths",
+      "id": "addition",
+      "name": "Addition",
+      "icon": "➕",
+      "file": "data/maths/addition.json",
+      "description": "Add numbers quickly."
+    },
+    {
+      "class": 3,
+      "subject": "maths",
+      "id": "subtraction",
+      "name": "Subtraction",
+      "icon": "➖",
+      "file": "data/maths/subtraction.json",
+      "description": "Subtract numbers and practise mental maths."
+    },
+    {
+      "class": 3,
+      "subject": "maths",
+      "id": "multiplication",
+      "name": "Multiplication",
+      "icon": "✖️",
+      "file": "data/maths/multiplication.json",
+      "description": "Build multiplication facts."
+    },
+    {
+      "class": 3,
+      "subject": "maths",
+      "id": "division",
+      "name": "Division",
+      "icon": "➗",
+      "file": "data/maths/division.json",
+      "description": "Share numbers into equal groups."
+    },
+    {
+      "class": 4,
+      "subject": "hindi",
+      "id": "vilom",
+      "name": "विलोम शब्द",
+      "icon": "↔️",
+      "file": "data/hindi/vilom.json",
+      "description": "Choose the opposite word."
+    },
+    {
+      "class": 4,
+      "subject": "hindi",
+      "id": "paryayvachi",
+      "name": "पर्यायवाची शब्द",
+      "icon": "🔄",
+      "file": "data/hindi/paryayvachi.json",
+      "description": "Find a similar-meaning word."
+    },
+    {
+      "class": 4,
+      "subject": "hindi",
+      "id": "ling",
+      "name": "लिंग",
+      "icon": "👩‍🏫",
+      "file": "data/hindi/ling.json",
+      "description": "Identify the correct gender."
+    },
+    {
+      "class": 4,
+      "subject": "hindi",
+      "id": "vachan",
+      "name": "वचन",
+      "icon": "👥",
+      "file": "data/hindi/vachan.json",
+      "description": "Identify singular and plural forms."
+    },
+    {
+      "id": "time",
+      "class": 3,
+      "subject": "maths",
+      "name": "Time",
+      "icon": "🕐",
+      "description": "Read clocks and tell the time.",
+      "file": "data/maths/time.json"
+    },
+    {
+      "id": "shapes",
+      "class": 3,
+      "subject": "maths",
+      "name": "Shapes",
+      "icon": "🔷",
+      "description": "Recognise shapes and patterns.",
+      "file": "data/maths/shapes.json"
+    },
+    {
+      "id": "drag-drop",
+      "class": 3,
+      "subject": "maths",
+      "name": "Drag & Drop",
+      "icon": "🖱️",
+      "description": "Move cards into the right place.",
+      "file": "data/maths/drag-drop.json"
+    },
+    {
+      "id": "match",
+      "class": 4,
+      "subject": "hindi",
+      "name": "Match the Following",
+      "icon": "🔗",
+      "description": "Match words with meanings.",
+      "file": "data/hindi/match.json"
+    },
+    {
+      "id": "picture",
+      "class": 4,
+      "subject": "hindi",
+      "name": "Picture Words",
+      "icon": "🖼️",
+      "description": "Look at pictures and choose the word.",
+      "file": "data/hindi/picture.json"
+    },
+    {
+      "id": "grammar",
+      "class": 4,
+      "subject": "hindi",
+      "name": "Grammar Mix",
+      "icon": "📝",
+      "description": "Quick Hindi grammar practice.",
+      "file": "data/hindi/grammar.json"
+    },
+    {
+      "id": "order",
+      "class": 4,
+      "subject": "hindi",
+      "name": "Arrange Words",
+      "icon": "↕️",
+      "description": "Put words in the correct order.",
+      "file": "data/hindi/order.json"
+    }
+  ]
+}

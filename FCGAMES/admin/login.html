@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin Login · Flashcard Champ</title>
+<link rel="icon" href="../assets/icons/kvs-logo.png" type="image/png">
+<script src="../js/env-check.js"></script>
+<link rel="stylesheet" href="../styles/main.css">
+<link rel="stylesheet" href="../styles/admin.css">
+</head>
+<body class="admin-body">
+<header class="topbar">
+  <div class="brand"><span id="schoolName">YOUR SCHOOL NAME</span></div>
+  <a class="admin-link" href="../index.html">Game</a>
+</header>
+<main>
+<script>try{localStorage.removeItem('flashcardChampAdmin')}catch(e){}</script>
+  <section class="admin-login-card">
+    <div class="admin-icon">🔐</div>
+    <p class="eyebrow">ADMIN AREA</p>
+    <h1>Admin Login</h1>
+    <p class="muted">Basic classroom protection for content management.</p>
+    <form id="loginForm" autocomplete="off">
+      <label>Username<input id="username" required autocomplete="username"></label>
+      <label>Password<input id="password" type="password" required autocomplete="current-password"></label>
+      <button class="primary admin-submit" type="submit">Login</button>
+      <div id="loginError" class="login-error" role="alert" hidden>Incorrect username or password.</div>
+    </form>
+    <a class="back-link" href="../index.html">← Back to Game</a>
+  </section>
+</main>
+<script type="module">
+import { login } from '../js/admin/auth.js';
+import '../js/admin/brand.js';
+document.querySelector('#loginForm').addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  const ok = await login(
+    document.querySelector('#username').value,
+    document.querySelector('#password').value
+  );
+  if(ok) location.href='dashboard.html';
+  else document.querySelector('#loginError').hidden=false;
+});
+</script>
+</body>
+</html>

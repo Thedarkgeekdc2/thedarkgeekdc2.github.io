@@ -1,0 +1,27 @@
+{
+  "class": 4,
+  "subject": "hindi",
+  "topicId": "picture",
+  "topic": "Picture Words",
+  "questions": [
+    {
+      "id": "pic001",
+      "type": "identify_picture",
+      "question": "चित्र देखकर सही शब्द चुनिए।",
+      "options": [
+        {
+          "answer": "हाथी",
+          "label": "हाथी",
+          "image": "assets/images/hindi/pictures/elephant.svg"
+        },
+        {
+          "answer": "घोड़ा",
+          "label": "घोड़ा",
+          "image": "assets/images/hindi/pictures/horse.svg"
+        }
+      ],
+      "answer": "हाथी",
+      "difficulty": "easy"
+    }
+  ]
+}

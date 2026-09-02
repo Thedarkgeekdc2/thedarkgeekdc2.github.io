@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Question Builder · Flashcard Champ</title>
+<link rel="icon" href="../assets/icons/kvs-logo.png" type="image/png">
+<script src="../js/env-check.js"></script>
+<link rel="stylesheet" href="../styles/main.css">
+<link rel="stylesheet" href="../styles/admin.css">
+<link rel="stylesheet" href="../styles/builder.css">
+<script>
+(function(){
+  try{
+    const raw=localStorage.getItem('flashcardChampAdmin');
+    if(!raw) throw new Error('no-session');
+    const s=JSON.parse(raw);
+    const age=Date.now()-Number(s.loginAt||0);
+    const timeout=Number(s.timeoutMinutes||60);
+    if(!Number.isFinite(age)||age<0||age>timeout*60*1000) throw new Error('expired');
+  }catch(e){
+    location.replace('login.html');
+  }
+})();
+</script>
+</head>
+<body class="admin-body">
+<header class="topbar">
+  <div class="brand"><span id="schoolName">YOUR SCHOOL NAME</span></div>
+  <div class="top-actions">
+    <a class="admin-link" href="dashboard.html">Dashboard</a>
+    <a class="admin-link" href="../index.html">Game</a>
+  </div>
+</header>
+
+<main class="builder-main">
+  <section class="builder-header">
+    <p class="eyebrow">ADMIN • QUESTION BUILDER</p>
+    <h1>Create a Flashcard</h1>
+    <p class="muted">Select a question type. The form changes automatically.</p>
+  </section>
+
+  <div class="builder-layout">
+    <form id="builderForm" class="builder-card tool-card" autocomplete="off">
+      <div class="form-grid">
+        <label>Class
+          <select id="classNo" required>
+            <option value="3">Class 3</option>
+            <option value="4">Class 4</option>
+          </select>
+        </label>
+
+        <label>Subject
+          <select id="subject" required></select>
+        </label>
+
+        <label class="full">Topic
+          <input id="topic" list="topicList" placeholder="e.g. Multiplication" required>
+          <datalist id="topicList"></datalist>
+        </label>
+
+        <label>Question Type
+          <select id="type" required>
+            <option value="mcq">MCQ</option>
+            <option value="true_false">True / False</option>
+            <option value="match">Match the Following</option>
+            <option value="image_based">Image Based</option>
+            <option value="identify_picture">Identify the Picture</option>
+            <option value="image_mcq">Image MCQ</option>
+            <option value="choose_answer">Choose the Correct Answer</option>
+            <option value="odd_one_out">Odd One Out</option>
+            <option value="yes_no">Yes / No</option>
+            <option value="arrange_order">Arrange in Order</option>
+            <option value="drag_drop">Drag & Drop</option>
+          </select>
+        </label>
+
+        <label>Difficulty
+          <select id="difficulty" required>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="challenge">Challenge</option>
+          </select>
+        </label>
+
+        <label class="full">Question
+          <textarea id="question" rows="3" placeholder="Type the question..." required></textarea>
+        </label>
+      </div>
+
+      <div id="dynamicFields" class="dynamic-fields"></div>
+
+      <div class="builder-actions">
+        <button class="secondary" type="button" id="previewBtn">👁️ Preview</button>
+        <button class="primary" type="submit">💾 Save Question</button>
+      </div>
+      <div id="saveStatus" class="save-status" aria-live="polite"></div>
+    </form>
+
+    <aside class="preview-panel tool-card">
+      <div class="preview-title"><span>Live Preview</span><span id="previewType" class="type">mcq</span></div>
+      <div id="livePreview" class="live-preview">
+        <div class="preview-empty">Fill the form to see the card preview.</div>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script type="module">
+import {requireAdmin} from '../js/admin/auth.js';
+import '../js/admin/brand.js';
+if(!requireAdmin()) location.href='login.html';
+</script>
+<script type="module" src="../js/admin/question-builder.js"></script>
+</body>
+</html>

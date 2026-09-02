@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Settings · Flashcard Champ</title>
+<link rel="icon" href="../assets/icons/kvs-logo.png" type="image/png">
+<script src="../js/env-check.js"></script>
+<link rel="stylesheet" href="../styles/main.css"><link rel="stylesheet" href="../styles/admin.css"><link rel="stylesheet" href="../styles/settings.css">
+<script>
+(function(){
+  try{
+    const raw=localStorage.getItem('flashcardChampAdmin');
+    if(!raw) throw new Error('no-session');
+    const s=JSON.parse(raw);
+    const age=Date.now()-Number(s.loginAt||0);
+    const timeout=Number(s.timeoutMinutes||60);
+    if(!Number.isFinite(age)||age<0||age>timeout*60*1000) throw new Error('expired');
+  }catch(e){
+    location.replace('login.html');
+  }
+})();
+</script>
+</head>
+<body class="admin-body">
+<header class="topbar"><div class="brand"><span>YOUR SCHOOL NAME</span></div>
+<div class="top-actions"><a class="admin-link" href="dashboard.html">Dashboard</a><a class="admin-link" href="../index.html">Game</a></div></header>
+<main>
+<section class="admin-hero"><p class="eyebrow">ADMIN • SETTINGS</p><h1>App Settings</h1><p class="muted">Change branding and common game settings without editing code.</p></section>
+<form id="settingsForm">
+<section class="settings-card"><div class="settings-title"><h2>🏫 School Branding</h2><span class="badge">Frontend</span></div>
+<div class="settings-grid">
+<label>School Name<input id="schoolNameInput"></label>
+<label>Short Name<input id="schoolShortName"></label>
+<label>Logo Path<input id="logo"></label>
+<label class="full">Footer Text<input id="footerText"></label>
+<label class="full">Copyright Text<input id="copyrightText"></label>
+<label class="switch-row"><input id="showSchoolName" type="checkbox"> Show school name in navbar</label>
+<label class="switch-row"><input id="showLogo" type="checkbox"> Show logo in navbar</label>
+<label class="switch-row"><input id="showFooter" type="checkbox"> Show footer</label>
+</div></section>
+
+<section class="settings-card"><div class="settings-title"><h2>🎮 Game Settings</h2><span class="badge">Gameplay</span></div>
+<div class="settings-grid">
+<label>Questions per game<input id="questionsPerGame" type="number" min="1" max="50"></label>
+<label>Starting lives<input id="startingLives" type="number" min="1" max="9"></label>
+<label>Question time (seconds)<input id="questionTimeSeconds" type="number" min="3" max="120"></label>
+<label>Points per correct answer<input id="pointsPerCorrectAnswer" type="number" min="1" max="1000"></label>
+<label class="switch-row"><input id="enableTimer" type="checkbox"> Enable timer</label>
+<label class="switch-row"><input id="enableLives" type="checkbox"> Enable lives</label>
+<label class="switch-row"><input id="enableStreak" type="checkbox"> Enable streak</label>
+<label class="switch-row"><input id="enableSounds" type="checkbox"> Enable sounds</label>
+<label class="switch-row"><input id="showAnswerAfterWrong" type="checkbox"> Show answer after wrong</label>
+<label class="switch-row"><input id="enableSpecialCards" type="checkbox"> Enable special cards</label>
+</div></section>
+
+<section class="settings-card"><div class="settings-title"><h2>🎨 Theme</h2><span class="badge">Appearance</span></div>
+<div class="settings-grid">
+<label>Theme<select id="theme"><option value="colorful">Colorful</option><option value="simple">Simple</option></select></label>
+<label>Card corners<select id="borderRadius"><option value="large">Large</option><option value="medium">Medium</option><option value="small">Small</option></select></label>
+<label class="switch-row"><input id="animations" type="checkbox"> Animations</label>
+<label class="switch-row"><input id="confetti" type="checkbox"> Confetti</label>
+</div></section>
+
+<div class="settings-actions"><button type="button" id="reset" class="secondary">↺ Reset Defaults</button><button type="submit" class="primary">💾 Save Settings</button></div>
+<div id="status" class="tool-status" aria-live="polite"></div>
+</form>
+</main>
+<script type="module">
+import {requireAdmin} from '../js/admin/auth.js';
+import '../js/admin/brand.js';
+if(!requireAdmin()) location.href='login.html';
+</script>
+<script type="module" src="../js/admin/settings.js"></script>
+</body></html>

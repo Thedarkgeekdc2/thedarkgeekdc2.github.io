@@ -1,0 +1,17 @@
+.tool-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+.tool-card{display:grid;gap:12px;align-content:start;}
+.tool-card h2{margin:0;font-size:18px;}
+.tool-card input[type=file]{
+  width:100%;padding:12px;border:var(--border-w) dashed var(--ink-soft);border-radius:var(--r-input);background:var(--paper-tint);
+}
+.sync-note{background:var(--paper-tint);}
+.sync-note p{margin:6px 0 0;color:var(--ink-soft);font-size:14.5px;line-height:1.55;}
+.format-help{border:var(--border-w) solid var(--line);border-radius:var(--r-input);padding:10px 14px;background:var(--paper-tint);}
+.format-help summary{cursor:pointer;font-weight:700;font-size:14px;}
+.format-help p{margin:10px 0 6px;font-size:13.5px;color:var(--ink-soft);}
+.format-help pre{
+  background:var(--ink);color:#f5f0ff;padding:12px 14px;border-radius:var(--r-input);
+  overflow-x:auto;font-size:12.5px;line-height:1.5;
+}
+.format-help code{background:rgba(108,77,240,.14);background:color-mix(in srgb, var(--grape) 14%, transparent);padding:1px 5px;border-radius:5px;font-size:12.5px;}
+@media(max-width:700px){.tool-grid{grid-template-columns:1fr;}}

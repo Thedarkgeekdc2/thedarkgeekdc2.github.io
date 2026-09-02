@@ -1,0 +1,11 @@
+{
+  "adminUsername": "admin",
+  "sessionTimeoutMinutes": 60,
+  "requireDeleteConfirmation": true,
+  "enableBackupBeforeDelete": true,
+  "allowJsonImport": true,
+  "allowJsonExport": true,
+  "allowImageUpload": true,
+  "adminPassword": "KV2KGP 1",
+  "note": "Basic classroom-level protection; admin URLs require an active local session."
+}

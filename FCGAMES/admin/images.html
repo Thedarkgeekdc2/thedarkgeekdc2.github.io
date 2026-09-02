@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Images · Flashcard Champ</title>
+<link rel="icon" href="../assets/icons/kvs-logo.png" type="image/png">
+<script src="../js/env-check.js"></script>
+<link rel="stylesheet" href="../styles/main.css">
+<link rel="stylesheet" href="../styles/admin.css">
+<link rel="stylesheet" href="../styles/images.css">
+<script>
+(function(){
+  try{
+    const raw=localStorage.getItem('flashcardChampAdmin');
+    if(!raw) throw new Error('no-session');
+    const s=JSON.parse(raw);
+    const age=Date.now()-Number(s.loginAt||0);
+    const timeout=Number(s.timeoutMinutes||60);
+    if(!Number.isFinite(age)||age<0||age>timeout*60*1000) throw new Error('expired');
+  }catch(e){
+    location.replace('login.html');
+  }
+})();
+</script>
+</head>
+<body class="admin-body">
+<header class="topbar">
+  <div class="brand"><span id="schoolName">YOUR SCHOOL NAME</span></div>
+  <div class="top-actions">
+    <a class="admin-link" href="dashboard.html">Dashboard</a>
+    <a class="admin-link" href="../index.html">Game</a>
+    <button id="logout" class="logout-btn">Logout</button>
+  </div>
+</header>
+<main class="images-main">
+  <section class="admin-hero">
+    <p class="eyebrow">ADMIN • IMAGES</p>
+    <h1>Image Library</h1>
+    <p class="muted">Every image used across your questions, checked for broken links, with a one-tap copy into the Question Builder.</p>
+  </section>
+
+  <section class="tool-card images-add-note">
+    <h2>➕ Adding a new image</h2>
+    <p class="muted">This app is hosted as plain static files (for example on GitHub Pages), so there's no upload button here that saves a file anywhere students can see. To add a picture: upload it into <code>assets/images/&lt;subject&gt;/&lt;folder&gt;/</code> in the project (through GitHub's "Add file" or your code editor), then use that path in the Question Builder. Preview a file from your own device below to get a ready-made path first.</p>
+    <div class="image-preview-tool">
+      <label class="file-picker">
+        📷 Choose an image to preview
+        <input type="file" id="localFilePicker" accept="image/*">
+      </label>
+      <div id="localPreviewWrap" hidden>
+        <img id="localPreviewImg" alt="Local preview">
+        <div class="suggest-path-row">
+          <div class="form-grid">
+            <label>Subject
+              <select id="suggestSubject"></select>
+            </label>
+            <label>Folder name
+              <input id="suggestFolder" placeholder="e.g. pictures, shapes, clocks">
+            </label>
+          </div>
+          <label>Suggested path
+            <div class="copy-row"><input id="suggestedPath" readonly><button type="button" id="copySuggested" class="small-btn">📋 Copy</button></div>
+          </label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-card">
+    <div class="field-header"><h2>🃏 Used in your questions</h2><button id="refreshUsed" type="button" class="small-btn">🔄 Refresh</button></div>
+    <p class="muted">Every image path a built-in or custom question actually points to right now.</p>
+    <div id="usedGallery" class="image-gallery"><p class="muted">Loading…</p></div>
+  </section>
+
+  <section class="tool-card">
+    <h2>📚 Image asset library</h2>
+    <p class="muted">Reference list from <code>data/media-manifest.json</code>. Anything marked "Not used yet" already exists in the project but isn't attached to a question.</p>
+    <div id="libraryGallery" class="image-gallery"><p class="muted">Loading…</p></div>
+  </section>
+</main>
+<script type="module">
+import { requireAdmin, logout } from '../js/admin/auth.js';
+import '../js/admin/brand.js';
+if(!requireAdmin()){ location.href='login.html'; }
+document.querySelector('#logout').onclick=()=>{logout();location.href='login.html';};
+</script>
+<script type="module" src="../js/admin/image-manager.js"></script>
+</body>
+</html>

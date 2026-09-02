@@ -1,0 +1,105 @@
+{
+  "class": 3,
+  "subject": "maths",
+  "topic": "Sample: All Question Types",
+  "questions": [
+    {
+      "id": "sample-mcq-01",
+      "type": "mcq",
+      "question": "Which number comes right after 47?",
+      "options": ["46", "47", "48", "49"],
+      "answer": "48",
+      "difficulty": "easy"
+    },
+    {
+      "id": "sample-true-false-01",
+      "type": "true_false",
+      "question": "A week has 7 days.",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "sample-yes-no-01",
+      "type": "yes_no",
+      "question": "Is 10 an even number?",
+      "answer": "Yes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "sample-choose-answer-01",
+      "type": "choose_answer",
+      "question": "Which of these is a fruit?",
+      "options": ["Carrot", "Mango", "Potato", "Spinach"],
+      "answer": "Mango",
+      "difficulty": "easy"
+    },
+    {
+      "id": "sample-odd-one-out-01",
+      "type": "odd_one_out",
+      "question": "Which one is not a shape?",
+      "options": ["Circle", "Square", "Banana", "Triangle"],
+      "answer": "Banana",
+      "difficulty": "easy"
+    },
+    {
+      "id": "sample-image-based-01",
+      "type": "image_based",
+      "question": "What time does the clock show?",
+      "image": "assets/images/maths/clocks/clock-0300.svg",
+      "options": ["2:00", "3:00", "4:00", "3:30"],
+      "answer": "3:00",
+      "difficulty": "easy"
+    },
+    {
+      "id": "sample-image-mcq-01",
+      "type": "image_mcq",
+      "question": "How many sides does this shape have?",
+      "image": "assets/images/maths/shapes/triangle.svg",
+      "options": ["2", "3", "4", "5"],
+      "answer": "3",
+      "difficulty": "easy"
+    },
+    {
+      "id": "sample-identify-picture-01",
+      "type": "identify_picture",
+      "question": "Which one is the elephant?",
+      "options": [
+        { "answer": "Elephant", "label": "Elephant", "image": "assets/images/hindi/pictures/elephant.svg" },
+        { "answer": "Horse", "label": "Horse", "image": "assets/images/hindi/pictures/horse.svg" },
+        { "answer": "Tree", "label": "Tree", "image": "assets/images/hindi/pictures/tree.svg" },
+        "Lion"
+      ],
+      "answer": "Elephant",
+      "difficulty": "easy"
+    },
+    {
+      "id": "sample-match-01",
+      "type": "match",
+      "question": "Match each shape to its number of sides.",
+      "pairs": [
+        { "left": "Triangle", "right": "3" },
+        { "left": "Square", "right": "4" },
+        { "left": "Pentagon", "right": "5" }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "sample-drag-drop-01",
+      "type": "drag_drop",
+      "question": "Drag each item to its matching picture.",
+      "pairs": [
+        { "drag": "1/2", "target": "Half", "image": "assets/images/maths/fractions/half.svg" },
+        { "drag": "5 Apples", "target": "Apples", "image": "assets/images/maths/counting/apples-5.svg" }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "sample-arrange-order-01",
+      "type": "arrange_order",
+      "question": "Arrange these numbers from smallest to largest.",
+      "items": ["45", "12", "78", "3"],
+      "answer": ["3", "12", "45", "78"],
+      "difficulty": "medium"
+    }
+  ]
+}

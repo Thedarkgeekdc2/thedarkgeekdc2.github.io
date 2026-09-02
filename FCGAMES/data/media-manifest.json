@@ -1,0 +1,45 @@
+{
+  "version": 2,
+  "images": [
+    {
+      "path": "assets/images/hindi/pictures/elephant.svg",
+      "type": "svg"
+    },
+    {
+      "path": "assets/images/hindi/pictures/horse.svg",
+      "type": "svg"
+    },
+    {
+      "path": "assets/images/hindi/pictures/tree.svg",
+      "type": "svg"
+    },
+    {
+      "path": "assets/images/maths/clocks/clock-0200.svg",
+      "type": "svg"
+    },
+    {
+      "path": "assets/images/maths/clocks/clock-0300.svg",
+      "type": "svg"
+    },
+    {
+      "path": "assets/images/maths/clocks/clock-0430.svg",
+      "type": "svg"
+    },
+    {
+      "path": "assets/images/maths/counting/apples-5.svg",
+      "type": "svg"
+    },
+    {
+      "path": "assets/images/maths/fractions/half.svg",
+      "type": "svg"
+    },
+    {
+      "path": "assets/images/maths/shapes/circle.svg",
+      "type": "svg"
+    },
+    {
+      "path": "assets/images/maths/shapes/triangle.svg",
+      "type": "svg"
+    }
+  ]
+}

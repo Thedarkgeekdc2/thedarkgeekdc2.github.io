@@ -1,0 +1,159 @@
+{
+  "version": 1,
+  "topics": [
+    {
+      "file": "data/maths/addition.json",
+      "class": 3,
+      "subject": "maths",
+      "topic": "Addition",
+      "questionCount": 10
+    },
+    {
+      "file": "data/maths/subtraction.json",
+      "class": 3,
+      "subject": "maths",
+      "topic": "Subtraction",
+      "questionCount": 6
+    },
+    {
+      "file": "data/maths/division.json",
+      "class": 3,
+      "subject": "maths",
+      "topic": "Division",
+      "questionCount": 5
+    },
+    {
+      "file": "data/maths/drag-drop.json",
+      "class": 3,
+      "subject": "maths",
+      "topic": "Drag & Drop",
+      "questionCount": 1
+    },
+    {
+      "file": "data/maths/counting.json",
+      "class": 3,
+      "subject": "maths",
+      "topic": "Counting",
+      "questionCount": 2
+    },
+    {
+      "file": "data/maths/fractions.json",
+      "class": 3,
+      "subject": "maths",
+      "topic": "Fractions",
+      "questionCount": 2
+    },
+    {
+      "file": "data/maths/multiplication.json",
+      "class": 3,
+      "subject": "maths",
+      "topic": "Multiplication",
+      "questionCount": 5
+    },
+    {
+      "file": "data/maths/numbers.json",
+      "class": 3,
+      "subject": "maths",
+      "topic": "Numbers & Classification",
+      "questionCount": 4
+    },
+    {
+      "file": "data/maths/ordering.json",
+      "class": 3,
+      "subject": "maths",
+      "topic": "Order & Matching",
+      "questionCount": 2
+    },
+    {
+      "file": "data/maths/shapes.json",
+      "class": 3,
+      "subject": "maths",
+      "topic": "Shapes",
+      "questionCount": 2
+    },
+    {
+      "file": "data/maths/time.json",
+      "class": 3,
+      "subject": "maths",
+      "topic": "Time",
+      "questionCount": 2
+    },
+    {
+      "file": "data/hindi/classification.json",
+      "class": 4,
+      "subject": "hindi",
+      "topic": "वर्गीकरण",
+      "questionCount": 2
+    },
+    {
+      "file": "data/hindi/grammar.json",
+      "class": 4,
+      "subject": "hindi",
+      "topic": "Grammar Mix",
+      "questionCount": 2
+    },
+    {
+      "file": "data/hindi/order.json",
+      "class": 4,
+      "subject": "hindi",
+      "topic": "Arrange Words",
+      "questionCount": 1
+    },
+    {
+      "file": "data/hindi/picture.json",
+      "class": 4,
+      "subject": "hindi",
+      "topic": "Picture Words",
+      "questionCount": 1
+    },
+    {
+      "file": "data/hindi/ling.json",
+      "class": 4,
+      "subject": "hindi",
+      "topic": "लिंग",
+      "questionCount": 2
+    },
+    {
+      "file": "data/hindi/match.json",
+      "class": 4,
+      "subject": "hindi",
+      "topic": "मिलान",
+      "questionCount": 2
+    },
+    {
+      "file": "data/hindi/paryayvachi.json",
+      "class": 4,
+      "subject": "hindi",
+      "topic": "पर्यायवाची शब्द",
+      "questionCount": 2
+    },
+    {
+      "file": "data/hindi/picture-words.json",
+      "class": 4,
+      "subject": "hindi",
+      "topic": "चित्र पहचान",
+      "questionCount": 2
+    },
+    {
+      "file": "data/hindi/vachan.json",
+      "class": 4,
+      "subject": "hindi",
+      "topic": "वचन",
+      "questionCount": 3
+    },
+    {
+      "file": "data/hindi/vilom.json",
+      "class": 4,
+      "subject": "hindi",
+      "topic": "विलोम शब्द",
+      "questionCount": 4
+    },
+    {
+      "file": "data/maths/image-practice.json",
+      "class": 3,
+      "subject": "maths",
+      "topic": "Image Practice",
+      "questionCount": 3
+    }
+  ]
+}

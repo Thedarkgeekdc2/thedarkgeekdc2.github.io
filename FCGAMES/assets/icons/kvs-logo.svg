@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Kendriya Vidyalaya Sangathan Logo</title>
+  <desc id="desc">Stylized KVS emblem with golden rays and saffron-green open book.</desc>
+
+  <defs>
+    <linearGradient id="saffron" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff6a00"/>
+      <stop offset="0.5" stop-color="#ff8a00"/>
+      <stop offset="1" stop-color="#ff5a00"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#159447"/>
+      <stop offset="0.5" stop-color="#20a84d"/>
+      <stop offset="1" stop-color="#087b39"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd84a"/>
+      <stop offset="1" stop-color="#e4a500"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sun rays -->
+  <g fill="url(#gold)">
+    <path d="M600 70 C570 130 570 220 600 295 C630 220 630 130 600 70Z"/>
+    <path d="M470 95 C455 160 475 235 530 292 C540 215 515 145 470 95Z"/>
+    <path d="M730 95 C685 145 660 215 670 292 C725 235 745 160 730 95Z"/>
+    <path d="M350 160 C355 220 395 275 455 310 C440 240 400 190 350 160Z"/>
+    <path d="M850 160 C800 190 760 240 745 310 C805 275 845 220 850 160Z"/>
+    <path d="M250 250 C270 305 325 345 390 360 C360 300 310 265 250 250Z"/>
+    <path d="M950 250 C890 265 840 300 810 360 C875 345 930 305 950 250Z"/>
+    <path d="M185 360 C220 410 280 435 350 435 C305 390 250 365 185 360Z"/>
+    <path d="M1015 360 C950 365 895 390 850 435 C920 435 980 410 1015 360Z"/>
+    <path d="M155 490 C195 525 255 540 320 525 C265 495 215 485 155 490Z"/>
+    <path d="M1045 490 C985 485 935 495 880 525 C945 540 1005 525 1045 490Z"/>
+  </g>
+
+  <!-- Open book -->
+  <path d="M95 570
+           C215 620 350 620 475 585
+           C535 568 575 570 600 590
+           C625 570 665 568 725 585
+           C850 620 985 620 1105 570
+           L1035 700
+           C920 735 790 730 690 700
+           C640 685 615 690 600 715
+           C585 690 560 685 510 700
+           C410 730 280 735 165 700Z"
+        fill="url(#saffron)"/>
+
+  <path d="M110 660
+           C230 720 355 720 480 685
+           C535 670 570 675 600 705
+           C630 675 665 670 720 685
+           C845 720 970 720 1090 660
+           L1015 790
+           C895 815 785 805 690 770
+           C645 753 620 758 600 785
+           C580 758 555 753 510 770
+           C415 805 305 815 185 790Z"
+        fill="url(#green)"/>
+
+  <!-- Center spine highlight -->
+  <path d="M600 590 C592 620 592 680 600 715 C608 680 608 620 600 590Z"
+        fill="#ffffff" opacity="0.95"/>
+
+  <!-- Motto -->
+  <text x="600" y="855" text-anchor="middle"
+        font-family="Noto Sans Devanagari, Mangal, sans-serif"
+        font-size="42" font-weight="600" fill="#7d1027">
+    तत् त्वं पूषन् अपावृणु
+  </text>
+
+  <line x1="220" y1="885" x2="980" y2="885" stroke="#7d1027" stroke-width="3"/>
+
+  <text x="600" y="935" text-anchor="middle"
+        font-family="Noto Sans Devanagari, Mangal, sans-serif"
+        font-size="40" font-weight="700" fill="#7d1027">
+    केंद्रीय विद्यालय संगठन
+  </text>
+
+  <text x="600" y="975" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="25" letter-spacing="4" fill="#7d1027">
+    KENDRIYA VIDYALAYA SANGATHAN
+  </text>
+</svg>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin Dashboard · Flashcard Champ</title>
+<link rel="icon" href="../assets/icons/kvs-logo.png" type="image/png">
+<script src="../js/env-check.js"></script>
+<link rel="stylesheet" href="../styles/main.css">
+<link rel="stylesheet" href="../styles/admin.css">
+<script>
+(function(){
+  try{
+    const raw=localStorage.getItem('flashcardChampAdmin');
+    if(!raw) throw new Error('no-session');
+    const s=JSON.parse(raw);
+    const age=Date.now()-Number(s.loginAt||0);
+    const timeout=Number(s.timeoutMinutes||60);
+    if(!Number.isFinite(age)||age<0||age>timeout*60*1000) throw new Error('expired');
+  }catch(e){
+    location.replace('login.html');
+  }
+})();
+</script>
+</head>
+<body class="admin-body">
+<header class="topbar">
+  <div class="brand"><span id="schoolName">YOUR SCHOOL NAME</span></div>
+  <div class="top-actions"><a class="admin-link" href="../index.html">Game</a><button id="logout" class="logout-btn">Logout</button></div>
+</header>
+<main>
+  <section class="admin-hero">
+    <p class="eyebrow">CONTENT MANAGEMENT</p>
+    <h1>Admin Dashboard</h1>
+    <p class="muted">Manage your school's classes, topics and questions from one place.</p>
+  </section>
+
+  <section class="admin-grid">
+    <a class="admin-tile admin-link-tile" href="question-builder.html"><div class="tile-icon">🧩</div><h2>Question Builder</h2><p>Create questions using the visual builder.</p><span class="coming ready">Open</span></a>
+    <a class="admin-tile admin-link-tile" href="catalog.html"><div class="tile-icon">🏫</div><h2>Classes & Subjects</h2><p>Add, update and use classes and subjects everywhere.</p><span class="coming ready">Open</span></a>
+    <a class="admin-tile admin-link-tile" href="topics.html"><div class="tile-icon">📚</div><h2>Topics</h2><p>Manage topics for every available class and subject.</p><span class="coming ready">Open</span></a>
+    <a class="admin-tile admin-link-tile" href="questions.html"><div class="tile-icon">🃏</div><h2>Questions</h2><p>View, edit and delete saved questions.</p><span class="coming ready">Open</span></a>
+    <a class="admin-tile admin-link-tile" href="data-tools.html"><div class="tile-icon">📥</div><h2>Import / Export</h2><p>Import JSON, export content and create backups.</p><span class="coming ready">Open</span></a>
+    <a class="admin-tile admin-link-tile" href="data-tools.html"><div class="tile-icon">💾</div><h2>Backup / Restore</h2><p>Protect your content before making changes.</p><span class="coming ready">Open</span></a>
+    <a class="admin-tile admin-link-tile" href="images.html"><div class="tile-icon">🖼️</div><h2>Images</h2><p>Browse, validate and reuse image-based learning content.</p><span class="coming ready">Open</span></a>
+  <a class="admin-tile admin-link-tile" href="settings.html"><div class="tile-icon">⚙️</div><h2>Settings</h2><p>Change school branding, game rules and theme.</p><span class="coming ready">Open</span></a>
+  </section>
+</main>
+<script type="module">
+import { requireAdmin, logout } from '../js/admin/auth.js';
+import '../js/admin/brand.js';
+if(!requireAdmin()){ location.href='login.html'; }
+document.querySelector('#logout').onclick=()=>{logout();location.href='login.html';};
+</script>
+</body>
+</html>

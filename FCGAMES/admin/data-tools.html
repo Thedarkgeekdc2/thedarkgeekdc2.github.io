@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Data Tools · Flashcard Champ</title>
+<link rel="icon" href="../assets/icons/kvs-logo.png" type="image/png">
+<script src="../js/env-check.js"></script>
+<link rel="stylesheet" href="../styles/main.css">
+<link rel="stylesheet" href="../styles/admin.css">
+<link rel="stylesheet" href="../styles/data-tools.css">
+<script>
+(function(){
+  try{
+    const raw=localStorage.getItem('flashcardChampAdmin');
+    if(!raw) throw new Error('no-session');
+    const s=JSON.parse(raw);
+    const age=Date.now()-Number(s.loginAt||0);
+    const timeout=Number(s.timeoutMinutes||60);
+    if(!Number.isFinite(age)||age<0||age>timeout*60*1000) throw new Error('expired');
+  }catch(e){
+    location.replace('login.html');
+  }
+})();
+</script>
+</head>
+<body class="admin-body">
+<header class="topbar"><div class="brand"><span>YOUR SCHOOL NAME</span></div>
+<div class="top-actions"><a class="admin-link" href="dashboard.html">Dashboard</a><a class="admin-link" href="../index.html">Game</a></div></header>
+<main>
+<section class="admin-hero"><p class="eyebrow">ADMIN • DATA TOOLS</p><h1>Import, Export & Backup</h1><p class="muted">Move your custom questions safely between devices and keep a backup before major changes.</p></section>
+
+<div class="tool-card sync-note"><b>📶 About syncing between devices</b><p>All admin data (questions, topics, classes, subjects, settings) is saved only in this browser's local storage — there's no shared server, so changes made here don't automatically appear on another phone, tablet or computer. To move your changes to another device: <b>Export</b> here, then <b>Import</b> the same file on the other device — it merges in without deleting anything already there.</p></div>
+
+<div class="tool-grid">
+<article class="tool-card"><div class="tile-icon">📥</div><h2>Import JSON</h2><p>Adds questions to what you already have — never replaces or deletes existing content. New classes, subjects and topics found in the file are added automatically.</p>
+<input id="importFile" type="file" accept=".json,application/json"><small id="importName" class="file-name">No file selected</small><button id="importBtn" class="primary">Import JSON</button>
+<button type="button" id="downloadSample" class="small-btn">⬇️ Download sample format</button>
+<details class="format-help">
+<summary>What format does this file need?</summary>
+<p>Either of these shapes works:</p>
+<p><b>1. A single topic</b> (same shape as the built-in topic files) — every question inherits <code>class</code>/<code>subject</code>/<code>topic</code> from the wrapper:</p>
+<pre>{
+  "class": 3,
+  "subject": "maths",
+  "topic": "Multiplication Practice",
+  "questions": [
+    { "id": "mul101", "type": "mcq", "question": "7 × 8 = ?",
+      "options": ["54","56","58","64"], "answer": "56", "difficulty": "easy" }
+  ]
+}</pre>
+<p><b>2. Several topics at once</b> — a JSON array of objects shaped like above, or a full export/backup file (each question already carries its own <code>class</code>/<code>subject</code>/<code>topic</code>).</p>
+<p>A brand-new <code>class</code> number or <code>subject</code> name that doesn't exist yet is created automatically so it shows up in the game — no need to add it in Classes &amp; Subjects first.</p>
+</details>
+</article>
+
+<article class="tool-card"><div class="tile-icon">📤</div><h2>Export Questions</h2><p>Download all custom questions and topics — the file this device produces can be imported (merged) on any other device.</p><button id="exportBtn" class="primary">Export JSON</button></article>
+
+<article class="tool-card"><div class="tile-icon">💾</div><h2>Full Backup</h2><p>Create a complete restore-ready snapshot of local admin data.</p><button id="backupBtn" class="primary">Create Backup</button></article>
+
+<article class="tool-card"><div class="tile-icon">♻️</div><h2>Restore Backup</h2><p><b>Replaces</b> everything with a saved snapshot — use this to undo recent changes, not for adding content (use Import for that).</p>
+<input id="restoreFile" type="file" accept=".json,application/json"><small id="restoreName" class="file-name">No backup selected</small><button id="restoreBtn" class="secondary">Restore Backup</button></article>
+</div>
+
+<div id="status" class="tool-status" aria-live="polite"></div>
+
+<div id="confirm" class="modal-backdrop" hidden><div class="confirm-card">
+<h2>Restore Backup?</h2><p>This will replace your current custom questions and topics. Create a backup first if needed.</p>
+<div class="confirm-actions"><button id="cancel" class="secondary">Cancel</button><button id="confirmRestore" class="danger-btn">Restore</button></div>
+</div></div>
+</main>
+<script type="module">
+import {requireAdmin} from '../js/admin/auth.js';
+import '../js/admin/brand.js';
+if(!requireAdmin()) location.href='login.html';
+</script>
+<script type="module" src="../js/admin/data-tools.js"></script>
+</body></html>

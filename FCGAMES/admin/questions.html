@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Question Library · Flashcard Champ</title>
+<link rel="icon" href="../assets/icons/kvs-logo.png" type="image/png">
+<script src="../js/env-check.js"></script>
+<link rel="stylesheet" href="../styles/main.css">
+<link rel="stylesheet" href="../styles/admin.css">
+<link rel="stylesheet" href="../styles/library.css">
+<script>
+(function(){
+  try{
+    const raw=localStorage.getItem('flashcardChampAdmin');
+    if(!raw) throw new Error('no-session');
+    const s=JSON.parse(raw);
+    const age=Date.now()-Number(s.loginAt||0);
+    const timeout=Number(s.timeoutMinutes||60);
+    if(!Number.isFinite(age)||age<0||age>timeout*60*1000) throw new Error('expired');
+  }catch(e){
+    location.replace('login.html');
+  }
+})();
+</script>
+</head>
+<body class="admin-body">
+<header class="topbar">
+  <div class="brand"><span>YOUR SCHOOL NAME</span></div>
+  <div class="top-actions">
+    <a class="admin-link" href="dashboard.html">Dashboard</a>
+    <a class="admin-link" href="../index.html">Game</a>
+  </div>
+</header>
+<main>
+  <section class="admin-hero">
+    <p class="eyebrow">ADMIN • QUESTION LIBRARY</p>
+    <h1>Questions</h1>
+    <p class="muted">View and manage questions created in the Builder.</p>
+  </section>
+
+  <section class="library-toolbar">
+    <input id="search" placeholder="Search questions, classes, subjects or topics">
+    <select id="filterClass"><option value="">All Classes</option></select>
+    <select id="filterSubject"><option value="">All Subjects</option></select>
+    <select id="filterType"><option value="">All Types</option></select>
+    <button id="refresh" class="secondary">↻ Refresh</button>
+  </section>
+
+  <div id="library" class="question-list"></div>
+</main>
+<div id="confirm" class="modal-backdrop" hidden aria-hidden="true">
+  <div class="confirm-card">
+    <h2>Delete Question?</h2>
+    <p id="confirmText">This question will be removed from local saved questions.</p>
+    <div class="confirm-actions"><button id="cancelDelete" class="secondary">Cancel</button><button id="confirmDelete" class="danger-btn">Delete</button></div>
+  </div>
+</div>
+<script type="module">
+import {requireAdmin} from '../js/admin/auth.js';
+import '../js/admin/brand.js';
+if(!requireAdmin()) location.href='login.html';
+</script>
+<script type="module" src="../js/admin/question-library.js"></script>
+</body>
+</html>

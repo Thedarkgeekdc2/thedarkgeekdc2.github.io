@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Topic Manager · Flashcard Champ</title>
+<link rel="icon" href="../assets/icons/kvs-logo.png" type="image/png">
+<script src="../js/env-check.js"></script>
+<link rel="stylesheet" href="../styles/main.css"><link rel="stylesheet" href="../styles/admin.css"><link rel="stylesheet" href="../styles/topics.css">
+<script>
+(function(){
+  try{
+    const raw=localStorage.getItem('flashcardChampAdmin');
+    if(!raw) throw new Error('no-session');
+    const s=JSON.parse(raw);
+    const age=Date.now()-Number(s.loginAt||0);
+    const timeout=Number(s.timeoutMinutes||60);
+    if(!Number.isFinite(age)||age<0||age>timeout*60*1000) throw new Error('expired');
+  }catch(e){
+    location.replace('login.html');
+  }
+})();
+</script>
+</head>
+<body class="admin-body">
+<header class="topbar"><div class="brand"><span>YOUR SCHOOL NAME</span></div>
+<div class="top-actions"><a class="admin-link" href="dashboard.html">Dashboard</a><a class="admin-link" href="../index.html">Game</a></div></header>
+<main>
+<section class="admin-hero"><p class="eyebrow">ADMIN • TOPIC MANAGER</p><h1>Topics</h1><p class="muted">Create local custom topics for new questions.</p></section>
+<section class="topic-form"><select id="classNo"><option value="3">Class 3</option><option value="4">Class 4</option></select>
+<select id="subject"><option value="maths">Maths</option><option value="hindi">Hindi</option></select>
+<input id="topic" placeholder="New topic name"><button id="add" class="primary">＋ Add Topic</button></section>
+<p id="status" class="tool-status" aria-live="polite"></p>
+<div id="topics" class="topic-list"></div>
+</main>
+<div id="confirm" class="modal-backdrop" hidden><div class="confirm-card"><h2>Delete Topic?</h2><p id="confirmText"></p><div class="confirm-actions"><button id="cancel" class="secondary">Cancel</button><button id="delete" class="danger-btn">Delete</button></div></div></div>
+<script type="module">
+import {requireAdmin} from '../js/admin/auth.js';
+import '../js/admin/brand.js';
+if(!requireAdmin()) location.href='login.html';
+</script>
+<script type="module" src="../js/admin/topic-manager.js"></script>
+</body></html>

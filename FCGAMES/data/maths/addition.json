@@ -1,0 +1,126 @@
+{
+  "class": 3,
+  "subject": "maths",
+  "topicId": "addition",
+  "topic": "Addition",
+  "questions": [
+    {
+      "id": "add001",
+      "type": "mcq",
+      "question": "245 + 136 = ?",
+      "options": [
+        "371",
+        "381",
+        "391",
+        "401"
+      ],
+      "answer": "381",
+      "difficulty": "easy"
+    },
+    {
+      "id": "add002",
+      "type": "mcq",
+      "question": "128 + 271 = ?",
+      "options": [
+        "389",
+        "399",
+        "409",
+        "419"
+      ],
+      "answer": "399",
+      "difficulty": "easy"
+    },
+    {
+      "id": "add003",
+      "type": "true_false",
+      "question": "150 + 250 = 400.",
+      "answer": "True",
+      "difficulty": "easy"
+    },
+    {
+      "id": "add004",
+      "type": "mcq",
+      "question": "320 + 45 = ?",
+      "options": [
+        "355",
+        "365",
+        "375",
+        "385"
+      ],
+      "answer": "365",
+      "difficulty": "medium"
+    },
+    {
+      "id": "add005",
+      "type": "mcq",
+      "question": "What is 600 + 125?",
+      "options": [
+        "715",
+        "725",
+        "735",
+        "745"
+      ],
+      "answer": "725",
+      "difficulty": "easy"
+    },
+    {
+      "id": "add006",
+      "type": "mcq",
+      "question": "Which sum is 500?",
+      "options": [
+        "245 + 245",
+        "320 + 180",
+        "250 + 240",
+        "410 + 80"
+      ],
+      "answer": "320 + 180",
+      "difficulty": "medium"
+    },
+    {
+      "id": "add007",
+      "type": "mcq",
+      "question": "374 + 126 = ?",
+      "options": [
+        "490",
+        "500",
+        "510",
+        "520"
+      ],
+      "answer": "500",
+      "difficulty": "medium"
+    },
+    {
+      "id": "add008",
+      "type": "true_false",
+      "question": "99 + 101 = 190.",
+      "answer": "False",
+      "difficulty": "easy"
+    },
+    {
+      "id": "add009",
+      "type": "mcq",
+      "question": "450 + 50 = ?",
+      "options": [
+        "480",
+        "490",
+        "500",
+        "510"
+      ],
+      "answer": "500",
+      "difficulty": "easy"
+    },
+    {
+      "id": "add010",
+      "type": "mcq",
+      "question": "What is 999 + 1?",
+      "options": [
+        "990",
+        "999",
+        "1000",
+        "1010"
+      ],
+      "answer": "1000",
+      "difficulty": "challenge"
+    }
+  ]
+}

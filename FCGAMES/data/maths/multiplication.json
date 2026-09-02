@@ -1,0 +1,67 @@
+{
+  "class": 3,
+  "subject": "maths",
+  "topic": "Multiplication",
+  "questions": [
+    {
+      "id": "mul001",
+      "type": "mcq",
+      "question": "7 × 8 = ?",
+      "options": [
+        "54",
+        "56",
+        "64",
+        "48"
+      ],
+      "answer": "56",
+      "difficulty": "easy",
+      "explanation": "7 groups of 8 make 56."
+    },
+    {
+      "id": "mul002",
+      "type": "true_false",
+      "question": "6 × 5 = 30.",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "mul003",
+      "type": "mcq",
+      "question": "9 × 4 = ?",
+      "options": [
+        "32",
+        "34",
+        "36",
+        "40"
+      ],
+      "answer": "36",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mul004",
+      "type": "mcq",
+      "question": "What is 8 × 6?",
+      "options": [
+        "42",
+        "46",
+        "48",
+        "54"
+      ],
+      "answer": "48",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mul005",
+      "type": "choose_answer",
+      "question": "Which is the correct answer for 5 × 7?",
+      "options": [
+        "30",
+        "35",
+        "40",
+        "45"
+      ],
+      "answer": "35",
+      "difficulty": "easy"
+    }
+  ]
+}

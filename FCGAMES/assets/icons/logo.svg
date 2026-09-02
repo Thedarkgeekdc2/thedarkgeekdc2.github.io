@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bgRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8A2BE2"/>
+      <stop offset="28%" stop-color="#3B82F6"/>
+      <stop offset="58%" stop-color="#00D4FF"/>
+      <stop offset="78%" stop-color="#22E06F"/>
+      <stop offset="100%" stop-color="#FFD52E"/>
+    </linearGradient>
+    <linearGradient id="letters" x1="5%" y1="95%" x2="95%" y2="5%">
+      <stop offset="0%" stop-color="#7A2CF5"/>
+      <stop offset="25%" stop-color="#3F6BFF"/>
+      <stop offset="52%" stop-color="#10D6C7"/>
+      <stop offset="76%" stop-color="#57E84C"/>
+      <stop offset="100%" stop-color="#FFD72E"/>
+    </linearGradient>
+    <linearGradient id="swoosh" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#9B2CFF"/>
+      <stop offset="28%" stop-color="#2D7BFF"/>
+      <stop offset="55%" stop-color="#00E5FF"/>
+      <stop offset="78%" stop-color="#25E871"/>
+      <stop offset="100%" stop-color="#FFE234"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#0A0624" flood-opacity="0.75"/>
+    </filter>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <circle cx="512" cy="512" r="470" fill="#080B24"/>
+  <circle cx="512" cy="512" r="462" fill="none" stroke="url(#bgRing)" stroke-width="22" filter="url(#glow)"/>
+  <circle cx="512" cy="512" r="427" fill="none" stroke="#101743" stroke-width="16"/>
+
+  <!-- top orbit -->
+  <path d="M112 400 C235 135 700 82 920 292" fill="none" stroke="url(#swoosh)" stroke-width="34" stroke-linecap="round"/>
+  <path d="M140 400 C265 170 670 125 874 296" fill="none" stroke="#FFF" stroke-opacity=".22" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- FC -->
+  <g font-family="Arial Black, Impact, DejaVu Sans, sans-serif" font-weight="900" text-anchor="middle" filter="url(#shadow)">
+    <text x="495" y="665" font-size="485" letter-spacing="-45" fill="#020618" stroke="#0B0F34" stroke-width="34" paint-order="stroke">FC</text>
+    <text x="495" y="640" font-size="485" letter-spacing="-45" fill="url(#letters)" stroke="#D9FFFF" stroke-opacity=".65" stroke-width="5" paint-order="stroke">FC</text>
+  </g>
+
+  <!-- bottom swoosh -->
+  <path d="M235 778 C380 915 700 908 874 762 C804 873 515 958 270 846 C231 828 215 804 235 778Z" fill="url(#swoosh)" filter="url(#glow)"/>
+  <path d="M278 815 C420 894 677 886 824 782" fill="none" stroke="#FFF" stroke-opacity=".28" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- sparkles -->
+  <g fill="url(#letters)">
+    <path d="M180 525 l8 21 21 8-21 8-8 21-8-21-21-8 21-8z"/>
+    <path d="M820 480 l10 26 26 10-26 10-10 26-10-26-26-10 26-10z"/>
+    <path d="M755 240 l7 18 18 7-18 7-7 18-7-18-18-7 18-7z"/>
+    <path d="M315 255 l8 20 20 8-20 8-8 20-8-20-20-8 20-8z"/>
+  </g>
+
+  <!-- subtle highlights -->
+  <path d="M220 335 C380 185 650 160 824 260" fill="none" stroke="#FFFFFF" stroke-opacity=".18" stroke-width="12" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Classes & Subjects · Flashcard Champ</title>
+<link rel="icon" href="../assets/icons/kvs-logo.png" type="image/png">
+<script src="../js/env-check.js"></script>
+<link rel="stylesheet" href="../styles/main.css"><link rel="stylesheet" href="../styles/admin.css"><link rel="stylesheet" href="../styles/catalog.css">
+<script>
+(function(){
+  try{
+    const raw=localStorage.getItem('flashcardChampAdmin');
+    if(!raw) throw new Error('no-session');
+    const s=JSON.parse(raw);
+    const age=Date.now()-Number(s.loginAt||0);
+    const timeout=Number(s.timeoutMinutes||60);
+    if(!Number.isFinite(age)||age<0||age>timeout*60*1000) throw new Error('expired');
+  }catch(e){
+    location.replace('login.html');
+  }
+})();
+</script>
+</head>
+<body class="admin-body">
+<header class="topbar"><div class="brand"><span>YOUR SCHOOL NAME</span></div>
+<div class="top-actions"><a class="admin-link" href="dashboard.html">Dashboard</a><a class="admin-link" href="../index.html">Game</a></div></header>
+<main>
+<section class="admin-hero"><p class="eyebrow">ADMIN • ACADEMIC SETUP</p><h1>Classes & Subjects</h1><p class="muted">Add new classes or subjects. They will appear automatically in the Question Builder and student game.</p></section>
+<div class="catalog-grid">
+  <section class="catalog-card">
+    <div class="catalog-title"><h2>🏫 Classes</h2><span id="classCount" class="badge">0</span></div>
+    <div class="add-row"><input id="classInput" placeholder="e.g. Class 5"><button id="addClass" class="primary">＋ Add Class</button></div>
+    <div id="classList" class="catalog-list"></div>
+  </section>
+  <section class="catalog-card">
+    <div class="catalog-title"><h2>📚 Subjects</h2><span id="subjectCount" class="badge">0</span></div>
+    <div class="add-row"><input id="subjectInput" placeholder="e.g. English"><button id="addSubject" class="primary">＋ Add Subject</button></div>
+    <div id="subjectList" class="catalog-list"></div>
+  </section>
+</div>
+<div id="status" class="tool-status" aria-live="polite"></div>
+</main>
+<script type="module">
+import {requireAdmin} from '../js/admin/auth.js';
+import '../js/admin/brand.js';
+if(!requireAdmin()) location.href='login.html';
+</script>
+<script type="module" src="../js/admin/catalog.js"></script>
+</body></html>

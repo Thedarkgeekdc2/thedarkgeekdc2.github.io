@@ -1,0 +1,45 @@
+{
+  "class": 4,
+  "subject": "hindi",
+  "topic": "वचन",
+  "questions": [
+    {
+      "id": "vac001",
+      "type": "true_false",
+      "question": "'लड़कियाँ' बहुवचन शब्द है।",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "vac002",
+      "type": "mcq",
+      "question": "'बच्चा' का बहुवचन क्या है?",
+      "options": [
+        "बच्चा",
+        "बच्चे",
+        "बच्चों",
+        "बच्ची"
+      ],
+      "answer": "बच्चे",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vac003",
+      "type": "arrange_order",
+      "question": "वाक्य के शब्दों को सही क्रम में लगाइए।",
+      "items": [
+        "खेलते",
+        "बच्चे",
+        "मैदान में",
+        "हैं"
+      ],
+      "answer": [
+        "बच्चे",
+        "मैदान में",
+        "खेलते",
+        "हैं"
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

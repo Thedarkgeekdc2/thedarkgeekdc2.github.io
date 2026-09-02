@@ -1,0 +1,16 @@
+{
+  "classes": [
+    {
+      "class": 3,
+      "subjects": [
+        "maths"
+      ]
+    },
+    {
+      "class": 4,
+      "subjects": [
+        "hindi"
+      ]
+    }
+  ]
+}

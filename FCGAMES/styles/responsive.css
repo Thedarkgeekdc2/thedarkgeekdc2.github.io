@@ -1,0 +1,3 @@
+
+@media (max-width: 760px){.navbar{padding:12px 14px}.nav-actions .secondary-btn{padding:9px 11px}.main{width:min(100% - 20px,1120px);padding:24px 0 34px}.hero{grid-template-columns:1fr}.hero-card{padding:26px}.class-grid,.topic-grid,.difficulty-grid{grid-template-columns:1fr}.game-topline{align-items:start;flex-direction:column}.hud{width:100%}.flashcard{padding:20px;border-radius:22px}.answer-grid{grid-template-columns:1fr}.text-answer{flex-direction:column}.text-answer .primary-btn{width:100%}.result-card{padding:28px 20px}.result-stats{grid-template-columns:repeat(2,1fr)}.footer-inner{width:100%}}
+@media (min-width:761px){.class-grid.topic-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}

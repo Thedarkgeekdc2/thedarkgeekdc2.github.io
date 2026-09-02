@@ -1,0 +1,43 @@
+{
+  "class": 4,
+  "subject": "hindi",
+  "topic": "मिलान",
+  "questions": [
+    {
+      "id": "mat001",
+      "type": "match",
+      "question": "सही जोड़ी बनाइए।",
+      "pairs": [
+        {
+          "left": "जल",
+          "right": "पानी"
+        },
+        {
+          "left": "सूर्य",
+          "right": "रवि"
+        },
+        {
+          "left": "पृथ्वी",
+          "right": "धरती"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "mat002",
+      "type": "drag_drop",
+      "question": "शब्द को सही चित्र के पास खींचें।",
+      "targets": [
+        {
+          "label": "पेड़",
+          "image": "assets/images/hindi/pictures/tree.svg"
+        },
+        {
+          "label": "हाथी",
+          "image": "assets/images/hindi/pictures/elephant.svg"
+        }
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

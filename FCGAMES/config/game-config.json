@@ -1,0 +1,11 @@
+{
+  "questionsPerGame": 10,
+  "startingLives": 3,
+  "questionTimeSeconds": 20,
+  "pointsPerCorrectAnswer": 10,
+  "enableTimer": true,
+  "enableLives": true,
+  "enableStreak": true,
+  "enableSounds": true,
+  "showAnswerAfterWrong": true
+}

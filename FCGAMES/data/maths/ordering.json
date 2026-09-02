@@ -1,0 +1,45 @@
+{
+  "class": 3,
+  "subject": "maths",
+  "topic": "Order & Matching",
+  "questions": [
+    {
+      "id": "ord001",
+      "type": "match",
+      "question": "Match the number with its number name.",
+      "pairs": [
+        {
+          "left": "3",
+          "right": "Three"
+        },
+        {
+          "left": "5",
+          "right": "Five"
+        },
+        {
+          "left": "8",
+          "right": "Eight"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "ord002",
+      "type": "arrange_order",
+      "question": "Arrange the steps from smallest to greatest.",
+      "items": [
+        "10",
+        "2",
+        "7",
+        "5"
+      ],
+      "answer": [
+        "2",
+        "5",
+        "7",
+        "10"
+      ],
+      "difficulty": "easy"
+    }
+  ]
+}

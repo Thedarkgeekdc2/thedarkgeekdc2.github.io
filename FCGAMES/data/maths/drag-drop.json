@@ -1,0 +1,20 @@
+{
+  "class": 3,
+  "subject": "maths",
+  "topicId": "drag-drop",
+  "topic": "Drag & Drop",
+  "questions": [
+    {
+      "id": "drag001",
+      "type": "drag_drop",
+      "question": "Drag each number into the correct box: Even or Odd.",
+      "pairs": [
+        { "drag": "2", "target": "Even" },
+        { "drag": "3", "target": "Odd" },
+        { "drag": "4", "target": "Even" },
+        { "drag": "7", "target": "Odd" }
+      ],
+      "difficulty": "easy"
+    }
+  ]
+}

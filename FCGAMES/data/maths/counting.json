@@ -1,0 +1,41 @@
+{
+  "class": 3,
+  "subject": "maths",
+  "topic": "Counting",
+  "questions": [
+    {
+      "id": "count001",
+      "type": "image_mcq",
+      "question": "How many apples are there?",
+      "image": "assets/images/maths/counting/apples-5.svg",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "answer": "5",
+      "difficulty": "easy"
+    },
+    {
+      "id": "count002",
+      "type": "drag_drop",
+      "question": "Drag each number to the matching number group.",
+      "pairs": [
+        {
+          "drag": "2",
+          "target": "★★"
+        },
+        {
+          "drag": "3",
+          "target": "★★★"
+        },
+        {
+          "drag": "4",
+          "target": "★★★★"
+        }
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}
