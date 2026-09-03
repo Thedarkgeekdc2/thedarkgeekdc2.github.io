@@ -45,6 +45,7 @@ async function loadQuestions(){
   return allQuestions;
 }
 async function home(){
+  activePauseGame=null;
   const c=await getCatalog();
 
   app.innerHTML=`<section class="hero">
@@ -122,42 +123,56 @@ async function startGame(diff){
   state.difficulty=diff;await loadQuestions();
   const pool=allQuestions.filter(q=>q.class===state.classNo&&String(q.subject).toLowerCase()===state.subject&&topicKey(q.topic)===topicKey(state.topic)&&(diff==='mixed'||q.difficulty===diff));
   if(!pool.length){alert('No questions found for this selection.');return;}
-  const requested=Number(settings.game.questionsPerGame)||10;
+  const requested=Number(settings.game.questionsPerGame)||24;
   const s={questions:shuffle(pool).slice(0,Math.min(requested,pool.length)),index:0,score:0,lives:settings.game.enableLives?settings.game.startingLives:999,streak:0,bestStreak:0,correct:0,answers:0,state:{...state},settings,poolSize:pool.length,requested};
   renderGame(s);
 }
+let activePauseGame=null;
+document.addEventListener('visibilitychange',()=>{
+  // If the app goes to the background (screen lock, switching tabs/apps),
+  // pause immediately so the timer can never keep ticking out of sight.
+  if(document.hidden&&activePauseGame)activePauseGame();
+});
 function renderGame(s){
-  const q=s.questions[s.index];let locked=false,paused=false,time=s.settings.game.questionTimeSeconds;
-  app.innerHTML=`<section class="game"><div class="game-top"><span class="progress-chip">Q ${s.index+1}/${s.questions.length}</span><span class="progress-chip">⭐ <b id="score">${s.score}</b></span>${s.settings.game.enableStreak?`<span class="progress-chip">🔥 <b id="streak">${s.streak}</b></span>`:''}${s.settings.game.enableLives?`<span class="progress-chip">❤️ <b id="lives">${s.lives}</b></span>`:''}<button type="button" id="pauseBtn" class="pause-btn" aria-label="Pause game">⏸️</button></div><div class="progress-track"><div class="progress-fill" style="width:${Math.round((s.index)/s.questions.length*100)}%"></div></div>${s.settings.game.enableTimer?`<div class="timer">⏱️ <b id="time">${s.settings.game.questionTimeSeconds}</b>s</div>`:''}<div id="question-card"></div><div class="pause-overlay" id="pauseOverlay" hidden><div class="pause-card"><h2>⏸️ Paused</h2><p>Take your time — nothing is running while you're away.</p><div class="pause-actions"><button type="button" id="resumeBtn" class="primary">▶️ Resume</button><button type="button" id="quitBtn" class="quit-btn">🏠 Quit to Home</button></div></div></div></section>`;
+  const q=s.questions[s.index];let locked=false,time=s.settings.game.questionTimeSeconds,paused=false;
+  app.innerHTML=`<section class="game"><div class="game-top"><span class="progress-chip">Q ${s.index+1}/${s.questions.length}</span><span class="progress-chip">⭐ <b id="score">${s.score}</b></span>${s.settings.game.enableStreak?`<span class="progress-chip">🔥 <b id="streak">${s.streak}</b></span>`:''}${s.settings.game.enableLives?`<span class="progress-chip">❤️ <b id="lives">${s.lives}</b></span>`:''}<button type="button" id="pause-btn" class="progress-chip pause-btn">⏸️ Pause</button></div><div class="progress-track"><div class="progress-fill" style="width:${Math.round((s.index)/s.questions.length*100)}%"></div></div>${s.settings.game.enableTimer?`<div class="timer">⏱️ <b id="time">${s.settings.game.questionTimeSeconds}</b>s</div>`:''}<div id="question-card"></div></section><div id="pause-overlay" class="pause-overlay hidden" role="dialog" aria-modal="true" aria-label="Game Paused" aria-hidden="true"><div class="pause-card"><div class="pause-icon">⏸️</div><h2>Game Paused</h2><p>The timer is stopped. Resume whenever you're ready.</p><div class="pause-actions"><button type="button" class="primary" id="resume-btn">▶️ Resume</button><button type="button" class="pause-home-btn" id="pause-home-btn">🏠 Home</button></div></div></div>`;
   const root=document.getElementById('question-card');
   renderQuestion(root,q,finish);
-  const pauseBtn=document.getElementById('pauseBtn');
-  const overlay=document.getElementById('pauseOverlay');
-  function setPaused(p){
-    if(locked)return;
-    paused=p;
-    overlay.hidden=!p;
-    pauseBtn.textContent=p?'▶️':'⏸️';
-    pauseBtn.setAttribute('aria-label',p?'Resume game':'Pause game');
-  }
-  pauseBtn.onclick=()=>setPaused(!paused);
-  document.getElementById('resumeBtn').onclick=()=>setPaused(false);
-  document.getElementById('quitBtn').onclick=()=>{if(tick)clearInterval(tick);home();};
   let tick=null;
-  if(s.settings.game.enableTimer){
+  function startTick(){
+    if(!s.settings.game.enableTimer||paused||locked)return;
     tick=setInterval(()=>{
-      if(locked){clearInterval(tick);return;}
-      if(paused)return;
+      if(paused||locked){clearInterval(tick);tick=null;return;}
       time--;
       const timeEl=document.getElementById('time');
       if(timeEl)timeEl.textContent=time;
       if(time<=2){document.getElementById('time')?.parentElement?.classList.add('timer-warn');}
-      if(time<=0){clearInterval(tick);finish(false);}
+      if(time<=0){clearInterval(tick);tick=null;finish(false);}
     },1000);
   }
+  startTick();
+  function pauseGame(){
+    if(paused||locked)return;
+    paused=true;
+    if(tick){clearInterval(tick);tick=null;}
+    document.getElementById('pause-overlay')?.classList.remove('hidden');
+    document.getElementById('pause-overlay')?.setAttribute('aria-hidden','false');
+    document.getElementById('pause-btn')?.setAttribute('disabled','true');
+  }
+  function resumeGame(){
+    if(!paused)return;
+    paused=false;
+    document.getElementById('pause-overlay')?.classList.add('hidden');
+    document.getElementById('pause-overlay')?.setAttribute('aria-hidden','true');
+    document.getElementById('pause-btn')?.removeAttribute('disabled');
+    startTick();
+  }
+  activePauseGame=pauseGame;
+  document.getElementById('pause-btn')?.addEventListener('click',pauseGame);
+  document.getElementById('resume-btn')?.addEventListener('click',resumeGame);
+  document.getElementById('pause-home-btn')?.addEventListener('click',()=>{activePauseGame=null;home();});
   function finish(ok){
-    if(locked)return;locked=true;if(tick)clearInterval(tick);s.answers++;
-    pauseBtn.disabled=true;
+    if(locked)return;locked=true;if(tick){clearInterval(tick);tick=null;}activePauseGame=null;s.answers++;
     if(s.settings.game.enableSounds)playSound(ok);
     if(ok){
       s.correct++;
@@ -313,6 +328,7 @@ function confettiBurst(s,count){
   setTimeout(()=>layer.remove(),1500);
 }
 function showResult(s){
+  activePauseGame=null;
   const acc=s.answers?Math.round(s.correct/s.answers*100):0;
   const praise=acc>=90?'Outstanding work! 🌟':acc>=70?'Great job! 👏':acc>=40?'Nice effort — keep practicing! 💪':'Keep going, you\u2019ll get there! 🌱';
   app.innerHTML=`<section class="result"><div class="trophy">🏆</div><h1>Game Complete!</h1><p class="result-praise">${esc(praise)}</p><div class="result-grid"><div><b>${s.score}</b><span>Score</span></div><div><b>${s.correct}/${s.answers}</b><span>Correct</span></div><div><b>${acc}%</b><span>Accuracy</span></div><div><b>${s.bestStreak}</b><span>Best Streak</span></div></div><div class="result-actions"><button id="again" class="primary">🔄 Play Again</button><button id="home">🏠 Home</button></div></section>`;
@@ -324,3 +340,4 @@ function showError(e){console.error(e);app.innerHTML=`<section class="panel"><h2
 window.FlashcardApp={chooseClass,home};
 home().catch(showError);
 })();
+
