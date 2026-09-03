@@ -1,7 +1,7 @@
 const state = {
   config: null, questions: [], filtered: [], index: 0, score: 0, lives: 3, streak: 0,
   bestStreak: 0, correct: 0, wrong: 0, timeLeft: 10, timerId: null, locked: false,
-  session: null
+  session: null, paused: false
 };
 
 const params = new URLSearchParams(location.search);
@@ -23,10 +23,10 @@ async function boot(){
     state.questions=shuffle([...bank.questions]);
     state.filtered = getDifficulty()==='all' ? state.questions : state.questions.filter(q=>q.difficulty===getDifficulty());
     if(!state.filtered.length) state.filtered=state.questions;
-    const limit=Math.min(Number(game.questionsPerGame)||10,state.filtered.length);
+    const limit=Math.min(Number(game.questionsPerGame)||24,state.filtered.length);
     state.filtered=shuffle(state.filtered).slice(0,limit);
-    state.lives=Number(game.startingLives)||3;
-    state.timeLeft=Number(game.questionTimeSeconds)||10;
+    state.lives=Number(game.startingLives)||6;
+    state.timeLeft=Number(game.questionTimeSeconds)||60;
     state.session={classNo,subject,topicId:selectedTopic.id,topicName:selectedTopic.name};
     renderShell(); renderQuestion();
   }catch(e){ document.body.innerHTML=`<main class="main"><div class="hero-card"><h1>Game Setup Error</h1><p>${escapeHTML(e.message)}</p><a class="primary-btn" href="../index.html">Back Home</a></div></main>`; }
@@ -34,12 +34,43 @@ async function boot(){
 
 function renderShell(){
   const {school,app,topic,game}=state.config;
-  document.getElementById('game-app').innerHTML=`<div class="app"><header class="navbar"><div class="brand"><img src="../${escapeHTML(school.logo)}" alt=""><div class="brand-text"><div class="app-name">${escapeHTML(app.appName)}</div><div class="school-name">${escapeHTML(school.schoolName)}</div></div></div><div class="nav-actions"><a class="secondary-btn" href="../index.html">🏠 Home</a></div></header><main class="main game-main"><div class="game-topline"><div><div class="hero-kicker">${escapeHTML(topic.icon||'🃏')} ${escapeHTML(topic.name)}</div><h1 class="game-title">Flashcard Challenge</h1></div><div class="hud"><div class="hud-pill">⭐ <span id="score">0</span></div><div class="hud-pill">🔥 <span id="streak">0</span></div><div class="hud-pill">❤️ <span id="lives">${state.lives}</span></div></div></div><div class="progress-row"><span id="progress-text">Question 1 / ${state.filtered.length}</span><div class="progress-track"><div id="progress-fill" class="progress-fill"></div></div></div><section class="flashcard-wrap"><article class="flashcard" id="flashcard"><div class="card-top"><span class="type-badge" id="type-badge">MCQ</span><div class="timer-badge">⏱️ <span id="timer">${game.questionTimeSeconds}</span></div></div><div id="question-area"></div><div id="feedback" aria-live="polite"></div><div class="next-row"><button id="next-btn" class="primary-btn hidden" type="button">Next Question →</button></div></article></section><div class="tip"><span>💡</span><span>Choose an answer before time runs out.</span></div></main>${school.showFooter?`<footer class="footer"><div class="footer-inner"><div class="footer-main">${escapeHTML(school.copyrightText)}</div><div class="footer-credit">${escapeHTML(school.footerText)}</div></div></footer>`:''}</div>`;
+  document.getElementById('game-app').innerHTML=`<div class="app"><header class="navbar"><div class="brand"><img src="../${escapeHTML(school.logo)}" alt=""><div class="brand-text"><div class="app-name">${escapeHTML(app.appName)}</div><div class="school-name">${escapeHTML(school.schoolName)}</div></div></div><div class="nav-actions"><button class="secondary-btn" id="pause-btn" type="button">⏸️ Pause</button><a class="secondary-btn" href="../index.html">🏠 Home</a></div></header><main class="main game-main"><div class="game-topline"><div><div class="hero-kicker">${escapeHTML(topic.icon||'🃏')} ${escapeHTML(topic.name)}</div><h1 class="game-title">Flashcard Challenge</h1></div><div class="hud"><div class="hud-pill">⭐ <span id="score">0</span></div><div class="hud-pill">🔥 <span id="streak">0</span></div><div class="hud-pill">❤️ <span id="lives">${state.lives}</span></div></div></div><div class="progress-row"><span id="progress-text">Question 1 / ${state.filtered.length}</span><div class="progress-track"><div id="progress-fill" class="progress-fill"></div></div></div><section class="flashcard-wrap"><article class="flashcard" id="flashcard"><div class="card-top"><span class="type-badge" id="type-badge">MCQ</span><div class="timer-badge">⏱️ <span id="timer">${game.questionTimeSeconds}</span></div></div><div id="question-area"></div><div id="feedback" aria-live="polite"></div><div class="next-row"><button id="next-btn" class="primary-btn hidden" type="button">Next Question →</button></div></article></section><div class="tip"><span>💡</span><span>Choose an answer before time runs out.</span></div></main>${school.showFooter?`<footer class="footer"><div class="footer-inner"><div class="footer-main">${escapeHTML(school.copyrightText)}</div><div class="footer-credit">${escapeHTML(school.footerText)}</div></div></footer>`:''}<div id="pause-overlay" class="pause-overlay hidden" role="dialog" aria-modal="true" aria-label="Game Paused" aria-hidden="true"><div class="pause-card"><div class="pause-icon">⏸️</div><h2>Game Paused</h2><p>The timer is stopped. Resume whenever you're ready.</p><div class="pause-actions"><button class="primary-btn" id="resume-btn" type="button">▶️ Resume</button><a class="secondary-btn" href="../index.html">🏠 Home</a></div></div></div></div>`;
   document.getElementById('next-btn').addEventListener('click', nextQuestion);
+  document.getElementById('pause-btn').addEventListener('click', pauseGame);
+  document.getElementById('resume-btn').addEventListener('click', resumeGame);
+  document.addEventListener('visibilitychange', handleVisibilityChange);
+}
+
+function pauseGame(){
+  if(state.paused || state.lives<=0) return;
+  state.paused=true;
+  clearTimer();
+  const overlay=document.getElementById('pause-overlay');
+  overlay.classList.remove('hidden');
+  overlay.setAttribute('aria-hidden','false');
+  const pauseBtn=document.getElementById('pause-btn');
+  if(pauseBtn) pauseBtn.disabled=true;
+}
+
+function resumeGame(){
+  if(!state.paused) return;
+  state.paused=false;
+  const overlay=document.getElementById('pause-overlay');
+  overlay.classList.add('hidden');
+  overlay.setAttribute('aria-hidden','true');
+  const pauseBtn=document.getElementById('pause-btn');
+  if(pauseBtn) pauseBtn.disabled=false;
+  if(state.config?.game?.enableTimer && !state.locked && state.lives>0) startTimer();
+}
+
+function handleVisibilityChange(){
+  // If the app goes to the background (screen lock, tab switch, app switch),
+  // pause immediately so the timer never keeps ticking behind the scenes.
+  if(document.hidden && !state.paused && state.config && state.lives>0) pauseGame();
 }
 
 function renderQuestion(){
-  clearTimer(); state.locked=false; state.timeLeft=Number(state.config.game.questionTimeSeconds)||10;
+  clearTimer(); state.locked=false; state.timeLeft=Number(state.config.game.questionTimeSeconds)||60;
   const q=state.filtered[state.index];
   document.getElementById('progress-text').textContent=`Question ${state.index+1} / ${state.filtered.length}`;
   document.getElementById('progress-fill').style.width=`${((state.index+1)/state.filtered.length)*100}%`;
@@ -130,7 +161,7 @@ function bindDragDrop(q){
   document.getElementById('drag-submit').addEventListener('click',()=>{const ok=(q.answerMap||[]).every(p=>document.querySelector(`[data-zone-id="${CSS.escape(p.zone)}"] [data-drag-id="${CSS.escape(p.item)}"]`));handleInteractiveResult(ok,q);});
 }
 function handleInteractiveResult(ok,q){if(state.locked)return;state.locked=true;clearTimer();finishAnswer(ok,q);}
-function startTimer(){ clearTimer(); state.timerId=setInterval(()=>{state.timeLeft--;document.getElementById('timer').textContent=state.timeLeft;if(state.timeLeft<=0){clearTimer();if(!state.locked) timeOut();}},1000); }
+function startTimer(){ clearTimer(); if(state.paused) return; state.timerId=setInterval(()=>{if(state.paused){clearTimer();return;}state.timeLeft--;document.getElementById('timer').textContent=state.timeLeft;if(state.timeLeft<=0){clearTimer();if(!state.locked) timeOut();}},1000); }
 function timeOut(){ const q=state.filtered[state.index]; state.locked=true;state.wrong++;state.streak=0;if(state.config.game.enableLives)state.lives--;document.getElementById('lives').textContent=state.lives;document.getElementById('feedback').innerHTML=`<div class="feedback error">⏰ Time up! Correct answer: <strong>${escapeHTML(q.answer)}</strong></div>`;document.querySelectorAll('.answer-btn').forEach(b=>{b.disabled=true;if(normalized(b.dataset.answer)===normalized(q.answer))b.classList.add('correct');});document.getElementById('next-btn').classList.remove('hidden');if(state.lives<=0){document.getElementById('next-btn').textContent='See Result →';document.getElementById('next-btn').onclick=finishGame;}}
 function nextQuestion(){ if(state.lives<=0){finishGame();return;} state.index++; if(state.index>=state.filtered.length){finishGame();return;} document.getElementById('next-btn').onclick=nextQuestion;document.getElementById('next-btn').textContent='Next Question →';renderQuestion(); }
 function finishGame(){clearTimer();sessionStorage.setItem('fc-result',JSON.stringify({score:state.score,correct:state.correct,wrong:state.wrong,bestStreak:state.bestStreak,total:state.filtered.length,topicName:state.session.topicName,classNo:state.session.classNo,subject:state.session.subject}));location.href=`../pages/result.html`;}
