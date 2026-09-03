@@ -1,6 +1,6 @@
 const state = {
   config: null, questions: [], filtered: [], index: 0, score: 0, lives: 3, streak: 0,
-  bestStreak: 0, correct: 0, wrong: 0, timeLeft: 10, timerId: null, locked: false,
+  bestStreak: 0, correct: 0, wrong: 0, timeLeft: 60, timerId: null, locked: false,
   session: null, paused: false
 };
 
