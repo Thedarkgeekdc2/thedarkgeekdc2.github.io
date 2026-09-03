@@ -2,12 +2,12 @@
 const KEY='flashcardChampSettings';
 const DEFAULTS={
   app:{appName:'Flashcard Champ',version:'1.0.0',releaseYear:2026},
-  school:{schoolName:'PM SHRI KV 2 KGP',schoolShortName:'KV2KGP',logo:'assets/icons/logo.svg',
-    footerText:'Made with help of ChatGPT AI',copyrightText:'© 2026 PM SHRI KENDRIYA VIDYALAYA NO 2 KHARAGPUR',
-    showSchoolNameInNavbar:true,showLogoInNavbar:false,showFooter:true},
-  game:{questionsPerGame:10,startingLives:3,questionTimeSeconds:10,pointsPerCorrectAnswer:10,
-    enableTimer:true,enableLives:true,enableStreak:true,enableSounds:false,
-    showAnswerAfterWrong:true,enableSpecialCards:false},
+  school:{schoolName:'PM SHRI KV NO 2 KGP',schoolShortName:'KV2KGP',logo:'assets/icons/logo.svg',
+    footerText:'Practice a little every day and watch yourself improve! 🌟',copyrightText:'© 2026 PM SHRI KV NO 2 KHARAGPUR',
+    showSchoolNameInNavbar:true,showLogoInNavbar:true,showFooter:true},
+  game:{questionsPerGame:24,startingLives:6,questionTimeSeconds:60,pointsPerCorrectAnswer:10,
+    enableTimer:true,enableLives:true,enableStreak:true,enableSounds:true,
+    showAnswerAfterWrong:true,enableSpecialCards:true},
   theme:{theme:'colorful',borderRadius:'large',animations:true,confetti:true}
 };
 function clone(v){return JSON.parse(JSON.stringify(v));}
