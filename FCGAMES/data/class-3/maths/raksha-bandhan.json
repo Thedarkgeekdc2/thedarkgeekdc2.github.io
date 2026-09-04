@@ -1,0 +1,1187 @@
+{
+  "class": 3,
+  "subject": "maths",
+  "topic": "Raksha Bandhan",
+  "questions": [
+    {
+      "id": "rb-easy-01",
+      "type": "mcq",
+      "question": "5 × 1 = ?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "10"
+      ],
+      "answer": "5",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rb-easy-02",
+      "type": "mcq",
+      "question": "4 × 2 = ?",
+      "options": [
+        "6",
+        "8",
+        "9",
+        "10"
+      ],
+      "answer": "8",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rb-easy-03",
+      "type": "mcq",
+      "question": "3 × 3 = ?",
+      "options": [
+        "6",
+        "9",
+        "12",
+        "15"
+      ],
+      "answer": "9",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rb-easy-04",
+      "type": "mcq",
+      "question": "2 × 5 = ?",
+      "options": [
+        "8",
+        "10",
+        "12",
+        "15"
+      ],
+      "answer": "10",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rb-easy-05",
+      "type": "mcq",
+      "question": "1 × 6 = ?",
+      "options": [
+        "1",
+        "5",
+        "6",
+        "7"
+      ],
+      "answer": "6",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rb-easy-06",
+      "type": "mcq",
+      "question": "What is 5 + 5 + 5?",
+      "options": [
+        "10",
+        "15",
+        "20",
+        "25"
+      ],
+      "answer": "15",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rb-easy-07",
+      "type": "mcq",
+      "question": "What is 2 + 2 + 2 + 2?",
+      "options": [
+        "6",
+        "8",
+        "10",
+        "12"
+      ],
+      "answer": "8",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rb-easy-08",
+      "type": "mcq",
+      "question": "Each Rakhi needs 1 flower. For 5 Rakhis, how many flowers are needed?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "10"
+      ],
+      "answer": "5",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rb-easy-09",
+      "type": "mcq",
+      "question": "Each Rakhi needs 2 threads. For 5 Rakhis, how many threads are needed?",
+      "options": [
+        "8",
+        "10",
+        "12",
+        "15"
+      ],
+      "answer": "10",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rb-easy-10",
+      "type": "mcq",
+      "question": "Each Rakhi needs 4 beads. For 5 Rakhis, how many beads are needed?",
+      "options": [
+        "16",
+        "18",
+        "20",
+        "24"
+      ],
+      "answer": "20",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rb-easy-11",
+      "type": "true_false",
+      "question": "3 × 3 = 9.",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "rb-easy-12",
+      "type": "true_false",
+      "question": "4 × 2 = 6.",
+      "answer": false,
+      "difficulty": "easy"
+    },
+    {
+      "id": "rb-easy-13",
+      "type": "true_false",
+      "question": "10 ÷ 2 = 5.",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "rb-easy-14",
+      "type": "true_false",
+      "question": "2 × 4 gives the same answer as 4 × 2.",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "rb-easy-15",
+      "type": "yes_no",
+      "question": "Is 5 × 1 equal to 5?",
+      "answer": "Yes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rb-easy-16",
+      "type": "yes_no",
+      "question": "Is 3 × 2 equal to 8?",
+      "answer": "No",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rb-easy-17",
+      "type": "yes_no",
+      "question": "Is 18 ÷ 9 equal to 2?",
+      "answer": "Yes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rb-easy-18",
+      "type": "choose_answer",
+      "question": "Which shows repeated addition for 3 × 4?",
+      "options": [
+        "3+3+3+3",
+        "4+4",
+        "3+4",
+        "4+4+4+4+4"
+      ],
+      "answer": "3+3+3+3",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rb-easy-19",
+      "type": "choose_answer",
+      "question": "18 laddoos are shared equally among 9 people. How many does each get?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "9"
+      ],
+      "answer": "2",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rb-easy-20",
+      "type": "choose_answer",
+      "question": "20 flowers are shared equally among 5 friends. How many does each get?",
+      "options": [
+        "2",
+        "4",
+        "5",
+        "10"
+      ],
+      "answer": "4",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rb-easy-21",
+      "type": "choose_answer",
+      "question": "Which is the correct way to write \"5 times 4\"?",
+      "options": [
+        "5+4",
+        "5×4",
+        "4-5",
+        "5÷4"
+      ],
+      "answer": "5×4",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rb-easy-22",
+      "type": "odd_one_out",
+      "question": "Which of these does NOT equal 12?",
+      "options": [
+        "3×4",
+        "2×6",
+        "6×2",
+        "5×2"
+      ],
+      "answer": "5×2",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rb-easy-23",
+      "type": "odd_one_out",
+      "question": "Which of these is NOT a way to make 10?",
+      "options": [
+        "2×5",
+        "5×2",
+        "10×1",
+        "3×3"
+      ],
+      "answer": "3×3",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rb-easy-24",
+      "type": "match",
+      "question": "Match each multiplication to its answer.",
+      "pairs": [
+        {
+          "left": "2×3",
+          "right": "6"
+        },
+        {
+          "left": "4×2",
+          "right": "8"
+        },
+        {
+          "left": "5×2",
+          "right": "10"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "rb-easy-25",
+      "type": "arrange_order",
+      "question": "Arrange these in increasing order of their value.",
+      "items": [
+        "3×3",
+        "2×2",
+        "4×2",
+        "1×5"
+      ],
+      "answer": [
+        "2×2",
+        "1×5",
+        "4×2",
+        "3×3"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "rb-medium-01",
+      "type": "mcq",
+      "question": "6 × 3 = ?",
+      "options": [
+        "16",
+        "18",
+        "21",
+        "24"
+      ],
+      "answer": "18",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rb-medium-02",
+      "type": "mcq",
+      "question": "7 × 2 = ?",
+      "options": [
+        "12",
+        "14",
+        "16",
+        "18"
+      ],
+      "answer": "14",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rb-medium-03",
+      "type": "mcq",
+      "question": "8 × 3 = ?",
+      "options": [
+        "21",
+        "24",
+        "27",
+        "32"
+      ],
+      "answer": "24",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rb-medium-04",
+      "type": "mcq",
+      "question": "9 × 2 = ?",
+      "options": [
+        "16",
+        "18",
+        "20",
+        "27"
+      ],
+      "answer": "18",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rb-medium-05",
+      "type": "mcq",
+      "question": "10 × 4 = ?",
+      "options": [
+        "14",
+        "40",
+        "44",
+        "400"
+      ],
+      "answer": "40",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rb-medium-06",
+      "type": "mcq",
+      "question": "An idli vessel has 6 plates. Each plate makes 4 idlis. How many idlis in one go?",
+      "options": [
+        "10",
+        "20",
+        "24",
+        "28"
+      ],
+      "answer": "24",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rb-medium-07",
+      "type": "mcq",
+      "question": "16 kaju katlis are shared equally among 4 people. How many does each get?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answer": "4",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rb-medium-08",
+      "type": "mcq",
+      "question": "15 pedas are shared equally among 5 people. How many does each get?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answer": "3",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rb-medium-09",
+      "type": "mcq",
+      "question": "24 jalebis are shared so each person gets 4. How many people get jalebis?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
+      "answer": "6",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rb-medium-10",
+      "type": "mcq",
+      "question": "Dhara skip jumps by 3 starting from 0. After 4 jumps, which number does she reach?",
+      "options": [
+        "9",
+        "12",
+        "15",
+        "18"
+      ],
+      "answer": "12",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rb-medium-11",
+      "type": "true_false",
+      "question": "8 × 2 = 18.",
+      "answer": false,
+      "difficulty": "medium"
+    },
+    {
+      "id": "rb-medium-12",
+      "type": "true_false",
+      "question": "6 × 6 = 36.",
+      "answer": true,
+      "difficulty": "medium"
+    },
+    {
+      "id": "rb-medium-13",
+      "type": "true_false",
+      "question": "Skip jumping by 3 from 0, after 5 jumps you reach 15.",
+      "answer": true,
+      "difficulty": "medium"
+    },
+    {
+      "id": "rb-medium-14",
+      "type": "true_false",
+      "question": "32 ÷ 8 = 5.",
+      "answer": false,
+      "difficulty": "medium"
+    },
+    {
+      "id": "rb-medium-15",
+      "type": "yes_no",
+      "question": "Is 9 × 3 equal to 27?",
+      "answer": "Yes",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rb-medium-16",
+      "type": "yes_no",
+      "question": "Is 45 ÷ 5 equal to 9?",
+      "answer": "Yes",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rb-medium-17",
+      "type": "yes_no",
+      "question": "Is 6 × 8 equal to 42?",
+      "answer": "No",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rb-medium-18",
+      "type": "choose_answer",
+      "question": "Each cycle needs 2 wheels. How many cycles can be fitted with 12 wheels?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
+      "answer": "6",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rb-medium-19",
+      "type": "choose_answer",
+      "question": "A group of spiders has 32 legs. Each spider has 8 legs. How many spiders are there?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "answer": "4",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rb-medium-20",
+      "type": "choose_answer",
+      "question": "Which multiplication matches \"6 times 8\"?",
+      "options": [
+        "6×8",
+        "8÷6",
+        "6+8",
+        "8-6"
+      ],
+      "answer": "6×8",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rb-medium-21",
+      "type": "choose_answer",
+      "question": "9 idli plates each make 4 idlis. How many idlis in total?",
+      "options": [
+        "32",
+        "36",
+        "40",
+        "44"
+      ],
+      "answer": "36",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rb-medium-22",
+      "type": "odd_one_out",
+      "question": "Which of these does NOT equal 24?",
+      "options": [
+        "6×4",
+        "8×3",
+        "3×9",
+        "4×6"
+      ],
+      "answer": "3×9",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rb-medium-23",
+      "type": "odd_one_out",
+      "question": "Which of these does NOT equal 40?",
+      "options": [
+        "8×5",
+        "10×4",
+        "5×8",
+        "6×7"
+      ],
+      "answer": "6×7",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rb-medium-24",
+      "type": "match",
+      "question": "Match each expression to its product.",
+      "pairs": [
+        {
+          "left": "8×4",
+          "right": "32"
+        },
+        {
+          "left": "7×5",
+          "right": "35"
+        },
+        {
+          "left": "9×3",
+          "right": "27"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "rb-medium-25",
+      "type": "arrange_order",
+      "question": "Arrange these products in increasing order.",
+      "items": [
+        "9×2",
+        "7×2",
+        "10×1",
+        "4×4"
+      ],
+      "answer": [
+        "10×1",
+        "7×2",
+        "4×4",
+        "9×2"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "rb-hard-01",
+      "type": "mcq",
+      "question": "Mary has 63 sea-shells. She gives 7 shells to each of 5 friends. How many shells does she give away in total?",
+      "options": [
+        "28",
+        "30",
+        "35",
+        "40"
+      ],
+      "answer": "35",
+      "difficulty": "hard"
+    },
+    {
+      "id": "rb-hard-02",
+      "type": "mcq",
+      "question": "Mary had 63 sea-shells and gave away 35 (7 to each of 5 friends). How many shells does she have left?",
+      "options": [
+        "26",
+        "28",
+        "30",
+        "33"
+      ],
+      "answer": "28",
+      "difficulty": "hard"
+    },
+    {
+      "id": "rb-hard-03",
+      "type": "mcq",
+      "question": "Suma saves ₹8 every day. After how many days will she have ₹56?",
+      "options": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "answer": "7",
+      "difficulty": "hard"
+    },
+    {
+      "id": "rb-hard-04",
+      "type": "mcq",
+      "question": "Dhruv has 112 sea-shells and uses 28 shells for each necklace. How many necklaces can he make?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "answer": "4",
+      "difficulty": "hard"
+    },
+    {
+      "id": "rb-hard-05",
+      "type": "mcq",
+      "question": "A spider has 8 legs. How many legs do 10 spiders have?",
+      "options": [
+        "60",
+        "70",
+        "80",
+        "90"
+      ],
+      "answer": "80",
+      "difficulty": "hard"
+    },
+    {
+      "id": "rb-hard-06",
+      "type": "mcq",
+      "question": "A spider has 8 legs. How many legs do 15 spiders have?",
+      "options": [
+        "100",
+        "110",
+        "120",
+        "130"
+      ],
+      "answer": "120",
+      "difficulty": "hard"
+    },
+    {
+      "id": "rb-hard-07",
+      "type": "mcq",
+      "question": "An auto rickshaw has 3 wheels. How many wheels do 18 auto rickshaws have?",
+      "options": [
+        "36",
+        "45",
+        "54",
+        "60"
+      ],
+      "answer": "54",
+      "difficulty": "hard"
+    },
+    {
+      "id": "rb-hard-08",
+      "type": "mcq",
+      "question": "Auto rickshaws in a garage have 36 wheels in total (3 wheels each). How many rickshaws are there?",
+      "options": [
+        "9",
+        "10",
+        "12",
+        "15"
+      ],
+      "answer": "12",
+      "difficulty": "hard"
+    },
+    {
+      "id": "rb-hard-09",
+      "type": "mcq",
+      "question": "One rabdi cup costs ₹75. What is the cost of 5 cups?",
+      "options": [
+        "350",
+        "360",
+        "375",
+        "400"
+      ],
+      "answer": "375",
+      "difficulty": "hard"
+    },
+    {
+      "id": "rb-hard-10",
+      "type": "mcq",
+      "question": "One wall-hanging costs ₹42. What do two wall-hangings cost?",
+      "options": [
+        "74",
+        "80",
+        "84",
+        "88"
+      ],
+      "answer": "84",
+      "difficulty": "hard"
+    },
+    {
+      "id": "rb-hard-11",
+      "type": "true_false",
+      "question": "A line of 55 ants, each with 6 legs, has 330 legs in total.",
+      "answer": true,
+      "difficulty": "hard"
+    },
+    {
+      "id": "rb-hard-12",
+      "type": "true_false",
+      "question": "If Micky sees 48 cow legs in a shed, there are 10 cows (each cow has 4 legs).",
+      "answer": false,
+      "difficulty": "hard"
+    },
+    {
+      "id": "rb-hard-13",
+      "type": "true_false",
+      "question": "If Micky sees 48 cow legs in a shed, there are 12 cows (each cow has 4 legs).",
+      "answer": true,
+      "difficulty": "hard"
+    },
+    {
+      "id": "rb-hard-14",
+      "type": "true_false",
+      "question": "Kannu makes necklaces of 17 sea-shells each. With 100 shells, she can make exactly 6 necklaces with none left over.",
+      "answer": false,
+      "difficulty": "hard"
+    },
+    {
+      "id": "rb-hard-15",
+      "type": "yes_no",
+      "question": "Does Preeti need 4 ₹100 notes to buy 5 rabdi cups worth ₹75 each (total ₹375)?",
+      "answer": "Yes",
+      "difficulty": "hard"
+    },
+    {
+      "id": "rb-hard-16",
+      "type": "yes_no",
+      "question": "If each wheel needs 5 spokes, can you make exactly 12 wheels with 60 spokes?",
+      "answer": "Yes",
+      "difficulty": "hard"
+    },
+    {
+      "id": "rb-hard-17",
+      "type": "yes_no",
+      "question": "If each wheel needs 5 spokes, is it possible to make 10 wheels with only 45 spokes?",
+      "answer": "No",
+      "difficulty": "hard"
+    },
+    {
+      "id": "rb-hard-18",
+      "type": "choose_answer",
+      "question": "127 shiny pebbles are distributed equally among 3 friends. What does each friend get?",
+      "options": [
+        "40 each, 3 left over",
+        "42 each, 1 left over",
+        "41 each, 4 left over",
+        "40 each, 7 left over"
+      ],
+      "answer": "42 each, 1 left over",
+      "difficulty": "hard"
+    },
+    {
+      "id": "rb-hard-19",
+      "type": "choose_answer",
+      "question": "Karry the crow sees 24 horns on cows (2 horns per cow). How many legs do these cows have in total (4 legs each)?",
+      "options": [
+        "24",
+        "36",
+        "48",
+        "96"
+      ],
+      "answer": "48",
+      "difficulty": "hard"
+    },
+    {
+      "id": "rb-hard-20",
+      "type": "choose_answer",
+      "question": "Preeti has a ₹500 note and wants only ₹50 notes in exchange. How many notes will she get?",
+      "options": [
+        "5",
+        "8",
+        "10",
+        "50"
+      ],
+      "answer": "10",
+      "difficulty": "hard"
+    },
+    {
+      "id": "rb-hard-21",
+      "type": "choose_answer",
+      "question": "9 idli plates each make 4 idlis. How many idlis are made in total?",
+      "options": [
+        "32",
+        "36",
+        "40",
+        "45"
+      ],
+      "answer": "36",
+      "difficulty": "hard"
+    },
+    {
+      "id": "rb-hard-22",
+      "type": "odd_one_out",
+      "question": "Which of these does NOT equal 45?",
+      "options": [
+        "9×5",
+        "5×9",
+        "6×8",
+        "45×1"
+      ],
+      "answer": "6×8",
+      "difficulty": "hard"
+    },
+    {
+      "id": "rb-hard-23",
+      "type": "odd_one_out",
+      "question": "All auto rickshaws here have 3 wheels each. Which statement does NOT belong with the others?",
+      "options": [
+        "12 autos give 36 wheels",
+        "36 ÷ 3 = 12 autos",
+        "9 autos give 4 wheels each",
+        "6 autos + 6 autos = 12 autos"
+      ],
+      "answer": "9 autos give 4 wheels each",
+      "difficulty": "hard"
+    },
+    {
+      "id": "rb-hard-24",
+      "type": "match",
+      "question": "Match each situation to its correct answer.",
+      "pairs": [
+        {
+          "left": "63 shells minus 35 given away",
+          "right": "28 left"
+        },
+        {
+          "left": "18 rickshaws × 3 wheels",
+          "right": "54 wheels"
+        },
+        {
+          "left": "₹8 saved daily for 7 days",
+          "right": "₹56"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "rb-hard-25",
+      "type": "arrange_order",
+      "question": "Arrange these totals from smallest to largest.",
+      "items": [
+        "5 spiders' legs (8 each)",
+        "10 auto rickshaw wheels (3 each)",
+        "6 ants' legs (6 each)",
+        "3 wall-hangings (₹42 each)"
+      ],
+      "answer": [
+        "10 auto rickshaw wheels (3 each)",
+        "6 ants' legs (6 each)",
+        "5 spiders' legs (8 each)",
+        "3 wall-hangings (₹42 each)"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "rb-challenge-01",
+      "type": "mcq",
+      "question": "A frog starts at 0 and jumps in steps of 7 (7, 14, 21, ...). What is the largest number it lands on before crossing 50?",
+      "options": [
+        "42",
+        "45",
+        "49",
+        "52"
+      ],
+      "answer": "49",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "rb-challenge-02",
+      "type": "mcq",
+      "question": "The same frog (jumps of 7) has just landed on 49. What is its next landing number?",
+      "options": [
+        "50",
+        "54",
+        "56",
+        "63"
+      ],
+      "answer": "56",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "rb-challenge-03",
+      "type": "mcq",
+      "question": "The times-2 table and times-3 table add up to the times-5 table. Using this, what is 2×4 + 3×4?",
+      "options": [
+        "12",
+        "16",
+        "20",
+        "24"
+      ],
+      "answer": "20",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "rb-challenge-04",
+      "type": "mcq",
+      "question": "Using the same rule (times-2 + times-3 = times-5), what is 2×7 + 3×7?",
+      "options": [
+        "30",
+        "33",
+        "35",
+        "38"
+      ],
+      "answer": "35",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "rb-challenge-05",
+      "type": "mcq",
+      "question": "Gopal notes Dhara's skip jumps but misses the first few numbers: 32, 40, 48, 56. By what number is Dhara skip jumping?",
+      "options": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "answer": "8",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "rb-challenge-06",
+      "type": "mcq",
+      "question": "Using the jump size found above (8), what number did Dhara land on just before 32?",
+      "options": [
+        "16",
+        "20",
+        "24",
+        "28"
+      ],
+      "answer": "24",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "rb-challenge-07",
+      "type": "mcq",
+      "question": "Gopal is skip jumping and lands on 27, with a jump size of 9. What is his next landing number after 27?",
+      "options": [
+        "30",
+        "33",
+        "34",
+        "36"
+      ],
+      "answer": "36",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "rb-challenge-08",
+      "type": "mcq",
+      "question": "There are 10 number cards (1–10). One envelope already uses cards 5 and 9 (5×9=45). Another envelope shows 18. Which two of the REMAINING cards multiply to 18?",
+      "options": [
+        "2 and 9",
+        "3 and 6",
+        "4 and 5",
+        "1 and 8"
+      ],
+      "answer": "3 and 6",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "rb-challenge-09",
+      "type": "mcq",
+      "question": "Continuing the envelope puzzle: cards 5, 9, 3, 6 are now used. An envelope shows 32. Which two of the remaining cards (1, 2, 4, 7, 8, 10) multiply to 32?",
+      "options": [
+        "4 and 8",
+        "2 and 10",
+        "1 and 10",
+        "7 and 8"
+      ],
+      "answer": "4 and 8",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "rb-challenge-10",
+      "type": "mcq",
+      "question": "Continuing further: cards 5, 9, 3, 6, 4, 8 are used. Only 1, 2, 7, 10 remain. An envelope shows 7. Which two remaining cards multiply to 7?",
+      "options": [
+        "1 and 7",
+        "2 and 7",
+        "7 and 10",
+        "1 and 10"
+      ],
+      "answer": "1 and 7",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "rb-challenge-11",
+      "type": "true_false",
+      "question": "In the envelope puzzle, once cards 5, 9, 3, 6, 4, 8, 1, 7 are all used, the last envelope (showing 20) must contain the remaining cards 2 and 10.",
+      "answer": true,
+      "difficulty": "challenge"
+    },
+    {
+      "id": "rb-challenge-12",
+      "type": "true_false",
+      "question": "In the times-5 table, any number multiplied by 5 where the number is even will always end in 0.",
+      "answer": true,
+      "difficulty": "challenge"
+    },
+    {
+      "id": "rb-challenge-13",
+      "type": "true_false",
+      "question": "In the times-5 table, any odd number multiplied by 5 will always end in 5.",
+      "answer": true,
+      "difficulty": "challenge"
+    },
+    {
+      "id": "rb-challenge-14",
+      "type": "true_false",
+      "question": "18 ÷ 9 and 9 × 2 give the same value.",
+      "answer": true,
+      "difficulty": "challenge"
+    },
+    {
+      "id": "rb-challenge-15",
+      "type": "yes_no",
+      "question": "Skip jumping by 6 starting from 0 (6, 12, 18, 24, ...) — will you ever land exactly on 20?",
+      "answer": "No",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "rb-challenge-16",
+      "type": "yes_no",
+      "question": "Can you reach the number 15 by skip jumping from 0 in steps of 1?",
+      "answer": "Yes",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "rb-challenge-17",
+      "type": "yes_no",
+      "question": "Toto reaches 18 in 6 jumps, but his jumps are not all the same size. Is the total distance he covers still 18?",
+      "answer": "Yes",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "rb-challenge-18",
+      "type": "choose_answer",
+      "question": "Roro starts at 0 and takes 6 equal jumps to reach 18. What is the size of each jump?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "6"
+      ],
+      "answer": "3",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "rb-challenge-19",
+      "type": "choose_answer",
+      "question": "Since the times-2 table plus the times-3 table equals the times-5 table, which pair of tables would add up to the times-9 table?",
+      "options": [
+        "4-table + 5-table",
+        "2-table + 6-table",
+        "3-table + 5-table",
+        "1-table + 7-table"
+      ],
+      "answer": "4-table + 5-table",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "rb-challenge-20",
+      "type": "choose_answer",
+      "question": "Based on the times-5 table pattern, what last digit will 23 × 5 end with?",
+      "options": [
+        "0",
+        "3",
+        "5",
+        "8"
+      ],
+      "answer": "5",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "rb-challenge-21",
+      "type": "choose_answer",
+      "question": "Based on the times-5 table pattern, what last digit will 32 × 5 end with?",
+      "options": [
+        "0",
+        "2",
+        "5",
+        "6"
+      ],
+      "answer": "0",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "rb-challenge-22",
+      "type": "odd_one_out",
+      "question": "Which of these numbers can NOT be reached by skip jumping from 0 in steps of 3?",
+      "options": [
+        "9",
+        "15",
+        "20",
+        "24"
+      ],
+      "answer": "20",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "rb-challenge-23",
+      "type": "odd_one_out",
+      "question": "Which of these does NOT describe the pattern 32, 40, 48, 56?",
+      "options": [
+        "skip jumping by 8",
+        "adding 8 repeatedly",
+        "4×8, 5×8, 6×8, 7×8",
+        "skip jumping by 6"
+      ],
+      "answer": "skip jumping by 6",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "rb-challenge-24",
+      "type": "match",
+      "question": "Match each number pattern to its next number.",
+      "pairs": [
+        {
+          "left": "3, 6, 9, ...",
+          "right": "12"
+        },
+        {
+          "left": "32, 40, 48, ...",
+          "right": "56"
+        },
+        {
+          "left": "7, 14, 21, ...",
+          "right": "28"
+        }
+      ],
+      "difficulty": "challenge"
+    },
+    {
+      "id": "rb-challenge-25",
+      "type": "arrange_order",
+      "question": "Dhara is skip jumping by 3 from 0. Arrange these jump labels in the order they actually happen.",
+      "items": [
+        "3rd jump",
+        "1st jump",
+        "4th jump",
+        "2nd jump"
+      ],
+      "answer": [
+        "1st jump",
+        "2nd jump",
+        "3rd jump",
+        "4th jump"
+      ],
+      "difficulty": "challenge"
+    }
+  ]
+}
