@@ -26,10 +26,10 @@
 Apne Admin Panel me jao:
 
 ```
-Admin → Data Tools → "📥 Download Sample" button dabao
+Admin → Import Export→ "📥 Download Sample" button dabao
 ```
 
-Isse `flashcard-champ-sample-import.json` naam ki file download hogi. Is file me app ke **saare 11 question types** ka ek-ek example already bana hua hai — ye file AI ko "sahi format" sikhane ke kaam aayegi. 🧩
+Isse `sample-all-question-types.json` naam ki file download hogi. Is file me app ke **saare 11 question types** ka ek-ek example already bana hua hai — ye file AI ko "sahi format" sikhane ke kaam aayegi. 🧩
 
 > 💡 **Tip:** Is file ko dobara mat likhna — bas aage AI ko dikhane ke liye use hoga.
 
