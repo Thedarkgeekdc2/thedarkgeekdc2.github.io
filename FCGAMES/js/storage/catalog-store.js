@@ -3,12 +3,18 @@ const KEY='flashcardChampCatalog';
 
 const DEFAULT_CATALOG = {
   classes: [
+    {id:'class-1', name:'Class 1', number:1},
+    {id:'class-2', name:'Class 2', number:2},
     {id:'class-3', name:'Class 3', number:3},
-    {id:'class-4', name:'Class 4', number:4}
+    {id:'class-4', name:'Class 4', number:4},
+    {id:'class-5', name:'Class 5', number:5}
   ],
   subjects: [
+    {id:'subject-hindi', name:'Hindi'},
+    {id:'subject-english', name:'English'},
     {id:'subject-maths', name:'Maths'},
-    {id:'subject-hindi', name:'Hindi'}
+    {id:'subject-twau', name:'TWAU (EVS)'},
+    {id:'subject-gk', name:'GK'}
   ]
 };
 

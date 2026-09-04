@@ -1,0 +1,52 @@
+{
+  "class": 3,
+  "subject": "maths",
+  "topic": "Numbers & Classification",
+  "questions": [
+    {
+      "id": "num001",
+      "type": "yes_no",
+      "question": "Is 48 an even number?",
+      "answer": "Yes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "num002",
+      "type": "odd_one_out",
+      "question": "Choose the odd one out.",
+      "options": [
+        "12",
+        "18",
+        "25",
+        "30"
+      ],
+      "answer": "25",
+      "difficulty": "easy"
+    },
+    {
+      "id": "num003",
+      "type": "arrange_order",
+      "question": "Arrange these numbers from smallest to greatest.",
+      "items": [
+        "25",
+        "7",
+        "14",
+        "3"
+      ],
+      "answer": [
+        "3",
+        "7",
+        "14",
+        "25"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "num004",
+      "type": "true_false",
+      "question": "100 is smaller than 99.",
+      "answer": false,
+      "difficulty": "easy"
+    }
+  ]
+}

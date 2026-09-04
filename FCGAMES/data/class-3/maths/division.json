@@ -1,0 +1,67 @@
+{
+  "class": 3,
+  "subject": "maths",
+  "topicId": "division",
+  "topic": "Division",
+  "questions": [
+    {
+      "id": "div001",
+      "type": "mcq",
+      "question": "48 ÷ 6 = ?",
+      "options": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "answer": "8",
+      "difficulty": "easy"
+    },
+    {
+      "id": "div002",
+      "type": "true_false",
+      "question": "35 ÷ 5 = 7.",
+      "answer": "True",
+      "difficulty": "easy"
+    },
+    {
+      "id": "div003",
+      "type": "mcq",
+      "question": "24 ÷ 4 = ?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
+      "answer": "6",
+      "difficulty": "easy"
+    },
+    {
+      "id": "div004",
+      "type": "mcq",
+      "question": "What is 81 ÷ 9?",
+      "options": [
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "answer": "9",
+      "difficulty": "medium"
+    },
+    {
+      "id": "div005",
+      "type": "mcq",
+      "question": "Which division gives 5?",
+      "options": [
+        "20 ÷ 4",
+        "25 ÷ 4",
+        "15 ÷ 5",
+        "30 ÷ 5"
+      ],
+      "answer": "20 ÷ 4",
+      "difficulty": "medium"
+    }
+  ]
+}

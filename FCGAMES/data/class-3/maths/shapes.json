@@ -1,0 +1,46 @@
+{
+  "class": 3,
+  "subject": "maths",
+  "topic": "Shapes",
+  "questions": [
+    {
+      "id": "shape001",
+      "type": "identify_picture",
+      "question": "Which shape is shown?",
+      "image": "assets/images/maths/shapes/triangle.svg",
+      "options": [
+        "Circle",
+        "Triangle",
+        "Square",
+        "Rectangle"
+      ],
+      "answer": "Triangle",
+      "difficulty": "easy"
+    },
+    {
+      "id": "shape002",
+      "type": "odd_one_out",
+      "question": "Which shape is different from the others?",
+      "imageOptions": [
+        {
+          "label": "Circle",
+          "image": "assets/images/maths/shapes/circle.svg"
+        },
+        {
+          "label": "Circle",
+          "image": "assets/images/maths/shapes/circle.svg"
+        },
+        {
+          "label": "Triangle",
+          "image": "assets/images/maths/shapes/triangle.svg"
+        },
+        {
+          "label": "Circle",
+          "image": "assets/images/maths/shapes/circle.svg"
+        }
+      ],
+      "answer": "Triangle",
+      "difficulty": "easy"
+    }
+  ]
+}

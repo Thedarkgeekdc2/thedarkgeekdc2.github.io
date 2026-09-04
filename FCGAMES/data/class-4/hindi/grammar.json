@@ -1,0 +1,28 @@
+{
+  "class": 4,
+  "subject": "hindi",
+  "topicId": "grammar",
+  "topic": "Grammar Mix",
+  "questions": [
+    {
+      "id": "gram001",
+      "type": "yes_no",
+      "question": "क्या “लड़के” बहुवचन शब्द है?",
+      "answer": "Yes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gram002",
+      "type": "choose_answer",
+      "question": "“सुंदर” कौन-सा शब्द है?",
+      "options": [
+        "संज्ञा",
+        "विशेषण",
+        "क्रिया",
+        "सर्वनाम"
+      ],
+      "answer": "विशेषण",
+      "difficulty": "medium"
+    }
+  ]
+}

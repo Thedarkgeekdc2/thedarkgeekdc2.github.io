@@ -1,0 +1,23 @@
+{
+  "class": 1,
+  "subject": "English",
+  "topic": "Greetings & Words",
+  "questions": [
+    {
+      "id": "eng-c1-greet-1",
+      "type": "mcq",
+      "question": "Which word means \"Good Morning\" greeting picture?",
+      "options": ["Hello", "Bye", "Sorry", "Please"],
+      "answer": "Hello",
+      "difficulty": "easy"
+    },
+    {
+      "id": "eng-c1-greet-2",
+      "type": "mcq",
+      "question": "Pick the word that rhymes with CAT.",
+      "options": ["Bat", "Dog", "Cup", "Pen"],
+      "answer": "Bat",
+      "difficulty": "easy"
+    }
+  ]
+}

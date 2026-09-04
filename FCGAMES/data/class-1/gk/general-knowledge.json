@@ -1,0 +1,23 @@
+{
+  "class": 1,
+  "subject": "GK",
+  "topic": "General Knowledge",
+  "questions": [
+    {
+      "id": "gk-c1-1",
+      "type": "mcq",
+      "question": "What is the national animal of India?",
+      "options": ["Tiger", "Lion", "Elephant", "Deer"],
+      "answer": "Tiger",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk-c1-2",
+      "type": "mcq",
+      "question": "How many days are there in a week?",
+      "options": ["7", "5", "10", "6"],
+      "answer": "7",
+      "difficulty": "easy"
+    }
+  ]
+}

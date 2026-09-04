@@ -1,0 +1,27 @@
+{
+  "class": 4,
+  "subject": "hindi",
+  "topic": "पर्यायवाची शब्द",
+  "questions": [
+    {
+      "id": "par001",
+      "type": "choose_answer",
+      "question": "'जल' का पर्यायवाची कौन-सा है?",
+      "options": [
+        "पानी",
+        "आग",
+        "धूप",
+        "हवा"
+      ],
+      "answer": "पानी",
+      "difficulty": "easy"
+    },
+    {
+      "id": "par002",
+      "type": "yes_no",
+      "question": "क्या 'सूर्य' और 'रवि' पर्यायवाची शब्द हैं?",
+      "answer": "Yes",
+      "difficulty": "easy"
+    }
+  ]
+}

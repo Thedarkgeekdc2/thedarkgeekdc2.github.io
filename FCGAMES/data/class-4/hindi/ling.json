@@ -1,0 +1,33 @@
+{
+  "class": 4,
+  "subject": "hindi",
+  "topic": "लिंग",
+  "questions": [
+    {
+      "id": "lin001",
+      "type": "mcq",
+      "question": "'राजा' का स्त्रीलिंग क्या है?",
+      "options": [
+        "रानी",
+        "राजी",
+        "राजकुमारी",
+        "माता"
+      ],
+      "answer": "रानी",
+      "difficulty": "easy"
+    },
+    {
+      "id": "lin002",
+      "type": "odd_one_out",
+      "question": "इनमें से स्त्रीलिंग शब्द अलग से पहचानिए।",
+      "options": [
+        "माता",
+        "बहन",
+        "राजा",
+        "लड़की"
+      ],
+      "answer": "राजा",
+      "difficulty": "easy"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "class": 3,
+  "subject": "TWAU (EVS)",
+  "topic": "Our Environment",
+  "questions": [
+    {
+      "id": "twau-c3-env-1",
+      "type": "mcq",
+      "question": "Which of these is a natural source of water?",
+      "options": ["River", "Tap", "Bottle", "Tank"],
+      "answer": "River",
+      "difficulty": "easy"
+    },
+    {
+      "id": "twau-c3-env-2",
+      "type": "mcq",
+      "question": "Which of these helps keep our surroundings clean?",
+      "options": ["Throwing garbage in dustbin", "Littering roads", "Burning plastic", "Wasting water"],
+      "answer": "Throwing garbage in dustbin",
+      "difficulty": "easy"
+    }
+  ]
+}

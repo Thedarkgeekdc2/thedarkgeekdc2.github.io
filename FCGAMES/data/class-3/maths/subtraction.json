@@ -1,0 +1,80 @@
+{
+  "class": 3,
+  "subject": "maths",
+  "topicId": "subtraction",
+  "topic": "Subtraction",
+  "questions": [
+    {
+      "id": "sub001",
+      "type": "mcq",
+      "question": "500 − 267 = ?",
+      "options": [
+        "223",
+        "233",
+        "243",
+        "253"
+      ],
+      "answer": "233",
+      "difficulty": "easy"
+    },
+    {
+      "id": "sub002",
+      "type": "mcq",
+      "question": "700 − 125 = ?",
+      "options": [
+        "565",
+        "575",
+        "585",
+        "595"
+      ],
+      "answer": "575",
+      "difficulty": "medium"
+    },
+    {
+      "id": "sub003",
+      "type": "true_false",
+      "question": "900 − 300 = 600.",
+      "answer": "True",
+      "difficulty": "easy"
+    },
+    {
+      "id": "sub004",
+      "type": "mcq",
+      "question": "450 − 50 = ?",
+      "options": [
+        "380",
+        "390",
+        "400",
+        "410"
+      ],
+      "answer": "400",
+      "difficulty": "easy"
+    },
+    {
+      "id": "sub005",
+      "type": "mcq",
+      "question": "What is 1000 − 1?",
+      "options": [
+        "990",
+        "998",
+        "999",
+        "1000"
+      ],
+      "answer": "999",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "sub006",
+      "type": "mcq",
+      "question": "Which answer is 250?",
+      "options": [
+        "400 − 150",
+        "450 − 150",
+        "350 − 100",
+        "500 − 200"
+      ],
+      "answer": "400 − 150",
+      "difficulty": "medium"
+    }
+  ]
+}

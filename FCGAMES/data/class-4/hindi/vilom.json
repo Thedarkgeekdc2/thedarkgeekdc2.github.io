@@ -1,0 +1,53 @@
+{
+  "class": 4,
+  "subject": "hindi",
+  "topic": "विलोम शब्द",
+  "questions": [
+    {
+      "id": "vil001",
+      "type": "mcq",
+      "question": "'दिन' का विलोम शब्द क्या है?",
+      "options": [
+        "सुबह",
+        "रात",
+        "दोपहर",
+        "सूरज"
+      ],
+      "answer": "रात",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vil002",
+      "type": "true_false",
+      "question": "'अच्छा' का विलोम शब्द 'बुरा' है।",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "vil003",
+      "type": "mcq",
+      "question": "'ऊपर' का विलोम शब्द क्या है?",
+      "options": [
+        "नीचे",
+        "दूर",
+        "पास",
+        "सीधा"
+      ],
+      "answer": "नीचे",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vil004",
+      "type": "mcq",
+      "question": "'सुख' का विलोम शब्द क्या है?",
+      "options": [
+        "दुःख",
+        "खुशी",
+        "आनंद",
+        "शांति"
+      ],
+      "answer": "दुःख",
+      "difficulty": "easy"
+    }
+  ]
+}

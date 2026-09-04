@@ -1,16 +1,9 @@
 {
   "classes": [
-    {
-      "class": 3,
-      "subjects": [
-        "maths"
-      ]
-    },
-    {
-      "class": 4,
-      "subjects": [
-        "hindi"
-      ]
-    }
+    { "class": 1, "subjects": ["Hindi", "English", "Maths", "GK"] },
+    { "class": 2, "subjects": ["Hindi", "English", "Maths", "GK"] },
+    { "class": 3, "subjects": ["Hindi", "English", "Maths", "TWAU (EVS)"] },
+    { "class": 4, "subjects": ["Hindi", "English", "Maths", "TWAU (EVS)"] },
+    { "class": 5, "subjects": ["Hindi", "English", "Maths", "TWAU (EVS)"] }
   ]
 }

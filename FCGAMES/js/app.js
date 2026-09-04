@@ -84,11 +84,20 @@ async function home(){
       );
     });
 }
+function normSubj(s){return String(s??'').toLowerCase().replace(/[^a-z]/g,'');}
+function subjectsForClass(subjects,classNo){
+  const junior=['hindi','english','maths','gk'];
+  const senior=['hindi','english','maths','twauevs'];
+  const allowed=Number(classNo)<=2?junior:senior;
+  const filtered=subjects.filter(s=>allowed.includes(normSubj(s.name)));
+  return filtered.length?filtered:subjects;
+}
 async function chooseClass(n,name){
   state.classNo=n;state.className=name;
   const c=await getCatalog();
+  const subjectsList=subjectsForClass(c.subjects,n);
   app.innerHTML=`<section class="panel"><button class="back" id="back">← Home</button><h2>🏫 ${esc(name)}</h2><p>Select a subject.</p>
-    <div class="topic-grid">${c.subjects.map(s=>`<button class="topic-card subject-card" data-sub="${esc(s.name)}"><span class="card-emoji">${String(s.name).toLowerCase()==='maths'?'🧮':'📚'}</span><strong>${esc(s.name)}</strong></button>`).join('')}</div></section>`;
+    <div class="topic-grid">${subjectsList.map(s=>`<button class="topic-card subject-card" data-sub="${esc(s.name)}"><span class="card-emoji">${String(s.name).toLowerCase()==='maths'?'🧮':'📚'}</span><strong>${esc(s.name)}</strong></button>`).join('')}</div></section>`;
   document.getElementById('back').onclick=home;
   document.querySelectorAll('[data-sub]').forEach(b=>b.onclick=()=>chooseSubject(b.dataset.sub));
 }

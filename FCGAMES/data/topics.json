@@ -6,7 +6,7 @@
       "id": "addition",
       "name": "Addition",
       "icon": "➕",
-      "file": "data/maths/addition.json",
+      "file": "data/class-3/maths/addition.json",
       "description": "Add numbers quickly."
     },
     {
@@ -15,7 +15,7 @@
       "id": "subtraction",
       "name": "Subtraction",
       "icon": "➖",
-      "file": "data/maths/subtraction.json",
+      "file": "data/class-3/maths/subtraction.json",
       "description": "Subtract numbers and practise mental maths."
     },
     {
@@ -24,7 +24,7 @@
       "id": "multiplication",
       "name": "Multiplication",
       "icon": "✖️",
-      "file": "data/maths/multiplication.json",
+      "file": "data/class-3/maths/multiplication.json",
       "description": "Build multiplication facts."
     },
     {
@@ -33,7 +33,7 @@
       "id": "division",
       "name": "Division",
       "icon": "➗",
-      "file": "data/maths/division.json",
+      "file": "data/class-3/maths/division.json",
       "description": "Share numbers into equal groups."
     },
     {
@@ -42,7 +42,7 @@
       "id": "vilom",
       "name": "विलोम शब्द",
       "icon": "↔️",
-      "file": "data/hindi/vilom.json",
+      "file": "data/class-4/hindi/vilom.json",
       "description": "Choose the opposite word."
     },
     {
@@ -51,7 +51,7 @@
       "id": "paryayvachi",
       "name": "पर्यायवाची शब्द",
       "icon": "🔄",
-      "file": "data/hindi/paryayvachi.json",
+      "file": "data/class-4/hindi/paryayvachi.json",
       "description": "Find a similar-meaning word."
     },
     {
@@ -60,7 +60,7 @@
       "id": "ling",
       "name": "लिंग",
       "icon": "👩‍🏫",
-      "file": "data/hindi/ling.json",
+      "file": "data/class-4/hindi/ling.json",
       "description": "Identify the correct gender."
     },
     {
@@ -69,7 +69,7 @@
       "id": "vachan",
       "name": "वचन",
       "icon": "👥",
-      "file": "data/hindi/vachan.json",
+      "file": "data/class-4/hindi/vachan.json",
       "description": "Identify singular and plural forms."
     },
     {
@@ -79,7 +79,7 @@
       "name": "Time",
       "icon": "🕐",
       "description": "Read clocks and tell the time.",
-      "file": "data/maths/time.json"
+      "file": "data/class-3/maths/time.json"
     },
     {
       "id": "shapes",
@@ -88,7 +88,7 @@
       "name": "Shapes",
       "icon": "🔷",
       "description": "Recognise shapes and patterns.",
-      "file": "data/maths/shapes.json"
+      "file": "data/class-3/maths/shapes.json"
     },
     {
       "id": "drag-drop",
@@ -97,7 +97,7 @@
       "name": "Drag & Drop",
       "icon": "🖱️",
       "description": "Move cards into the right place.",
-      "file": "data/maths/drag-drop.json"
+      "file": "data/class-3/maths/drag-drop.json"
     },
     {
       "id": "match",
@@ -106,7 +106,7 @@
       "name": "Match the Following",
       "icon": "🔗",
       "description": "Match words with meanings.",
-      "file": "data/hindi/match.json"
+      "file": "data/class-4/hindi/match.json"
     },
     {
       "id": "picture",
@@ -115,7 +115,7 @@
       "name": "Picture Words",
       "icon": "🖼️",
       "description": "Look at pictures and choose the word.",
-      "file": "data/hindi/picture.json"
+      "file": "data/class-4/hindi/picture.json"
     },
     {
       "id": "grammar",
@@ -124,7 +124,7 @@
       "name": "Grammar Mix",
       "icon": "📝",
       "description": "Quick Hindi grammar practice.",
-      "file": "data/hindi/grammar.json"
+      "file": "data/class-4/hindi/grammar.json"
     },
     {
       "id": "order",
@@ -133,7 +133,7 @@
       "name": "Arrange Words",
       "icon": "↕️",
       "description": "Put words in the correct order.",
-      "file": "data/hindi/order.json"
+      "file": "data/class-4/hindi/order.json"
     }
   ]
 }
