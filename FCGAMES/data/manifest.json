@@ -79,6 +79,13 @@
       "questionCount": 2
     },
     {
+      "file": "data/class-3/maths/raksha-bandhan.json",
+      "class": 3,
+      "subject": "maths",
+      "topic": "Raksha Bandhan",
+      "questionCount": 100
+    },
+    {
       "file": "data/class-3/maths/shapes.json",
       "class": 3,
       "subject": "maths",
