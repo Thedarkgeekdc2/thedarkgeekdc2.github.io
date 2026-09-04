@@ -135,6 +135,13 @@
       "questionCount": 1
     },
     {
+      "file": "data/class-4/hindi/onam-ke-rang.json",
+      "class": 4,
+      "subject": "hindi",
+      "topic": "ओणम के रंग",
+      "questionCount": 100
+    },
+    {
       "file": "data/class-4/hindi/picture-words.json",
       "class": 4,
       "subject": "hindi",
