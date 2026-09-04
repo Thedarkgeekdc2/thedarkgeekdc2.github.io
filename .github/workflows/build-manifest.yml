@@ -1,0 +1,42 @@
+name: Rebuild Question Manifest
+
+on:
+  push:
+    paths:
+      - 'FCGAMES/data/**/*.json'
+      - 'FCGAMES/scripts/generate-manifest.js'
+      - '.github/workflows/build-manifest.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-manifest:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+
+      - name: Rebuild data/manifest.json
+        working-directory: FCGAMES
+        run: node scripts/generate-manifest.js
+
+      - name: Commit updated manifest
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          if git diff --quiet -- FCGAMES/data/manifest.json; then
+            echo "manifest.json already up to date - nothing to commit."
+          else
+            git add FCGAMES/data/manifest.json
+            git commit -m "chore: auto-rebuild data/manifest.json"
+            git push
+          fi
