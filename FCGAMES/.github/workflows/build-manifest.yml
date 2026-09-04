@@ -1,13 +1,13 @@
 name: Rebuild Question Manifest
 
-# Runs automatically whenever question JSON files change, so you never have
-# to hand-edit data/manifest.json - just drop your topic file into the right
-# data/class-<N>/<subject>/ folder and push.
 on:
   push:
     paths:
-      - 'data/class-*/**/*.json'
-  workflow_dispatch: {}
+      - 'data/**/*.json'
+      - 'scripts/generate-manifest.js'
+      - '.github/workflows/build-manifest.yml'
+
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -15,20 +15,24 @@ permissions:
 jobs:
   build-manifest:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v7
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
         with:
           node-version: '24'
 
       - name: Rebuild data/manifest.json
         run: node scripts/generate-manifest.js
 
-      - name: Commit updated manifest (if changed)
+      - name: Commit updated manifest
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
           if git diff --quiet -- data/manifest.json; then
             echo "manifest.json already up to date - nothing to commit."
           else
