@@ -1,4 +1,4 @@
-name: Rebuild question manifest
+name: Rebuild Question Manifest
 
 # Runs automatically whenever question JSON files change, so you never have
 # to hand-edit data/manifest.json - just drop your topic file into the right
