@@ -79,9 +79,16 @@ Agar prompt me aapne koi **naya Topic** (jo pehle se catalog me nahi tha) diya, 
 
 ## 📝 Copy-Paste Prompt
 
-> Isko copy karo, `[  ]` wali saari jagah apni details se badlo, phir Claude/ChatGPT ko bhej do:
+> Copy this prompt, fill in the **DATA ENTRY** fields first, attach the Sample JSON and Chapter PDF, then send the complete prompt to Claude/ChatGPT:
 
-```
+```text
+DATA ENTRY
+
+Class: [CLASS NUMBER, e.g. 3]
+Subject: [SUBJECT NAME, e.g. maths / hindi]
+Topic: [TOPIC NAME, e.g. Fractions]
+Total Questions: [TOTAL QUESTIONS, e.g. 20]
+
 You are helping me create a question bank for a school flashcard app
 called "Flashcard Champ".
 
@@ -90,36 +97,50 @@ I am attaching two files:
    the app supports.
 2. A PDF of a school chapter/lesson.
 
-Using ONLY the content of the attached chapter PDF, generate a NEW JSON
-file with [TOTAL QUESTIONS] good quality questions, covering as many of
-the question types shown in the sample as reasonably make sense for this
-content (mix different types, don't use only one type).
+Using ONLY the content of the attached chapter PDF, generate exactly
+[ TOTAL QUESTIONS ] good quality questions.
 
-Use these values for every question:
-- Class: [CLASS NUMBER, e.g. 3]
-- Subject: [SUBJECT NAME, e.g. maths / hindi]
-- Topic: [TOPIC NAME, e.g. Fractions]
+Use the Class, Subject, and Topic exactly as provided in DATA ENTRY.
+Cover as many of the question types shown in the sample as reasonably
+make sense for this content. Mix different question types and do not use
+only one type.
 
 Rules to follow exactly:
 1. Follow the exact JSON structure and field names shown in the sample
    file (id, type, question, options, answer, difficulty, pairs, items,
    image, etc.) — copy the pattern precisely for whichever type you use.
-2. Every "id" must be unique text, no spaces (e.g. "ch1-q01", "ch1-q02").
+2. Every "id" must be unique text and contain no spaces
+   (e.g. "ch1-q01", "ch1-q02").
 3. Do NOT use "fill_blank" or "one_word" types — they are not supported.
-   Every question must be answerable by tapping an option, never by
-   typing an answer.
+   Every question must be answerable by tapping/selecting an option,
+   never by typing an answer.
 4. Do NOT use "image_based", "image_mcq", or "identify_picture" types —
-   skip these unless I separately tell you which image files exist in
-   the project, since a made-up image path will just show broken.
+   skip these unless I separately tell you which image files exist in the
+   project. Never invent an image filename or path.
 5. Mix difficulty levels: "easy", "medium", "challenge".
-6. Wrap everything in one object like this:
-   { "class": ..., "subject": "...", "topic": "...", "questions": [...] }
-7. Return ONLY the final JSON — no explanation before or after, no
-   markdown code fences — just the raw JSON so I can copy-paste it
-   straight into a .json file.
+6. Questions must be based ONLY on the attached chapter PDF. Do not add
+   facts from outside knowledge.
+7. Avoid duplicate or nearly identical questions.
+8. Make every question clear, age-appropriate, and directly related to
+   the chapter content.
+9. Make answer options meaningful and plausible.
+10. Before generating the final JSON, internally verify that:
+    - the total number of questions is exactly as requested
+    - every ID is unique
+    - all required fields are present
+    - every answer matches its question and options
+    - only supported question types are used
+    - no invented image path is used
+11. Wrap everything in one object like this:
+    { "class": ..., "subject": "...", "topic": "...", "questions": [...] }
+12. The "class", "subject", and "topic" values must exactly match the
+    DATA ENTRY values above.
+13. Return ONLY the final JSON — no explanation before or after, no
+    markdown code fences — just the raw JSON so I can copy-paste it
+    straight into a .json file.
 ```
 
-> ⚠️ **Note:** Prompt me point 4 jaan-bujh kar image types "skip" karne ko bola hai, kyunki AI ko nahi pata aapke project me kaunsi image files maujood hain — agar wo khud se image path bana degi to wo image game me **broken/tooti hui** dikhegi. Agar aap image wale questions chahte ho, wo baad me khud **Admin → Question Builder** ya **Admin → Images** se add kar sakte ho (real image path select karke).
+> ⚠️ **Note:** Image question types ko default me skip kiya gaya hai, kyunki AI ko project me available real image files/paths ka pata nahi hota. Agar AI khud se image path banayegi to image game me **broken/tooti hui** dikh sakti hai. Image wale questions tabhi use karein jab aap available image files/paths AI ko separately provide karein.
 
 ---
 
