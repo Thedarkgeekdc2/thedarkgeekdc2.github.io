@@ -1,0 +1,1179 @@
+{
+  "class": 2,
+  "subject": "GK",
+  "topic": "सामान्य ज्ञान",
+  "questions": [
+    {
+      "id": "gk2-easy-01",
+      "type": "mcq",
+      "question": "हमारे देश का नाम क्या है?",
+      "options": [
+        "भारत",
+        "चीन",
+        "नेपाल",
+        "जापान"
+      ],
+      "answer": "भारत",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk2-easy-02",
+      "type": "mcq",
+      "question": "भारत की राजधानी कौन-सी है?",
+      "options": [
+        "मुंबई",
+        "नई दिल्ली",
+        "चेन्नई",
+        "कोलकाता"
+      ],
+      "answer": "नई दिल्ली",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk2-easy-03",
+      "type": "mcq",
+      "question": "भारत के झंडे को क्या कहते हैं?",
+      "options": [
+        "तिरंगा",
+        "पताका",
+        "निशान",
+        "झंडी"
+      ],
+      "answer": "तिरंगा",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk2-easy-04",
+      "type": "mcq",
+      "question": "एक साल में कितने ऋतुएँ (मौसम) होते हैं?",
+      "options": [
+        "तीन",
+        "चार",
+        "छह",
+        "दो"
+      ],
+      "answer": "छह",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk2-easy-05",
+      "type": "mcq",
+      "question": "गर्मी के मौसम में हमें क्या पहनना चाहिए?",
+      "options": [
+        "हल्के सूती कपड़े",
+        "ऊनी कपड़े",
+        "रेनकोट",
+        "स्वेटर"
+      ],
+      "answer": "हल्के सूती कपड़े",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk2-easy-06",
+      "type": "mcq",
+      "question": "सर्दी के मौसम में हमें क्या पहनना चाहिए?",
+      "options": [
+        "स्वेटर",
+        "हल्के कपड़े",
+        "बरसाती",
+        "चप्पल ही"
+      ],
+      "answer": "स्वेटर",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk2-easy-07",
+      "type": "mcq",
+      "question": "बारिश के मौसम में हमें क्या साथ रखना चाहिए?",
+      "options": [
+        "छाता",
+        "धूप का चश्मा",
+        "स्वेटर",
+        "पंखा"
+      ],
+      "answer": "छाता",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk2-easy-08",
+      "type": "mcq",
+      "question": "हमें पानी में चलने वाला वाहन कौन-सा है?",
+      "options": [
+        "नाव",
+        "बस",
+        "हवाई जहाज़",
+        "साइकिल"
+      ],
+      "answer": "नाव",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk2-easy-09",
+      "type": "mcq",
+      "question": "आसमान में उड़ने वाला वाहन कौन-सा है?",
+      "options": [
+        "कार",
+        "हवाई जहाज़",
+        "ट्रेन",
+        "नाव"
+      ],
+      "answer": "हवाई जहाज़",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk2-easy-10",
+      "type": "mcq",
+      "question": "पटरी पर चलने वाला वाहन कौन-सा है?",
+      "options": [
+        "ट्रेन",
+        "कार",
+        "साइकिल",
+        "नाव"
+      ],
+      "answer": "ट्रेन",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk2-easy-11",
+      "type": "true_false",
+      "question": "भारत की राजधानी नई दिल्ली है।",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk2-easy-12",
+      "type": "true_false",
+      "question": "हवाई जहाज़ पानी में चलता है।",
+      "answer": false,
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk2-easy-13",
+      "type": "true_false",
+      "question": "सर्दी में हमें स्वेटर पहनना चाहिए।",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk2-easy-14",
+      "type": "true_false",
+      "question": "ट्रेन आसमान में उड़ती है।",
+      "answer": false,
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk2-easy-15",
+      "type": "yes_no",
+      "question": "क्या भारत के झंडे को तिरंगा कहते हैं?",
+      "answer": "Yes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk2-easy-16",
+      "type": "yes_no",
+      "question": "क्या बारिश में हमें छाता ले जाना चाहिए?",
+      "answer": "Yes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk2-easy-17",
+      "type": "yes_no",
+      "question": "क्या नाव सड़क पर चलती है?",
+      "answer": "No",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk2-easy-18",
+      "type": "choose_answer",
+      "question": "डॉक्टर हमारी किस काम में मदद करते हैं?",
+      "options": [
+        "बीमारी ठीक करने में",
+        "खाना बनाने में",
+        "पढ़ाने में",
+        "गाड़ी चलाने में"
+      ],
+      "answer": "बीमारी ठीक करने में",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk2-easy-19",
+      "type": "choose_answer",
+      "question": "शिक्षक हमारी किस काम में मदद करते हैं?",
+      "options": [
+        "पढ़ाने में",
+        "खाना बनाने में",
+        "गाड़ी चलाने में",
+        "कपड़े सिलने में"
+      ],
+      "answer": "पढ़ाने में",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk2-easy-20",
+      "type": "choose_answer",
+      "question": "पुलिस हमारी किस काम में मदद करती है?",
+      "options": [
+        "सुरक्षा में",
+        "पढ़ाने में",
+        "खाना बनाने में",
+        "इलाज करने में"
+      ],
+      "answer": "सुरक्षा में",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk2-easy-21",
+      "type": "choose_answer",
+      "question": "किसान हमारे लिए क्या उगाता है?",
+      "options": [
+        "अनाज और सब्ज़ियाँ",
+        "कपड़े",
+        "दवाइयाँ",
+        "किताबें"
+      ],
+      "answer": "अनाज और सब्ज़ियाँ",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk2-easy-22",
+      "type": "odd_one_out",
+      "question": "इनमें से कौन-सा वाहन पानी में नहीं चलता?",
+      "options": [
+        "नाव",
+        "जहाज़",
+        "कश्ती",
+        "बस"
+      ],
+      "answer": "बस",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk2-easy-23",
+      "type": "odd_one_out",
+      "question": "इनमें से कौन-सा मौसम नहीं है?",
+      "options": [
+        "गर्मी",
+        "सर्दी",
+        "बारिश",
+        "सोमवार"
+      ],
+      "answer": "सोमवार",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk2-easy-24",
+      "type": "match",
+      "question": "सहायक व्यक्ति का उसके काम से मिलान कीजिए।",
+      "pairs": [
+        {
+          "left": "डॉक्टर",
+          "right": "बीमारी ठीक करना"
+        },
+        {
+          "left": "शिक्षक",
+          "right": "पढ़ाना"
+        },
+        {
+          "left": "किसान",
+          "right": "अनाज उगाना"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk2-easy-25",
+      "type": "arrange_order",
+      "question": "इन मौसमों को साल में आने के क्रम में लगाइए (गर्मी से शुरू)।",
+      "items": [
+        "सर्दी",
+        "बारिश",
+        "गर्मी"
+      ],
+      "answer": [
+        "गर्मी",
+        "बारिश",
+        "सर्दी"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk2-medium-01",
+      "type": "mcq",
+      "question": "भारत का राष्ट्रीय पशु कौन-सा है?",
+      "options": [
+        "शेर",
+        "बाघ",
+        "हाथी",
+        "भालू"
+      ],
+      "answer": "बाघ",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk2-medium-02",
+      "type": "mcq",
+      "question": "भारत का राष्ट्रीय पक्षी कौन-सा है?",
+      "options": [
+        "मोर",
+        "तोता",
+        "कौआ",
+        "उल्लू"
+      ],
+      "answer": "मोर",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk2-medium-03",
+      "type": "mcq",
+      "question": "भारत का राष्ट्रीय फूल कौन-सा है?",
+      "options": [
+        "कमल",
+        "गुलाब",
+        "गेंदा",
+        "चमेली"
+      ],
+      "answer": "कमल",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk2-medium-04",
+      "type": "mcq",
+      "question": "भारत का राष्ट्रीय फल कौन-सा है?",
+      "options": [
+        "आम",
+        "सेब",
+        "केला",
+        "अंगूर"
+      ],
+      "answer": "आम",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk2-medium-05",
+      "type": "mcq",
+      "question": "भारत का स्वतंत्रता दिवस कब मनाया जाता है?",
+      "options": [
+        "26 जनवरी",
+        "15 अगस्त",
+        "2 अक्टूबर",
+        "1 मई"
+      ],
+      "answer": "15 अगस्त",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk2-medium-06",
+      "type": "mcq",
+      "question": "भारत का गणतंत्र दिवस कब मनाया जाता है?",
+      "options": [
+        "15 अगस्त",
+        "26 जनवरी",
+        "5 सितंबर",
+        "14 नवंबर"
+      ],
+      "answer": "26 जनवरी",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk2-medium-07",
+      "type": "mcq",
+      "question": "महात्मा गांधी की जयंती कब मनाई जाती है?",
+      "options": [
+        "2 अक्टूबर",
+        "15 अगस्त",
+        "26 जनवरी",
+        "30 जनवरी"
+      ],
+      "answer": "2 अक्टूबर",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk2-medium-08",
+      "type": "mcq",
+      "question": "हमारे शरीर की पाँच ज्ञानेंद्रियों में से एक कौन-सी नहीं है?",
+      "options": [
+        "आँख",
+        "कान",
+        "नाक",
+        "बाल"
+      ],
+      "answer": "बाल",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk2-medium-09",
+      "type": "mcq",
+      "question": "पौधे किसकी मदद से अपना भोजन बनाते हैं?",
+      "options": [
+        "सूर्य के प्रकाश",
+        "चाँद की रोशनी",
+        "बिजली",
+        "आग"
+      ],
+      "answer": "सूर्य के प्रकाश",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk2-medium-10",
+      "type": "mcq",
+      "question": "पौधे का वह भाग कौन-सा है जो ज़मीन से पानी सोखता है?",
+      "options": [
+        "जड़",
+        "पत्ती",
+        "फूल",
+        "तना"
+      ],
+      "answer": "जड़",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk2-medium-11",
+      "type": "true_false",
+      "question": "भारत का राष्ट्रीय पशु बाघ है।",
+      "answer": true,
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk2-medium-12",
+      "type": "true_false",
+      "question": "भारत का राष्ट्रीय फल सेब है।",
+      "answer": false,
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk2-medium-13",
+      "type": "true_false",
+      "question": "भारत का स्वतंत्रता दिवस 15 अगस्त को मनाया जाता है।",
+      "answer": true,
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk2-medium-14",
+      "type": "true_false",
+      "question": "जड़ पौधे का वह भाग है जो फूल बनाता है।",
+      "answer": false,
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk2-medium-15",
+      "type": "yes_no",
+      "question": "क्या भारत का गणतंत्र दिवस 26 जनवरी को मनाया जाता है?",
+      "answer": "Yes",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk2-medium-16",
+      "type": "yes_no",
+      "question": "क्या पौधे सूर्य के प्रकाश से भोजन बनाते हैं?",
+      "answer": "Yes",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk2-medium-17",
+      "type": "yes_no",
+      "question": "क्या बाल हमारी ज्ञानेंद्रिय है?",
+      "answer": "No",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk2-medium-18",
+      "type": "choose_answer",
+      "question": "हमारे शरीर में खून पंप करने वाला अंग कौन-सा है?",
+      "options": [
+        "हृदय (दिल)",
+        "फेफड़े",
+        "पेट",
+        "दिमाग"
+      ],
+      "answer": "हृदय (दिल)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk2-medium-19",
+      "type": "choose_answer",
+      "question": "हमारे शरीर में साँस लेने में मदद करने वाला अंग कौन-सा है?",
+      "options": [
+        "फेफड़े",
+        "हृदय",
+        "पेट",
+        "हड्डी"
+      ],
+      "answer": "फेफड़े",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk2-medium-20",
+      "type": "choose_answer",
+      "question": "हम सोचने-समझने का काम किस अंग से करते हैं?",
+      "options": [
+        "दिमाग (मस्तिष्क)",
+        "हाथ",
+        "पैर",
+        "पेट"
+      ],
+      "answer": "दिमाग (मस्तिष्क)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk2-medium-21",
+      "type": "choose_answer",
+      "question": "पानी किस-किस रूप में पाया जाता है?",
+      "options": [
+        "ठोस, द्रव और गैस",
+        "केवल द्रव",
+        "केवल ठोस",
+        "केवल गैस"
+      ],
+      "answer": "ठोस, द्रव और गैस",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk2-medium-22",
+      "type": "odd_one_out",
+      "question": "इनमें से कौन-सा भारत का राष्ट्रीय प्रतीक नहीं है?",
+      "options": [
+        "बाघ",
+        "मोर",
+        "कमल",
+        "बिल्ली"
+      ],
+      "answer": "बिल्ली",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk2-medium-23",
+      "type": "odd_one_out",
+      "question": "इनमें से कौन-सा हमारे शरीर का अंग नहीं है?",
+      "options": [
+        "हृदय",
+        "फेफड़े",
+        "दिमाग",
+        "मेज़"
+      ],
+      "answer": "मेज़",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk2-medium-24",
+      "type": "match",
+      "question": "राष्ट्रीय प्रतीकों का मिलान कीजिए।",
+      "pairs": [
+        {
+          "left": "राष्ट्रीय पशु",
+          "right": "बाघ"
+        },
+        {
+          "left": "राष्ट्रीय पक्षी",
+          "right": "मोर"
+        },
+        {
+          "left": "राष्ट्रीय फल",
+          "right": "आम"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk2-medium-25",
+      "type": "arrange_order",
+      "question": "इन राष्ट्रीय त्योहारों को साल में आने के सही क्रम में लगाइए।",
+      "items": [
+        "स्वतंत्रता दिवस",
+        "गणतंत्र दिवस",
+        "गांधी जयंती"
+      ],
+      "answer": [
+        "गणतंत्र दिवस",
+        "स्वतंत्रता दिवस",
+        "गांधी जयंती"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk2-hard-01",
+      "type": "mcq",
+      "question": "हमारे शरीर में कुल कितनी ज्ञानेंद्रियाँ होती हैं?",
+      "options": [
+        "तीन",
+        "चार",
+        "पाँच",
+        "छह"
+      ],
+      "answer": "पाँच",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk2-hard-02",
+      "type": "mcq",
+      "question": "चींटी और मधुमक्खी जैसे जीव किस समूह में साथ रहकर काम करते हैं, उसे क्या कहते हैं?",
+      "options": [
+        "समुदाय",
+        "अकेले",
+        "परिवार",
+        "पेड़"
+      ],
+      "answer": "समुदाय",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk2-hard-03",
+      "type": "mcq",
+      "question": "पौधे हमें साँस लेने के लिए कौन-सी गैस देते हैं?",
+      "options": [
+        "ऑक्सीजन",
+        "कार्बन डाइऑक्साइड",
+        "नाइट्रोजन",
+        "धुआँ"
+      ],
+      "answer": "ऑक्सीजन",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk2-hard-04",
+      "type": "mcq",
+      "question": "हम साँस छोड़ते समय कौन-सी गैस बाहर निकालते हैं?",
+      "options": [
+        "ऑक्सीजन",
+        "कार्बन डाइऑक्साइड",
+        "हाइड्रोजन",
+        "धुआँ"
+      ],
+      "answer": "कार्बन डाइऑक्साइड",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk2-hard-05",
+      "type": "mcq",
+      "question": "सूरज हमारे सौरमंडल के किस भाग में है?",
+      "options": [
+        "बीच में (केंद्र में)",
+        "सबसे किनारे",
+        "चाँद के पास",
+        "पृथ्वी के अंदर"
+      ],
+      "answer": "बीच में (केंद्र में)",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk2-hard-06",
+      "type": "mcq",
+      "question": "पृथ्वी हमारे सौरमंडल का कौन-सा ग्रह है जहाँ जीवन है?",
+      "options": [
+        "पृथ्वी",
+        "मंगल",
+        "शुक्र",
+        "बुध"
+      ],
+      "answer": "पृथ्वी",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk2-hard-07",
+      "type": "mcq",
+      "question": "पानी को उबालने पर वह किस अवस्था में बदल जाता है?",
+      "options": [
+        "भाप (गैस)",
+        "बर्फ (ठोस)",
+        "मिट्टी",
+        "पत्थर"
+      ],
+      "answer": "भाप (गैस)",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk2-hard-08",
+      "type": "mcq",
+      "question": "पानी को जमाने पर वह किस अवस्था में बदल जाता है?",
+      "options": [
+        "बर्फ (ठोस)",
+        "भाप (गैस)",
+        "मिट्टी",
+        "रेत"
+      ],
+      "answer": "बर्फ (ठोस)",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk2-hard-09",
+      "type": "mcq",
+      "question": "चुंबक किस धातु को आकर्षित करता है?",
+      "options": [
+        "लोहा",
+        "लकड़ी",
+        "प्लास्टिक",
+        "कागज़"
+      ],
+      "answer": "लोहा",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk2-hard-10",
+      "type": "mcq",
+      "question": "ध्वनि किसके कारण उत्पन्न होती है?",
+      "options": [
+        "कंपन (हिलने) से",
+        "रोशनी से",
+        "रंग से",
+        "गंध से"
+      ],
+      "answer": "कंपन (हिलने) से",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk2-hard-11",
+      "type": "true_false",
+      "question": "हमारे शरीर में पाँच ज्ञानेंद्रियाँ होती हैं।",
+      "answer": true,
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk2-hard-12",
+      "type": "true_false",
+      "question": "हम साँस लेते समय कार्बन डाइऑक्साइड अंदर लेते हैं।",
+      "answer": false,
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk2-hard-13",
+      "type": "true_false",
+      "question": "चुंबक लोहे को आकर्षित करता है।",
+      "answer": true,
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk2-hard-14",
+      "type": "true_false",
+      "question": "पानी को उबालने पर वह बर्फ बन जाता है।",
+      "answer": false,
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk2-hard-15",
+      "type": "yes_no",
+      "question": "क्या ध्वनि कंपन के कारण उत्पन्न होती है?",
+      "answer": "Yes",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk2-hard-16",
+      "type": "yes_no",
+      "question": "क्या पृथ्वी पर जीवन है?",
+      "answer": "Yes",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk2-hard-17",
+      "type": "yes_no",
+      "question": "क्या पानी को जमाने पर वह भाप बन जाता है?",
+      "answer": "No",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk2-hard-18",
+      "type": "choose_answer",
+      "question": "विश्व में कुल कितने महाद्वीप हैं?",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "answer": "7",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk2-hard-19",
+      "type": "choose_answer",
+      "question": "हमारे सौरमंडल में सूर्य से सबसे नज़दीक ग्रह कौन-सा है?",
+      "options": [
+        "बुध",
+        "शुक्र",
+        "पृथ्वी",
+        "मंगल"
+      ],
+      "answer": "बुध",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk2-hard-20",
+      "type": "choose_answer",
+      "question": "हमारे सौरमंडल का सबसे बड़ा ग्रह कौन-सा है?",
+      "options": [
+        "बृहस्पति",
+        "पृथ्वी",
+        "बुध",
+        "शुक्र"
+      ],
+      "answer": "बृहस्पति",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk2-hard-21",
+      "type": "choose_answer",
+      "question": "पेड़-पौधों और जानवरों के अध्ययन को क्या कहते हैं?",
+      "options": [
+        "जीव विज्ञान",
+        "भूगोल",
+        "गणित",
+        "इतिहास"
+      ],
+      "answer": "जीव विज्ञान",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk2-hard-22",
+      "type": "odd_one_out",
+      "question": "इनमें से कौन-सी पदार्थ की अवस्था नहीं है?",
+      "options": [
+        "ठोस",
+        "द्रव",
+        "गैस",
+        "रंग"
+      ],
+      "answer": "रंग",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk2-hard-23",
+      "type": "odd_one_out",
+      "question": "इनमें से कौन-सा हमारे सौरमंडल का ग्रह नहीं है?",
+      "options": [
+        "पृथ्वी",
+        "मंगल",
+        "चाँद",
+        "बृहस्पति"
+      ],
+      "answer": "चाँद",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk2-hard-24",
+      "type": "match",
+      "question": "पदार्थ की अवस्था का उदाहरण से मिलान कीजिए।",
+      "pairs": [
+        {
+          "left": "ठोस",
+          "right": "बर्फ"
+        },
+        {
+          "left": "द्रव",
+          "right": "पानी"
+        },
+        {
+          "left": "गैस",
+          "right": "भाप"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk2-hard-25",
+      "type": "arrange_order",
+      "question": "इन ज्ञानेंद्रियों को शरीर में ऊपर से नीचे की ओर सही क्रम में लगाइए।",
+      "items": [
+        "नाक",
+        "आँख",
+        "जीभ"
+      ],
+      "answer": [
+        "आँख",
+        "नाक",
+        "जीभ"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk2-challenge-01",
+      "type": "mcq",
+      "question": "भारत के प्रथम प्रधानमंत्री कौन थे?",
+      "options": [
+        "जवाहरलाल नेहरू",
+        "महात्मा गांधी",
+        "डॉ. राजेंद्र प्रसाद",
+        "सरदार पटेल"
+      ],
+      "answer": "जवाहरलाल नेहरू",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk2-challenge-02",
+      "type": "mcq",
+      "question": "भारत के प्रथम राष्ट्रपति कौन थे?",
+      "options": [
+        "डॉ. राजेंद्र प्रसाद",
+        "जवाहरलाल नेहरू",
+        "इंदिरा गांधी",
+        "महात्मा गांधी"
+      ],
+      "answer": "डॉ. राजेंद्र प्रसाद",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk2-challenge-03",
+      "type": "mcq",
+      "question": "भारत के राष्ट्रपिता किसे कहा जाता है?",
+      "options": [
+        "महात्मा गांधी",
+        "जवाहरलाल नेहरू",
+        "सुभाष चंद्र बोस",
+        "भगत सिंह"
+      ],
+      "answer": "महात्मा गांधी",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk2-challenge-04",
+      "type": "mcq",
+      "question": "भारत का राष्ट्रगान किसने लिखा था?",
+      "options": [
+        "रवींद्रनाथ टैगोर",
+        "बंकिमचंद्र चट्टोपाध्याय",
+        "महात्मा गांधी",
+        "सुभाष चंद्र बोस"
+      ],
+      "answer": "रवींद्रनाथ टैगोर",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk2-challenge-05",
+      "type": "mcq",
+      "question": "हमारे शिक्षक दिवस किसकी जयंती पर मनाया जाता है?",
+      "options": [
+        "डॉ. सर्वपल्ली राधाकृष्णन",
+        "जवाहरलाल नेहरू",
+        "महात्मा गांधी",
+        "रवींद्रनाथ टैगोर"
+      ],
+      "answer": "डॉ. सर्वपल्ली राधाकृष्णन",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk2-challenge-06",
+      "type": "mcq",
+      "question": "हमारे बाल दिवस किसकी जयंती पर मनाया जाता है?",
+      "options": [
+        "जवाहरलाल नेहरू",
+        "महात्मा गांधी",
+        "सुभाष चंद्र बोस",
+        "सरदार पटेल"
+      ],
+      "answer": "जवाहरलाल नेहरू",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk2-challenge-07",
+      "type": "mcq",
+      "question": "सूरज पूर्व दिशा में उगता है, तो वह किस दिशा में डूबता है?",
+      "options": [
+        "पश्चिम",
+        "उत्तर",
+        "दक्षिण",
+        "पूर्व में ही"
+      ],
+      "answer": "पश्चिम",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk2-challenge-08",
+      "type": "mcq",
+      "question": "इंद्रधनुष में कितने रंग होते हैं?",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "answer": "7",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk2-challenge-09",
+      "type": "mcq",
+      "question": "पृथ्वी अपनी धुरी पर घूमने में लगभग कितना समय लेती है?",
+      "options": [
+        "24 घंटे",
+        "12 घंटे",
+        "48 घंटे",
+        "1 सप्ताह"
+      ],
+      "answer": "24 घंटे",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk2-challenge-10",
+      "type": "mcq",
+      "question": "पौधे और जानवर दोनों को मिलाकर क्या कहते हैं?",
+      "options": [
+        "सजीव (जीव)",
+        "निर्जीव",
+        "पत्थर",
+        "धातु"
+      ],
+      "answer": "सजीव (जीव)",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk2-challenge-11",
+      "type": "true_false",
+      "question": "भारत के राष्ट्रपिता महात्मा गांधी हैं।",
+      "answer": true,
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk2-challenge-12",
+      "type": "true_false",
+      "question": "भारत का राष्ट्रगान बंकिमचंद्र चट्टोपाध्याय ने लिखा था।",
+      "answer": false,
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk2-challenge-13",
+      "type": "true_false",
+      "question": "पृथ्वी अपनी धुरी पर लगभग 24 घंटे में घूमती है।",
+      "answer": true,
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk2-challenge-14",
+      "type": "true_false",
+      "question": "इंद्रधनुष में केवल तीन रंग होते हैं।",
+      "answer": false,
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk2-challenge-15",
+      "type": "yes_no",
+      "question": "क्या शिक्षक दिवस डॉ. सर्वपल्ली राधाकृष्णन की जयंती पर मनाया जाता है?",
+      "answer": "Yes",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk2-challenge-16",
+      "type": "yes_no",
+      "question": "क्या सूरज पश्चिम दिशा में उगता है?",
+      "answer": "No",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk2-challenge-17",
+      "type": "yes_no",
+      "question": "क्या पौधे और जानवर दोनों सजीव कहलाते हैं?",
+      "answer": "Yes",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk2-challenge-18",
+      "type": "choose_answer",
+      "question": "भारत के प्रथम प्रधानमंत्री और प्रथम राष्ट्रपति क्रमशः कौन थे?",
+      "options": [
+        "जवाहरलाल नेहरू और डॉ. राजेंद्र प्रसाद",
+        "डॉ. राजेंद्र प्रसाद और जवाहरलाल नेहरू",
+        "महात्मा गांधी और नेहरू",
+        "सरदार पटेल और नेहरू"
+      ],
+      "answer": "जवाहरलाल नेहरू और डॉ. राजेंद्र प्रसाद",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk2-challenge-19",
+      "type": "choose_answer",
+      "question": "बाल दिवस और शिक्षक दिवस भारत में क्रमशः किसकी जयंती पर मनाए जाते हैं?",
+      "options": [
+        "नेहरू और डॉ. राधाकृष्णन",
+        "डॉ. राधाकृष्णन और नेहरू",
+        "गांधी और नेहरू",
+        "नेहरू और गांधी"
+      ],
+      "answer": "नेहरू और डॉ. राधाकृष्णन",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk2-challenge-20",
+      "type": "choose_answer",
+      "question": "सूरज पूर्व में उगता है और ___ में डूबता है।",
+      "options": [
+        "पश्चिम",
+        "उत्तर",
+        "दक्षिण",
+        "केंद्र"
+      ],
+      "answer": "पश्चिम",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk2-challenge-21",
+      "type": "choose_answer",
+      "question": "धरती पर सजीवों (पेड़-पौधे और जानवर) के अध्ययन को क्या कहते हैं?",
+      "options": [
+        "जीव विज्ञान",
+        "भूगोल",
+        "खगोल विज्ञान",
+        "रसायन विज्ञान"
+      ],
+      "answer": "जीव विज्ञान",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk2-challenge-22",
+      "type": "odd_one_out",
+      "question": "इनमें से कौन-सा स्वतंत्रता सेनानी नहीं था?",
+      "options": [
+        "महात्मा गांधी",
+        "सुभाष चंद्र बोस",
+        "भगत सिंह",
+        "थॉमस एडिसन"
+      ],
+      "answer": "थॉमस एडिसन",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk2-challenge-23",
+      "type": "odd_one_out",
+      "question": "इनमें से कौन-सा राष्ट्रीय पर्व नहीं है?",
+      "options": [
+        "स्वतंत्रता दिवस",
+        "गणतंत्र दिवस",
+        "गांधी जयंती",
+        "जन्मदिन (हमारा अपना)"
+      ],
+      "answer": "जन्मदिन (हमारा अपना)",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk2-challenge-24",
+      "type": "match",
+      "question": "महान व्यक्तियों का उनके परिचय से मिलान कीजिए।",
+      "pairs": [
+        {
+          "left": "महात्मा गांधी",
+          "right": "राष्ट्रपिता"
+        },
+        {
+          "left": "जवाहरलाल नेहरू",
+          "right": "प्रथम प्रधानमंत्री"
+        },
+        {
+          "left": "डॉ. राजेंद्र प्रसाद",
+          "right": "प्रथम राष्ट्रपति"
+        }
+      ],
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk2-challenge-25",
+      "type": "arrange_order",
+      "question": "इन राष्ट्रीय दिवसों को साल में महीने के क्रम में लगाइए (जनवरी से शुरू)।",
+      "items": [
+        "स्वतंत्रता दिवस (अगस्त)",
+        "गणतंत्र दिवस (जनवरी)",
+        "गांधी जयंती (अक्टूबर)"
+      ],
+      "answer": [
+        "गणतंत्र दिवस (जनवरी)",
+        "स्वतंत्रता दिवस (अगस्त)",
+        "गांधी जयंती (अक्टूबर)"
+      ],
+      "difficulty": "challenge"
+    }
+  ]
+}

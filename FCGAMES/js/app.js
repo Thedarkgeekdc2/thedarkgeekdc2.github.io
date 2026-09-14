@@ -86,9 +86,9 @@ async function home(){
 }
 function normSubj(s){return String(s??'').toLowerCase().replace(/[^a-z]/g,'');}
 function subjectsForClass(subjects,classNo){
-  const junior=['hindi','english','maths','gk'];
-  const senior=['hindi','english','maths','twauevs'];
-  const allowed=Number(classNo)<=2?junior:senior;
+  const n=Number(classNo);
+  const core=['hindi','english','maths','gk'];
+  const allowed=n<=2?core:[...core,'twauevs'];
   const filtered=subjects.filter(s=>allowed.includes(normSubj(s.name)));
   return filtered.length?filtered:subjects;
 }

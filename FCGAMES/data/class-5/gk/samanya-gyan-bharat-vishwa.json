@@ -1,0 +1,1185 @@
+{
+  "class": 5,
+  "subject": "GK",
+  "topic": "सामान्य ज्ञान (भारत और विश्व)",
+  "questions": [
+    {
+      "id": "gk5-easy-01",
+      "type": "mcq",
+      "question": "भारत की राजधानी क्या है?",
+      "options": [
+        "मुंबई",
+        "नई दिल्ली",
+        "कोलकाता",
+        "चेन्नई"
+      ],
+      "answer": "नई दिल्ली",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk5-easy-02",
+      "type": "mcq",
+      "question": "भारत का राष्ट्रीय पशु कौन-सा है?",
+      "options": [
+        "शेर",
+        "बाघ",
+        "हाथी",
+        "हिरण"
+      ],
+      "answer": "बाघ",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk5-easy-03",
+      "type": "mcq",
+      "question": "भारत का राष्ट्रीय पक्षी कौन-सा है?",
+      "options": [
+        "मोर",
+        "तोता",
+        "कबूतर",
+        "कौआ"
+      ],
+      "answer": "मोर",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk5-easy-04",
+      "type": "mcq",
+      "question": "भारत का राष्ट्रीय फूल कौन-सा है?",
+      "options": [
+        "गुलाब",
+        "कमल",
+        "सूरजमुखी",
+        "चमेली"
+      ],
+      "answer": "कमल",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk5-easy-05",
+      "type": "mcq",
+      "question": "भारत का राष्ट्रीय फल कौन-सा है?",
+      "options": [
+        "सेब",
+        "केला",
+        "आम",
+        "अंगूर"
+      ],
+      "answer": "आम",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk5-easy-06",
+      "type": "mcq",
+      "question": "भारत का स्वतंत्रता दिवस कब मनाया जाता है?",
+      "options": [
+        "26 जनवरी",
+        "15 अगस्त",
+        "2 अक्टूबर",
+        "14 नवंबर"
+      ],
+      "answer": "15 अगस्त",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk5-easy-07",
+      "type": "mcq",
+      "question": "भारत का गणतंत्र दिवस कब मनाया जाता है?",
+      "options": [
+        "15 अगस्त",
+        "26 जनवरी",
+        "5 सितंबर",
+        "2 अक्टूबर"
+      ],
+      "answer": "26 जनवरी",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk5-easy-08",
+      "type": "mcq",
+      "question": "महात्मा गांधी की जयंती कब मनाई जाती है?",
+      "options": [
+        "2 अक्टूबर",
+        "15 अगस्त",
+        "26 जनवरी",
+        "14 नवंबर"
+      ],
+      "answer": "2 अक्टूबर",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk5-easy-09",
+      "type": "mcq",
+      "question": "भारत के राष्ट्रपिता किसे कहा जाता है?",
+      "options": [
+        "जवाहरलाल नेहरू",
+        "महात्मा गांधी",
+        "सुभाष चंद्र बोस",
+        "भगत सिंह"
+      ],
+      "answer": "महात्मा गांधी",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk5-easy-10",
+      "type": "mcq",
+      "question": "सूर्योदय किस दिशा में होता है?",
+      "options": [
+        "पूर्व",
+        "पश्चिम",
+        "उत्तर",
+        "दक्षिण"
+      ],
+      "answer": "पूर्व",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk5-easy-11",
+      "type": "true_false",
+      "question": "भारत का राष्ट्रीय पक्षी मोर है।",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk5-easy-12",
+      "type": "true_false",
+      "question": "भारत की राजधानी मुंबई है।",
+      "answer": false,
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk5-easy-13",
+      "type": "true_false",
+      "question": "सूर्य पूर्व दिशा में उगता है।",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk5-easy-14",
+      "type": "true_false",
+      "question": "भारत का राष्ट्रीय फूल गुलाब है।",
+      "answer": false,
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk5-easy-15",
+      "type": "yes_no",
+      "question": "क्या भारत का राष्ट्रीय पशु बाघ है?",
+      "answer": "Yes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk5-easy-16",
+      "type": "yes_no",
+      "question": "क्या भारत का स्वतंत्रता दिवस 26 जनवरी को मनाया जाता है?",
+      "answer": "No",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk5-easy-17",
+      "type": "yes_no",
+      "question": "क्या सूर्य पश्चिम दिशा में अस्त होता है?",
+      "answer": "Yes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk5-easy-18",
+      "type": "choose_answer",
+      "question": "सप्ताह में कितने दिन होते हैं?",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "answer": "7",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk5-easy-19",
+      "type": "choose_answer",
+      "question": "एक वर्ष में कितने महीने होते हैं?",
+      "options": [
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "answer": "12",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk5-easy-20",
+      "type": "choose_answer",
+      "question": "इंद्रधनुष में कितने रंग होते हैं?",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "answer": "7",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk5-easy-21",
+      "type": "choose_answer",
+      "question": "भारत का राष्ट्रगान किसने लिखा?",
+      "options": [
+        "रवींद्रनाथ टैगोर",
+        "बंकिमचंद्र चट्टोपाध्याय",
+        "सुभाष चंद्र बोस",
+        "महात्मा गांधी"
+      ],
+      "answer": "रवींद्रनाथ टैगोर",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk5-easy-22",
+      "type": "odd_one_out",
+      "question": "इनमें से कौन-सा भारत का पड़ोसी देश नहीं है?",
+      "options": [
+        "नेपाल",
+        "पाकिस्तान",
+        "भूटान",
+        "ब्राज़ील"
+      ],
+      "answer": "ब्राज़ील",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk5-easy-23",
+      "type": "odd_one_out",
+      "question": "इनमें से कौन-सा दिन सप्ताह का दिन नहीं है?",
+      "options": [
+        "सोमवार",
+        "बुधवार",
+        "जनवरी",
+        "शुक्रवार"
+      ],
+      "answer": "जनवरी",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk5-easy-24",
+      "type": "match",
+      "question": "राष्ट्रीय प्रतीकों का मिलान कीजिए।",
+      "pairs": [
+        {
+          "left": "राष्ट्रीय पक्षी",
+          "right": "मोर"
+        },
+        {
+          "left": "राष्ट्रीय पशु",
+          "right": "बाघ"
+        },
+        {
+          "left": "राष्ट्रीय फूल",
+          "right": "कमल"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk5-easy-25",
+      "type": "arrange_order",
+      "question": "सप्ताह के इन दिनों को सही क्रम में लगाइए।",
+      "items": [
+        "बुधवार",
+        "सोमवार",
+        "मंगलवार",
+        "रविवार"
+      ],
+      "answer": [
+        "रविवार",
+        "सोमवार",
+        "मंगलवार",
+        "बुधवार"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk5-medium-01",
+      "type": "mcq",
+      "question": "भारत की सबसे लंबी नदी कौन-सी है?",
+      "options": [
+        "यमुना",
+        "गंगा",
+        "गोदावरी",
+        "नर्मदा"
+      ],
+      "answer": "गंगा",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk5-medium-02",
+      "type": "mcq",
+      "question": "भारत में क्षेत्रफल के हिसाब से सबसे बड़ा राज्य कौन-सा है?",
+      "options": [
+        "राजस्थान",
+        "उत्तर प्रदेश",
+        "महाराष्ट्र",
+        "मध्य प्रदेश"
+      ],
+      "answer": "राजस्थान",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk5-medium-03",
+      "type": "mcq",
+      "question": "भारत में क्षेत्रफल के हिसाब से सबसे छोटा राज्य कौन-सा है?",
+      "options": [
+        "सिक्किम",
+        "गोवा",
+        "त्रिपुरा",
+        "केरल"
+      ],
+      "answer": "गोवा",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk5-medium-04",
+      "type": "mcq",
+      "question": "ताजमहल भारत के किस शहर में स्थित है?",
+      "options": [
+        "दिल्ली",
+        "आगरा",
+        "जयपुर",
+        "लखनऊ"
+      ],
+      "answer": "आगरा",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk5-medium-05",
+      "type": "mcq",
+      "question": "ताजमहल किसने बनवाया था?",
+      "options": [
+        "अकबर",
+        "शाहजहाँ",
+        "हुमायूँ",
+        "औरंगज़ेब"
+      ],
+      "answer": "शाहजहाँ",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk5-medium-06",
+      "type": "mcq",
+      "question": "भारत के प्रथम प्रधानमंत्री कौन थे?",
+      "options": [
+        "सरदार पटेल",
+        "जवाहरलाल नेहरू",
+        "डॉ. राजेंद्र प्रसाद",
+        "लाल बहादुर शास्त्री"
+      ],
+      "answer": "जवाहरलाल नेहरू",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk5-medium-07",
+      "type": "mcq",
+      "question": "भारत के प्रथम राष्ट्रपति कौन थे?",
+      "options": [
+        "डॉ. राजेंद्र प्रसाद",
+        "जवाहरलाल नेहरू",
+        "इंदिरा गांधी",
+        "सर्वपल्ली राधाकृष्णन"
+      ],
+      "answer": "डॉ. राजेंद्र प्रसाद",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk5-medium-08",
+      "type": "mcq",
+      "question": "विश्व का सबसे ऊँचा पर्वत शिखर कौन-सा है?",
+      "options": [
+        "कंचनजंगा",
+        "माउंट एवरेस्ट",
+        "के2",
+        "नंगा पर्वत"
+      ],
+      "answer": "माउंट एवरेस्ट",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk5-medium-09",
+      "type": "mcq",
+      "question": "विश्व में कुल कितने महाद्वीप हैं?",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "answer": "7",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk5-medium-10",
+      "type": "mcq",
+      "question": "विश्व में कुल कितने महासागर हैं?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "answer": "5",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk5-medium-11",
+      "type": "true_false",
+      "question": "भारत की सबसे लंबी नदी गंगा है।",
+      "answer": true,
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk5-medium-12",
+      "type": "true_false",
+      "question": "माउंट एवरेस्ट भारत में स्थित है।",
+      "answer": false,
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk5-medium-13",
+      "type": "true_false",
+      "question": "विश्व में कुल सात महाद्वीप हैं।",
+      "answer": true,
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk5-medium-14",
+      "type": "true_false",
+      "question": "राजस्थान भारत का सबसे छोटा राज्य है।",
+      "answer": false,
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk5-medium-15",
+      "type": "yes_no",
+      "question": "क्या ताजमहल आगरा में स्थित है?",
+      "answer": "Yes",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk5-medium-16",
+      "type": "yes_no",
+      "question": "क्या डॉ. राजेंद्र प्रसाद भारत के प्रथम प्रधानमंत्री थे?",
+      "answer": "No",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk5-medium-17",
+      "type": "yes_no",
+      "question": "क्या पृथ्वी पर सबसे बड़ा महाद्वीप एशिया है?",
+      "answer": "Yes",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk5-medium-18",
+      "type": "choose_answer",
+      "question": "शतरंज के बोर्ड में कुल कितने खाने होते हैं?",
+      "options": [
+        "32",
+        "48",
+        "64",
+        "100"
+      ],
+      "answer": "64",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk5-medium-19",
+      "type": "choose_answer",
+      "question": "क्रिकेट टीम में मैदान पर कितने खिलाड़ी होते हैं?",
+      "options": [
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      "answer": "11",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk5-medium-20",
+      "type": "choose_answer",
+      "question": "ओलंपिक खेल हर कितने वर्ष में आयोजित होते हैं?",
+      "options": [
+        "2 वर्ष",
+        "3 वर्ष",
+        "4 वर्ष",
+        "5 वर्ष"
+      ],
+      "answer": "4 वर्ष",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk5-medium-21",
+      "type": "choose_answer",
+      "question": "रामायण महाकाव्य के रचयिता कौन हैं?",
+      "options": [
+        "महर्षि वाल्मीकि",
+        "महर्षि वेदव्यास",
+        "तुलसीदास",
+        "कालिदास"
+      ],
+      "answer": "महर्षि वाल्मीकि",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk5-medium-22",
+      "type": "odd_one_out",
+      "question": "इनमें से कौन-सा भारत का राज्य नहीं, बल्कि पड़ोसी देश है?",
+      "options": [
+        "केरल",
+        "पंजाब",
+        "नेपाल",
+        "बिहार"
+      ],
+      "answer": "नेपाल",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk5-medium-23",
+      "type": "odd_one_out",
+      "question": "इनमें से कौन-सा महाद्वीप नहीं है?",
+      "options": [
+        "एशिया",
+        "अफ्रीका",
+        "भारत",
+        "यूरोप"
+      ],
+      "answer": "भारत",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk5-medium-24",
+      "type": "match",
+      "question": "स्मारकों का उनके शहर से मिलान कीजिए।",
+      "pairs": [
+        {
+          "left": "ताजमहल",
+          "right": "आगरा"
+        },
+        {
+          "left": "गेटवे ऑफ इंडिया",
+          "right": "मुंबई"
+        },
+        {
+          "left": "इंडिया गेट",
+          "right": "दिल्ली"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk5-medium-25",
+      "type": "arrange_order",
+      "question": "इन महाद्वीपों को क्षेत्रफल में बड़े से छोटे क्रम में लगाइए (केवल इन तीन में)।",
+      "items": [
+        "ऑस्ट्रेलिया",
+        "अफ्रीका",
+        "एशिया"
+      ],
+      "answer": [
+        "एशिया",
+        "अफ्रीका",
+        "ऑस्ट्रेलिया"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk5-hard-01",
+      "type": "mcq",
+      "question": "चाँद पर कदम रखने वाले पहले व्यक्ति कौन थे?",
+      "options": [
+        "नील आर्मस्ट्रांग",
+        "राकेश शर्मा",
+        "यूरी गागरिन",
+        "एडविन एल्ड्रिन"
+      ],
+      "answer": "नील आर्मस्ट्रांग",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk5-hard-02",
+      "type": "mcq",
+      "question": "टेलीफोन का आविष्कार किसने किया था?",
+      "options": [
+        "थॉमस एडिसन",
+        "ग्राहम बेल",
+        "आइज़क न्यूटन",
+        "जेम्स वाट"
+      ],
+      "answer": "ग्राहम बेल",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk5-hard-03",
+      "type": "mcq",
+      "question": "बिजली के बल्ब का आविष्कार किसने किया था?",
+      "options": [
+        "ग्राहम बेल",
+        "थॉमस एडिसन",
+        "आइंस्टीन",
+        "न्यूटन"
+      ],
+      "answer": "थॉमस एडिसन",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk5-hard-04",
+      "type": "mcq",
+      "question": "गुरुत्वाकर्षण का सिद्धांत किसने दिया था?",
+      "options": [
+        "आइज़क न्यूटन",
+        "आइंस्टीन",
+        "गैलीलियो",
+        "चार्ल्स डार्विन"
+      ],
+      "answer": "आइज़क न्यूटन",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk5-hard-05",
+      "type": "mcq",
+      "question": "भाप इंजन का आविष्कार किसने किया था?",
+      "options": [
+        "जेम्स वाट",
+        "थॉमस एडिसन",
+        "राइट बंधु",
+        "माइकल फैराडे"
+      ],
+      "answer": "जेम्स वाट",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk5-hard-06",
+      "type": "mcq",
+      "question": "सौरमंडल में सूर्य से सबसे नज़दीक ग्रह कौन-सा है?",
+      "options": [
+        "शुक्र",
+        "बुध",
+        "पृथ्वी",
+        "मंगल"
+      ],
+      "answer": "बुध",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk5-hard-07",
+      "type": "mcq",
+      "question": "सौरमंडल का सबसे बड़ा ग्रह कौन-सा है?",
+      "options": [
+        "शनि",
+        "बृहस्पति",
+        "पृथ्वी",
+        "अरुण"
+      ],
+      "answer": "बृहस्पति",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk5-hard-08",
+      "type": "mcq",
+      "question": "किस ग्रह को 'लाल ग्रह' कहा जाता है?",
+      "options": [
+        "शुक्र",
+        "मंगल",
+        "बुध",
+        "शनि"
+      ],
+      "answer": "मंगल",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk5-hard-09",
+      "type": "mcq",
+      "question": "सौरमंडल में कुल कितने ग्रह हैं?",
+      "options": [
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "answer": "8",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk5-hard-10",
+      "type": "mcq",
+      "question": "भारत की पहली महिला प्रधानमंत्री कौन थीं?",
+      "options": [
+        "सरोजिनी नायडू",
+        "इंदिरा गांधी",
+        "प्रतिभा पाटिल",
+        "सुचेता कृपलानी"
+      ],
+      "answer": "इंदिरा गांधी",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk5-hard-11",
+      "type": "true_false",
+      "question": "नील आर्मस्ट्रांग चाँद पर कदम रखने वाले पहले व्यक्ति थे।",
+      "answer": true,
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk5-hard-12",
+      "type": "true_false",
+      "question": "गुरुत्वाकर्षण का सिद्धांत आइंस्टीन ने दिया था।",
+      "answer": false,
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk5-hard-13",
+      "type": "true_false",
+      "question": "बुध सूर्य के सबसे नज़दीक ग्रह है।",
+      "answer": true,
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk5-hard-14",
+      "type": "true_false",
+      "question": "सौरमंडल का सबसे बड़ा ग्रह पृथ्वी है।",
+      "answer": false,
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk5-hard-15",
+      "type": "yes_no",
+      "question": "क्या मंगल ग्रह को 'लाल ग्रह' कहा जाता है?",
+      "answer": "Yes",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk5-hard-16",
+      "type": "yes_no",
+      "question": "क्या टेलीफोन का आविष्कार थॉमस एडिसन ने किया था?",
+      "answer": "No",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk5-hard-17",
+      "type": "yes_no",
+      "question": "क्या इंदिरा गांधी भारत की पहली महिला प्रधानमंत्री थीं?",
+      "answer": "Yes",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk5-hard-18",
+      "type": "choose_answer",
+      "question": "विश्व की सबसे लंबी नदी कौन-सी मानी जाती है?",
+      "options": [
+        "नील नदी",
+        "गंगा नदी",
+        "अमेज़न नदी",
+        "यमुना नदी"
+      ],
+      "answer": "नील नदी",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk5-hard-19",
+      "type": "choose_answer",
+      "question": "विश्व का सबसे बड़ा गर्म रेगिस्तान कौन-सा है?",
+      "options": [
+        "थार रेगिस्तान",
+        "सहारा रेगिस्तान",
+        "गोबी रेगिस्तान",
+        "कालाहारी रेगिस्तान"
+      ],
+      "answer": "सहारा रेगिस्तान",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk5-hard-20",
+      "type": "choose_answer",
+      "question": "भारत में शिक्षक दिवस किसकी जयंती पर मनाया जाता है?",
+      "options": [
+        "डॉ. सर्वपल्ली राधाकृष्णन",
+        "जवाहरलाल नेहरू",
+        "महात्मा गांधी",
+        "रवींद्रनाथ टैगोर"
+      ],
+      "answer": "डॉ. सर्वपल्ली राधाकृष्णन",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk5-hard-21",
+      "type": "choose_answer",
+      "question": "भारत में बाल दिवस किसकी जयंती पर मनाया जाता है?",
+      "options": [
+        "जवाहरलाल नेहरू",
+        "महात्मा गांधी",
+        "सुभाष चंद्र बोस",
+        "सरदार पटेल"
+      ],
+      "answer": "जवाहरलाल नेहरू",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk5-hard-22",
+      "type": "odd_one_out",
+      "question": "इनमें से कौन-सा वैज्ञानिक आविष्कारक नहीं, बल्कि स्वतंत्रता सेनानी था?",
+      "options": [
+        "थॉमस एडिसन",
+        "ग्राहम बेल",
+        "भगत सिंह",
+        "जेम्स वाट"
+      ],
+      "answer": "भगत सिंह",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk5-hard-23",
+      "type": "odd_one_out",
+      "question": "इनमें से कौन-सा सौरमंडल का ग्रह नहीं है?",
+      "options": [
+        "मंगल",
+        "बृहस्पति",
+        "चंद्रमा",
+        "शनि"
+      ],
+      "answer": "चंद्रमा",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk5-hard-24",
+      "type": "match",
+      "question": "आविष्कार का आविष्कारक से मिलान कीजिए।",
+      "pairs": [
+        {
+          "left": "टेलीफोन",
+          "right": "ग्राहम बेल"
+        },
+        {
+          "left": "बिजली का बल्ब",
+          "right": "थॉमस एडिसन"
+        },
+        {
+          "left": "भाप इंजन",
+          "right": "जेम्स वाट"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk5-hard-25",
+      "type": "arrange_order",
+      "question": "सूर्य से दूरी के क्रम में इन ग्रहों को नज़दीक से दूर लगाइए।",
+      "items": [
+        "पृथ्वी",
+        "बुध",
+        "मंगल",
+        "शुक्र"
+      ],
+      "answer": [
+        "बुध",
+        "शुक्र",
+        "पृथ्वी",
+        "मंगल"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk5-challenge-01",
+      "type": "mcq",
+      "question": "भारत का राष्ट्रगीत 'वंदे मातरम्' किसने लिखा था?",
+      "options": [
+        "बंकिमचंद्र चट्टोपाध्याय",
+        "रवींद्रनाथ टैगोर",
+        "सुभाष चंद्र बोस",
+        "महात्मा गांधी"
+      ],
+      "answer": "बंकिमचंद्र चट्टोपाध्याय",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk5-challenge-02",
+      "type": "mcq",
+      "question": "महाभारत महाकाव्य के रचयिता कौन हैं?",
+      "options": [
+        "महर्षि वाल्मीकि",
+        "महर्षि वेदव्यास",
+        "तुलसीदास",
+        "कालिदास"
+      ],
+      "answer": "महर्षि वेदव्यास",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk5-challenge-03",
+      "type": "mcq",
+      "question": "विश्व में क्षेत्रफल के हिसाब से सबसे बड़ा महाद्वीप कौन-सा है?",
+      "options": [
+        "अफ्रीका",
+        "एशिया",
+        "उत्तरी अमेरिका",
+        "यूरोप"
+      ],
+      "answer": "एशिया",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk5-challenge-04",
+      "type": "mcq",
+      "question": "विश्व में क्षेत्रफल के हिसाब से सबसे छोटा महाद्वीप कौन-सा है?",
+      "options": [
+        "यूरोप",
+        "अंटार्कटिका",
+        "ऑस्ट्रेलिया",
+        "दक्षिणी अमेरिका"
+      ],
+      "answer": "ऑस्ट्रेलिया",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk5-challenge-05",
+      "type": "mcq",
+      "question": "विश्व का सबसे बड़ा महासागर कौन-सा है?",
+      "options": [
+        "हिन्द महासागर",
+        "अटलांटिक महासागर",
+        "प्रशांत महासागर",
+        "आर्कटिक महासागर"
+      ],
+      "answer": "प्रशांत महासागर",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk5-challenge-06",
+      "type": "mcq",
+      "question": "सापेक्षता का सिद्धांत किसने दिया था?",
+      "options": [
+        "आइज़क न्यूटन",
+        "अल्बर्ट आइंस्टीन",
+        "गैलीलियो",
+        "माइकल फैराडे"
+      ],
+      "answer": "अल्बर्ट आइंस्टीन",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk5-challenge-07",
+      "type": "mcq",
+      "question": "छापेखाने (प्रिंटिंग प्रेस) का आविष्कार किसने किया था?",
+      "options": [
+        "गुटेनबर्ग",
+        "ग्राहम बेल",
+        "थॉमस एडिसन",
+        "जेम्स वाट"
+      ],
+      "answer": "गुटेनबर्ग",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk5-challenge-08",
+      "type": "mcq",
+      "question": "भारत की मुद्रा (करेंसी) का नाम क्या है?",
+      "options": [
+        "डॉलर",
+        "रुपया",
+        "दिनार",
+        "पाउंड"
+      ],
+      "answer": "रुपया",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk5-challenge-09",
+      "type": "mcq",
+      "question": "भारत में कुल कितने राज्य हैं?",
+      "options": [
+        "25",
+        "26",
+        "28",
+        "30"
+      ],
+      "answer": "28",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk5-challenge-10",
+      "type": "mcq",
+      "question": "फुटबॉल के खेल में मैदान पर एक टीम के कितने खिलाड़ी होते हैं?",
+      "options": [
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      "answer": "11",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk5-challenge-11",
+      "type": "true_false",
+      "question": "सापेक्षता का सिद्धांत अल्बर्ट आइंस्टीन ने दिया था।",
+      "answer": true,
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk5-challenge-12",
+      "type": "true_false",
+      "question": "विश्व का सबसे बड़ा महासागर अटलांटिक महासागर है।",
+      "answer": false,
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk5-challenge-13",
+      "type": "true_false",
+      "question": "भारत में कुल 28 राज्य हैं।",
+      "answer": true,
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk5-challenge-14",
+      "type": "true_false",
+      "question": "महाभारत के रचयिता महर्षि वाल्मीकि हैं।",
+      "answer": false,
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk5-challenge-15",
+      "type": "yes_no",
+      "question": "क्या एशिया विश्व का सबसे बड़ा महाद्वीप है?",
+      "answer": "Yes",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk5-challenge-16",
+      "type": "yes_no",
+      "question": "क्या गुटेनबर्ग ने छापेखाने का आविष्कार किया था?",
+      "answer": "Yes",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk5-challenge-17",
+      "type": "yes_no",
+      "question": "क्या भारत की मुद्रा का नाम डॉलर है?",
+      "answer": "No",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk5-challenge-18",
+      "type": "choose_answer",
+      "question": "'सापेक्षता का सिद्धांत' और 'गुरुत्वाकर्षण का सिद्धांत' क्रमशः किन वैज्ञानिकों ने दिए?",
+      "options": [
+        "आइंस्टीन और न्यूटन",
+        "न्यूटन और आइंस्टीन",
+        "एडिसन और बेल",
+        "गैलीलियो और डार्विन"
+      ],
+      "answer": "आइंस्टीन और न्यूटन",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk5-challenge-19",
+      "type": "choose_answer",
+      "question": "भारत के प्रथम प्रधानमंत्री और प्रथम राष्ट्रपति क्रमशः कौन थे?",
+      "options": [
+        "जवाहरलाल नेहरू और डॉ. राजेंद्र प्रसाद",
+        "डॉ. राजेंद्र प्रसाद और जवाहरलाल नेहरू",
+        "इंदिरा गांधी और सरदार पटेल",
+        "सरदार पटेल और नेहरू"
+      ],
+      "answer": "जवाहरलाल नेहरू और डॉ. राजेंद्र प्रसाद",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk5-challenge-20",
+      "type": "choose_answer",
+      "question": "रामायण और महाभारत के रचयिता क्रमशः कौन हैं?",
+      "options": [
+        "वाल्मीकि और वेदव्यास",
+        "वेदव्यास और वाल्मीकि",
+        "तुलसीदास और कालिदास",
+        "कालिदास और तुलसीदास"
+      ],
+      "answer": "वाल्मीकि और वेदव्यास",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk5-challenge-21",
+      "type": "choose_answer",
+      "question": "शिक्षक दिवस और बाल दिवस भारत में क्रमशः किसकी जयंती पर मनाए जाते हैं?",
+      "options": [
+        "डॉ. राधाकृष्णन और नेहरू",
+        "नेहरू और डॉ. राधाकृष्णन",
+        "गांधी और नेहरू",
+        "नेहरू और गांधी"
+      ],
+      "answer": "डॉ. राधाकृष्णन और नेहरू",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk5-challenge-22",
+      "type": "odd_one_out",
+      "question": "इनमें से कौन-सा 'प्रथम' व्यक्ति भारत से संबंधित नहीं है?",
+      "options": [
+        "भारत के प्रथम प्रधानमंत्री",
+        "भारत के प्रथम राष्ट्रपति",
+        "चाँद पर कदम रखने वाले प्रथम व्यक्ति",
+        "भारत की प्रथम महिला प्रधानमंत्री"
+      ],
+      "answer": "चाँद पर कदम रखने वाले प्रथम व्यक्ति",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk5-challenge-23",
+      "type": "odd_one_out",
+      "question": "इनमें से कौन-सा महासागर नहीं है?",
+      "options": [
+        "प्रशांत महासागर",
+        "अटलांटिक महासागर",
+        "गंगा महासागर",
+        "हिन्द महासागर"
+      ],
+      "answer": "गंगा महासागर",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk5-challenge-24",
+      "type": "match",
+      "question": "वैज्ञानिक सिद्धांतों का उनके वैज्ञानिक से मिलान कीजिए।",
+      "pairs": [
+        {
+          "left": "गुरुत्वाकर्षण का सिद्धांत",
+          "right": "आइज़क न्यूटन"
+        },
+        {
+          "left": "सापेक्षता का सिद्धांत",
+          "right": "अल्बर्ट आइंस्टीन"
+        },
+        {
+          "left": "विकासवाद का सिद्धांत",
+          "right": "चार्ल्स डार्विन"
+        }
+      ],
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk5-challenge-25",
+      "type": "arrange_order",
+      "question": "इन ऐतिहासिक घटनाओं को समय के सही क्रम में लगाइए।",
+      "items": [
+        "भारत को स्वतंत्रता मिली",
+        "चाँद पर पहला कदम रखा गया",
+        "भारत गणराज्य बना",
+        "ताजमहल बनवाया गया"
+      ],
+      "answer": [
+        "ताजमहल बनवाया गया",
+        "भारत को स्वतंत्रता मिली",
+        "भारत गणराज्य बना",
+        "चाँद पर पहला कदम रखा गया"
+      ],
+      "difficulty": "challenge"
+    }
+  ]
+}

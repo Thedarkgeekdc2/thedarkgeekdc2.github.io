@@ -1,0 +1,1185 @@
+{
+  "class": 1,
+  "subject": "GK",
+  "topic": "सामान्य ज्ञान",
+  "questions": [
+    {
+      "id": "gk1-easy-01",
+      "type": "mcq",
+      "question": "आकाश का रंग कैसा होता है?",
+      "options": [
+        "नीला",
+        "हरा",
+        "काला",
+        "भूरा"
+      ],
+      "answer": "नीला",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk1-easy-02",
+      "type": "mcq",
+      "question": "घास का रंग कैसा होता है?",
+      "options": [
+        "लाल",
+        "हरा",
+        "पीला",
+        "नीला"
+      ],
+      "answer": "हरा",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk1-easy-03",
+      "type": "mcq",
+      "question": "सूरज किस रंग का दिखता है?",
+      "options": [
+        "पीला",
+        "बैंगनी",
+        "काला",
+        "सफेद"
+      ],
+      "answer": "पीला",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk1-easy-04",
+      "type": "mcq",
+      "question": "केला किस रंग का होता है?",
+      "options": [
+        "लाल",
+        "पीला",
+        "नीला",
+        "काला"
+      ],
+      "answer": "पीला",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk1-easy-05",
+      "type": "mcq",
+      "question": "सेब किस रंग का होता है?",
+      "options": [
+        "लाल",
+        "नीला",
+        "बैंगनी",
+        "काला"
+      ],
+      "answer": "लाल",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk1-easy-06",
+      "type": "mcq",
+      "question": "गाय क्या आवाज़ निकालती है?",
+      "options": [
+        "भौं-भौं",
+        "रँभाना (मूं)",
+        "म्याऊँ",
+        "हिनहिनाना"
+      ],
+      "answer": "रँभाना (मूं)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk1-easy-07",
+      "type": "mcq",
+      "question": "कुत्ता क्या आवाज़ निकालता है?",
+      "options": [
+        "भौं-भौं",
+        "म्याऊँ",
+        "रँभाना",
+        "चिल्लाना"
+      ],
+      "answer": "भौं-भौं",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk1-easy-08",
+      "type": "mcq",
+      "question": "बिल्ली क्या आवाज़ निकालती है?",
+      "options": [
+        "म्याऊँ",
+        "भौं-भौं",
+        "रँभाना",
+        "चीं-चीं"
+      ],
+      "answer": "म्याऊँ",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk1-easy-09",
+      "type": "mcq",
+      "question": "हमारे शरीर में देखने के लिए कौन-सा अंग है?",
+      "options": [
+        "आँख",
+        "कान",
+        "नाक",
+        "हाथ"
+      ],
+      "answer": "आँख",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk1-easy-10",
+      "type": "mcq",
+      "question": "हमारे शरीर में सुनने के लिए कौन-सा अंग है?",
+      "options": [
+        "आँख",
+        "कान",
+        "नाक",
+        "पैर"
+      ],
+      "answer": "कान",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk1-easy-11",
+      "type": "true_false",
+      "question": "आकाश का रंग नीला होता है।",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk1-easy-12",
+      "type": "true_false",
+      "question": "घास का रंग लाल होता है।",
+      "answer": false,
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk1-easy-13",
+      "type": "true_false",
+      "question": "बिल्ली म्याऊँ करती है।",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk1-easy-14",
+      "type": "true_false",
+      "question": "हम आँखों से सुनते हैं।",
+      "answer": false,
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk1-easy-15",
+      "type": "yes_no",
+      "question": "क्या सूरज पीले रंग का दिखता है?",
+      "answer": "Yes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk1-easy-16",
+      "type": "yes_no",
+      "question": "क्या कुत्ता म्याऊँ करता है?",
+      "answer": "No",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk1-easy-17",
+      "type": "yes_no",
+      "question": "क्या हम कान से सुनते हैं?",
+      "answer": "Yes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk1-easy-18",
+      "type": "choose_answer",
+      "question": "एक सप्ताह में कितने दिन होते हैं?",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "10"
+      ],
+      "answer": "7",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk1-easy-19",
+      "type": "choose_answer",
+      "question": "हमारे हाथ में कितनी उँगलियाँ होती हैं?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "3"
+      ],
+      "answer": "5",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk1-easy-20",
+      "type": "choose_answer",
+      "question": "गाय हमें क्या देती है?",
+      "options": [
+        "दूध",
+        "अंडे",
+        "ऊन",
+        "शहद"
+      ],
+      "answer": "दूध",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk1-easy-21",
+      "type": "choose_answer",
+      "question": "मुर्गी हमें क्या देती है?",
+      "options": [
+        "दूध",
+        "अंडे",
+        "ऊन",
+        "शहद"
+      ],
+      "answer": "अंडे",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk1-easy-22",
+      "type": "odd_one_out",
+      "question": "इनमें से कौन-सा फल नहीं है?",
+      "options": [
+        "सेब",
+        "केला",
+        "आम",
+        "गाजर"
+      ],
+      "answer": "गाजर",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk1-easy-23",
+      "type": "odd_one_out",
+      "question": "इनमें से कौन-सा जानवर नहीं है?",
+      "options": [
+        "गाय",
+        "कुत्ता",
+        "बिल्ली",
+        "कुर्सी"
+      ],
+      "answer": "कुर्सी",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk1-easy-24",
+      "type": "match",
+      "question": "रंग का उसकी चीज़ से मिलान कीजिए।",
+      "pairs": [
+        {
+          "left": "सूरज",
+          "right": "पीला"
+        },
+        {
+          "left": "घास",
+          "right": "हरा"
+        },
+        {
+          "left": "आकाश",
+          "right": "नीला"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk1-easy-25",
+      "type": "arrange_order",
+      "question": "इन उँगलियों की गिनती को सही क्रम में लगाइए।",
+      "items": [
+        "तीन",
+        "एक",
+        "चार",
+        "दो"
+      ],
+      "answer": [
+        "एक",
+        "दो",
+        "तीन",
+        "चार"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "gk1-medium-01",
+      "type": "mcq",
+      "question": "हमारे परिवार में माँ के पति को क्या कहते हैं?",
+      "options": [
+        "पिता",
+        "भाई",
+        "चाचा",
+        "दादा"
+      ],
+      "answer": "पिता",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk1-medium-02",
+      "type": "mcq",
+      "question": "पिता के पिता को क्या कहते हैं?",
+      "options": [
+        "दादा",
+        "मामा",
+        "चाचा",
+        "भाई"
+      ],
+      "answer": "दादा",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk1-medium-03",
+      "type": "mcq",
+      "question": "सप्ताह के पहले दिन को क्या कहते हैं?",
+      "options": [
+        "रविवार",
+        "सोमवार",
+        "शनिवार",
+        "मंगलवार"
+      ],
+      "answer": "रविवार",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk1-medium-04",
+      "type": "mcq",
+      "question": "एक साल में कितने महीने होते हैं?",
+      "options": [
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "answer": "12",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk1-medium-05",
+      "type": "mcq",
+      "question": "गोल आकार की चीज़ को क्या कहते हैं?",
+      "options": [
+        "वर्ग",
+        "गोला (वृत्त)",
+        "त्रिभुज",
+        "आयत"
+      ],
+      "answer": "गोला (वृत्त)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk1-medium-06",
+      "type": "mcq",
+      "question": "तीन भुजाओं वाली आकृति को क्या कहते हैं?",
+      "options": [
+        "वर्ग",
+        "त्रिभुज",
+        "वृत्त",
+        "आयत"
+      ],
+      "answer": "त्रिभुज",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk1-medium-07",
+      "type": "mcq",
+      "question": "चार बराबर भुजाओं वाली आकृति को क्या कहते हैं?",
+      "options": [
+        "त्रिभुज",
+        "वर्ग",
+        "वृत्त",
+        "अंडाकार"
+      ],
+      "answer": "वर्ग",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk1-medium-08",
+      "type": "mcq",
+      "question": "हम भोजन किस अंग से चबाते हैं?",
+      "options": [
+        "दाँत",
+        "बाल",
+        "नाखून",
+        "कान"
+      ],
+      "answer": "दाँत",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk1-medium-09",
+      "type": "mcq",
+      "question": "हम सूँघने के लिए किस अंग का प्रयोग करते हैं?",
+      "options": [
+        "नाक",
+        "आँख",
+        "कान",
+        "जीभ"
+      ],
+      "answer": "नाक",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk1-medium-10",
+      "type": "mcq",
+      "question": "हम स्वाद किस अंग से पहचानते हैं?",
+      "options": [
+        "जीभ",
+        "नाक",
+        "कान",
+        "त्वचा"
+      ],
+      "answer": "जीभ",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk1-medium-11",
+      "type": "true_false",
+      "question": "एक साल में 12 महीने होते हैं।",
+      "answer": true,
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk1-medium-12",
+      "type": "true_false",
+      "question": "त्रिभुज की चार भुजाएँ होती हैं।",
+      "answer": false,
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk1-medium-13",
+      "type": "true_false",
+      "question": "हम जीभ से स्वाद पहचानते हैं।",
+      "answer": true,
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk1-medium-14",
+      "type": "true_false",
+      "question": "सप्ताह का पहला दिन सोमवार होता है।",
+      "answer": false,
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk1-medium-15",
+      "type": "yes_no",
+      "question": "क्या वर्ग की चार बराबर भुजाएँ होती हैं?",
+      "answer": "Yes",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk1-medium-16",
+      "type": "yes_no",
+      "question": "क्या हम आँख से सूँघते हैं?",
+      "answer": "No",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk1-medium-17",
+      "type": "yes_no",
+      "question": "क्या दादा पिता के पिता होते हैं?",
+      "answer": "Yes",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk1-medium-18",
+      "type": "choose_answer",
+      "question": "सूरज किस समय दिखाई देता है?",
+      "options": [
+        "दिन में",
+        "रात में",
+        "कभी नहीं",
+        "केवल शाम को"
+      ],
+      "answer": "दिन में",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk1-medium-19",
+      "type": "choose_answer",
+      "question": "चाँद और तारे किस समय दिखाई देते हैं?",
+      "options": [
+        "रात में",
+        "दिन में",
+        "सुबह में",
+        "कभी नहीं"
+      ],
+      "answer": "रात में",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk1-medium-20",
+      "type": "choose_answer",
+      "question": "पेड़ हमें क्या देते हैं जिससे हम साँस लेते हैं?",
+      "options": [
+        "ऑक्सीजन",
+        "धुआँ",
+        "पानी",
+        "मिट्टी"
+      ],
+      "answer": "ऑक्सीजन",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk1-medium-21",
+      "type": "choose_answer",
+      "question": "बारिश का पानी कहाँ से आता है?",
+      "options": [
+        "बादलों से",
+        "ज़मीन से",
+        "पेड़ों से",
+        "सूरज से"
+      ],
+      "answer": "बादलों से",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk1-medium-22",
+      "type": "odd_one_out",
+      "question": "इनमें से कौन-सी आकृति नहीं है?",
+      "options": [
+        "वृत्त",
+        "त्रिभुज",
+        "वर्ग",
+        "सोमवार"
+      ],
+      "answer": "सोमवार",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk1-medium-23",
+      "type": "odd_one_out",
+      "question": "इनमें से कौन-सा शरीर का अंग नहीं है?",
+      "options": [
+        "आँख",
+        "कान",
+        "नाक",
+        "कुर्सी"
+      ],
+      "answer": "कुर्सी",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk1-medium-24",
+      "type": "match",
+      "question": "शरीर के अंग का उसके काम से मिलान कीजिए।",
+      "pairs": [
+        {
+          "left": "आँख",
+          "right": "देखना"
+        },
+        {
+          "left": "कान",
+          "right": "सुनना"
+        },
+        {
+          "left": "नाक",
+          "right": "सूँघना"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk1-medium-25",
+      "type": "arrange_order",
+      "question": "सप्ताह के इन दिनों को सही क्रम में लगाइए।",
+      "items": [
+        "मंगलवार",
+        "रविवार",
+        "सोमवार",
+        "बुधवार"
+      ],
+      "answer": [
+        "रविवार",
+        "सोमवार",
+        "मंगलवार",
+        "बुधवार"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "gk1-hard-01",
+      "type": "mcq",
+      "question": "भारत का राष्ट्रीय पशु कौन-सा है?",
+      "options": [
+        "शेर",
+        "बाघ",
+        "हाथी",
+        "हिरण"
+      ],
+      "answer": "बाघ",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk1-hard-02",
+      "type": "mcq",
+      "question": "भारत का राष्ट्रीय पक्षी कौन-सा है?",
+      "options": [
+        "तोता",
+        "मोर",
+        "कौआ",
+        "कबूतर"
+      ],
+      "answer": "मोर",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk1-hard-03",
+      "type": "mcq",
+      "question": "भारत का राष्ट्रीय फूल कौन-सा है?",
+      "options": [
+        "गुलाब",
+        "कमल",
+        "गेंदा",
+        "सूरजमुखी"
+      ],
+      "answer": "कमल",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk1-hard-04",
+      "type": "mcq",
+      "question": "हमारे देश का नाम क्या है?",
+      "options": [
+        "भारत",
+        "अमेरिका",
+        "चीन",
+        "जापान"
+      ],
+      "answer": "भारत",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk1-hard-05",
+      "type": "mcq",
+      "question": "भारत की राजधानी कौन-सी है?",
+      "options": [
+        "मुंबई",
+        "नई दिल्ली",
+        "चेन्नई",
+        "पुणे"
+      ],
+      "answer": "नई दिल्ली",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk1-hard-06",
+      "type": "mcq",
+      "question": "भारत के झंडे में कितने रंग होते हैं?",
+      "options": [
+        "दो",
+        "तीन",
+        "चार",
+        "पाँच"
+      ],
+      "answer": "तीन",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk1-hard-07",
+      "type": "mcq",
+      "question": "भारत के झंडे में सबसे ऊपर कौन-सा रंग होता है?",
+      "options": [
+        "केसरिया (नारंगी)",
+        "सफेद",
+        "हरा",
+        "नीला"
+      ],
+      "answer": "केसरिया (नारंगी)",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk1-hard-08",
+      "type": "mcq",
+      "question": "भारत के झंडे में सबसे नीचे कौन-सा रंग होता है?",
+      "options": [
+        "हरा",
+        "सफेद",
+        "केसरिया",
+        "नीला"
+      ],
+      "answer": "हरा",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk1-hard-09",
+      "type": "mcq",
+      "question": "भारत के झंडे के बीच में क्या बना होता है?",
+      "options": [
+        "सूरज",
+        "चक्र (पहिया)",
+        "चाँद",
+        "तारा"
+      ],
+      "answer": "चक्र (पहिया)",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk1-hard-10",
+      "type": "mcq",
+      "question": "हम स्कूल में सबसे पहले किसे नमस्कार करते हैं?",
+      "options": [
+        "शिक्षक",
+        "अजनबी",
+        "जानवर",
+        "पेड़"
+      ],
+      "answer": "शिक्षक",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk1-hard-11",
+      "type": "true_false",
+      "question": "भारत का राष्ट्रीय पशु बाघ है।",
+      "answer": true,
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk1-hard-12",
+      "type": "true_false",
+      "question": "भारत के झंडे में चार रंग होते हैं।",
+      "answer": false,
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk1-hard-13",
+      "type": "true_false",
+      "question": "भारत का राष्ट्रीय पक्षी मोर है।",
+      "answer": true,
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk1-hard-14",
+      "type": "true_false",
+      "question": "भारत की राजधानी मुंबई है।",
+      "answer": false,
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk1-hard-15",
+      "type": "yes_no",
+      "question": "क्या भारत के झंडे के बीच में चक्र बना होता है?",
+      "answer": "Yes",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk1-hard-16",
+      "type": "yes_no",
+      "question": "क्या भारत का राष्ट्रीय फूल गुलाब है?",
+      "answer": "No",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk1-hard-17",
+      "type": "yes_no",
+      "question": "क्या भारत के झंडे में सबसे ऊपर केसरिया रंग होता है?",
+      "answer": "Yes",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk1-hard-18",
+      "type": "choose_answer",
+      "question": "स्कूल जाते समय हमें अपने साथ क्या लेकर जाना चाहिए?",
+      "options": [
+        "बस्ता और किताबें",
+        "खिलौने ही",
+        "केवल पानी",
+        "कुछ नहीं"
+      ],
+      "answer": "बस्ता और किताबें",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk1-hard-19",
+      "type": "choose_answer",
+      "question": "सड़क पार करते समय हमें क्या करना चाहिए?",
+      "options": [
+        "दोनों तरफ देखकर पार करना",
+        "दौड़कर पार करना",
+        "आँख बंद करके पार करना",
+        "बिना देखे पार करना"
+      ],
+      "answer": "दोनों तरफ देखकर पार करना",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk1-hard-20",
+      "type": "choose_answer",
+      "question": "हमें खाना खाने से पहले क्या करना चाहिए?",
+      "options": [
+        "हाथ धोना",
+        "खेलना",
+        "सो जाना",
+        "दौड़ना"
+      ],
+      "answer": "हाथ धोना",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk1-hard-21",
+      "type": "choose_answer",
+      "question": "पेड़ लगाना हमारे लिए क्यों अच्छा है?",
+      "options": [
+        "शुद्ध हवा मिलती है",
+        "कुछ नहीं होता",
+        "हवा गंदी होती है",
+        "पेड़ बेकार होते हैं"
+      ],
+      "answer": "शुद्ध हवा मिलती है",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk1-hard-22",
+      "type": "odd_one_out",
+      "question": "इनमें से कौन-सा भारत के झंडे का रंग नहीं है?",
+      "options": [
+        "केसरिया",
+        "सफेद",
+        "हरा",
+        "गुलाबी"
+      ],
+      "answer": "गुलाबी",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk1-hard-23",
+      "type": "odd_one_out",
+      "question": "इनमें से कौन-सी अच्छी आदत नहीं है?",
+      "options": [
+        "हाथ धोना",
+        "सच बोलना",
+        "कूड़ा फैलाना",
+        "बड़ों का आदर करना"
+      ],
+      "answer": "कूड़ा फैलाना",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk1-hard-24",
+      "type": "match",
+      "question": "राष्ट्रीय प्रतीकों का मिलान कीजिए।",
+      "pairs": [
+        {
+          "left": "राष्ट्रीय पशु",
+          "right": "बाघ"
+        },
+        {
+          "left": "राष्ट्रीय पक्षी",
+          "right": "मोर"
+        },
+        {
+          "left": "राष्ट्रीय फूल",
+          "right": "कमल"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk1-hard-25",
+      "type": "arrange_order",
+      "question": "भारत के झंडे के रंगों को ऊपर से नीचे सही क्रम में लगाइए।",
+      "items": [
+        "सफेद",
+        "हरा",
+        "केसरिया"
+      ],
+      "answer": [
+        "केसरिया",
+        "सफेद",
+        "हरा"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "gk1-challenge-01",
+      "type": "mcq",
+      "question": "हमारे देश के झंडे को क्या कहा जाता है?",
+      "options": [
+        "तिरंगा",
+        "त्रिशूल",
+        "तारा",
+        "चक्र"
+      ],
+      "answer": "तिरंगा",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk1-challenge-02",
+      "type": "mcq",
+      "question": "हमें बड़ों से बात करते समय कैसे बोलना चाहिए?",
+      "options": [
+        "विनम्रता से",
+        "चिल्लाकर",
+        "गुस्से से",
+        "बिना सुने"
+      ],
+      "answer": "विनम्रता से",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk1-challenge-03",
+      "type": "mcq",
+      "question": "हमें स्कूल में अपने दोस्तों के साथ कैसा व्यवहार करना चाहिए?",
+      "options": [
+        "मिल-जुलकर रहना",
+        "झगड़ा करना",
+        "अकेले रहना",
+        "चिढ़ाना"
+      ],
+      "answer": "मिल-जुलकर रहना",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk1-challenge-04",
+      "type": "mcq",
+      "question": "अगर हमारा दोस्त गिर जाए तो हमें क्या करना चाहिए?",
+      "options": [
+        "उसकी मदद करना",
+        "हँसना",
+        "अनदेखा करना",
+        "भाग जाना"
+      ],
+      "answer": "उसकी मदद करना",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk1-challenge-05",
+      "type": "mcq",
+      "question": "पानी बचाने के लिए हमें क्या करना चाहिए?",
+      "options": [
+        "नल खुला न छोड़ना",
+        "पानी बहाते रहना",
+        "नल हमेशा खुला रखना",
+        "बाल्टी भर कर फेंकना"
+      ],
+      "answer": "नल खुला न छोड़ना",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk1-challenge-06",
+      "type": "mcq",
+      "question": "हमें फल और सब्ज़ियाँ खाने से पहले क्या करना चाहिए?",
+      "options": [
+        "धोना",
+        "छिलके सहित खाना बिना धोए",
+        "फेंक देना",
+        "सूँघना"
+      ],
+      "answer": "धोना",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk1-challenge-07",
+      "type": "mcq",
+      "question": "अगर हम गलती करें तो हमें क्या कहना चाहिए?",
+      "options": [
+        "माफ़ी माँगना (सॉरी)",
+        "झूठ बोलना",
+        "छुप जाना",
+        "गुस्सा करना"
+      ],
+      "answer": "माफ़ी माँगना (सॉरी)",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk1-challenge-08",
+      "type": "mcq",
+      "question": "दूसरों की मदद करने वाले व्यक्ति को हम कैसा कहते हैं?",
+      "options": [
+        "दयालु",
+        "गुस्सैल",
+        "आलसी",
+        "चालाक"
+      ],
+      "answer": "दयालु",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk1-challenge-09",
+      "type": "mcq",
+      "question": "हमें रात को सोने से पहले क्या करना चाहिए?",
+      "options": [
+        "दाँत साफ करना",
+        "खेलना",
+        "शोर मचाना",
+        "टीवी देखते रहना"
+      ],
+      "answer": "दाँत साफ करना",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk1-challenge-10",
+      "type": "mcq",
+      "question": "हमें कूड़ा कहाँ फेंकना चाहिए?",
+      "options": [
+        "कूड़ेदान में",
+        "सड़क पर",
+        "पानी में",
+        "पेड़ पर"
+      ],
+      "answer": "कूड़ेदान में",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk1-challenge-11",
+      "type": "true_false",
+      "question": "हमारे देश के झंडे को तिरंगा कहा जाता है।",
+      "answer": true,
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk1-challenge-12",
+      "type": "true_false",
+      "question": "हमें गलती करने पर माफ़ी नहीं माँगनी चाहिए।",
+      "answer": false,
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk1-challenge-13",
+      "type": "true_false",
+      "question": "हमें फल और सब्ज़ियाँ खाने से पहले धोना चाहिए।",
+      "answer": true,
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk1-challenge-14",
+      "type": "true_false",
+      "question": "कूड़ा सड़क पर फेंकना अच्छी आदत है।",
+      "answer": false,
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk1-challenge-15",
+      "type": "yes_no",
+      "question": "क्या हमें बड़ों से विनम्रता से बात करनी चाहिए?",
+      "answer": "Yes",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk1-challenge-16",
+      "type": "yes_no",
+      "question": "क्या पानी बर्बाद करना अच्छी आदत है?",
+      "answer": "No",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk1-challenge-17",
+      "type": "yes_no",
+      "question": "क्या दूसरों की मदद करने वाला व्यक्ति दयालु कहलाता है?",
+      "answer": "Yes",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk1-challenge-18",
+      "type": "choose_answer",
+      "question": "स्कूल में घंटी बजने पर हमें क्या करना चाहिए?",
+      "options": [
+        "शांति से लाइन में खड़े होना",
+        "धक्का-मुक्की करना",
+        "शोर मचाना",
+        "भाग जाना"
+      ],
+      "answer": "शांति से लाइन में खड़े होना",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk1-challenge-19",
+      "type": "choose_answer",
+      "question": "अगर सड़क पर कोई सिग्नल लाल हो तो हमें क्या करना चाहिए?",
+      "options": [
+        "रुक जाना",
+        "दौड़कर पार करना",
+        "आँख बंद कर लेना",
+        "कूद जाना"
+      ],
+      "answer": "रुक जाना",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk1-challenge-20",
+      "type": "choose_answer",
+      "question": "पेड़ काटने से हमारे पर्यावरण पर क्या असर पड़ता है?",
+      "options": [
+        "हवा गंदी हो जाती है",
+        "कुछ नहीं होता",
+        "हवा और शुद्ध हो जाती है",
+        "बारिश बढ़ जाती है"
+      ],
+      "answer": "हवा गंदी हो जाती है",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk1-challenge-21",
+      "type": "choose_answer",
+      "question": "हमें बिजली बचाने के लिए क्या करना चाहिए?",
+      "options": [
+        "बिना ज़रूरत बत्ती बंद रखना",
+        "हमेशा सब बत्तियाँ जलाए रखना",
+        "पंखा हमेशा चलाना",
+        "फ्रिज खुला रखना"
+      ],
+      "answer": "बिना ज़रूरत बत्ती बंद रखना",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk1-challenge-22",
+      "type": "odd_one_out",
+      "question": "इनमें से कौन-सी अच्छी आदत नहीं है?",
+      "options": [
+        "सच बोलना",
+        "दूसरों की मदद करना",
+        "झूठ बोलना",
+        "हाथ धोना"
+      ],
+      "answer": "झूठ बोलना",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk1-challenge-23",
+      "type": "odd_one_out",
+      "question": "इनमें से कौन-सा काम पर्यावरण के लिए अच्छा नहीं है?",
+      "options": [
+        "पेड़ लगाना",
+        "पानी बचाना",
+        "पेड़ काटना",
+        "कूड़ा कूड़ेदान में डालना"
+      ],
+      "answer": "पेड़ काटना",
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk1-challenge-24",
+      "type": "match",
+      "question": "अच्छी आदत का उसके फायदे से मिलान कीजिए।",
+      "pairs": [
+        {
+          "left": "हाथ धोना",
+          "right": "बीमारी से बचाव"
+        },
+        {
+          "left": "पेड़ लगाना",
+          "right": "शुद्ध हवा"
+        },
+        {
+          "left": "सच बोलना",
+          "right": "सबका भरोसा"
+        }
+      ],
+      "difficulty": "challenge"
+    },
+    {
+      "id": "gk1-challenge-25",
+      "type": "arrange_order",
+      "question": "सुबह उठने के बाद इन कामों को सही क्रम में लगाइए।",
+      "items": [
+        "स्कूल जाना",
+        "नाश्ता करना",
+        "दाँत साफ करना",
+        "सोकर उठना"
+      ],
+      "answer": [
+        "सोकर उठना",
+        "दाँत साफ करना",
+        "नाश्ता करना",
+        "स्कूल जाना"
+      ],
+      "difficulty": "challenge"
+    }
+  ]
+}
