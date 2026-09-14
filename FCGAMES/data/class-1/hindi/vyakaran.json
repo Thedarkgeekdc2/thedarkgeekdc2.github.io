@@ -1,0 +1,1194 @@
+{
+  "class": 1,
+  "subject": "hindi",
+  "topic": "व्याकरण",
+  "questions": [
+    {
+      "id": "vy1-001",
+      "type": "mcq",
+      "question": "इनमें से स्वर कौन-सा है?",
+      "options": [
+        "अ",
+        "क",
+        "ख",
+        "ग"
+      ],
+      "answer": "अ",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-002",
+      "type": "mcq",
+      "question": "इनमें से व्यंजन कौन-सा है?",
+      "options": [
+        "आ",
+        "इ",
+        "ग",
+        "ई"
+      ],
+      "answer": "ग",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-003",
+      "type": "mcq",
+      "question": "'इ' किस प्रकार का वर्ण है?",
+      "options": [
+        "स्वर",
+        "व्यंजन",
+        "मात्रा",
+        "विराम चिन्ह"
+      ],
+      "answer": "स्वर",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-004",
+      "type": "mcq",
+      "question": "'ख' किस प्रकार का वर्ण है?",
+      "options": [
+        "स्वर",
+        "व्यंजन",
+        "मात्रा",
+        "शब्द"
+      ],
+      "answer": "व्यंजन",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-005",
+      "type": "true_false",
+      "question": "'ई' एक स्वर है।",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-006",
+      "type": "true_false",
+      "question": "'च' एक स्वर है।",
+      "answer": false,
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-007",
+      "type": "yes_no",
+      "question": "क्या 'उ' एक स्वर है?",
+      "answer": "Yes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-008",
+      "type": "yes_no",
+      "question": "क्या 'त' एक स्वर है?",
+      "answer": "No",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-009",
+      "type": "choose_answer",
+      "question": "स्वरों की शुरुआत किस अक्षर से होती है?",
+      "options": [
+        "अ",
+        "क",
+        "ग",
+        "ट"
+      ],
+      "answer": "अ",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-010",
+      "type": "choose_answer",
+      "question": "'क ख ग घ' में सबसे पहला व्यंजन कौन-सा है?",
+      "options": [
+        "क",
+        "ख",
+        "ग",
+        "घ"
+      ],
+      "answer": "क",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-011",
+      "type": "odd_one_out",
+      "question": "इनमें से कौन-सा स्वर नहीं है?",
+      "options": [
+        "अ",
+        "आ",
+        "क",
+        "इ"
+      ],
+      "answer": "क",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-012",
+      "type": "odd_one_out",
+      "question": "इनमें से कौन-सा व्यंजन नहीं है?",
+      "options": [
+        "क",
+        "ख",
+        "ग",
+        "आ"
+      ],
+      "answer": "आ",
+      "difficulty": "medium"
+    },
+    {
+      "id": "vy1-013",
+      "type": "match",
+      "question": "वर्ण को उसके प्रकार से मिलान कीजिए।",
+      "pairs": [
+        {
+          "left": "अ",
+          "right": "स्वर"
+        },
+        {
+          "left": "क",
+          "right": "व्यंजन"
+        },
+        {
+          "left": "औ",
+          "right": "स्वर"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-014",
+      "type": "arrange_order",
+      "question": "स्वरों को सही क्रम में लगाइए।",
+      "items": [
+        "इ",
+        "अ",
+        "ई",
+        "आ"
+      ],
+      "answer": [
+        "अ",
+        "आ",
+        "इ",
+        "ई"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-015",
+      "type": "arrange_order",
+      "question": "व्यंजनों को सही क्रम में लगाइए (क वर्ग)।",
+      "items": [
+        "ग",
+        "क",
+        "घ",
+        "ख"
+      ],
+      "answer": [
+        "क",
+        "ख",
+        "ग",
+        "घ"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "vy1-016",
+      "type": "mcq",
+      "question": "'क' में 'आ' की मात्रा लगाने पर क्या बनेगा?",
+      "options": [
+        "का",
+        "कि",
+        "की",
+        "कु"
+      ],
+      "answer": "का",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-017",
+      "type": "mcq",
+      "question": "'म' में 'ी' की मात्रा लगाने पर क्या बनेगा?",
+      "options": [
+        "मि",
+        "मी",
+        "मे",
+        "मो"
+      ],
+      "answer": "मी",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-018",
+      "type": "mcq",
+      "question": "'स' में 'ु' की मात्रा लगाने पर क्या बनेगा?",
+      "options": [
+        "सू",
+        "सु",
+        "सो",
+        "सा"
+      ],
+      "answer": "सु",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-019",
+      "type": "mcq",
+      "question": "'द' में 'ो' की मात्रा लगाने पर क्या बनेगा?",
+      "options": [
+        "दा",
+        "दू",
+        "दो",
+        "दे"
+      ],
+      "answer": "दो",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-020",
+      "type": "mcq",
+      "question": "'ि' किस स्वर की मात्रा है?",
+      "options": [
+        "इ",
+        "ई",
+        "उ",
+        "ए"
+      ],
+      "answer": "इ",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-021",
+      "type": "mcq",
+      "question": "'ी' किस स्वर की मात्रा है?",
+      "options": [
+        "इ",
+        "ई",
+        "ऊ",
+        "ओ"
+      ],
+      "answer": "ई",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-022",
+      "type": "mcq",
+      "question": "'ू' किस स्वर की मात्रा है?",
+      "options": [
+        "उ",
+        "ऊ",
+        "ओ",
+        "औ"
+      ],
+      "answer": "ऊ",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-023",
+      "type": "mcq",
+      "question": "'े' किस स्वर की मात्रा है?",
+      "options": [
+        "ऐ",
+        "ए",
+        "ओ",
+        "औ"
+      ],
+      "answer": "ए",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-024",
+      "type": "mcq",
+      "question": "'ौ' किस स्वर की मात्रा है?",
+      "options": [
+        "ओ",
+        "औ",
+        "आ",
+        "अं"
+      ],
+      "answer": "औ",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-025",
+      "type": "true_false",
+      "question": "'की' शब्द में 'ी' (ई की मात्रा) लगी है।",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-026",
+      "type": "true_false",
+      "question": "'का' शब्द में 'ि' (इ की मात्रा) लगी है।",
+      "answer": false,
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-027",
+      "type": "yes_no",
+      "question": "क्या 'चा' में 'आ' की मात्रा लगी है?",
+      "answer": "Yes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-028",
+      "type": "yes_no",
+      "question": "क्या 'तू' में 'इ' की मात्रा लगी है?",
+      "answer": "No",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-029",
+      "type": "choose_answer",
+      "question": "'न' में कौन-सी मात्रा लगाने पर 'नौ' बनेगा?",
+      "options": [
+        "ी",
+        "ौ",
+        "ो",
+        "े"
+      ],
+      "answer": "ौ",
+      "difficulty": "medium"
+    },
+    {
+      "id": "vy1-030",
+      "type": "choose_answer",
+      "question": "'ल' में कौन-सी मात्रा लगाने पर 'लू' बनेगा?",
+      "options": [
+        "ि",
+        "ी",
+        "ु",
+        "ू"
+      ],
+      "answer": "ू",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-031",
+      "type": "odd_one_out",
+      "question": "इनमें से किसमें मात्रा नहीं लगी है?",
+      "options": [
+        "का",
+        "की",
+        "कु",
+        "क"
+      ],
+      "answer": "क",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-032",
+      "type": "odd_one_out",
+      "question": "इनमें से कौन-सा शब्द 'आ' की मात्रा वाला नहीं है?",
+      "options": [
+        "माला",
+        "राजा",
+        "गिर",
+        "नाना"
+      ],
+      "answer": "गिर",
+      "difficulty": "medium"
+    },
+    {
+      "id": "vy1-033",
+      "type": "match",
+      "question": "मात्रा चिन्ह को उसके नाम से मिलान कीजिए।",
+      "pairs": [
+        {
+          "left": "ा",
+          "right": "आ की मात्रा"
+        },
+        {
+          "left": "ी",
+          "right": "ई की मात्रा"
+        },
+        {
+          "left": "ो",
+          "right": "ओ की मात्रा"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-034",
+      "type": "arrange_order",
+      "question": "इन अक्षरों से 'माला' शब्द सही क्रम में बनाइए।",
+      "items": [
+        "ला",
+        "मा"
+      ],
+      "answer": [
+        "मा",
+        "ला"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "vy1-035",
+      "type": "arrange_order",
+      "question": "इन अक्षरों से 'नदी' शब्द सही क्रम में बनाइए।",
+      "items": [
+        "दी",
+        "न"
+      ],
+      "answer": [
+        "न",
+        "दी"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-036",
+      "type": "mcq",
+      "question": "'घर' शब्द में कुल कितने अक्षर हैं?",
+      "options": [
+        "एक",
+        "दो",
+        "तीन",
+        "चार"
+      ],
+      "answer": "दो",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-037",
+      "type": "mcq",
+      "question": "'कमल' शब्द में कुल कितने अक्षर हैं?",
+      "options": [
+        "दो",
+        "तीन",
+        "चार",
+        "पाँच"
+      ],
+      "answer": "तीन",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-038",
+      "type": "mcq",
+      "question": "इनमें से सही ढंग से लिखा शब्द कौन-सा है?",
+      "options": [
+        "पानी",
+        "पनी",
+        "पाणी",
+        "पानि"
+      ],
+      "answer": "पानी",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-039",
+      "type": "mcq",
+      "question": "इनमें से सही ढंग से लिखा शब्द कौन-सा है?",
+      "options": [
+        "किताब",
+        "कीताब",
+        "किताबं",
+        "कीताबं"
+      ],
+      "answer": "किताब",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-040",
+      "type": "mcq",
+      "question": "'आम' शब्द का पहला अक्षर कौन-सा है?",
+      "options": [
+        "आ",
+        "अ",
+        "म",
+        "आम"
+      ],
+      "answer": "आ",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-041",
+      "type": "mcq",
+      "question": "'बकरी' शब्द का आखिरी अक्षर कौन-सा है?",
+      "options": [
+        "ब",
+        "क",
+        "री",
+        "बक"
+      ],
+      "answer": "री",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-042",
+      "type": "true_false",
+      "question": "'फूल' एक सही शब्द है।",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-043",
+      "type": "true_false",
+      "question": "'फलू' 'फूल' शब्द को सही ढंग से लिखा गया रूप है।",
+      "answer": false,
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-044",
+      "type": "yes_no",
+      "question": "क्या 'गाय' एक सही शब्द है?",
+      "answer": "Yes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-045",
+      "type": "yes_no",
+      "question": "क्या 'यगा' 'गाय' का सही रूप है?",
+      "answer": "No",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-046",
+      "type": "choose_answer",
+      "question": "इनमें से कौन-सा शब्द 'फल' के लिए सही है?",
+      "options": [
+        "फल",
+        "फला",
+        "फली",
+        "फालु"
+      ],
+      "answer": "फल",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-047",
+      "type": "choose_answer",
+      "question": "इनमें से कौन-सा शब्द 'दूध' के लिए सही है?",
+      "options": [
+        "दुध",
+        "दूध",
+        "दुद",
+        "दूद"
+      ],
+      "answer": "दूध",
+      "difficulty": "medium"
+    },
+    {
+      "id": "vy1-048",
+      "type": "odd_one_out",
+      "question": "इनमें से कौन-सा शब्द सही नहीं लिखा गया है?",
+      "options": [
+        "घर",
+        "पानी",
+        "किताब",
+        "स्कूुल"
+      ],
+      "answer": "स्कूुल",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-049",
+      "type": "odd_one_out",
+      "question": "इनमें से कौन-सा गलत शब्द है?",
+      "options": [
+        "नाव",
+        "पेड़",
+        "गआय",
+        "फूल"
+      ],
+      "answer": "गआय",
+      "difficulty": "medium"
+    },
+    {
+      "id": "vy1-050",
+      "type": "match",
+      "question": "शब्द को उसके सही अक्षरों की संख्या से मिलान कीजिए।",
+      "pairs": [
+        {
+          "left": "घर",
+          "right": "दो अक्षर"
+        },
+        {
+          "left": "कमल",
+          "right": "तीन अक्षर"
+        },
+        {
+          "left": "किताब",
+          "right": "तीन अक्षर"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-051",
+      "type": "arrange_order",
+      "question": "इन अक्षरों से सही शब्द बनाइए।",
+      "items": [
+        "ल",
+        "क",
+        "म"
+      ],
+      "answer": [
+        "क",
+        "म",
+        "ल"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-052",
+      "type": "arrange_order",
+      "question": "इन अक्षरों से सही शब्द बनाइए।",
+      "items": [
+        "र",
+        "घ"
+      ],
+      "answer": [
+        "घ",
+        "र"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-053",
+      "type": "arrange_order",
+      "question": "इन अक्षरों से सही शब्द बनाइए।",
+      "items": [
+        "ता",
+        "भा",
+        "र"
+      ],
+      "answer": [
+        "भा",
+        "र",
+        "ता"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "vy1-054",
+      "type": "arrange_order",
+      "question": "इन अक्षरों से सही शब्द बनाइए।",
+      "items": [
+        "न",
+        "व",
+        "श"
+      ],
+      "answer": [
+        "व",
+        "न",
+        "श"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-055",
+      "type": "mcq",
+      "question": "'क'+'ल'+'म' से कौन-सा शब्द बनता है?",
+      "options": [
+        "कलम",
+        "मलक",
+        "लमक",
+        "कमल"
+      ],
+      "answer": "कलम",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-056",
+      "type": "mcq",
+      "question": "'ज'+'ल' से कौन-सा शब्द बनता है?",
+      "options": [
+        "जल",
+        "लज",
+        "जला",
+        "लजा"
+      ],
+      "answer": "जल",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-057",
+      "type": "choose_answer",
+      "question": "'न'+'ल' से कौन-सा शब्द बनता है?",
+      "options": [
+        "नल",
+        "लन",
+        "नला",
+        "लना"
+      ],
+      "answer": "नल",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-058",
+      "type": "choose_answer",
+      "question": "'ब'+'स' से कौन-सा शब्द बनता है?",
+      "options": [
+        "बस",
+        "सब",
+        "बसा",
+        "साब"
+      ],
+      "answer": "बस",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-059",
+      "type": "true_false",
+      "question": "'क'+'ल'+'म' को जोड़ने पर 'कलम' शब्द बनता है।",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-060",
+      "type": "true_false",
+      "question": "'ज'+'ल' को जोड़ने पर 'फल' शब्द बनता है।",
+      "answer": false,
+      "difficulty": "medium"
+    },
+    {
+      "id": "vy1-061",
+      "type": "mcq",
+      "question": "इनमें से कौन-सा शब्द किसी वस्तु का नाम है (संज्ञा है)?",
+      "options": [
+        "कुर्सी",
+        "दौड़ना",
+        "सुंदर",
+        "और"
+      ],
+      "answer": "कुर्सी",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-062",
+      "type": "mcq",
+      "question": "इनमें से कौन-सा शब्द किसी व्यक्ति का नाम है (संज्ञा है)?",
+      "options": [
+        "राम",
+        "खाना",
+        "तेज़",
+        "पर"
+      ],
+      "answer": "राम",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-063",
+      "type": "mcq",
+      "question": "इनमें से कौन-सा शब्द किसी स्थान का नाम है (संज्ञा है)?",
+      "options": [
+        "स्कूल",
+        "अच्छा",
+        "हँसना",
+        "धीरे"
+      ],
+      "answer": "स्कूल",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-064",
+      "type": "mcq",
+      "question": "इनमें से कौन-सा शब्द किसी जानवर का नाम है (संज्ञा है)?",
+      "options": [
+        "गाय",
+        "भागना",
+        "लंबा",
+        "और"
+      ],
+      "answer": "गाय",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-065",
+      "type": "true_false",
+      "question": "'किताब' एक संज्ञा शब्द है।",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-066",
+      "type": "true_false",
+      "question": "'दौड़ना' एक संज्ञा शब्द है।",
+      "answer": false,
+      "difficulty": "medium"
+    },
+    {
+      "id": "vy1-067",
+      "type": "yes_no",
+      "question": "क्या 'घर' एक संज्ञा है?",
+      "answer": "Yes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-068",
+      "type": "yes_no",
+      "question": "क्या 'तेज़' एक संज्ञा है?",
+      "answer": "No",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-069",
+      "type": "odd_one_out",
+      "question": "इनमें से कौन-सा शब्द संज्ञा नहीं है?",
+      "options": [
+        "पेड़",
+        "नदी",
+        "गाय",
+        "सुंदर"
+      ],
+      "answer": "सुंदर",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-070",
+      "type": "choose_answer",
+      "question": "इनमें से सभी संज्ञा शब्दों का समूह कौन-सा है?",
+      "options": [
+        "गाय, घर, पेड़",
+        "दौड़ना, हँसना, खाना",
+        "तेज़, सुंदर, बड़ा",
+        "और, पर, से"
+      ],
+      "answer": "गाय, घर, पेड़",
+      "difficulty": "medium"
+    },
+    {
+      "id": "vy1-071",
+      "type": "mcq",
+      "question": "'लड़का' का स्त्रीलिंग रूप क्या है?",
+      "options": [
+        "लड़की",
+        "लड़के",
+        "लड़कों",
+        "लड़का"
+      ],
+      "answer": "लड़की",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-072",
+      "type": "mcq",
+      "question": "'बकरा' का स्त्रीलिंग रूप क्या है?",
+      "options": [
+        "बकरी",
+        "बकरे",
+        "बकरों",
+        "बकरा"
+      ],
+      "answer": "बकरी",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-073",
+      "type": "true_false",
+      "question": "'शेरनी' 'शेर' का स्त्रीलिंग रूप है।",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-074",
+      "type": "choose_answer",
+      "question": "'राजा' का स्त्रीलिंग रूप क्या है?",
+      "options": [
+        "रानी",
+        "राजाओं",
+        "राजाइन",
+        "राजी"
+      ],
+      "answer": "रानी",
+      "difficulty": "medium"
+    },
+    {
+      "id": "vy1-075",
+      "type": "yes_no",
+      "question": "क्या 'घोड़ा' का स्त्रीलिंग रूप 'घोड़ी' है?",
+      "answer": "Yes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-076",
+      "type": "mcq",
+      "question": "'किताब' का बहुवचन (अनेक) रूप क्या है?",
+      "options": [
+        "किताबें",
+        "किताबों",
+        "किताबे",
+        "किताबियाँ"
+      ],
+      "answer": "किताबें",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-077",
+      "type": "mcq",
+      "question": "'लड़का' का बहुवचन रूप क्या है?",
+      "options": [
+        "लड़के",
+        "लड़कियाँ",
+        "लड़का",
+        "लड़कों की"
+      ],
+      "answer": "लड़के",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-078",
+      "type": "true_false",
+      "question": "'गाय' का बहुवचन रूप 'गायें' होता है।",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-079",
+      "type": "choose_answer",
+      "question": "'पेड़' का बहुवचन रूप क्या है?",
+      "options": [
+        "पेड़ों",
+        "पेड़",
+        "पेड़ें",
+        "पेड़ियाँ"
+      ],
+      "answer": "पेड़ों",
+      "difficulty": "medium"
+    },
+    {
+      "id": "vy1-080",
+      "type": "yes_no",
+      "question": "क्या 'किताब' एकवचन शब्द है?",
+      "answer": "Yes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-081",
+      "type": "mcq",
+      "question": "इनमें से कौन-सा शब्द किसी काम को बताता है (क्रिया है)?",
+      "options": [
+        "दौड़ना",
+        "कुर्सी",
+        "लाल",
+        "घर"
+      ],
+      "answer": "दौड़ना",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-082",
+      "type": "mcq",
+      "question": "इनमें से कौन-सा शब्द क्रिया है?",
+      "options": [
+        "खाना",
+        "मेज़",
+        "सुंदर",
+        "धीरे"
+      ],
+      "answer": "खाना",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-083",
+      "type": "true_false",
+      "question": "'हँसना' एक क्रिया शब्द है।",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-084",
+      "type": "odd_one_out",
+      "question": "इनमें से कौन-सा शब्द क्रिया नहीं है?",
+      "options": [
+        "पढ़ना",
+        "लिखना",
+        "खेलना",
+        "मेज़"
+      ],
+      "answer": "मेज़",
+      "difficulty": "medium"
+    },
+    {
+      "id": "vy1-085",
+      "type": "yes_no",
+      "question": "क्या 'सोना' (नींद वाला) एक क्रिया शब्द है?",
+      "answer": "Yes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-086",
+      "type": "arrange_order",
+      "question": "शब्दों से सही वाक्य बनाइए।",
+      "items": [
+        "जाता",
+        "राम",
+        "स्कूल",
+        "है"
+      ],
+      "answer": [
+        "राम",
+        "स्कूल",
+        "जाता",
+        "है"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "vy1-087",
+      "type": "arrange_order",
+      "question": "शब्दों से सही वाक्य बनाइए।",
+      "items": [
+        "पीती",
+        "गाय",
+        "है",
+        "दूध"
+      ],
+      "answer": [
+        "गाय",
+        "दूध",
+        "पीती",
+        "है"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "vy1-088",
+      "type": "arrange_order",
+      "question": "शब्दों से सही वाक्य बनाइए।",
+      "items": [
+        "है",
+        "सूरज",
+        "चमकता"
+      ],
+      "answer": [
+        "सूरज",
+        "चमकता",
+        "है"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-089",
+      "type": "arrange_order",
+      "question": "शब्दों से सही वाक्य बनाइए।",
+      "items": [
+        "खेलता",
+        "बच्चा",
+        "है",
+        "बगीचे में"
+      ],
+      "answer": [
+        "बच्चा",
+        "बगीचे में",
+        "खेलता",
+        "है"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "vy1-090",
+      "type": "mcq",
+      "question": "इनमें से सही वाक्य कौन-सा है?",
+      "options": [
+        "राम स्कूल जाता है।",
+        "जाता राम है स्कूल।",
+        "स्कूल है राम जाता।",
+        "है जाता राम स्कूल।"
+      ],
+      "answer": "राम स्कूल जाता है।",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-091",
+      "type": "mcq",
+      "question": "इनमें से सही वाक्य कौन-सा है?",
+      "options": [
+        "बिल्ली दूध पीती है।",
+        "पीती दूध है बिल्ली।",
+        "दूध बिल्ली है पीती।",
+        "है पीती बिल्ली दूध।"
+      ],
+      "answer": "बिल्ली दूध पीती है।",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-092",
+      "type": "true_false",
+      "question": "'सीता गाना गाती है।' एक सही वाक्य है।",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-093",
+      "type": "true_false",
+      "question": "'गाती सीता है गाना।' एक सही ढंग से बना वाक्य है।",
+      "answer": false,
+      "difficulty": "medium"
+    },
+    {
+      "id": "vy1-094",
+      "type": "yes_no",
+      "question": "क्या 'चिड़िया उड़ती है।' एक सही वाक्य है?",
+      "answer": "Yes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-095",
+      "type": "choose_answer",
+      "question": "'बच्चे खेलते हैं।' वाक्य में कौन काम कर रहा है?",
+      "options": [
+        "बच्चे",
+        "खेलते",
+        "हैं",
+        "कुछ नहीं"
+      ],
+      "answer": "बच्चे",
+      "difficulty": "medium"
+    },
+    {
+      "id": "vy1-096",
+      "type": "mcq",
+      "question": "वाक्य के अंत में कौन-सा चिन्ह लगाते हैं?",
+      "options": [
+        "।",
+        "?",
+        "!",
+        ","
+      ],
+      "answer": "।",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-097",
+      "type": "mcq",
+      "question": "सवाल पूछने वाले वाक्य के अंत में कौन-सा चिन्ह लगाते हैं?",
+      "options": [
+        "।",
+        "?",
+        "!",
+        ","
+      ],
+      "answer": "?",
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-098",
+      "type": "true_false",
+      "question": "'राम खेलता है।' वाक्य के अंत में पूर्ण विराम (।) लगा है।",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "vy1-099",
+      "type": "yes_no",
+      "question": "क्या 'तुम्हारा नाम क्या है' के अंत में प्रश्नवाचक चिन्ह (?) लगेगा?",
+      "answer": "Yes",
+      "difficulty": "medium"
+    },
+    {
+      "id": "vy1-100",
+      "type": "choose_answer",
+      "question": "'क्या तुम स्कूल जाओगे' वाक्य के अंत में कौन-सा चिन्ह सही होगा?",
+      "options": [
+        "?",
+        "।",
+        "!",
+        ","
+      ],
+      "answer": "?",
+      "difficulty": "medium"
+    }
+  ]
+}
