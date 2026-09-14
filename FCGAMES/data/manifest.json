@@ -23,6 +23,13 @@
       "questionCount": 100
     },
     {
+      "file": "data/class-1/hindi/vyakaran.json",
+      "class": 1,
+      "subject": "hindi",
+      "topic": "व्याकरण",
+      "questionCount": 100
+    },
+    {
       "file": "data/class-2/gk/samanya-gyan.json",
       "class": 2,
       "subject": "GK",
@@ -30,10 +37,24 @@
       "questionCount": 100
     },
     {
+      "file": "data/class-2/hindi/vyakaran.json",
+      "class": 2,
+      "subject": "hindi",
+      "topic": "व्याकरण",
+      "questionCount": 100
+    },
+    {
       "file": "data/class-3/gk/samanya-gyan.json",
       "class": 3,
       "subject": "GK",
       "topic": "सामान्य ज्ञान",
+      "questionCount": 100
+    },
+    {
+      "file": "data/class-3/hindi/vyakaran.json",
+      "class": 3,
+      "subject": "hindi",
+      "topic": "व्याकरण",
       "questionCount": 100
     },
     {
@@ -217,6 +238,13 @@
       "subject": "hindi",
       "topic": "विलोम शब्द",
       "questionCount": 4
+    },
+    {
+      "file": "data/class-4/hindi/vyakaran.json",
+      "class": 4,
+      "subject": "hindi",
+      "topic": "व्याकरण",
+      "questionCount": 100
     },
     {
       "file": "data/class-5/gk/samanya-gyan-bharat-vishwa.json",
