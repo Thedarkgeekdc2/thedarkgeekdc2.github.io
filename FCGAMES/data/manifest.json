@@ -16,6 +16,27 @@
       "questionCount": 2
     },
     {
+      "file": "data/class-1/gk/samanya-gyan.json",
+      "class": 1,
+      "subject": "GK",
+      "topic": "सामान्य ज्ञान",
+      "questionCount": 100
+    },
+    {
+      "file": "data/class-2/gk/samanya-gyan.json",
+      "class": 2,
+      "subject": "GK",
+      "topic": "सामान्य ज्ञान",
+      "questionCount": 100
+    },
+    {
+      "file": "data/class-3/gk/samanya-gyan.json",
+      "class": 3,
+      "subject": "GK",
+      "topic": "सामान्य ज्ञान",
+      "questionCount": 100
+    },
+    {
       "file": "data/class-3/maths/addition.json",
       "class": 3,
       "subject": "maths",
@@ -114,6 +135,13 @@
       "questionCount": 2
     },
     {
+      "file": "data/class-4/gk/samanya-gyan.json",
+      "class": 4,
+      "subject": "GK",
+      "topic": "सामान्य ज्ञान",
+      "questionCount": 100
+    },
+    {
       "file": "data/class-4/hindi/order.json",
       "class": 4,
       "subject": "hindi",
@@ -189,6 +217,13 @@
       "subject": "hindi",
       "topic": "विलोम शब्द",
       "questionCount": 4
+    },
+    {
+      "file": "data/class-5/gk/samanya-gyan-bharat-vishwa.json",
+      "class": 5,
+      "subject": "GK",
+      "topic": "सामान्य ज्ञान (भारत और विश्व)",
+      "questionCount": 100
     }
   ]
 }
