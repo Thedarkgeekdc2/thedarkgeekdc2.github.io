@@ -6,13 +6,13 @@ Content is organized **by class, then by subject**:
 data/
   class-1/   hindi/  english/  maths/  gk/
   class-2/   hindi/  english/  maths/  gk/
-  class-3/   hindi/  english/  maths/  twau/   (TWAU = The World Around Us / EVS)
-  class-4/   hindi/  english/  maths/  twau/
-  class-5/   hindi/  english/  maths/  twau/
+  class-3/   hindi/  english/  maths/  twau/   gk/  (TWAU = The World Around Us / EVS)
+  class-4/   hindi/  english/  maths/  twau/   gk/
+  class-5/   hindi/  english/  maths/  twau/   gk/
 ```
 
 Class 1 & 2 use the subjects **Hindi, English, Maths, GK**.
-Class 3, 4 & 5 use the subjects **Hindi, English, Maths, TWAU (EVS)**.
+Class 3, 4 & 5 use the subjects **Hindi, English, Maths, TWAU (EVS), GK**.
 
 Empty subject folders contain a `.gitkeep` placeholder just so the folder
 exists in the repo - delete it once you add your first topic file there.
