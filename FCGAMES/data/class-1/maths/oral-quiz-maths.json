@@ -1,0 +1,1196 @@
+{
+  "class": 1,
+  "subject": "maths",
+  "topic": "Oral / Quiz Type Maths",
+  "questions": [
+    {
+      "id": "m1-001",
+      "type": "mcq",
+      "question": "Which number comes after 7?",
+      "options": [
+        "6",
+        "8",
+        "9",
+        "5"
+      ],
+      "answer": "8",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-002",
+      "type": "mcq",
+      "question": "Which number comes after 12?",
+      "options": [
+        "11",
+        "13",
+        "14",
+        "10"
+      ],
+      "answer": "13",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-003",
+      "type": "mcq",
+      "question": "Which number comes before 10?",
+      "options": [
+        "9",
+        "11",
+        "8",
+        "12"
+      ],
+      "answer": "9",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-004",
+      "type": "mcq",
+      "question": "Which number comes before 15?",
+      "options": [
+        "14",
+        "16",
+        "13",
+        "17"
+      ],
+      "answer": "14",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-005",
+      "type": "mcq",
+      "question": "What number is missing? 3, 4, __, 6",
+      "options": [
+        "5",
+        "7",
+        "4",
+        "8"
+      ],
+      "answer": "5",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-006",
+      "type": "mcq",
+      "question": "What number is missing? 8, 9, __, 11",
+      "options": [
+        "10",
+        "12",
+        "9",
+        "13"
+      ],
+      "answer": "10",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-007",
+      "type": "mcq",
+      "question": "What number is missing? 17, __, 19, 20",
+      "options": [
+        "18",
+        "16",
+        "21",
+        "15"
+      ],
+      "answer": "18",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m1-008",
+      "type": "true_false",
+      "question": "The number after 9 is 10.",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-009",
+      "type": "true_false",
+      "question": "The number before 5 is 6.",
+      "answer": false,
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-010",
+      "type": "true_false",
+      "question": "Counting from 1, the number after 19 is 20.",
+      "answer": true,
+      "difficulty": "medium"
+    },
+    {
+      "id": "m1-011",
+      "type": "yes_no",
+      "question": "Does 5 come after 4?",
+      "answer": "Yes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-012",
+      "type": "yes_no",
+      "question": "Does 3 come after 5?",
+      "answer": "No",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-013",
+      "type": "choose_answer",
+      "question": "Count and choose: how many fingers are on one hand?",
+      "options": [
+        "5",
+        "4",
+        "6",
+        "10"
+      ],
+      "answer": "5",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-014",
+      "type": "choose_answer",
+      "question": "How many days are there before Sunday if today is Wednesday counting backwards (Tue, Mon, Sun)?",
+      "options": [
+        "3",
+        "2",
+        "4",
+        "1"
+      ],
+      "answer": "3",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m1-015",
+      "type": "odd_one_out",
+      "question": "Which number is out of counting order here: 1, 2, 3, 5, 4?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "5"
+      ],
+      "answer": "5",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-016",
+      "type": "arrange_order",
+      "question": "Arrange these numbers in counting order (smallest first).",
+      "items": [
+        "4",
+        "1",
+        "3",
+        "2"
+      ],
+      "answer": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-017",
+      "type": "mcq",
+      "question": "In the number 23, how many tens are there?",
+      "options": [
+        "2",
+        "3",
+        "0",
+        "5"
+      ],
+      "answer": "2",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-018",
+      "type": "mcq",
+      "question": "In the number 23, how many ones are there?",
+      "options": [
+        "3",
+        "2",
+        "0",
+        "5"
+      ],
+      "answer": "3",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-019",
+      "type": "mcq",
+      "question": "In the number 47, how many tens are there?",
+      "options": [
+        "4",
+        "7",
+        "0",
+        "11"
+      ],
+      "answer": "4",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-020",
+      "type": "mcq",
+      "question": "In the number 15, how many ones are there?",
+      "options": [
+        "5",
+        "1",
+        "0",
+        "15"
+      ],
+      "answer": "5",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-021",
+      "type": "true_false",
+      "question": "In 36, there are 3 tens and 6 ones.",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-022",
+      "type": "true_false",
+      "question": "In 52, there are 5 ones and 2 tens.",
+      "answer": false,
+      "difficulty": "medium"
+    },
+    {
+      "id": "m1-023",
+      "type": "choose_answer",
+      "question": "2 tens and 5 ones make which number?",
+      "options": [
+        "25",
+        "52",
+        "20",
+        "15"
+      ],
+      "answer": "25",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-024",
+      "type": "choose_answer",
+      "question": "4 tens and 0 ones make which number?",
+      "options": [
+        "40",
+        "4",
+        "04",
+        "14"
+      ],
+      "answer": "40",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m1-025",
+      "type": "mcq",
+      "question": "2 + 3 = ?",
+      "options": [
+        "6",
+        "5",
+        "2",
+        "8"
+      ],
+      "answer": "5",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-026",
+      "type": "mcq",
+      "question": "4 + 3 = ?",
+      "options": [
+        "10",
+        "7",
+        "8",
+        "9"
+      ],
+      "answer": "7",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-027",
+      "type": "mcq",
+      "question": "5 + 2 = ?",
+      "options": [
+        "6",
+        "9",
+        "8",
+        "7"
+      ],
+      "answer": "7",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-028",
+      "type": "mcq",
+      "question": "1 + 6 = ?",
+      "options": [
+        "8",
+        "10",
+        "7",
+        "4"
+      ],
+      "answer": "7",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-029",
+      "type": "mcq",
+      "question": "3 + 3 = ?",
+      "options": [
+        "9",
+        "3",
+        "6",
+        "8"
+      ],
+      "answer": "6",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-030",
+      "type": "mcq",
+      "question": "6 + 2 = ?",
+      "options": [
+        "10",
+        "9",
+        "8",
+        "5"
+      ],
+      "answer": "8",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-031",
+      "type": "mcq",
+      "question": "7 + 1 = ?",
+      "options": [
+        "11",
+        "5",
+        "9",
+        "8"
+      ],
+      "answer": "8",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-032",
+      "type": "mcq",
+      "question": "2 + 2 = ?",
+      "options": [
+        "6",
+        "7",
+        "4",
+        "1"
+      ],
+      "answer": "4",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-033",
+      "type": "mcq",
+      "question": "4 + 4 = ?",
+      "options": [
+        "8",
+        "6",
+        "7",
+        "10"
+      ],
+      "answer": "8",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-034",
+      "type": "mcq",
+      "question": "5 + 3 = ?",
+      "options": [
+        "7",
+        "8",
+        "11",
+        "10"
+      ],
+      "answer": "8",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-035",
+      "type": "mcq",
+      "question": "3 + 5 = ?",
+      "options": [
+        "5",
+        "11",
+        "8",
+        "6"
+      ],
+      "answer": "8",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-036",
+      "type": "mcq",
+      "question": "15 + 7 = ?",
+      "options": [
+        "23",
+        "21",
+        "22",
+        "27"
+      ],
+      "answer": "22",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m1-037",
+      "type": "mcq",
+      "question": "23 + 14 = ?",
+      "options": [
+        "32",
+        "40",
+        "39",
+        "37"
+      ],
+      "answer": "37",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m1-038",
+      "type": "mcq",
+      "question": "38 + 19 = ?",
+      "options": [
+        "57",
+        "54",
+        "62",
+        "58"
+      ],
+      "answer": "57",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m1-039",
+      "type": "mcq",
+      "question": "5 - 2 = ?",
+      "options": [
+        "5",
+        "3",
+        "1",
+        "2"
+      ],
+      "answer": "3",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-040",
+      "type": "mcq",
+      "question": "7 - 3 = ?",
+      "options": [
+        "2",
+        "7",
+        "4",
+        "1"
+      ],
+      "answer": "4",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-041",
+      "type": "mcq",
+      "question": "9 - 4 = ?",
+      "options": [
+        "2",
+        "4",
+        "8",
+        "5"
+      ],
+      "answer": "5",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-042",
+      "type": "mcq",
+      "question": "6 - 1 = ?",
+      "options": [
+        "7",
+        "5",
+        "8",
+        "6"
+      ],
+      "answer": "5",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-043",
+      "type": "mcq",
+      "question": "8 - 5 = ?",
+      "options": [
+        "3",
+        "6",
+        "2",
+        "5"
+      ],
+      "answer": "3",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-044",
+      "type": "mcq",
+      "question": "10 - 4 = ?",
+      "options": [
+        "7",
+        "4",
+        "6",
+        "3"
+      ],
+      "answer": "6",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-045",
+      "type": "mcq",
+      "question": "9 - 6 = ?",
+      "options": [
+        "6",
+        "1",
+        "3",
+        "2"
+      ],
+      "answer": "3",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-046",
+      "type": "mcq",
+      "question": "7 - 2 = ?",
+      "options": [
+        "5",
+        "8",
+        "4",
+        "6"
+      ],
+      "answer": "5",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-047",
+      "type": "mcq",
+      "question": "8 - 3 = ?",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "2"
+      ],
+      "answer": "5",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-048",
+      "type": "mcq",
+      "question": "6 - 5 = ?",
+      "options": [
+        "3",
+        "4",
+        "1",
+        "2"
+      ],
+      "answer": "1",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-049",
+      "type": "mcq",
+      "question": "10 - 7 = ?",
+      "options": [
+        "5",
+        "3",
+        "6",
+        "0"
+      ],
+      "answer": "3",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-050",
+      "type": "mcq",
+      "question": "25 - 9 = ?",
+      "options": [
+        "14",
+        "18",
+        "13",
+        "16"
+      ],
+      "answer": "16",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m1-051",
+      "type": "mcq",
+      "question": "34 - 18 = ?",
+      "options": [
+        "16",
+        "19",
+        "14",
+        "15"
+      ],
+      "answer": "16",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m1-052",
+      "type": "mcq",
+      "question": "50 - 23 = ?",
+      "options": [
+        "25",
+        "27",
+        "29",
+        "24"
+      ],
+      "answer": "27",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m1-053",
+      "type": "mcq",
+      "question": "What comes next? 2, 4, 6, __",
+      "options": [
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "answer": "8",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-054",
+      "type": "mcq",
+      "question": "What comes next? 5, 10, 15, __",
+      "options": [
+        "20",
+        "18",
+        "25",
+        "16"
+      ],
+      "answer": "20",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-055",
+      "type": "mcq",
+      "question": "What comes next? 1, 3, 5, __",
+      "options": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "answer": "7",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-056",
+      "type": "mcq",
+      "question": "What comes next? 10, 20, 30, __",
+      "options": [
+        "40",
+        "35",
+        "45",
+        "31"
+      ],
+      "answer": "40",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-057",
+      "type": "choose_answer",
+      "question": "What is the missing number? 3, 6, 9, __, 15",
+      "options": [
+        "12",
+        "10",
+        "13",
+        "11"
+      ],
+      "answer": "12",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m1-058",
+      "type": "true_false",
+      "question": "In the pattern 2, 4, 6, 8, each number is 2 more than the one before.",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-059",
+      "type": "mcq",
+      "question": "Which sign is correct? 7 __ 4",
+      "options": [
+        ">",
+        "<",
+        "="
+      ],
+      "answer": ">",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-060",
+      "type": "mcq",
+      "question": "Which sign is correct? 3 __ 9",
+      "options": [
+        "<",
+        ">",
+        "="
+      ],
+      "answer": "<",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-061",
+      "type": "mcq",
+      "question": "Which sign is correct? 5 __ 5",
+      "options": [
+        "=",
+        "<",
+        ">"
+      ],
+      "answer": "=",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-062",
+      "type": "true_false",
+      "question": "10 is greater than 8.",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-063",
+      "type": "true_false",
+      "question": "6 is greater than 9.",
+      "answer": false,
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-064",
+      "type": "yes_no",
+      "question": "Is 12 greater than 8?",
+      "answer": "Yes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-065",
+      "type": "choose_answer",
+      "question": "Which number is the smallest?",
+      "options": [
+        "9",
+        "15",
+        "21",
+        "6"
+      ],
+      "answer": "6",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m1-066",
+      "type": "choose_answer",
+      "question": "Which number is the greatest?",
+      "options": [
+        "18",
+        "24",
+        "9",
+        "15"
+      ],
+      "answer": "24",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m1-067",
+      "type": "mcq",
+      "question": "How many sides does a triangle have?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "2"
+      ],
+      "answer": "3",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-068",
+      "type": "mcq",
+      "question": "How many sides does a square have?",
+      "options": [
+        "4",
+        "3",
+        "5",
+        "6"
+      ],
+      "answer": "4",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-069",
+      "type": "mcq",
+      "question": "How many corners does a rectangle have?",
+      "options": [
+        "4",
+        "3",
+        "2",
+        "5"
+      ],
+      "answer": "4",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-070",
+      "type": "mcq",
+      "question": "Which shape has no corners at all?",
+      "options": [
+        "Circle",
+        "Square",
+        "Triangle",
+        "Rectangle"
+      ],
+      "answer": "Circle",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-071",
+      "type": "true_false",
+      "question": "A circle has 3 sides.",
+      "answer": false,
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-072",
+      "type": "true_false",
+      "question": "A square has 4 equal sides.",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-073",
+      "type": "yes_no",
+      "question": "Does a triangle have 3 corners?",
+      "answer": "Yes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-074",
+      "type": "odd_one_out",
+      "question": "Which shape is different from the others (not four-sided)?",
+      "options": [
+        "Square",
+        "Rectangle",
+        "Triangle",
+        "Square (again type)"
+      ],
+      "answer": "Triangle",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-075",
+      "type": "match",
+      "question": "Match the shape to its number of sides.",
+      "pairs": [
+        {
+          "left": "Triangle",
+          "right": "3 sides"
+        },
+        {
+          "left": "Square",
+          "right": "4 sides"
+        },
+        {
+          "left": "Circle",
+          "right": "0 sides"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "m1-076",
+      "type": "choose_answer",
+      "question": "Which of these is a 3D shape (not flat)?",
+      "options": [
+        "Ball (sphere)",
+        "Circle",
+        "Square",
+        "Triangle"
+      ],
+      "answer": "Ball (sphere)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m1-077",
+      "type": "mcq",
+      "question": "Which is longer — a pencil or a bus?",
+      "options": [
+        "Bus",
+        "Pencil",
+        "Both same",
+        "Cannot tell"
+      ],
+      "answer": "Bus",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-078",
+      "type": "mcq",
+      "question": "Which is shorter — an ant or an elephant?",
+      "options": [
+        "Ant",
+        "Elephant",
+        "Both same",
+        "Cannot tell"
+      ],
+      "answer": "Ant",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-079",
+      "type": "mcq",
+      "question": "Which is heavier — a stone or a feather?",
+      "options": [
+        "Stone",
+        "Feather",
+        "Both same",
+        "Cannot tell"
+      ],
+      "answer": "Stone",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-080",
+      "type": "true_false",
+      "question": "A book is usually heavier than a leaf.",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-081",
+      "type": "yes_no",
+      "question": "Is a table taller than a chair usually?",
+      "answer": "Yes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-082",
+      "type": "choose_answer",
+      "question": "Which is used to measure how heavy something is?",
+      "options": [
+        "Weighing scale",
+        "Clock",
+        "Ruler only",
+        "Calendar"
+      ],
+      "answer": "Weighing scale",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m1-083",
+      "type": "mcq",
+      "question": "How many days are there in a week?",
+      "options": [
+        "7",
+        "5",
+        "6",
+        "10"
+      ],
+      "answer": "7",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-084",
+      "type": "mcq",
+      "question": "What comes after Monday?",
+      "options": [
+        "Tuesday",
+        "Sunday",
+        "Wednesday",
+        "Friday"
+      ],
+      "answer": "Tuesday",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-085",
+      "type": "mcq",
+      "question": "Which comes first in a day — morning or night?",
+      "options": [
+        "Morning",
+        "Night",
+        "Both same",
+        "Cannot tell"
+      ],
+      "answer": "Morning",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-086",
+      "type": "true_false",
+      "question": "There are 7 days in a week.",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-087",
+      "type": "yes_no",
+      "question": "Does the sun rise in the morning?",
+      "answer": "Yes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-088",
+      "type": "choose_answer",
+      "question": "Which day comes just before Friday?",
+      "options": [
+        "Thursday",
+        "Saturday",
+        "Wednesday",
+        "Sunday"
+      ],
+      "answer": "Thursday",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m1-089",
+      "type": "mcq",
+      "question": "Which coin/note is used to buy things in India?",
+      "options": [
+        "Rupee",
+        "Dollar",
+        "Pound",
+        "Euro"
+      ],
+      "answer": "Rupee",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-090",
+      "type": "mcq",
+      "question": "If you have a 5 rupee coin and a 2 rupee coin, how much do you have in total?",
+      "options": [
+        "7",
+        "3",
+        "10",
+        "5"
+      ],
+      "answer": "7",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-091",
+      "type": "true_false",
+      "question": "A 10 rupee note is worth more than a 5 rupee coin.",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-092",
+      "type": "choose_answer",
+      "question": "You have 10 rupees and spend 4 rupees. How much is left?",
+      "options": [
+        "6",
+        "4",
+        "14",
+        "5"
+      ],
+      "answer": "6",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m1-093",
+      "type": "mcq",
+      "question": "What is double 3?",
+      "options": [
+        "6",
+        "3",
+        "9",
+        "5"
+      ],
+      "answer": "6",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-094",
+      "type": "mcq",
+      "question": "What is double 4?",
+      "options": [
+        "8",
+        "4",
+        "6",
+        "10"
+      ],
+      "answer": "8",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-095",
+      "type": "choose_answer",
+      "question": "What is 10 take away 1?",
+      "options": [
+        "9",
+        "8",
+        "10",
+        "11"
+      ],
+      "answer": "9",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-096",
+      "type": "choose_answer",
+      "question": "What is double 5?",
+      "options": [
+        "10",
+        "5",
+        "15",
+        "20"
+      ],
+      "answer": "10",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m1-097",
+      "type": "mcq",
+      "question": "Riya has 3 apples. Her mother gives her 2 more. How many apples does Riya have now?",
+      "options": [
+        "5",
+        "4",
+        "6",
+        "3"
+      ],
+      "answer": "5",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-098",
+      "type": "choose_answer",
+      "question": "There are 8 birds on a tree. 3 birds fly away. How many birds are left?",
+      "options": [
+        "5",
+        "6",
+        "4",
+        "3"
+      ],
+      "answer": "5",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m1-099",
+      "type": "odd_one_out",
+      "question": "Which one does not belong with the others?",
+      "options": [
+        "Apple",
+        "Banana",
+        "Mango",
+        "Chair"
+      ],
+      "answer": "Chair",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m1-100",
+      "type": "true_false",
+      "question": "2, 4, 6, 8 are all even numbers.",
+      "answer": true,
+      "difficulty": "medium"
+    }
+  ]
+}

@@ -1,0 +1,1221 @@
+{
+  "class": 2,
+  "subject": "maths",
+  "topic": "Oral / Quiz Type Maths",
+  "questions": [
+    {
+      "id": "m2-001",
+      "type": "mcq",
+      "question": "Which number comes after 49?",
+      "options": [
+        "48",
+        "50",
+        "51",
+        "47"
+      ],
+      "answer": "50",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-002",
+      "type": "mcq",
+      "question": "Which number comes before 100?",
+      "options": [
+        "99",
+        "101",
+        "98",
+        "90"
+      ],
+      "answer": "99",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-003",
+      "type": "choose_answer",
+      "question": "Skip count by 2: 2, 4, 6, __",
+      "options": [
+        "8",
+        "7",
+        "9",
+        "10"
+      ],
+      "answer": "8",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-004",
+      "type": "choose_answer",
+      "question": "Skip count by 10: 10, 20, 30, __",
+      "options": [
+        "40",
+        "35",
+        "50",
+        "41"
+      ],
+      "answer": "40",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m2-005",
+      "type": "true_false",
+      "question": "The number after 89 is 90.",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-006",
+      "type": "arrange_order",
+      "question": "Arrange these numbers in counting order (smallest first).",
+      "items": [
+        "47",
+        "23",
+        "65",
+        "12"
+      ],
+      "answer": [
+        "12",
+        "23",
+        "47",
+        "65"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "m2-007",
+      "type": "mcq",
+      "question": "In the number 68, how many tens are there?",
+      "options": [
+        "6",
+        "8",
+        "0",
+        "14"
+      ],
+      "answer": "6",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-008",
+      "type": "mcq",
+      "question": "In the number 94, how many ones are there?",
+      "options": [
+        "4",
+        "9",
+        "0",
+        "94"
+      ],
+      "answer": "4",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-009",
+      "type": "choose_answer",
+      "question": "5 tens and 7 ones make which number?",
+      "options": [
+        "57",
+        "75",
+        "50",
+        "7"
+      ],
+      "answer": "57",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-010",
+      "type": "choose_answer",
+      "question": "What is the expanded form of 46?",
+      "options": [
+        "40 + 6",
+        "4 + 6",
+        "400 + 6",
+        "46 + 0"
+      ],
+      "answer": "40 + 6",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m2-011",
+      "type": "true_false",
+      "question": "In 73, there are 7 tens and 3 ones.",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-012",
+      "type": "true_false",
+      "question": "The expanded form of 82 is 8 + 2.",
+      "answer": false,
+      "difficulty": "medium"
+    },
+    {
+      "id": "m2-013",
+      "type": "mcq",
+      "question": "23 + 14 = ?",
+      "options": [
+        "37",
+        "38",
+        "42",
+        "32"
+      ],
+      "answer": "37",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-014",
+      "type": "mcq",
+      "question": "32 + 27 = ?",
+      "options": [
+        "64",
+        "56",
+        "59",
+        "54"
+      ],
+      "answer": "59",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-015",
+      "type": "mcq",
+      "question": "45 + 13 = ?",
+      "options": [
+        "63",
+        "58",
+        "59",
+        "53"
+      ],
+      "answer": "58",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-016",
+      "type": "mcq",
+      "question": "56 + 22 = ?",
+      "options": [
+        "78",
+        "75",
+        "83",
+        "73"
+      ],
+      "answer": "78",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-017",
+      "type": "mcq",
+      "question": "18 + 21 = ?",
+      "options": [
+        "36",
+        "39",
+        "44",
+        "41"
+      ],
+      "answer": "39",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-018",
+      "type": "mcq",
+      "question": "34 + 15 = ?",
+      "options": [
+        "51",
+        "44",
+        "46",
+        "49"
+      ],
+      "answer": "49",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-019",
+      "type": "mcq",
+      "question": "67 + 38 = ?",
+      "options": [
+        "103",
+        "108",
+        "105",
+        "106"
+      ],
+      "answer": "105",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m2-020",
+      "type": "mcq",
+      "question": "89 + 46 = ?",
+      "options": [
+        "127",
+        "136",
+        "135",
+        "137"
+      ],
+      "answer": "135",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m2-021",
+      "type": "mcq",
+      "question": "45 - 23 = ?",
+      "options": [
+        "25",
+        "22",
+        "27",
+        "24"
+      ],
+      "answer": "22",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-022",
+      "type": "mcq",
+      "question": "58 - 26 = ?",
+      "options": [
+        "35",
+        "32",
+        "33",
+        "27"
+      ],
+      "answer": "32",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-023",
+      "type": "mcq",
+      "question": "67 - 34 = ?",
+      "options": [
+        "33",
+        "31",
+        "36",
+        "34"
+      ],
+      "answer": "33",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-024",
+      "type": "mcq",
+      "question": "89 - 45 = ?",
+      "options": [
+        "39",
+        "41",
+        "44",
+        "42"
+      ],
+      "answer": "44",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-025",
+      "type": "mcq",
+      "question": "73 - 21 = ?",
+      "options": [
+        "57",
+        "52",
+        "54",
+        "51"
+      ],
+      "answer": "52",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-026",
+      "type": "mcq",
+      "question": "96 - 52 = ?",
+      "options": [
+        "43",
+        "49",
+        "41",
+        "44"
+      ],
+      "answer": "44",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-027",
+      "type": "mcq",
+      "question": "72 - 38 = ?",
+      "options": [
+        "33",
+        "42",
+        "34",
+        "31"
+      ],
+      "answer": "34",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m2-028",
+      "type": "mcq",
+      "question": "91 - 57 = ?",
+      "options": [
+        "33",
+        "34",
+        "32",
+        "31"
+      ],
+      "answer": "34",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m2-029",
+      "type": "mcq",
+      "question": "2 x 3 = ?",
+      "options": [
+        "6",
+        "4",
+        "7",
+        "9"
+      ],
+      "answer": "6",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-030",
+      "type": "mcq",
+      "question": "2 x 5 = ?",
+      "options": [
+        "12",
+        "6",
+        "10",
+        "7"
+      ],
+      "answer": "10",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-031",
+      "type": "mcq",
+      "question": "5 x 2 = ?",
+      "options": [
+        "10",
+        "9",
+        "14",
+        "8"
+      ],
+      "answer": "10",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-032",
+      "type": "mcq",
+      "question": "5 x 4 = ?",
+      "options": [
+        "18",
+        "21",
+        "17",
+        "20"
+      ],
+      "answer": "20",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-033",
+      "type": "mcq",
+      "question": "10 x 3 = ?",
+      "options": [
+        "34",
+        "30",
+        "33",
+        "26"
+      ],
+      "answer": "30",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-034",
+      "type": "mcq",
+      "question": "2 x 7 = ?",
+      "options": [
+        "20",
+        "14",
+        "12",
+        "15"
+      ],
+      "answer": "14",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m2-035",
+      "type": "mcq",
+      "question": "5 x 6 = ?",
+      "options": [
+        "31",
+        "32",
+        "36",
+        "30"
+      ],
+      "answer": "30",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m2-036",
+      "type": "mcq",
+      "question": "10 x 8 = ?",
+      "options": [
+        "81",
+        "74",
+        "80",
+        "83"
+      ],
+      "answer": "80",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m2-037",
+      "type": "mcq",
+      "question": "10 ÷ 2 = ?",
+      "options": [
+        "5",
+        "8",
+        "6",
+        "3"
+      ],
+      "answer": "5",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-038",
+      "type": "mcq",
+      "question": "15 ÷ 5 = ?",
+      "options": [
+        "2",
+        "4",
+        "3",
+        "5"
+      ],
+      "answer": "3",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-039",
+      "type": "mcq",
+      "question": "20 ÷ 10 = ?",
+      "options": [
+        "4",
+        "5",
+        "2",
+        "3"
+      ],
+      "answer": "2",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-040",
+      "type": "mcq",
+      "question": "6 ÷ 2 = ?",
+      "options": [
+        "6",
+        "3",
+        "5",
+        "0"
+      ],
+      "answer": "3",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-041",
+      "type": "mcq",
+      "question": "12 ÷ 3 = ?",
+      "options": [
+        "4",
+        "7",
+        "1",
+        "3"
+      ],
+      "answer": "4",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-042",
+      "type": "mcq",
+      "question": "18 ÷ 3 = ?",
+      "options": [
+        "9",
+        "6",
+        "7",
+        "5"
+      ],
+      "answer": "6",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m2-043",
+      "type": "mcq",
+      "question": "24 ÷ 4 = ?",
+      "options": [
+        "2",
+        "6",
+        "10",
+        "9"
+      ],
+      "answer": "6",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m2-044",
+      "type": "mcq",
+      "question": "What comes next? 10, 20, 30, __",
+      "options": [
+        "40",
+        "35",
+        "50",
+        "31"
+      ],
+      "answer": "40",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-045",
+      "type": "mcq",
+      "question": "What comes next? 3, 6, 9, __",
+      "options": [
+        "12",
+        "10",
+        "11",
+        "13"
+      ],
+      "answer": "12",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-046",
+      "type": "choose_answer",
+      "question": "What is the missing number? 15, 20, __, 30",
+      "options": [
+        "25",
+        "24",
+        "26",
+        "23"
+      ],
+      "answer": "25",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-047",
+      "type": "choose_answer",
+      "question": "What is the missing number? 5, 10, 15, __, 25",
+      "options": [
+        "20",
+        "18",
+        "22",
+        "19"
+      ],
+      "answer": "20",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m2-048",
+      "type": "true_false",
+      "question": "In the pattern 2, 4, 6, 8, each number increases by 2.",
+      "answer": true,
+      "difficulty": "medium"
+    },
+    {
+      "id": "m2-049",
+      "type": "mcq",
+      "question": "Which sign is correct? 45 __ 54",
+      "options": [
+        "<",
+        ">",
+        "="
+      ],
+      "answer": "<",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-050",
+      "type": "mcq",
+      "question": "Which sign is correct? 78 __ 78",
+      "options": [
+        "=",
+        "<",
+        ">"
+      ],
+      "answer": "=",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-051",
+      "type": "true_false",
+      "question": "67 is greater than 76.",
+      "answer": false,
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-052",
+      "type": "choose_answer",
+      "question": "Which is the greatest number?",
+      "options": [
+        "58",
+        "85",
+        "48",
+        "54"
+      ],
+      "answer": "85",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m2-053",
+      "type": "mcq",
+      "question": "If a chocolate is cut into 2 equal parts, each part is called?",
+      "options": [
+        "Half",
+        "Quarter",
+        "Whole",
+        "Third"
+      ],
+      "answer": "Half",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-054",
+      "type": "mcq",
+      "question": "If a pizza is cut into 4 equal parts, each part is called?",
+      "options": [
+        "Quarter",
+        "Half",
+        "Whole",
+        "Fifth"
+      ],
+      "answer": "Quarter",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-055",
+      "type": "true_false",
+      "question": "Half means one part out of two equal parts.",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-056",
+      "type": "true_false",
+      "question": "Quarter means one part out of three equal parts.",
+      "answer": false,
+      "difficulty": "medium"
+    },
+    {
+      "id": "m2-057",
+      "type": "yes_no",
+      "question": "Is half of a whole equal to 2 equal parts, taking 1?",
+      "answer": "Yes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-058",
+      "type": "choose_answer",
+      "question": "Which fraction shows one part out of three equal parts?",
+      "options": [
+        "1/3",
+        "1/2",
+        "1/4",
+        "2/3"
+      ],
+      "answer": "1/3",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m2-059",
+      "type": "mcq",
+      "question": "How many sides does a pentagon have?",
+      "options": [
+        "5",
+        "4",
+        "6",
+        "3"
+      ],
+      "answer": "5",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-060",
+      "type": "mcq",
+      "question": "How many corners does a triangle have?",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "5"
+      ],
+      "answer": "3",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-061",
+      "type": "true_false",
+      "question": "A cube has 6 flat faces.",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-062",
+      "type": "true_false",
+      "question": "A circle has 4 corners.",
+      "answer": false,
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-063",
+      "type": "match",
+      "question": "Match the shape to its number of corners.",
+      "pairs": [
+        {
+          "left": "Triangle",
+          "right": "3 corners"
+        },
+        {
+          "left": "Square",
+          "right": "4 corners"
+        },
+        {
+          "left": "Circle",
+          "right": "0 corners"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "m2-064",
+      "type": "mcq",
+      "question": "Which unit is used to measure length?",
+      "options": [
+        "Centimetre",
+        "Kilogram",
+        "Litre",
+        "Hour"
+      ],
+      "answer": "Centimetre",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-065",
+      "type": "mcq",
+      "question": "Which unit is used to measure weight?",
+      "options": [
+        "Kilogram",
+        "Metre",
+        "Litre",
+        "Minute"
+      ],
+      "answer": "Kilogram",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-066",
+      "type": "mcq",
+      "question": "Which unit is used to measure liquid?",
+      "options": [
+        "Litre",
+        "Kilogram",
+        "Metre",
+        "Hour"
+      ],
+      "answer": "Litre",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-067",
+      "type": "true_false",
+      "question": "A metre is used to measure length.",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-068",
+      "type": "choose_answer",
+      "question": "Which is heavier — 1 kg of stones or 1 kg of cotton?",
+      "options": [
+        "Both are the same weight",
+        "Stones",
+        "Cotton",
+        "Cannot tell"
+      ],
+      "answer": "Both are the same weight",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m2-069",
+      "type": "choose_answer",
+      "question": "Which is more — 5 litres or 500 millilitres?",
+      "options": [
+        "5 litres",
+        "500 millilitres",
+        "Both same",
+        "Cannot tell"
+      ],
+      "answer": "5 litres",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m2-070",
+      "type": "mcq",
+      "question": "How many months are there in a year?",
+      "options": [
+        "12",
+        "10",
+        "11",
+        "13"
+      ],
+      "answer": "12",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-071",
+      "type": "mcq",
+      "question": "How many hours are there in a day?",
+      "options": [
+        "24",
+        "12",
+        "20",
+        "23"
+      ],
+      "answer": "24",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-072",
+      "type": "mcq",
+      "question": "Which month comes after January?",
+      "options": [
+        "February",
+        "March",
+        "December",
+        "April"
+      ],
+      "answer": "February",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-073",
+      "type": "true_false",
+      "question": "There are 60 minutes in an hour.",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-074",
+      "type": "choose_answer",
+      "question": "If it is 3 o'clock now, what time will it be after 2 hours?",
+      "options": [
+        "5 o'clock",
+        "4 o'clock",
+        "6 o'clock",
+        "1 o'clock"
+      ],
+      "answer": "5 o'clock",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m2-075",
+      "type": "choose_answer",
+      "question": "Which day comes two days after Monday?",
+      "options": [
+        "Wednesday",
+        "Tuesday",
+        "Thursday",
+        "Friday"
+      ],
+      "answer": "Wednesday",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m2-076",
+      "type": "mcq",
+      "question": "You have a 10 rupee note and a 5 rupee coin. How much do you have?",
+      "options": [
+        "15",
+        "10",
+        "5",
+        "20"
+      ],
+      "answer": "15",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-077",
+      "type": "mcq",
+      "question": "You have 20 rupees and buy a toy for 12 rupees. How much money is left?",
+      "options": [
+        "8",
+        "12",
+        "32",
+        "10"
+      ],
+      "answer": "8",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-078",
+      "type": "true_false",
+      "question": "A 50 rupee note is worth more than a 20 rupee note.",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-079",
+      "type": "true_false",
+      "question": "2 coins of 5 rupees each make 15 rupees.",
+      "answer": false,
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-080",
+      "type": "choose_answer",
+      "question": "You buy a pencil for 6 rupees with a 10 rupee note. How much change will you get?",
+      "options": [
+        "4",
+        "6",
+        "16",
+        "5"
+      ],
+      "answer": "4",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m2-081",
+      "type": "choose_answer",
+      "question": "How many 10 rupee notes make 50 rupees?",
+      "options": [
+        "5",
+        "4",
+        "6",
+        "10"
+      ],
+      "answer": "5",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m2-082",
+      "type": "mcq",
+      "question": "What is double 6?",
+      "options": [
+        "12",
+        "6",
+        "18",
+        "10"
+      ],
+      "answer": "12",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-083",
+      "type": "mcq",
+      "question": "What is double 9?",
+      "options": [
+        "18",
+        "9",
+        "81",
+        "16"
+      ],
+      "answer": "18",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-084",
+      "type": "choose_answer",
+      "question": "What is half of 10?",
+      "options": [
+        "5",
+        "10",
+        "2",
+        "20"
+      ],
+      "answer": "5",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-085",
+      "type": "choose_answer",
+      "question": "What is half of 20?",
+      "options": [
+        "10",
+        "20",
+        "5",
+        "40"
+      ],
+      "answer": "10",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-086",
+      "type": "choose_answer",
+      "question": "What is 25 + 5, quickly?",
+      "options": [
+        "30",
+        "25",
+        "20",
+        "35"
+      ],
+      "answer": "30",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m2-087",
+      "type": "choose_answer",
+      "question": "What is 40 - 5, quickly?",
+      "options": [
+        "35",
+        "30",
+        "45",
+        "25"
+      ],
+      "answer": "35",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m2-088",
+      "type": "mcq",
+      "question": "Meena has 12 candies. She gives 5 to her friend. How many candies does she have now?",
+      "options": [
+        "7",
+        "5",
+        "17",
+        "6"
+      ],
+      "answer": "7",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-089",
+      "type": "mcq",
+      "question": "There are 4 rows of chairs with 5 chairs in each row. How many chairs are there in total?",
+      "options": [
+        "20",
+        "9",
+        "15",
+        "25"
+      ],
+      "answer": "20",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-090",
+      "type": "choose_answer",
+      "question": "Raju has 3 packets of 4 pencils each. How many pencils does he have in total?",
+      "options": [
+        "12",
+        "7",
+        "9",
+        "10"
+      ],
+      "answer": "12",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m2-091",
+      "type": "choose_answer",
+      "question": "A class has 30 students. If 18 are girls, how many are boys?",
+      "options": [
+        "12",
+        "18",
+        "30",
+        "48"
+      ],
+      "answer": "12",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m2-092",
+      "type": "true_false",
+      "question": "If you have 15 rupees and spend 9, you have 6 rupees left.",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-093",
+      "type": "odd_one_out",
+      "question": "Which number is odd one out (not a multiple of 2)?",
+      "options": [
+        "2",
+        "4",
+        "7",
+        "6"
+      ],
+      "answer": "7",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-094",
+      "type": "odd_one_out",
+      "question": "Which shape does not belong with the others?",
+      "options": [
+        "Square",
+        "Rectangle",
+        "Triangle",
+        "Circle"
+      ],
+      "answer": "Circle",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-095",
+      "type": "true_false",
+      "question": "2, 4, 6, 8 are all even numbers.",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-096",
+      "type": "choose_answer",
+      "question": "Find the rule: 1, 2, 4, 7, 11 — what is added each time?",
+      "options": [
+        "It increases by one more each time (1,2,3,4)",
+        "It always adds 2",
+        "It always adds 3",
+        "It subtracts each time"
+      ],
+      "answer": "It increases by one more each time (1,2,3,4)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m2-097",
+      "type": "mcq",
+      "question": "About how many students are usually in one classroom — near 30 or near 3?",
+      "options": [
+        "Near 30",
+        "Near 3",
+        "Near 300",
+        "Near 3000"
+      ],
+      "answer": "Near 30",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-098",
+      "type": "choose_answer",
+      "question": "There are 48 marbles in a jar. Is this number closer to 50 or 40?",
+      "options": [
+        "Closer to 50",
+        "Closer to 40",
+        "Exactly in the middle",
+        "Cannot tell"
+      ],
+      "answer": "Closer to 50",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m2-099",
+      "type": "mcq",
+      "question": "If a picture chart shows 3 apples for Monday and 5 apples for Tuesday, which day has more apples?",
+      "options": [
+        "Tuesday",
+        "Monday",
+        "Both same",
+        "Cannot tell"
+      ],
+      "answer": "Tuesday",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m2-100",
+      "type": "choose_answer",
+      "question": "A table shows: Red=4, Blue=6, Green=2. Which colour has the least count?",
+      "options": [
+        "Green",
+        "Red",
+        "Blue",
+        "Cannot tell"
+      ],
+      "answer": "Green",
+      "difficulty": "medium"
+    }
+  ]
+}

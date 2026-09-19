@@ -1,0 +1,1264 @@
+{
+  "class": 4,
+  "subject": "maths",
+  "topic": "Oral / Quiz Type Maths",
+  "questions": [
+    {
+      "id": "m4-001",
+      "type": "mcq",
+      "question": "Which number comes after 9999?",
+      "options": [
+        "9998",
+        "10000",
+        "10001",
+        "9990"
+      ],
+      "answer": "10000",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m4-002",
+      "type": "mcq",
+      "question": "Which number comes before 5000?",
+      "options": [
+        "4999",
+        "5001",
+        "4990",
+        "4900"
+      ],
+      "answer": "4999",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m4-003",
+      "type": "choose_answer",
+      "question": "Skip count by 50: 50, 100, 150, __",
+      "options": [
+        "200",
+        "180",
+        "220",
+        "190"
+      ],
+      "answer": "200",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-004",
+      "type": "choose_answer",
+      "question": "Skip count by 100: 300, 400, 500, __",
+      "options": [
+        "600",
+        "550",
+        "650",
+        "590"
+      ],
+      "answer": "600",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-005",
+      "type": "true_false",
+      "question": "1000 comes right after 999.",
+      "answer": true,
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-006",
+      "type": "arrange_order",
+      "question": "Arrange these numbers in counting order (smallest first).",
+      "items": [
+        "4506",
+        "4056",
+        "4650",
+        "4065"
+      ],
+      "answer": [
+        "4056",
+        "4065",
+        "4506",
+        "4650"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "m4-007",
+      "type": "mcq",
+      "question": "In the number 4,567, what is the place value of 5?",
+      "options": [
+        "500",
+        "5",
+        "50",
+        "5000"
+      ],
+      "answer": "500",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m4-008",
+      "type": "mcq",
+      "question": "In the number 8,921, what is the place value of 8?",
+      "options": [
+        "8000",
+        "8",
+        "80",
+        "800"
+      ],
+      "answer": "8000",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m4-009",
+      "type": "choose_answer",
+      "question": "What is the expanded form of 3,204?",
+      "options": [
+        "3000 + 200 + 0 + 4",
+        "3000 + 20 + 4",
+        "300 + 20 + 4",
+        "3000 + 204"
+      ],
+      "answer": "3000 + 200 + 0 + 4",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-010",
+      "type": "choose_answer",
+      "question": "4 thousands, 3 hundreds, 0 tens, 6 ones make which number?",
+      "options": [
+        "4306",
+        "4360",
+        "4036",
+        "4630"
+      ],
+      "answer": "4306",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-011",
+      "type": "true_false",
+      "question": "In the number 7,842, there are 7 thousands.",
+      "answer": true,
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-012",
+      "type": "choose_answer",
+      "question": "What is the place value of 0 in the number 5,082?",
+      "options": [
+        "0 (it holds the tens place with value 0)",
+        "80",
+        "800",
+        "8"
+      ],
+      "answer": "0 (it holds the tens place with value 0)",
+      "difficulty": "hard"
+    },
+    {
+      "id": "m4-013",
+      "type": "mcq",
+      "question": "2345 + 1234 = ?",
+      "options": [
+        "3576",
+        "3582",
+        "3574",
+        "3579"
+      ],
+      "answer": "3579",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m4-014",
+      "type": "mcq",
+      "question": "3456 + 2211 = ?",
+      "options": [
+        "5669",
+        "5665",
+        "5670",
+        "5667"
+      ],
+      "answer": "5667",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m4-015",
+      "type": "mcq",
+      "question": "4567 + 1322 = ?",
+      "options": [
+        "5886",
+        "5889",
+        "5869",
+        "5884"
+      ],
+      "answer": "5889",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m4-016",
+      "type": "mcq",
+      "question": "5678 + 2345 = ?",
+      "options": [
+        "8023",
+        "8021",
+        "8022",
+        "7993"
+      ],
+      "answer": "8023",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-017",
+      "type": "mcq",
+      "question": "6789 + 1567 = ?",
+      "options": [
+        "8351",
+        "8356",
+        "8357",
+        "8326"
+      ],
+      "answer": "8356",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-018",
+      "type": "mcq",
+      "question": "4321 + 3789 = ?",
+      "options": [
+        "8111",
+        "8107",
+        "8105",
+        "8110"
+      ],
+      "answer": "8110",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-019",
+      "type": "mcq",
+      "question": "7654 + 1876 = ?",
+      "options": [
+        "9560",
+        "9528",
+        "9530",
+        "9533"
+      ],
+      "answer": "9530",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-020",
+      "type": "choose_answer",
+      "question": "A school has 2,456 boys and 2,678 girls. How many students are there in total?",
+      "options": [
+        "5134",
+        "5124",
+        "5144",
+        "5034"
+      ],
+      "answer": "5134",
+      "difficulty": "hard"
+    },
+    {
+      "id": "m4-021",
+      "type": "mcq",
+      "question": "4567 - 2345 = ?",
+      "options": [
+        "2222",
+        "2223",
+        "2217",
+        "2202"
+      ],
+      "answer": "2222",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m4-022",
+      "type": "mcq",
+      "question": "6789 - 3456 = ?",
+      "options": [
+        "3333",
+        "3338",
+        "3332",
+        "3336"
+      ],
+      "answer": "3333",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m4-023",
+      "type": "mcq",
+      "question": "8765 - 4321 = ?",
+      "options": [
+        "4443",
+        "4424",
+        "4445",
+        "4444"
+      ],
+      "answer": "4444",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m4-024",
+      "type": "mcq",
+      "question": "9123 - 4567 = ?",
+      "options": [
+        "4561",
+        "4556",
+        "4553",
+        "4551"
+      ],
+      "answer": "4556",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-025",
+      "type": "mcq",
+      "question": "8234 - 3789 = ?",
+      "options": [
+        "4415",
+        "4442",
+        "4447",
+        "4445"
+      ],
+      "answer": "4445",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-026",
+      "type": "mcq",
+      "question": "7001 - 2456 = ?",
+      "options": [
+        "4515",
+        "4545",
+        "4546",
+        "4575"
+      ],
+      "answer": "4545",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-027",
+      "type": "mcq",
+      "question": "6345 - 1789 = ?",
+      "options": [
+        "4561",
+        "4551",
+        "4554",
+        "4556"
+      ],
+      "answer": "4556",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-028",
+      "type": "choose_answer",
+      "question": "A factory made 8,500 toys. 3,675 were sold. How many toys are left?",
+      "options": [
+        "4825",
+        "4725",
+        "4925",
+        "4815"
+      ],
+      "answer": "4825",
+      "difficulty": "hard"
+    },
+    {
+      "id": "m4-029",
+      "type": "mcq",
+      "question": "12 x 4 = ?",
+      "options": [
+        "45",
+        "49",
+        "48",
+        "51"
+      ],
+      "answer": "48",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m4-030",
+      "type": "mcq",
+      "question": "13 x 5 = ?",
+      "options": [
+        "65",
+        "68",
+        "63",
+        "64"
+      ],
+      "answer": "65",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m4-031",
+      "type": "mcq",
+      "question": "15 x 3 = ?",
+      "options": [
+        "48",
+        "42",
+        "44",
+        "45"
+      ],
+      "answer": "45",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m4-032",
+      "type": "mcq",
+      "question": "23 x 6 = ?",
+      "options": [
+        "128",
+        "136",
+        "138",
+        "141"
+      ],
+      "answer": "138",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-033",
+      "type": "mcq",
+      "question": "34 x 5 = ?",
+      "options": [
+        "170",
+        "160",
+        "180",
+        "167"
+      ],
+      "answer": "170",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-034",
+      "type": "mcq",
+      "question": "18 x 7 = ?",
+      "options": [
+        "126",
+        "116",
+        "131",
+        "129"
+      ],
+      "answer": "126",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-035",
+      "type": "mcq",
+      "question": "25 x 4 = ?",
+      "options": [
+        "103",
+        "102",
+        "101",
+        "100"
+      ],
+      "answer": "100",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-036",
+      "type": "choose_answer",
+      "question": "A box has 24 chocolates. How many chocolates are there in 15 boxes?",
+      "options": [
+        "360",
+        "350",
+        "370",
+        "340"
+      ],
+      "answer": "360",
+      "difficulty": "hard"
+    },
+    {
+      "id": "m4-037",
+      "type": "mcq",
+      "question": "84 ÷ 7 = ?",
+      "options": [
+        "14",
+        "9",
+        "8",
+        "12"
+      ],
+      "answer": "12",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m4-038",
+      "type": "mcq",
+      "question": "96 ÷ 8 = ?",
+      "options": [
+        "7",
+        "8",
+        "10",
+        "12"
+      ],
+      "answer": "12",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m4-039",
+      "type": "mcq",
+      "question": "144 ÷ 12 = ?",
+      "options": [
+        "11",
+        "13",
+        "7",
+        "12"
+      ],
+      "answer": "12",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-040",
+      "type": "mcq",
+      "question": "156 ÷ 13 = ?",
+      "options": [
+        "10",
+        "7",
+        "11",
+        "12"
+      ],
+      "answer": "12",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-041",
+      "type": "mcq",
+      "question": "225 ÷ 9 = ?",
+      "options": [
+        "25",
+        "20",
+        "27",
+        "22"
+      ],
+      "answer": "25",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-042",
+      "type": "mcq",
+      "question": "216 ÷ 8 = ?",
+      "options": [
+        "26",
+        "22",
+        "32",
+        "27"
+      ],
+      "answer": "27",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-043",
+      "type": "choose_answer",
+      "question": "When 97 is divided by 8, what is the remainder?",
+      "options": [
+        "1",
+        "0",
+        "2",
+        "7"
+      ],
+      "answer": "1",
+      "difficulty": "hard"
+    },
+    {
+      "id": "m4-044",
+      "type": "mcq",
+      "question": "What comes next? 100, 200, 300, __",
+      "options": [
+        "400",
+        "350",
+        "450",
+        "390"
+      ],
+      "answer": "400",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m4-045",
+      "type": "mcq",
+      "question": "What comes next? 5, 10, 20, 40, __",
+      "options": [
+        "80",
+        "60",
+        "70",
+        "45"
+      ],
+      "answer": "80",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m4-046",
+      "type": "choose_answer",
+      "question": "What is the missing number? 12, 24, __, 48, 60",
+      "options": [
+        "36",
+        "30",
+        "40",
+        "32"
+      ],
+      "answer": "36",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-047",
+      "type": "choose_answer",
+      "question": "What is the rule in this pattern? 3, 9, 27, 81",
+      "options": [
+        "Each number is multiplied by 3",
+        "Each number adds 6",
+        "Each number is multiplied by 2",
+        "Each number adds 9"
+      ],
+      "answer": "Each number is multiplied by 3",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-048",
+      "type": "true_false",
+      "question": "In the pattern 100, 90, 80, 70, each number decreases by 10.",
+      "answer": true,
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-049",
+      "type": "mcq",
+      "question": "Which sign is correct? 4,567 __ 4,657",
+      "options": [
+        "<",
+        ">",
+        "="
+      ],
+      "answer": "<",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m4-050",
+      "type": "true_false",
+      "question": "8,234 is greater than 8,324.",
+      "answer": false,
+      "difficulty": "easy"
+    },
+    {
+      "id": "m4-051",
+      "type": "choose_answer",
+      "question": "Which is the greatest number?",
+      "options": [
+        "6,543",
+        "6,453",
+        "6,345",
+        "6,534"
+      ],
+      "answer": "6,543",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-052",
+      "type": "choose_answer",
+      "question": "Which is the smallest number?",
+      "options": [
+        "9,087",
+        "9,807",
+        "9,708",
+        "9,870"
+      ],
+      "answer": "9,087",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-053",
+      "type": "mcq",
+      "question": "Which fraction is greater — 1/2 or 1/4?",
+      "options": [
+        "1/2",
+        "1/4",
+        "Both equal",
+        "Cannot tell"
+      ],
+      "answer": "1/2",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m4-054",
+      "type": "mcq",
+      "question": "Which fraction is greater — 3/4 or 1/2?",
+      "options": [
+        "3/4",
+        "1/2",
+        "Both equal",
+        "Cannot tell"
+      ],
+      "answer": "3/4",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m4-055",
+      "type": "choose_answer",
+      "question": "What is 1/2 + 1/2?",
+      "options": [
+        "1 (one whole)",
+        "2",
+        "1/4",
+        "1/2"
+      ],
+      "answer": "1 (one whole)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-056",
+      "type": "choose_answer",
+      "question": "Which fraction is equal to 2/4?",
+      "options": [
+        "1/2",
+        "1/4",
+        "3/4",
+        "2/2"
+      ],
+      "answer": "1/2",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-057",
+      "type": "true_false",
+      "question": "2/3 is greater than 1/3.",
+      "answer": true,
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-058",
+      "type": "choose_answer",
+      "question": "Arrange in your mind: which is smallest — 1/2, 1/3, 1/4?",
+      "options": [
+        "1/4",
+        "1/2",
+        "1/3",
+        "All equal"
+      ],
+      "answer": "1/4",
+      "difficulty": "hard"
+    },
+    {
+      "id": "m4-059",
+      "type": "mcq",
+      "question": "How many faces does a cuboid have?",
+      "options": [
+        "6",
+        "4",
+        "8",
+        "5"
+      ],
+      "answer": "6",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m4-060",
+      "type": "mcq",
+      "question": "How many edges does a cube have?",
+      "options": [
+        "12",
+        "6",
+        "8",
+        "10"
+      ],
+      "answer": "12",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m4-061",
+      "type": "choose_answer",
+      "question": "How many vertices (corners) does a cube have?",
+      "options": [
+        "8",
+        "6",
+        "12",
+        "4"
+      ],
+      "answer": "8",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-062",
+      "type": "choose_answer",
+      "question": "Which shape has all sides equal and 4 right angles?",
+      "options": [
+        "Square",
+        "Rectangle",
+        "Rhombus",
+        "Trapezium"
+      ],
+      "answer": "Square",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-063",
+      "type": "match",
+      "question": "Match the 3D shape to its number of faces.",
+      "pairs": [
+        {
+          "left": "Cube",
+          "right": "6 faces"
+        },
+        {
+          "left": "Cone",
+          "right": "2 faces"
+        },
+        {
+          "left": "Cylinder",
+          "right": "3 faces"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-064",
+      "type": "mcq",
+      "question": "How many metres make 1 kilometre?",
+      "options": [
+        "1000",
+        "100",
+        "10",
+        "10000"
+      ],
+      "answer": "1000",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m4-065",
+      "type": "mcq",
+      "question": "How many millimetres make 1 centimetre?",
+      "options": [
+        "10",
+        "100",
+        "1000",
+        "1"
+      ],
+      "answer": "10",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m4-066",
+      "type": "choose_answer",
+      "question": "A ribbon is 3 metres long. How many centimetres is that?",
+      "options": [
+        "300",
+        "30",
+        "3000",
+        "3"
+      ],
+      "answer": "300",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-067",
+      "type": "choose_answer",
+      "question": "A bag weighs 2,500 grams. How many kilograms is that?",
+      "options": [
+        "2.5 kg",
+        "25 kg",
+        "250 kg",
+        "2 kg"
+      ],
+      "answer": "2.5 kg",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-068",
+      "type": "true_false",
+      "question": "1 kilometre is longer than 500 metres.",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "m4-069",
+      "type": "choose_answer",
+      "question": "A tank has 5 litres of water. 2,500 millilitres are used. How many millilitres are left?",
+      "options": [
+        "2500",
+        "2000",
+        "3000",
+        "1500"
+      ],
+      "answer": "2500",
+      "difficulty": "hard"
+    },
+    {
+      "id": "m4-070",
+      "type": "mcq",
+      "question": "How many seconds are there in a minute?",
+      "options": [
+        "60",
+        "100",
+        "30",
+        "24"
+      ],
+      "answer": "60",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m4-071",
+      "type": "mcq",
+      "question": "How many weeks are there in a year (approximately)?",
+      "options": [
+        "52",
+        "48",
+        "50",
+        "54"
+      ],
+      "answer": "52",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m4-072",
+      "type": "choose_answer",
+      "question": "A train leaves at 9:15 and reaches at 11:45. How long is the journey?",
+      "options": [
+        "2 hours 30 minutes",
+        "2 hours",
+        "3 hours",
+        "1 hour 30 minutes"
+      ],
+      "answer": "2 hours 30 minutes",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-073",
+      "type": "choose_answer",
+      "question": "If a class starts at 10:20 and lasts 40 minutes, at what time does it end?",
+      "options": [
+        "11:00",
+        "10:40",
+        "11:20",
+        "10:50"
+      ],
+      "answer": "11:00",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-074",
+      "type": "true_false",
+      "question": "A quarter of an hour is 15 minutes.",
+      "answer": true,
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-075",
+      "type": "choose_answer",
+      "question": "A movie starts at 6:50 pm and ends at 9:10 pm. How long is the movie?",
+      "options": [
+        "2 hours 20 minutes",
+        "2 hours",
+        "2 hours 10 minutes",
+        "1 hour 50 minutes"
+      ],
+      "answer": "2 hours 20 minutes",
+      "difficulty": "hard"
+    },
+    {
+      "id": "m4-076",
+      "type": "mcq",
+      "question": "You buy items worth 345 rupees with a 500 rupee note. How much change will you get?",
+      "options": [
+        "155",
+        "145",
+        "165",
+        "150"
+      ],
+      "answer": "155",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m4-077",
+      "type": "mcq",
+      "question": "How many 50 rupee notes make 500 rupees?",
+      "options": [
+        "10",
+        "5",
+        "20",
+        "50"
+      ],
+      "answer": "10",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m4-078",
+      "type": "choose_answer",
+      "question": "A pen costs 25 rupees, a notebook costs 60 rupees. What is the total cost of 2 pens and 1 notebook?",
+      "options": [
+        "110",
+        "85",
+        "135",
+        "95"
+      ],
+      "answer": "110",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-079",
+      "type": "choose_answer",
+      "question": "Ravi has 250 rupees. He spends 90 rupees on a book and 60 rupees on a pen. How much is left?",
+      "options": [
+        "100",
+        "110",
+        "90",
+        "160"
+      ],
+      "answer": "100",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-080",
+      "type": "true_false",
+      "question": "4 notes of 100 rupees make 400 rupees.",
+      "answer": true,
+      "difficulty": "easy"
+    },
+    {
+      "id": "m4-081",
+      "type": "choose_answer",
+      "question": "A shopkeeper sold an item for 480 rupees which cost him 350 rupees. What was his profit?",
+      "options": [
+        "130",
+        "120",
+        "140",
+        "150"
+      ],
+      "answer": "130",
+      "difficulty": "hard"
+    },
+    {
+      "id": "m4-082",
+      "type": "mcq",
+      "question": "What is double 45?",
+      "options": [
+        "90",
+        "85",
+        "95",
+        "100"
+      ],
+      "answer": "90",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m4-083",
+      "type": "mcq",
+      "question": "What is half of 90?",
+      "options": [
+        "45",
+        "90",
+        "40",
+        "50"
+      ],
+      "answer": "45",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m4-084",
+      "type": "choose_answer",
+      "question": "What is 25 + 19, quickly?",
+      "options": [
+        "44",
+        "43",
+        "45",
+        "34"
+      ],
+      "answer": "44",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-085",
+      "type": "choose_answer",
+      "question": "What is double 35?",
+      "options": [
+        "70",
+        "65",
+        "75",
+        "60"
+      ],
+      "answer": "70",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-086",
+      "type": "choose_answer",
+      "question": "What is half of 80?",
+      "options": [
+        "40",
+        "80",
+        "20",
+        "45"
+      ],
+      "answer": "40",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-087",
+      "type": "choose_answer",
+      "question": "What is 100 - 47, quickly?",
+      "options": [
+        "53",
+        "57",
+        "43",
+        "63"
+      ],
+      "answer": "53",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-088",
+      "type": "mcq",
+      "question": "A library has 1,250 books. 375 are given out. How many books are left?",
+      "options": [
+        "875",
+        "885",
+        "865",
+        "895"
+      ],
+      "answer": "875",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m4-089",
+      "type": "choose_answer",
+      "question": "There are 24 students in a class, and each student needs 3 notebooks. How many notebooks are needed in total?",
+      "options": [
+        "72",
+        "68",
+        "76",
+        "64"
+      ],
+      "answer": "72",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-090",
+      "type": "choose_answer",
+      "question": "A farmer has 156 eggs. He packs them into trays of 12 eggs each. How many trays does he need?",
+      "options": [
+        "13",
+        "12",
+        "14",
+        "11"
+      ],
+      "answer": "13",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-091",
+      "type": "choose_answer",
+      "question": "A tank fills at 25 litres per minute. How many litres will it hold in 6 minutes?",
+      "options": [
+        "150",
+        "125",
+        "175",
+        "100"
+      ],
+      "answer": "150",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-092",
+      "type": "choose_answer",
+      "question": "A bus has 45 seats. If 28 seats are occupied and 9 more people get on, how many seats are still empty?",
+      "options": [
+        "8",
+        "17",
+        "10",
+        "9"
+      ],
+      "answer": "8",
+      "difficulty": "hard"
+    },
+    {
+      "id": "m4-093",
+      "type": "odd_one_out",
+      "question": "Which number is odd one out (not a multiple of 3)?",
+      "options": [
+        "9",
+        "12",
+        "20",
+        "15"
+      ],
+      "answer": "20",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m4-094",
+      "type": "choose_answer",
+      "question": "Find the rule: 2, 6, 18, 54 — what is happening each time?",
+      "options": [
+        "Each number is multiplied by 3",
+        "Each number adds 4",
+        "Each number is doubled",
+        "Each number adds 16"
+      ],
+      "answer": "Each number is multiplied by 3",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-095",
+      "type": "true_false",
+      "question": "All multiples of 10 are also multiples of 5.",
+      "answer": true,
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-096",
+      "type": "choose_answer",
+      "question": "Find the rule: 100, 91, 82, 73 — what is happening each time?",
+      "options": [
+        "Each number decreases by 9",
+        "Each number decreases by 10",
+        "Each number decreases by 8",
+        "Each number decreases by 11"
+      ],
+      "answer": "Each number decreases by 9",
+      "difficulty": "hard"
+    },
+    {
+      "id": "m4-097",
+      "type": "mcq",
+      "question": "A number is 493. Rounded to the nearest hundred, what is it?",
+      "options": [
+        "500",
+        "400",
+        "490",
+        "450"
+      ],
+      "answer": "500",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m4-098",
+      "type": "choose_answer",
+      "question": "A number is 748. Rounded to the nearest ten, what is it?",
+      "options": [
+        "750",
+        "740",
+        "700",
+        "745"
+      ],
+      "answer": "750",
+      "difficulty": "medium"
+    },
+    {
+      "id": "m4-099",
+      "type": "mcq",
+      "question": "A table shows: Monday=45, Tuesday=60, Wednesday=38. Which day had the highest sales?",
+      "options": [
+        "Tuesday",
+        "Monday",
+        "Wednesday",
+        "Cannot tell"
+      ],
+      "answer": "Tuesday",
+      "difficulty": "easy"
+    },
+    {
+      "id": "m4-100",
+      "type": "choose_answer",
+      "question": "A pictograph shows 5 symbols for Class A, each symbol = 8 students. How many students are in Class A?",
+      "options": [
+        "40",
+        "45",
+        "35",
+        "50"
+      ],
+      "answer": "40",
+      "difficulty": "medium"
+    }
+  ]
+}
