@@ -30,6 +30,13 @@
       "questionCount": 100
     },
     {
+      "file": "data/class-1/maths/oral-quiz-maths.json",
+      "class": 1,
+      "subject": "maths",
+      "topic": "Oral / Quiz Type Maths",
+      "questionCount": 100
+    },
+    {
       "file": "data/class-2/gk/samanya-gyan.json",
       "class": 2,
       "subject": "GK",
@@ -41,6 +48,13 @@
       "class": 2,
       "subject": "hindi",
       "topic": "व्याकरण",
+      "questionCount": 100
+    },
+    {
+      "file": "data/class-2/maths/oral-quiz-maths.json",
+      "class": 2,
+      "subject": "maths",
+      "topic": "Oral / Quiz Type Maths",
       "questionCount": 100
     },
     {
@@ -112,6 +126,13 @@
       "subject": "maths",
       "topic": "Numbers & Classification",
       "questionCount": 4
+    },
+    {
+      "file": "data/class-3/maths/oral-quiz-maths.json",
+      "class": 3,
+      "subject": "maths",
+      "topic": "Oral / Quiz Type Maths",
+      "questionCount": 100
     },
     {
       "file": "data/class-3/maths/ordering.json",
@@ -244,6 +265,13 @@
       "class": 4,
       "subject": "hindi",
       "topic": "व्याकरण",
+      "questionCount": 100
+    },
+    {
+      "file": "data/class-4/maths/oral-quiz-maths.json",
+      "class": 4,
+      "subject": "maths",
+      "topic": "Oral / Quiz Type Maths",
       "questionCount": 100
     },
     {
