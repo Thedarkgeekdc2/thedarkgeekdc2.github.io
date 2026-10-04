@@ -1,0 +1,1307 @@
+{
+  "class": 3,
+  "subject": "maths",
+  "topic": "Half and double",
+  "questions": [
+    {
+      "id": "halfdouble-mcq-001",
+      "type": "mcq",
+      "question": "What is half of 6?",
+      "options": [
+        "3",
+        "2",
+        "4",
+        "5"
+      ],
+      "answer": "3",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-002",
+      "type": "mcq",
+      "question": "What is half of 8?",
+      "options": [
+        "4",
+        "2",
+        "3",
+        "5"
+      ],
+      "answer": "4",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-003",
+      "type": "mcq",
+      "question": "What is half of 10?",
+      "options": [
+        "5",
+        "3",
+        "4",
+        "6"
+      ],
+      "answer": "5",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-004",
+      "type": "mcq",
+      "question": "What is half of 12?",
+      "options": [
+        "6",
+        "4",
+        "5",
+        "7"
+      ],
+      "answer": "6",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-005",
+      "type": "mcq",
+      "question": "What is half of 14?",
+      "options": [
+        "7",
+        "5",
+        "6",
+        "8"
+      ],
+      "answer": "7",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-006",
+      "type": "mcq",
+      "question": "What is half of 6?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answer": "3",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-007",
+      "type": "mcq",
+      "question": "What is half of 8?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "answer": "4",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-008",
+      "type": "mcq",
+      "question": "What is half of 10?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "answer": "5",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-009",
+      "type": "mcq",
+      "question": "What is half of 12?",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "answer": "6",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-010",
+      "type": "mcq",
+      "question": "What is half of 14?",
+      "options": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "answer": "7",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-011",
+      "type": "mcq",
+      "question": "Choose the half of 6.",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answer": "3",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-012",
+      "type": "mcq",
+      "question": "Choose the half of 8.",
+      "options": [
+        "2",
+        "4",
+        "6",
+        "8"
+      ],
+      "answer": "4",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-013",
+      "type": "mcq",
+      "question": "Choose the half of 10.",
+      "options": [
+        "3",
+        "5",
+        "7",
+        "9"
+      ],
+      "answer": "5",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-014",
+      "type": "mcq",
+      "question": "Choose the half of 12.",
+      "options": [
+        "4",
+        "6",
+        "8",
+        "10"
+      ],
+      "answer": "6",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-015",
+      "type": "mcq",
+      "question": "Choose the half of 14.",
+      "options": [
+        "5",
+        "7",
+        "9",
+        "11"
+      ],
+      "answer": "7",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-016",
+      "type": "mcq",
+      "question": "What is double of 3?",
+      "options": [
+        "6",
+        "4",
+        "5",
+        "7"
+      ],
+      "answer": "6",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-017",
+      "type": "mcq",
+      "question": "What is double of 4?",
+      "options": [
+        "8",
+        "6",
+        "7",
+        "9"
+      ],
+      "answer": "8",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-018",
+      "type": "mcq",
+      "question": "What is double of 5?",
+      "options": [
+        "10",
+        "8",
+        "9",
+        "11"
+      ],
+      "answer": "10",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-019",
+      "type": "mcq",
+      "question": "What is double of 6?",
+      "options": [
+        "12",
+        "9",
+        "10",
+        "13"
+      ],
+      "answer": "12",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-020",
+      "type": "mcq",
+      "question": "What is double of 7?",
+      "options": [
+        "14",
+        "11",
+        "12",
+        "15"
+      ],
+      "answer": "14",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-021",
+      "type": "mcq",
+      "question": "What is double of 3?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "answer": "6",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-022",
+      "type": "mcq",
+      "question": "What is double of 4?",
+      "options": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "answer": "8",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-023",
+      "type": "mcq",
+      "question": "What is double of 5?",
+      "options": [
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "answer": "10",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-024",
+      "type": "mcq",
+      "question": "What is double of 6?",
+      "options": [
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "answer": "12",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-025",
+      "type": "mcq",
+      "question": "What is double of 7?",
+      "options": [
+        "11",
+        "12",
+        "14",
+        "15"
+      ],
+      "answer": "14",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-026",
+      "type": "mcq",
+      "question": "Choose the double of 3.",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "answer": "6",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-027",
+      "type": "mcq",
+      "question": "Choose the double of 4.",
+      "options": [
+        "6",
+        "7",
+        "8",
+        "10"
+      ],
+      "answer": "8",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-028",
+      "type": "mcq",
+      "question": "Choose the double of 5.",
+      "options": [
+        "8",
+        "9",
+        "10",
+        "12"
+      ],
+      "answer": "10",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-029",
+      "type": "mcq",
+      "question": "Choose the double of 6.",
+      "options": [
+        "9",
+        "10",
+        "12",
+        "14"
+      ],
+      "answer": "12",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-030",
+      "type": "mcq",
+      "question": "Choose the double of 7.",
+      "options": [
+        "11",
+        "12",
+        "14",
+        "16"
+      ],
+      "answer": "14",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-031",
+      "type": "mcq",
+      "question": "4 is the ___ of 8.",
+      "options": [
+        "half",
+        "double",
+        "whole",
+        "quarter"
+      ],
+      "answer": "half",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-032",
+      "type": "mcq",
+      "question": "8 is the ___ of 4.",
+      "options": [
+        "half",
+        "double",
+        "whole",
+        "quarter"
+      ],
+      "answer": "double",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-033",
+      "type": "mcq",
+      "question": "3 is the ___ of 6.",
+      "options": [
+        "half",
+        "double",
+        "whole",
+        "quarter"
+      ],
+      "answer": "half",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-034",
+      "type": "mcq",
+      "question": "6 is the ___ of 3.",
+      "options": [
+        "half",
+        "double",
+        "whole",
+        "quarter"
+      ],
+      "answer": "double",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-035",
+      "type": "mcq",
+      "question": "5 is the ___ of 10.",
+      "options": [
+        "half",
+        "double",
+        "whole",
+        "quarter"
+      ],
+      "answer": "half",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-036",
+      "type": "mcq",
+      "question": "10 is the ___ of 5.",
+      "options": [
+        "half",
+        "double",
+        "whole",
+        "quarter"
+      ],
+      "answer": "double",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-037",
+      "type": "mcq",
+      "question": "6 is the ___ of 12.",
+      "options": [
+        "half",
+        "double",
+        "whole",
+        "quarter"
+      ],
+      "answer": "half",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-038",
+      "type": "mcq",
+      "question": "12 is the ___ of 6.",
+      "options": [
+        "half",
+        "double",
+        "whole",
+        "quarter"
+      ],
+      "answer": "double",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-039",
+      "type": "mcq",
+      "question": "7 is the ___ of 14.",
+      "options": [
+        "half",
+        "double",
+        "whole",
+        "quarter"
+      ],
+      "answer": "half",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-040",
+      "type": "mcq",
+      "question": "14 is the ___ of 7.",
+      "options": [
+        "half",
+        "double",
+        "whole",
+        "quarter"
+      ],
+      "answer": "double",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-041",
+      "type": "mcq",
+      "question": "When 8 marbles are shared equally between 2 children, each gets:",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "answer": "4",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-042",
+      "type": "mcq",
+      "question": "When 10 marbles are shared equally between 2 children, each gets:",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "answer": "5",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-043",
+      "type": "mcq",
+      "question": "When 12 marbles are shared equally between 2 children, each gets:",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "answer": "6",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-044",
+      "type": "mcq",
+      "question": "When 14 marbles are shared equally between 2 children, each gets:",
+      "options": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "answer": "7",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-045",
+      "type": "mcq",
+      "question": "A whole shared equally between 2 people gives each person a:",
+      "options": [
+        "half",
+        "double",
+        "quarter",
+        "whole"
+      ],
+      "answer": "half",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-046",
+      "type": "mcq",
+      "question": "How many halves make one whole?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": "2",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-047",
+      "type": "mcq",
+      "question": "Which two groups are equal?",
+      "options": [
+        "4 and 4",
+        "3 and 4",
+        "4 and 5",
+        "5 and 6"
+      ],
+      "answer": "4 and 4",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-048",
+      "type": "mcq",
+      "question": "Which two groups are equal?",
+      "options": [
+        "3 and 3",
+        "3 and 4",
+        "4 and 5",
+        "5 and 6"
+      ],
+      "answer": "3 and 3",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-049",
+      "type": "mcq",
+      "question": "Which two groups show half of 8?",
+      "options": [
+        "4 and 4",
+        "3 and 5",
+        "2 and 6",
+        "1 and 7"
+      ],
+      "answer": "4 and 4",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-050",
+      "type": "mcq",
+      "question": "Which two groups show half of 10?",
+      "options": [
+        "4 and 6",
+        "5 and 5",
+        "3 and 7",
+        "2 and 8"
+      ],
+      "answer": "5 and 5",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-051",
+      "type": "mcq",
+      "question": "Which two groups show half of 12?",
+      "options": [
+        "5 and 7",
+        "6 and 6",
+        "4 and 8",
+        "3 and 9"
+      ],
+      "answer": "6 and 6",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-052",
+      "type": "mcq",
+      "question": "Which two groups show half of 14?",
+      "options": [
+        "6 and 8",
+        "7 and 7",
+        "5 and 9",
+        "4 and 10"
+      ],
+      "answer": "7 and 7",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-053",
+      "type": "mcq",
+      "question": "Double means taking the same number:",
+      "options": [
+        "one time",
+        "two times",
+        "three times",
+        "four times"
+      ],
+      "answer": "two times",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-054",
+      "type": "mcq",
+      "question": "To find double, we can:",
+      "options": [
+        "add the number to itself",
+        "take half",
+        "share into 4 parts",
+        "take 1 away"
+      ],
+      "answer": "add the number to itself",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-055",
+      "type": "mcq",
+      "question": "To find half, we can:",
+      "options": [
+        "share equally into 2 groups",
+        "add the number to itself",
+        "make 3 groups",
+        "take double"
+      ],
+      "answer": "share equally into 2 groups",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-056",
+      "type": "mcq",
+      "question": "Double means:",
+      "options": [
+        "two equal groups",
+        "one small group",
+        "three groups",
+        "unequal groups"
+      ],
+      "answer": "two equal groups",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-057",
+      "type": "mcq",
+      "question": "Which shows double of 4?",
+      "options": [
+        "4 + 4",
+        "4 + 2",
+        "4 - 2",
+        "4 + 1"
+      ],
+      "answer": "4 + 4",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-058",
+      "type": "mcq",
+      "question": "Which shows double of 5?",
+      "options": [
+        "5 + 5",
+        "5 + 2",
+        "5 - 2",
+        "5 + 1"
+      ],
+      "answer": "5 + 5",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-059",
+      "type": "mcq",
+      "question": "Which shows double of 6?",
+      "options": [
+        "6 + 6",
+        "6 + 3",
+        "6 - 2",
+        "6 + 1"
+      ],
+      "answer": "6 + 6",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-060",
+      "type": "mcq",
+      "question": "If 3 is half of 6, 6 is:",
+      "options": [
+        "half of 3",
+        "double of 3",
+        "same as 3",
+        "quarter of 3"
+      ],
+      "answer": "double of 3",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-061",
+      "type": "mcq",
+      "question": "If 4 is half of 8, 8 is:",
+      "options": [
+        "half of 4",
+        "double of 4",
+        "same as 4",
+        "quarter of 4"
+      ],
+      "answer": "double of 4",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-062",
+      "type": "mcq",
+      "question": "If 5 is half of 10, 10 is:",
+      "options": [
+        "half of 5",
+        "double of 5",
+        "same as 5",
+        "quarter of 5"
+      ],
+      "answer": "double of 5",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-063",
+      "type": "mcq",
+      "question": "If 6 is half of 12, 12 is:",
+      "options": [
+        "half of 6",
+        "double of 6",
+        "same as 6",
+        "quarter of 6"
+      ],
+      "answer": "double of 6",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-064",
+      "type": "mcq",
+      "question": "If 7 is half of 14, 14 is:",
+      "options": [
+        "half of 7",
+        "double of 7",
+        "same as 7",
+        "quarter of 7"
+      ],
+      "answer": "double of 7",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-065",
+      "type": "mcq",
+      "question": "If 8 is double of 4, 4 is:",
+      "options": [
+        "half of 8",
+        "double of 8",
+        "same as 8",
+        "quarter of 8"
+      ],
+      "answer": "half of 8",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-066",
+      "type": "mcq",
+      "question": "If 10 is double of 5, 5 is:",
+      "options": [
+        "half of 10",
+        "double of 10",
+        "same as 10",
+        "quarter of 10"
+      ],
+      "answer": "half of 10",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-067",
+      "type": "mcq",
+      "question": "If 12 is double of 6, 6 is:",
+      "options": [
+        "half of 12",
+        "double of 12",
+        "same as 12",
+        "quarter of 12"
+      ],
+      "answer": "half of 12",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-068",
+      "type": "mcq",
+      "question": "If 14 is double of 7, 7 is:",
+      "options": [
+        "half of 14",
+        "double of 14",
+        "same as 14",
+        "quarter of 14"
+      ],
+      "answer": "half of 14",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-069",
+      "type": "mcq",
+      "question": "On a number line, double of 3 is:",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "answer": "6",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-070",
+      "type": "mcq",
+      "question": "On a number line, double of 4 is:",
+      "options": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "answer": "8",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-071",
+      "type": "mcq",
+      "question": "On a number line, double of 5 is:",
+      "options": [
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "answer": "10",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-072",
+      "type": "mcq",
+      "question": "On a number line, double of 6 is:",
+      "options": [
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "answer": "12",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-073",
+      "type": "mcq",
+      "question": "On a number line, double of 7 is:",
+      "options": [
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "answer": "14",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-074",
+      "type": "mcq",
+      "question": "On a number line, half of 6 is:",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answer": "3",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-075",
+      "type": "mcq",
+      "question": "On a number line, half of 8 is:",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "answer": "4",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-076",
+      "type": "mcq",
+      "question": "On a number line, half of 10 is:",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "answer": "5",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-077",
+      "type": "mcq",
+      "question": "On a number line, half of 12 is:",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "answer": "6",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-078",
+      "type": "mcq",
+      "question": "On a number line, half of 14 is:",
+      "options": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "answer": "7",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-079",
+      "type": "mcq",
+      "question": "How many 1-step moves go from 8 back to 4?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answer": "4",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-080",
+      "type": "mcq",
+      "question": "How many 1-step moves go from 10 back to 5?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "answer": "5",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-081",
+      "type": "mcq",
+      "question": "How many 1-step moves go from 12 back to 6?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "answer": "6",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-082",
+      "type": "mcq",
+      "question": "How many 1-step moves go from 14 back to 7?",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "answer": "7",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-083",
+      "type": "mcq",
+      "question": "How many 1-step moves go from 4 to 8?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answer": "4",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-084",
+      "type": "mcq",
+      "question": "How many 1-step moves go from 5 to 10?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "answer": "5",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-085",
+      "type": "mcq",
+      "question": "How many 1-step moves go from 6 to 12?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "answer": "6",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-086",
+      "type": "mcq",
+      "question": "How many equal jumps of 3 go from 0 to 6?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": "2",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-087",
+      "type": "mcq",
+      "question": "How many equal jumps of 4 go from 0 to 8?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": "2",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-088",
+      "type": "mcq",
+      "question": "How many equal jumps of 5 go from 0 to 10?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": "2",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-089",
+      "type": "mcq",
+      "question": "How many equal jumps of 6 go from 0 to 12?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": "2",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-090",
+      "type": "mcq",
+      "question": "How many equal jumps of 7 go from 0 to 14?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": "2",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-091",
+      "type": "mcq",
+      "question": "How far is 13 from the double of 7?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": "1",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-092",
+      "type": "mcq",
+      "question": "How far is 5 from half of 14?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": "2",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-093",
+      "type": "mcq",
+      "question": "Which statement is right?",
+      "options": [
+        "4 is half of 8",
+        "4 is double of 8",
+        "8 is half of 4",
+        "8 is double of 8"
+      ],
+      "answer": "4 is half of 8",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-094",
+      "type": "mcq",
+      "question": "Which statement is right?",
+      "options": [
+        "8 is double of 4",
+        "8 is half of 4",
+        "4 is double of 8",
+        "4 is double of 4"
+      ],
+      "answer": "8 is double of 4",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-095",
+      "type": "mcq",
+      "question": "Which statement is right?",
+      "options": [
+        "5 is half of 10",
+        "10 is half of 5",
+        "5 is double of 10",
+        "10 is double of 10"
+      ],
+      "answer": "5 is half of 10",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-096",
+      "type": "mcq",
+      "question": "Which statement is right?",
+      "options": [
+        "10 is double of 5",
+        "10 is half of 5",
+        "5 is double of 10",
+        "5 is double of 5"
+      ],
+      "answer": "10 is double of 5",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-097",
+      "type": "mcq",
+      "question": "Which statement is right?",
+      "options": [
+        "6 is half of 12",
+        "12 is half of 6",
+        "6 is double of 12",
+        "12 is double of 12"
+      ],
+      "answer": "6 is half of 12",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-098",
+      "type": "mcq",
+      "question": "Which statement is right?",
+      "options": [
+        "12 is double of 6",
+        "12 is half of 6",
+        "6 is double of 12",
+        "6 is double of 6"
+      ],
+      "answer": "12 is double of 6",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-099",
+      "type": "mcq",
+      "question": "Which number is half of 8?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "answer": "4",
+      "difficulty": "easy"
+    },
+    {
+      "id": "halfdouble-mcq-100",
+      "type": "mcq",
+      "question": "Which number is double of 6?",
+      "options": [
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "answer": "12",
+      "difficulty": "easy"
+    }
+  ]
+}
