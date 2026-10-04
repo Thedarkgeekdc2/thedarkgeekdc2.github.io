@@ -107,6 +107,13 @@
       "questionCount": 2
     },
     {
+      "file": "data/class-3/maths/Flashcard_Champ_Half_and_Double_100_Easy_MCQ_Retry.json",
+      "class": 3,
+      "subject": "maths",
+      "topic": "Half and double",
+      "questionCount": 100
+    },
+    {
       "file": "data/class-3/maths/image-practice.json",
       "class": 3,
       "subject": "maths",
