@@ -1,0 +1,407 @@
+{
+  "class": 3,
+  "subject": "TWAU",
+  "topic": "Water",
+  "questions": [
+    {
+      "id": "water-mcq-01",
+      "type": "mcq",
+      "question": "What do we drink when we are thirsty?",
+      "options": ["Water", "Milk", "Juice", "Tea"],
+      "answer": "Water",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-02",
+      "type": "mcq",
+      "question": "Which one is a source of water?",
+      "options": ["River", "Chair", "Book", "Table"],
+      "answer": "River",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-03",
+      "type": "mcq",
+      "question": "Which one is a natural source of water?",
+      "options": ["Rain", "Bottle", "Bucket", "Tap"],
+      "answer": "Rain",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-04",
+      "type": "mcq",
+      "question": "Who needs water to live?",
+      "options": ["People", "Animals", "Plants", "All of these"],
+      "answer": "All of these",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-05",
+      "type": "mcq",
+      "question": "What do plants need to grow?",
+      "options": ["Water", "Plastic", "Stone", "Paper"],
+      "answer": "Water",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-06",
+      "type": "mcq",
+      "question": "Which one is used for bathing?",
+      "options": ["Water", "Sand", "Soil", "Paper"],
+      "answer": "Water",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-07",
+      "type": "mcq",
+      "question": "Which one is used for cooking?",
+      "options": ["Water", "Dust", "Stone", "Wood"],
+      "answer": "Water",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-08",
+      "type": "mcq",
+      "question": "Which one is a water body?",
+      "options": ["Pond", "Road", "School", "House"],
+      "answer": "Pond",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-09",
+      "type": "mcq",
+      "question": "Where can we find water?",
+      "options": ["River", "Chair", "Bag", "Pencil"],
+      "answer": "River",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-10",
+      "type": "mcq",
+      "question": "Why do we need water?",
+      "options": ["To live", "To sleep", "To read", "To play"],
+      "answer": "To live",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-11",
+      "type": "mcq",
+      "question": "Which animal needs water?",
+      "options": ["Cow", "Rock", "Chair", "Book"],
+      "answer": "Cow",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-12",
+      "type": "mcq",
+      "question": "Which one is another source of water?",
+      "options": ["Lake", "Table", "Fan", "Window"],
+      "answer": "Lake",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-13",
+      "type": "mcq",
+      "question": "Which water is safe to drink?",
+      "options": ["Clean water", "Dirty water", "Muddy water", "Drain water"],
+      "answer": "Clean water",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-14",
+      "type": "mcq",
+      "question": "What should we do when we finish using the tap?",
+      "options": ["Close it", "Open it", "Break it", "Ignore it"],
+      "answer": "Close it",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-15",
+      "type": "mcq",
+      "question": "Which activity uses water?",
+      "options": ["Washing clothes", "Reading", "Drawing", "Sleeping"],
+      "answer": "Washing clothes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-16",
+      "type": "mcq",
+      "question": "What do farmers use water for?",
+      "options": ["Growing crops", "Reading books", "Playing", "Sleeping"],
+      "answer": "Growing crops",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-17",
+      "type": "mcq",
+      "question": "Where does rain come from?",
+      "options": ["Clouds", "Roads", "Houses", "Trees"],
+      "answer": "Clouds",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-18",
+      "type": "mcq",
+      "question": "Which one stores water?",
+      "options": ["Tank", "Book", "Chair", "Pencil"],
+      "answer": "Tank",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-19",
+      "type": "mcq",
+      "question": "Which one can carry water?",
+      "options": ["Bucket", "Book", "Bag", "Pencil"],
+      "answer": "Bucket",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-20",
+      "type": "mcq",
+      "question": "Which one is a traditional source of water?",
+      "options": ["Well", "Computer", "Fan", "Table"],
+      "answer": "Well",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-21",
+      "type": "mcq",
+      "question": "Should we waste water?",
+      "options": ["No", "Yes", "Always", "Every day"],
+      "answer": "No",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-22",
+      "type": "mcq",
+      "question": "Which one helps us save water?",
+      "options": ["Closing the tap", "Leaving the tap open", "Playing with water", "Wasting water"],
+      "answer": "Closing the tap",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-23",
+      "type": "mcq",
+      "question": "What should we do with a leaking tap?",
+      "options": ["Repair it", "Ignore it", "Open it more", "Break it"],
+      "answer": "Repair it",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-24",
+      "type": "mcq",
+      "question": "Which one can pollute water?",
+      "options": ["Garbage", "Clean water", "Rain", "Flowers"],
+      "answer": "Garbage",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-25",
+      "type": "mcq",
+      "question": "Where should we not throw garbage?",
+      "options": ["River", "Dustbin", "Garbage bin", "Waste bin"],
+      "answer": "River",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-26",
+      "type": "mcq",
+      "question": "Which one is clean water?",
+      "options": ["Drinking water", "Drain water", "Dirty water", "Muddy water"],
+      "answer": "Drinking water",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-27",
+      "type": "mcq",
+      "question": "Which one is salty water?",
+      "options": ["Sea water", "Rain water", "Tap water", "Well water"],
+      "answer": "Sea water",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-28",
+      "type": "mcq",
+      "question": "Which one is a use of water at home?",
+      "options": ["Washing", "Reading", "Drawing", "Sleeping"],
+      "answer": "Washing",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-29",
+      "type": "mcq",
+      "question": "Which one is a use of water for animals?",
+      "options": ["Drinking", "Reading", "Writing", "Drawing"],
+      "answer": "Drinking",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-30",
+      "type": "mcq",
+      "question": "Which one needs water to stay alive?",
+      "options": ["Plant", "Stone", "Chair", "Table"],
+      "answer": "Plant",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-31",
+      "type": "mcq",
+      "question": "Which one is a natural water body?",
+      "options": ["Lake", "Bucket", "Bottle", "Tank"],
+      "answer": "Lake",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-32",
+      "type": "mcq",
+      "question": "Which one brings water to our homes?",
+      "options": ["Tap", "Chair", "Door", "Window"],
+      "answer": "Tap",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-33",
+      "type": "mcq",
+      "question": "What should we drink after playing in the sun?",
+      "options": ["Water", "Sand", "Oil", "Ink"],
+      "answer": "Water",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-34",
+      "type": "mcq",
+      "question": "Which one uses water in the garden?",
+      "options": ["Watering plants", "Reading", "Writing", "Sleeping"],
+      "answer": "Watering plants",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-35",
+      "type": "mcq",
+      "question": "Which one is important for all living things?",
+      "options": ["Water", "Plastic", "Paper", "Metal"],
+      "answer": "Water",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-36",
+      "type": "mcq",
+      "question": "What can happen if we waste water?",
+      "options": ["Less water may be available", "More books appear", "More toys come", "Nothing changes"],
+      "answer": "Less water may be available",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-37",
+      "type": "mcq",
+      "question": "Which one is a good water-saving habit?",
+      "options": ["Use only as much as needed", "Keep taps open", "Waste water", "Play with water"],
+      "answer": "Use only as much as needed",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-38",
+      "type": "mcq",
+      "question": "What can we use to drink water?",
+      "options": ["Glass", "Shoes", "Pencil", "Book"],
+      "answer": "Glass",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-39",
+      "type": "mcq",
+      "question": "Which one can hold water?",
+      "options": ["Bottle", "Pencil", "Book", "Shoe"],
+      "answer": "Bottle",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-40",
+      "type": "mcq",
+      "question": "Which one is a source of rainwater?",
+      "options": ["Clouds", "Tables", "Roads", "Chairs"],
+      "answer": "Clouds",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-41",
+      "type": "mcq",
+      "question": "Which one can be found in a pond?",
+      "options": ["Water", "Books", "Chairs", "Shoes"],
+      "answer": "Water",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-42",
+      "type": "mcq",
+      "question": "Which one should we keep clean?",
+      "options": ["Water sources", "Garbage", "Dirty drains", "Waste"],
+      "answer": "Water sources",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-43",
+      "type": "mcq",
+      "question": "Which one is needed to wash hands?",
+      "options": ["Water", "Stone", "Paper", "Wood"],
+      "answer": "Water",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-44",
+      "type": "mcq",
+      "question": "Which one is needed to clean clothes?",
+      "options": ["Water", "Sand", "Smoke", "Stone"],
+      "answer": "Water",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-45",
+      "type": "mcq",
+      "question": "What should we do while brushing our teeth?",
+      "options": ["Close the tap", "Keep the tap open", "Waste water", "Play with water"],
+      "answer": "Close the tap",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-46",
+      "type": "mcq",
+      "question": "Which one is a water-saving action?",
+      "options": ["Fixing a leaking tap", "Leaving taps open", "Throwing waste in rivers", "Wasting water"],
+      "answer": "Fixing a leaking tap",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-47",
+      "type": "mcq",
+      "question": "What is water important for?",
+      "options": ["Life", "Toys", "Shoes", "Books"],
+      "answer": "Life",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-48",
+      "type": "mcq",
+      "question": "Which one is a clean source of water?",
+      "options": ["Clean well", "Dirty drain", "Garbage pile", "Dirty puddle"],
+      "answer": "Clean well",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-49",
+      "type": "mcq",
+      "question": "Water is a precious ______.",
+      "options": ["Gift", "Toy", "Book", "Bag"],
+      "answer": "Gift",
+      "difficulty": "easy"
+    },
+    {
+      "id": "water-mcq-50",
+      "type": "mcq",
+      "question": "What should we do with water?",
+      "options": ["Save it", "Waste it", "Pollute it", "Ignore it"],
+      "answer": "Save it",
+      "difficulty": "easy"
+    }
+  ]
+}
