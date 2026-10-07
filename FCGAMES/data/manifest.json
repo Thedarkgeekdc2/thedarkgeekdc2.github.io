@@ -282,6 +282,13 @@
       "questionCount": 100
     },
     {
+      "file": "data/class-4/hindi/Mithai.json",
+      "class": 4,
+      "subject": "Hindi",
+      "topic": "मिठाइयों का सम्मेलन",
+      "questionCount": 100
+    },
+    {
       "file": "data/class-4/maths/oral-quiz-maths.json",
       "class": 4,
       "subject": "maths",
