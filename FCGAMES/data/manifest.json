@@ -177,18 +177,18 @@
       "questionCount": 2
     },
     {
-      "file": "data/class-3/twau/water.json",
-      "class": 3,
-      "subject": "TWAU",
-      "topic": "Water",
-      "questionCount": 50
-    },
-    {
       "file": "data/class-3/twau/our-environment.json",
       "class": 3,
       "subject": "TWAU (EVS)",
       "topic": "Our Environment",
       "questionCount": 2
+    },
+    {
+      "file": "data/class-3/twau/water.json",
+      "class": 3,
+      "subject": "TWAU (EVS)",
+      "topic": "Water",
+      "questionCount": 50
     },
     {
       "file": "data/class-4/gk/samanya-gyan.json",
