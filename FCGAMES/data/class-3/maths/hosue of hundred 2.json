@@ -1,6 +1,6 @@
 {
   "class": 3,
-  "subject": "Mathematics",
+  "subject": "maths",
   "topic": "House of 100 II",
   "questions": [
     {"id": "h100-mcq-01", "type": "mcq", "question": "How many hundreds are in 832?", "options": ["3", "8", "2", "32"], "answer": "8", "difficulty": "easy"},
