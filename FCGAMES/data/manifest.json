@@ -72,13 +72,6 @@
       "questionCount": 100
     },
     {
-      "file": "data/class-3/maths/hosue of hundred 2.json",
-      "class": 3,
-      "subject": "Mathematics",
-      "topic": "House of 100 II",
-      "questionCount": 150
-    },
-    {
       "file": "data/class-3/maths/addition.json",
       "class": 3,
       "subject": "maths",
@@ -119,6 +112,13 @@
       "subject": "maths",
       "topic": "Half and double",
       "questionCount": 100
+    },
+    {
+      "file": "data/class-3/maths/hosue of hundred 2.json",
+      "class": 3,
+      "subject": "maths",
+      "topic": "House of 100 II",
+      "questionCount": 150
     },
     {
       "file": "data/class-3/maths/image-practice.json",
