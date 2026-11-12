@@ -282,6 +282,13 @@
       "questionCount": 100
     },
     {
+      "file": "data/class-4/hindi/कैमरा.json",
+      "class": 4,
+      "subject": "Hindi",
+      "topic": "कैमरा",
+      "questionCount": 100
+    },
+    {
       "file": "data/class-4/hindi/Mithai.json",
       "class": 4,
       "subject": "Hindi",
